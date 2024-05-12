@@ -1,3 +1,3 @@
-= Der Kodierbold =
+# = Der Kodierbold =
 
-Programmieren lernen mit p5
+## Programmieren lernen mit p5
