@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="utf-8" />
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Programmieren lernen mit p5 - Kapitel 1</title>
+</head>
+
+<body>
+  <p> Hier ist ein Absatz.</p>
+  <p> Und hier ist ein <span> spannender Absatz</span> gewesen.</p>
+
+  Dies ist ein
+  <span style="color:aquamarine; background-color:blueviolet;">
+    Span - Test
+  </span>
+
+  <p>
+    Wir kennen die (<code>background()</code>) Funktion schon. Sie ist
+    automatisch ganz oben im (<code>draw()</code>) Abschnitt des Editors
+    vorhanden. So wird gleich am Anfang die ganze Leinwand neu übermalt und für
+    die neue Zeichnung vorbereitet. Wie du weisst, wird <code>draw()</code>
+    immer und immer wieder neu durchlaufen. <code>background()</code> ganz am
+    Anfang sorgt dafür, dass für einen neuen Durchlauf eine frische leere
+    Leinwand zur Verfügung steht.
+  </p>
+
+  <p id="test">
+    Wir haben auch schon gemerkt, dass der Parameter "grau" der
+    (<code>background(grau)</code>) Funktion den Grauwert des Hintergrunds
+    festlegt. Die möglichen Werte für "grau" sind 0 bis 255, wobei 0 einen total
+    schwarzen und 255 einen ganz weißen Hintergrund zeichnet.
+  </p>
+
+  <p>
+    Ausprobieren! Ändere in einer frisch geladenen Editor-Sitzung den
+    background-Wert, und setze ihn auf einen Wert zwischen 0 und 255. Was
+    passiert, wenn du das Argument "grau" mit einer größeren Zahl als 255
+    übergibst, zum Beispiel mit (<code>background(400)</code>)? p5 ist clever
+    und denkt sich: 400 ist nicht erlaubt, weil zu groß, deshalb nehme ich einen
+    Wert, der nur so groß wie möglich ist - und das ergibt weiß (wie bei "grau"
+    = 255).
+  </p>
+
+  Das ist unsere erste fantastische Farbe: der Grauwert! Immer dann, wenn du
+  eine Anweisung verwendest, <span class="Klasse"> mit der eine Farbe festgelegt
+    wird, und wenn du
+    dann nur eine einzige Zahl übergibst, wird ein Grauwert verwendet. Du kannst
+    damit immerhin </span> schon mal festlegen, ob etwas schwarz ('0'), grau (so
+  etwa
+  '150') oder weiß ('255') sein soll.
+
+  <span class="Klasse nacht">Das reicht uns natürlich bei weitem nicht. Wir
+    wollen richtige Farben!</span>
+
+  In p5 gibt es drei Farben zur Auswahl: rot, grün und blau. Der Trick ist, dass
+  man diese drei Farben - wie beim Malen mit Wasserfarben - mischen kann, um
+  noch ganz andere Farben oder Farbtöne herzustellen.
+
+
+
+
+</body>
+
+<script src="../../LIB/p5.js"></script>
+<script src="../../LIB/p5.sound.min.js"></script>
+
+</html>

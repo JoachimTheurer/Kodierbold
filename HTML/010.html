@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <title>Programmieren lernen mit p5 - Kapitel 1</title>
+</head>
+
+<body>
+
+  <h1 id="K010">Warum programmieren?</h1>
+
+  <p>
+    Wie du sicher weisst, gibt es fast überall Computer. Sie werden
+    verwendet, um sich Sachen zu merken, um zu rechnen, zum
+    Spielen und um Maschinen und Roboter zu steuern. Sie
+    stecken in jedem
+    Auto, jeder Waschmaschine und jeder Kasse, und jedes
+    Handy ist nichts
+    anderes als ein - gar nicht so kleiner - Computer.
+  </p>
+  <p>Kein Computer weiss von sich aus, was er zu tun hat. Das bestimmt das
+    Computer-Programm, das gerade für eine bestimmte Aufgabe genutzt wird. Eine
+    Webseite ansehen, ein Video anschauen, Musik spielen oder Schritte zählen
+    und den Weg beschreiben - das alles wird von Anwendungen gesteuert, für die
+    ein Computer-Programm geschrieben wurde.</p>
+  <p>Willst du, dass der Computer für dich eine bestimmte Aufgabe erledigt, für
+    die es schon ein Computer-Programm gibt, musst du nur die Anwendung
+    bedienen, aber nicht programmieren können. Wenn du aber selbst
+    programmierst, kannst du ganz neue Anwendungen basteln, die es noch gar
+    nicht gibt, kreativ sein und mit dem Computer Kunst erstellen, und viele
+    Sachen mit dem Computer machen, an die noch niemand gedacht hat und für die
+    es noch keine Programme gibt.</p>
+
+  <h2 id="K011">Was bedeutet Programmieren?</h2>
+  <p>
+    Ein Computer soll für uns ganz bestimmte Aufgaben
+    erledigen, zum Beispiel
+    bei einem Spiel die Spielefiguren darstellen und auf
+    Eingaben reagieren.
+    Damit der Computer auch weiss, wie er das hinkriegt,
+    muss man ihm bei jeder
+    Aufgabe
+    Schritt für Schritt sagen, was genau zu tun ist - wie
+    bei einer
+    Bastelanleitung.
+    Die einzelnen Anweisungen sind in einer Sprache
+    geschrieben, die der
+    Computer
+    auch versteht: einer Programmiersprache.
+    Alle Anweisungen zusammen für eine bestimmte Aufgabe
+    sind ein
+    Computerprogramm.
+    Ein solches Programm Anweisung für Anweisung zu
+    schreiben nennt man
+    programmieren.
+    Programmieren bedeutet
+    also, einem Computer mit Anweisungen in einer
+    Programmiersprache genau zu
+    sagen,
+    was er machen soll.
+  </p>
+  <p>
+    Es gibt viele verschiedene Programmiersprachen, die für
+    ganz
+    unterschiedliche Aufgaben geeignet sind. Jede hat ihre
+    eigenen Regeln,
+    aber alle übersetzen deine Anweisungen in die Sprache,
+    die der Computer
+    versteht. Wir verwenden als Programmiersprache p5
+    (englisch "pi feiv"
+    ausgesprochen).
+  </p>
+  <p>
+    Mit p5 kannst Du bunte und bewegte Zeichnungen, Spiele
+    und
+    viele andere lustige, schöne und nützliche Anwendungen
+    erschaffen.
+  <p>
+    Ein paar Beispiele, was damit möglich ist, kannst du dir
+    ansehen, wenn du
+    den <a href="960 Quellen.html#Beispiele">hier</a>
+    aufgelisteten Verweisen
+    folgst.
+    Bald kannst auch du so etwas erschaffen und deine
+    eigenen Programmier-Ideen
+    umsetzen!
+  </p>
+  Du wirst am Ende viel Freude an deinen schönen Zeichnungen haben und stolz auf
+  die bewegten Bilder sein, die du gemacht hast.
+  Eigentlich noch mehr Spaß macht es, sich vorher einfallen
+  zu
+  lassen, welche
+  kreative
+  Idee du verwirklichen willst, und wie du die
+  Programmier-Werkzeuge, die du
+  gleich
+  kennenlernen wirst, geschickt einsetzen kannst. Vielleicht
+  glaubst du es mir
+  jetzt
+  noch nicht, aber du wirst es bald merken: zu knobeln und
+  schliesslich
+  zu entdecken,
+  warum etwas nicht funktioniert oder ganz anders läuft, als
+  du dir gedacht
+  hast, und wie du es besser machen kannst,
+  ist beinahe schon der allerbeste Teil am Programmieren.
+  </p>
+
+  <h2 id="K012">Was brauche ich zum Programmieren?</h2>
+  <h3 id="K012A">Browser</h3>
+  <p>
+    Alles, was du zum Programmieren mit p5 brauchst, steht für dich schon im
+    Internet bereit. Damit du es verwenden kannst, brauchst du einen Browser,
+    zum Beispiel Google Chrome, Mozilla Firefox oder Apple
+    Safari. Sicher weisst du schon lange, wie man einen Browser bedient, sonst
+    könntest du diesen Text jetzt gar nicht lesen. Zwei
+    Tasten auf dem Browser sind wichtig:
+  <ul>
+    <li>Für das <strong>Lesen</strong> ist die "Zurück" Taste (Pfeil nach links
+      im Browser ganz
+      oben links) nützlich, mit der du wieder auf die Seite zurück kommst, die
+      du vorher angesehen hast.
+    </li>
+    <li>
+      Für das <strong>Programmieren</strong> ist die "Neu laden" Taste
+      hilfreich, mit der eine
+      Browser-Seite frisch von vorn gestartet werden kann. Die Taste ist der zum
+      Kreis gekrümmte Pfeil ganz oben ziemlich weit links. "Neu laden" hilft,
+      wenn der Browser nicht mehr auf deine Eingaben reagiert
+      oder nur etwas Komisches anzeigt.
+  </ul>
+  </p>
+  <h3 id="K012A">Tastatur</h3>
+  Sicher hast du auch schon eine Tastatur vor dir liegen. Je nach Modell kann
+  die
+  etwas unterschiedlich aussehen, Buchstaben und Zahlen lassen sich aber
+  bestimmt finden. Etwas schwieriger kann es manchmal werden, die verschiedenen
+  Klammern zu finden, die wir zum Programmieren unbedingt brauchen.
+
+  <ul>
+    <li>Die runden <mark>( )</mark> beziehungsweise eckigen <mark> [ ] </mark>
+      Klammern sind auf vielen Tastaturen auf den Ziffern 8 und 9 zu finden,
+      wenn die "Hoch-" oder "Shift" Taste beziehungsweise die "Steuerung STRG"
+      oder "Control CTRL" Taste mit der Ziffer gleichzeitig gedrückt wird. Die
+      "Steuerung" Taste und die Ziffer 7 oder 0 gleichzeitig gibt meistens die
+      geschweiften <mark> { } </mark> Klammern aus.
+    </li>
+    <li>
+      Wenn du die Klammer, die du brauchst, schon irgendwo auf dem Bildschirm
+      siehst, kannst du sie dir auch einfach kopieren. Wie alles, was du
+      kopieren willst, fährst du bei gedrückter Maus-Taste drüber und drückst
+      "Steuerung CTRL" oder "Option" und gleichzeitig den Buchstaben "c", und
+      dann zum Einfügen "Steuerung" und den Buchstaben "v".
+      <br> Etwas zu kopieren , was schon da steht, statt es nochmal zu tippen,
+      ist übrigens häufig eine gute Idee: es erspart Zeit und Tippfehler.
+    </li>
+  </ul>
+
+  <p>
+    Ein bisschen etwas mehr zum
+    <a href="960 Browser und Tastatur.html#Browser">Browser</a>
+    und zur
+    <a href="960 Browser und Tastatur.html#Tastatur">Tastatur</a>
+    steht noch im Anhang.
+  </p>
+
+  <h2 id="K013">Das Atelier des Programmier-Künstlers</h2>
+  <p>
+    Um p5 Programme zu schreiben, ist für dich schon eine Künstler-Werkstatt,
+    ein Atelier, im Internet eingerichtet. Hier wirst du Programme "entwickeln",
+    also schreiben, weshalb man man diese Werkstatt "Entwicklungsumgebung" oder
+    "Programmierumgebung" nennt. Hier kannst du Programme schreiben, testen und
+    gleich ansehen, ob der Computer daraus gemacht hast, was du wolltest.
+  </p>
+  <p>
+    Deine Künstler-Werkstatt, die p5 Entwicklungsumgebung, liegt auf dieser
+    Internet-Seite
+  </p>
+  <p>
+    <center>
+      <a style="text-align:center; font-size:large;"
+        href="https://editor.p5js.org/" target="_blank" ;>p5 Web Editor</a>.
+    </center>
+  </p>
+
+  <p>Rufe die Seite auf (klicke auf den Link "p5 Web Editor") und lege gleich
+    ein Lesezeichen
+    ("bookmark") im Browser dafür an. Das geht in den meisten Browsern mit dem
+    Stern rechts neben der Zeile ganz oben auf der neu geöffneten Seite, in der
+    jetzt <code>https://editor.p5js.org/</code> steht.
+  </p>
+
+  Dieses Browser-Fenster sollte ungefähr so aussehen:
+  <p><img src="../Bild/p5Editor (000) - Uebersicht.png"
+      alt="p5 Entwicklungsumgebung">
+  </p>
+  Das ist die p5 Entwicklungsumgebung.
+  <p>
+    Die oberste Zeile, die links mit
+    <span style="background-color:red"> p5* </span> anfängt, ist die
+    "Menüleiste".
+    Dort stellen wir gleich mal die Sprache von Englisch auf Deutsch um. Klappe
+    die Liste unter dem Wort "English" in der Menüleiste auf und klicke auf
+    "Deutsch".
+  </p>
+  <p><img src="../Bild/p5Editor (001) - auf Deutsch umschalten.png"
+      alt="Menüleiste">
+  </p>
+  Jetzt sollten alle Überschriften in der Menüleiste auf Deutsch geschrieben
+  sein.
+
+  <p> Unter der Menüleiste ist die Taste, um ein Programm zu starten.
+    Diese Start-Taste wird manchmal auch Play-Taste oder "Abspielknopf" genannt.
+    Rechts daneben liegt der Stopp-Knopf, mit dem das Programm wieder
+    angehalten werden kann.</p>
+  <p><img src="../Bild/p5Editor (002) - Start und Stopp.png"
+      alt="Start und Stopp-Taste">
+  </p>
+
+  <p>
+    Unter diesen beiden Tasten, auf der linken Seite, steht die Überschrift
+    <span class="rahmen" style="background-color:yellow"> sketch.js </span>.
+    In dem Rahmen darunter gibt es sogar schon ein paar Zeilen mit
+    Programm-Anweisungen, die auf der linken Seite nummeriert sind. Wir sehen
+    uns diesen Bereich, in den alle p5 Programme geschrieben werden, noch genau
+    an.
+  </p>
+
+  <p>Rechts davon, unter der Überschrift <span class="rahmen"
+      style="background-color:yellow">Vorschau
+    </span>, ist eine leere Fläche, auf der gezeichnet wird, was du mit deinem
+    Programm erschaffen hast.
+  </p>
+  <p>
+    <img src="../Bild/p5Editor (003) - Sketch und Vorschau.png"
+      alt="Rahmen für den Editor und die Zeichnung">
+  </p>
+
+  <p>Als p5-Programmier-Profis nennen wir den Bereich zum Schreiben der
+    Programme
+    auf der linken Seite den <span id="Begriff">Editor</span>. <br>
+    Die Computer-Zeichnung auf der rechten
+    Seite heisst <span id="Begriff">Sketch</span> ("Skizze" auf
+    Englisch, sprich "skätsch").
+  </p>
+
+  <p><img src="../Bild/p5Editor (004) - Editor, Vorschau und Konsole.png"
+      alt="Editor, Vorschau und Konsole">
+  </p>
+
+  <p>Normaler einfacher Text, den der Computer schreiben will, landet in dem
+    Rahmen ganz unten links, der mit <span class="rahmen">Konsole</span>
+    überschrieben ist.</p>
+
+  <p>Was es in dieser Entwicklungsumgebung sonst noch so gibt, sehen wir uns
+    später an, wenn wir es brauchen. Jetzt wollen wir rasch mit dem
+    Programmieren loslegen!
+
+    <button onclick="document.location='005.html'">Zurück</button>
+    <button onclick="document.location='014.html'">Weiter</button>
+
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+body {
+  font-size: 100%;
+  font-family: Verdana, Courier, Arial, sans-serif;
+  color: rgb(54, 43, 28);
+}
+
+p {
+  color: rgb(54, 43, 28);
+}
+
+h1 {
+  font-size: 125%;
+  font-family: Courier, Arial, sans-serif;
+  color: blueviolet;
+  text-align: center;
+}
+
+h2 {
+  font-size: 115%;
+  font-family: Courier, Arial, sans-serif;
+  color: blueviolet;
+  text-align: center;
+}
+
+h3 {
+  font-size: 105%;
+  font-family: Courier, Arial, sans-serif;
+  color: blueviolet;
+  text-align: left;
+}
+
+code {
+  color: cornflowerblue;
+  font-size: 120%;
+  font-weight: bold;
+}
+
+#Begriff {
+  font-size: 105%;
+  font-weight: bold;
+}
+#beispiel {
+  color: cadetblue;
+}
+
+#merke {
+  color: darkturquoise;
+}
+
+#ausprobieren {
+  color: blue;
+}
+
+#nebenbei {
+  color: chocolate;
+}
+
+#tbd {
+  font-size: 1.3em;
+  color: fuchsia;
+}
+
+.Klasse {
+  color: rgb(241, 240, 255);
+}
+
+.nacht {
+  background-color: black;
+}
+
+.rahmen {
+  border: 5px solid #ff0055; /* Rahmenfarbe, Dicke, Stil */
+  padding: 2px; /* Abstand zwischen Text und Rahmen */
+}
