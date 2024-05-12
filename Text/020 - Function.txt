@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+
+
+  <title>p5 - Kapitel 01.01</title>
+</head>
+
+<body>
+<h2>1.2 Editor</h2>
+
+	[$merk] Wir wissen jetzt: p5 Programme kannst du in einer Programmierumgebung schreiben, die mit [$link] im Browser aufgerufen wird. Im Editor auf der linken Seite der p5 Programmierumgebung schreibst du dein Programm. Es läuft los, wenn du den Abspiel-Knopf drückst. Dann erscheint auf der rechten Vorschau-Seite ein Fenster mit deiner Zeichnung, deinem sketch. [$/merk]
+	
+	Ein Programm besteht aus Anweisungen an den Computer. Sie werden beim Abspielen des Programms rasch hintereinander ausgeführt. Ganz viele dieser Anweisungen sind fertige Bausteine, die du nur noch in dein  Programm einsetzen musst. Eine Programmmiersprache wie p5 sorgt dafür, dass es diese fertigen Bausteine gibt - du musst nur lernen, sie richtig zu verwenden.
+	
+In p5, wie in vielen anderen Programmiersprachen auch, heisst ein solcher fertiger Baustein "Funktion", auf Englisch "function", sprich "fanktschn". Eine Funktion erledigt eine ganz bestimmte Aufgabe, zum Beispiel einen Kreis zeichnen oder den Hintergrund eines Bildes ausmalen. Viele Funktionen hintereinander ergeben dann das Programm, das ein ganzes Bild zeichnet.
+
+		Um eine bestimmte Funktion aufzurufen, schreibst du einfach den Namen der Funktion in das Programm. Die Namen der Funktionen kann man im Internet herausfinden; ganz viele werden wir hier noch kennenlernen. Es ist wichtig, den Namen einer Funktion ganz genau richtig zu schreiben, auch auf die Klein- oder Großbuchstaben kommt es dabei an.  
+
+Du musst der Funktion ganz genau sagen, was sie machen soll: wenn eine Leinwand aufgestellt werden soll, wie groß soll sie werden? Wenn ein Hintergrund gemalt werden soll, welche Farbe soll er haben? Deshalb hat jede Funktion hinter ihrem Namen runde Klammern,  ( und ) , in die Zahlen oder Wörter geschrieben werden. Diese Zahlen oder Wörter in den Klammern nennt man die "Argumente" der Funktion. Falls es mehrere Argumente für eine Funktion gibt, werden sie durch Kommas getrennt. Wenn du eine neue Funktion kennenlernst, wird dir immer auch gesagt, welche Werte als Argument erlaubt sind und was die Funktion damit macht.
+
+Hinter jeder einzelnen Anweisung in p5 muss immer ein Strichpunkt stehen, also auch hinter dem Aufruf einer Funktion. Nur so weiss das Programm, das diese Anweisung beendet ist und ausgeführt werden kann.
+
+<h2>1.2 Editor</h2>
+	
+Sehen wir uns mal an einem Beispiel an, wie das so mit den Funktionen "funktioniert". 
+
+Wenn p5 frisch aufgerufen wird, stehen schon zwei Funktionsaufrufe im Editor: 
+<p>createCanvas(400, 400);</p>
+und 
+<p>background(220); </p>.
+
+Die erste Funktion, die aufgerufen wird, ist <code>createCanvas(400, 400);</code>. Damit wird die Zeichenfläche auf der rechten Seite, unter der Überschrift "Vorschau", erzeugt. Auf Englisch heisst create (sprich "cre-eit") anlegen oder erschaffen, und Canvas (sprich "känws") ist die Leinwand. Der Aufruf der Funktion <code>createCanvas(400, 400);</code> sorgt also dafür, dass als Erstes eine Leinwand, auf der das Programm zeichnen kann, entsteht. 
+
+<code>createCanvas(400, 400);</code> hat zwei Argumente in den runden Klammern dahinter. Beide Argumente haben hier zufällig den gleichen Wert '400'. Der erste Wert '400' bestimmt die Breite der Leinwand, also wie groß die Leinwand in der Richtung nach rechts ist. Der zweite Wert '400' bestimmt die Höhe der Leinwand, also wie groß die Leinwand in der Richtung nach unten ist. 
+
+Jede Bildschirm besteht aus winzig kleinen Bildpunkten, den "Pixeln". Alles, was auf einem Bildschirm oder Monitor zu sehen ist, wird durch ganz viele Pixel dargestellt. Die Pixel sind so klein und dicht nebeneinander, dass man die Lücken dazwischen nicht sehen kann, obwohl es doch nur lauter einzelne Bildschirm-Punkte sind. (Mit einer Lupe kannst Du sie erkennen, wenn du nicht gerade einen superteuren und -tollen Bildschirm hast.) Die Leinwand soll also 400 Pixel nach rechts und 400 Pixel nach unten groß werden, wenn die Funktion <code>createCanvas(400, 400);</code> aufgerufen wird.  
+
+Die zweite Funktion, die aufgerufen wird, ist <code>background(220);</code>. "Background" bedeutet auf Englisch "Hintergrund" (sprich "bek-graund"). Damit wird die ganze Leinwand übermalt. Das Argument der Funktion <code>background(220);</code>, hier '220', bestimmt, wie hell oder dunkel der Hintergrund der Leinwand ist. Das Argument kann Werte zwischen 0 für weißen Hintergrund und 255 für schwarzen Hintergrund  annehmen.
+
+	[$screen]createCanvas und background : Funktion Argument Strichpunkt // Play und Stopp [$/screen]
+
+		[$exec] Probier mal aus, was das Programm, das jetzt schon automatisch da steht, macht [$/exec]. Dazu drückst Du den Abspiel- oder Play-Knopf: das Dreieck im Kreis oben links im Editor. Damit startest du das Programm, das die Anweisungen im Editor Schritt für Schritt ausführt. Die beiden Anweisungen sind: erzeuge eine Leinwand ("createCanvas") und male sie grau an ("background").
+
+Achte darauf, wie sich der Bildschirm im Vorschau-Teil auf der linken Seite ändert, wenn du den Abspiel-Knopf drückst. Zugegeben, so toll ist das Ergebnis noch nicht: ein graues Rechteck erscheint. Das ist unsere Leinwand, die durch den Aufruf von "createCanvas" erzeugt und durch den Aufruf der Funktion "background" grau gefärbt wird. 
+
+Du kannst das Programm mit dem Stopp-Knopf anhalten: klicke auf das schwarze Rechteck im grauen Kreis über dem Editor. Die Leinwand verschwindet, weil das Programm jetzt nicht mehr ausgeführt wird.
+
+		[$exec] Jetzt änderst du die Argumente der Funktionen.  Die Zeichenfläche ist mit <code>createCanvas(400, 400)</code> 400 mal 400 Pixel groß. 
+Was passiert, wenn Du diese Zahlen änderst? Probiere aus, die Zahlen in der Klammer von 400 auf 200 zu ändern - gemeinsam und jede einzeln. Drücke zuerst den Stopp-Knopf, ändere das Argument in <code>createCanvas(400, 400)</code> und drücke anschliessend den Abspiel-Knopf wieder.
+
+Was gefällt Dir besser als Zeichenfläche - ein Quadrat, das entsteht, wenn die erste und die zweite Zahl in der Klammer gleich gross sind, oder ein  Rechteck, das zum Beispiel mit createCanvas(350, 550); erzeugt wird? Kannst Du die Zeichenfläche so gross wie den ganzen Platz in der Vorschau machen, so dass du gerade noch ihren Rand siehst? Kannst du die Fläche so klein machen, dass Du sie kaum noch erkennen kannst - probier doch zum Beispiel mal createCanvas(5, 5);. Wenn das immerhin noch 5 mal 5 Pixel sind, kannst du dir vorstellen, wie winzig klein ein einziges Pixel ist. 
+		
+Was ist mit dem Argument der Funktion background(220)?. Ändere zum Ausprobieren den Grauwert '220' in den runden Klammern auf eine Zahl zwischen 0 und 255 und drücke den Abspiel-Knopf. Zwischen Schwarz (b(0)) und Weiß (bg) ist alles möglich.  
+
+Erzeuge jetzt wieder eine Zeichenfläche, die groß genug ist und deren Größe und Hintergrund dir gefällt. Du kannst auch einfach die ursprünglichen Einstellungen wiederherstellen, indem du das Browser-Fenster neu lädst.
+
+<h2>1.2 Eigene Figuren</h2>
+
+Eine Zeichenfläche und eine Leinwand sind zwar ganz nett, aber doch etwas wenig. Schreiben wir deshalb den Aufruf einer weiteren Funktion in den Editor, um zum Beispiel einen Kreis zu zeichnen.
+
+Dazu stellt uns die Programmiersprache p5 die Funktion <code>circle(200, 150, 100);</code> bereit. Circle (sprich "cörcl") bedeutet Kreis auf Englisch. Das erste Argument von "circle", hier 200, bestimmt, wie viele Pixel der Mittelpunkt des Kreises vom linken Rand der Zeichenfläche entfernt ist. Das zweite Argument der Funktion "circle", hier 150, bestimmt, wie viele Pixel der Mittelpunkt des Kreises vom oberen Rand der Zeichenfläche entfernt ist. Das dritte Argument der Funktion "circle", hier 100, bestimmt schliesslich, wie groß der Kreis ist - gemessen von Rand zu gegenüberliegendem Rand, gibt also den Durchmesser des Kreises an. 
+
+[$exec] Schreibe in die Zeile unter <code>circle(200, 150, 100);</code> die Anweisung <code>circle(200, 150, 100);</code>. Damit wird die Funktion "circle" aufgerufen und ein Kreis auf die Zeichenfläche gezeichnet. Das Programm sieht so aus:
+
+[$prog]circle [$/prog]
+
+So schnell ist ein Programm geschrieben, das einen Kreis zeichnet.  Ändere jetzt die Argumente der Funktion <code>circle(200, 150, 100);</code>! Verschiebe mit den ersten beiden Werten den Kreis nach rechts, links, oben und unten, bis er abgeschnitten wird oder ganz verschwindet. Dann mach' den Kreis winzig klein - vielleicht mit der Anweisung <code>circle(200, 150, 5);</code> - oder riesnegroß - wie mit <code>circle(200, 150, 400);</code>.
+
+Du siehst also: Programmieren ist wirklich nicht schwer.
+
+	[$merk] Wir wissen jetzt: 
+Ein Programm besteht aus Anweisungen, die nacheinander ausgeführt werden. Viele dieser Anwendungen sind Aufrufe von Funktionen. Eine "Funktion, die aufgerufen wird, führt eine ganz bestimmte Aufgabe aus, zum Beispiel einen Kreis zu zeichnen. Dazu müssen der Funktion genaue Anweisungen mitgegeben werden, zum Beispiel welchen Durchmesser der Kreis haben soll. Das geschieht durch "Argumente, die in runden Klammern hinter der jeweilgen Funktion stehen. Eine Länge, wie beispielsweise der Durchmesser, wird üblicherweise in "Pixel gemessen, das sind die kleinsten Bildpunkte auf einem Monitor.
+
+	
+				<h2>1.2 function in p5</h2>
+
+Funktionen können aber nicht nur im Programm brav hintereinander ausgeführt werden, sondern sie können auch ineinander geschachtelt werden. So werden einzelne Funktionsaufrufe wieder zu einer größeren, neuen Funktion zusammengebastelt. Man sagt, die neue Funktion wird "angelegt" oder "definiert".
+		
+Die Funktionen in einem Programm sind also ineinander gestapelt oder verschachtelt: eine kleine Funktions-Schachtel steckt in einer größeren, die wieder in einer noch größeren Schachtel steckt. Die ganz große Funktions-Schachtel aussenrum ist das vollständige p5 Programm. Die ganz kleinen Funktions-Schachteln ganz innen, wie "background oder "circle, sind für uns schon fertig gepackt, die können wir sofort verwenden. Wir müssen aber die Funktions-Schachtel in der mittleren Schicht, setup() und draw(), mit diesen kleinen Schachteln sinnvoll füllen. 
+
+Wir fangen mit setup() an. In der ersten Zeile des p5 Editors steht <code>function setup () {</code>.
+Damit wird die Funktion "setup" angelegt. "setup" (sprich "sätap") bedeutet Aufbau, Einrichten oder Installation. In p5 ist die Funktion "setup()" dazu da, deine Zeichenfläche vorzubereiten und einzurichten. Zur neu angelegten Funktion "setup" gehört alles, was innerhalb der beiden geschweiften Klammern { und } steht.
+		
+Wie wir wissen, ist in "setup schon der Aufruf der Funktion createCanvas(400, 400); enthalten.
+Diese Funktion erzeugt Dein Zeichenblatt, deine Leinwand. "createCanvas" wird stets als Erstes von "setup" aufgerufen. Zur Wiederholung: Die Argumente der Funktion createCanvas, also (400, 400) legen fest, wie groß die Leinwand werden  soll. Dabei wird die Zahl winziger Bildschirm-Punkte, die "Pixel" heissen, abgezählt. Die erste Zahl in der Klammer steht für die Breite der Zeichenfläche nach rechts, die zweite Zahl bezeichnet die Länge in der Richtung nach unten, also wie hoch die Leinwand ist. Die Zeichenfläche ist mit createCanvas(400, 400) deshalb 400 mal 400 Pixel groß. 
+
+	Drücken wir den Abspiel-Knopf, um das p5 Programm laufen lassen, wird von p5 automatisch immer zuerst die Funktion setup() aufgerufen. In der Funktion setup() wird dann die Funktion createCanvas aufgerufen, damit die Zeichenfläche im Vorschau-Bild angezeigt wird.
+
+ 				<h2>setup vs draw</h2> 
+				
+ Anschliessend steht im Editor noch eine zweite Funktion. Diese Funktion heisst "draw" (sprich "draoh"), was zeichnen oder malen bedeutet. 
+
+In draw ist schon die Funktion "background(220) eingebaut, die wir bereits kennen. Wenn Du etwas gezeichnet hast und dann "background aufrufst, wird deine Zeichnung vollständig ausradiert und das leere Zeichenblatt ist wieder da. Erinnerst du dich, was das Argument (220) in der Funktion "background(220) bedeutet? Das ist die Helligkeit oder "Graustufe" des Hintergrunds, zwischen schwarz, "background(0), über mittelgrau, "background(220), bis zu ganz weiss, "background(255).
+		
+Was ist der Unterschied zwischen den beiden Funktionen "setup und "draw, warum gibt es zwei Funtionen, die angelegt werden? Die beiden Funktionen "setup und "draw werden von p5 auf ganz unterschiedliche Weise aufgerufen. 
+
+	"setup wird am Anfang des Programmablaufs, wenn Du die Abspiel-Taste drückst, als Allererstes und nur ein einziges Mal durchlaufen. Hier kannst Du alles festlegen, was sich später nicht mehr ändern soll, zum Beispiel die Größe deiner Zeichenfläche. Dann geht p5 weiter zu draw.											
+	
+	draw wird vom p5 Programm immer und immer wieder, ohne Ende, aufgerufen und durchlaufen. Hier kommen die Sachen rein, die sich ändern sollen, wenn wir später bewegte Zeichnungen machen. Dann ist es nützlich, dass alles in "draw() immer wieder neu und von vorn durchlaufen wird. Wir bauen dann in jeden Aufruf von draw eine kleine Änderung ein, zum Beispiel welche Farbe oder Form oder welchen Ort eine Zeichnung hat. Weil "draw ganz oft und schnell hintereinander aufgerufen wird, sieht das dann aus wie ein fliessender Übergang oder eine gleichmässige Bewegung.
+
+				<h2>setup vs draw</h2> 
+
+Das war jetzt eine Menge Theorie, aber keine Bange: wir kommen gleich dazu, selber zu zeichnen. 
+
+[$merk] Nur noch eine kleine Zusammenfassung vorher: Ein p5 Programm läuft los, wenn du auf den Abspiel-Knopf drückst. Es besteht von Vorneherein aus zwei Bausteinen oder Funktionen, in die wir unsere Anweisungen schreiben. 
+	
+		Im ersten Teil, der Funktion "setup, wird deine Zeichnung, der sketch, vorbereitet. Zuerst ist es sinnvoll, die Leinwand, den canvas, zu erstellen. Dazu wird eine schon vorhandene Funktion aufgerufen, der du die gewünschte Größe der Leinwand in Pixeln mitgibst: createCanvas(400, 400) mit zum Beispiel 400 Pixel-nach-Rechts und 400 Pixel-nach-Unten). 
+		
+		Wir dürfen nicht vergessen, zum Abschluss jeder Anweisung einen Strichpunkt an das Ende der Zeile zu setzen. 
+	
+Der zweite Teil ist die Funktion "draw()", in den die Anweisungen für die Zeichnung geschrieben werden. Zuerst wird eine Funktion aufgerufen, um den Hintergrund der Leinwand in einer bestimmten Graustufe auszumalen, zum Beispiel grau-blau mit "background(200). Je größer die Zahl in Klammern für die Graustufe, das sogenannte Argument des Funktionsaufrufs, desto heller wird der Hintergrund.
+
+Wenn du das Programm startest, ruft p5 den "setup" Teil nur einmal auf, aber den "draw" Teil ganz oft immer wieder. Das ist für bewegte Zeichnungen, die man Animationen nennt, sehr hilfreich. Momentan macht das für uns keinen Unterschied, und wir können sowohl in setup als auch in draw zeichnen, wie es uns besser gefällt.
+
+[$prog Kreis in draw]
+
+[$prog Kreis in setup]
+
+Es kommt aber immer streng auf die Reihenfolge an! Der Aufruf von "circle muss hinter dem Aufruf von "background stehen, egal ob in setup oder draw - sonst wird dein Kreis wieder übermalt.
+
+
+Jetzt aber endlich zu vielen weiteren Funktionen, mit denen die unterschiedlichsten Formen in deine eigenen sketche gemalt werden können!
+	
+		
+</body>
+</html>

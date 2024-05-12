@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <title>p5 - Kapitel 01.01</title>
+</head>
+<body>
+<h2>Fehler</h2>
+
+Hast du dich vielleicht beim Eintippen der Zeile <code>circle(200, 150, 200);</code> vertippt? Oder hast aus Versehen an einer anderen Stelle etwas gelöscht oder dazu geschrieben? Dann erscheint gar keine Zeichenfläche oder es wird nicht das gezeichnet, was du wolltest. In der Programmierumgebung von p5 liegt unter dem Editor ein mit "Konsole" beschriftetes Feld. Hast du dich vertippt oder geht sonst irgend etwas schief, redet p5 in diesem Bereich mit dir - wenn auch leider nur auf Englisch. 
+
+<$exec>Probier das mal aus und ändere im Editor absichtlich die createCanvas Anweisung in "createcanvas" oder was anderes Falsches, dann drücke Ausführen. Das Ergebnis: keine graue Zeichenfläche erscheint, und in der "Konsole" unter dem Editor beschwert sich p5 in einer Fehlermeldung, dass es mit unserer Eingabe nichts anfangen kann. 
+
+<$screen> Fehlermeldung
+
+Was kannst du da jetzt machen? 
+
+Wie du siehst, steht am Anfang der Fehlermeldung "[sketch.js, line 2]". "Line" (sprich "lain") heisst Zeile auf Englisch, und "sketch.js" ist dein Programm, das jetzt die fehlerhafte <code>"createcanvas"</code> Anweisung enthält. Die Programm-Zeilen sind im Editor links am Rand nummeriert, und p5 sagt uns mit dieser  Fehlermeldung: Dein Tippfehler steckt in Zeile 2. Mit dieser Auskunft, dass der Fehler in einer bestimmten Zeile steckt, sollte er dann nicht mehr so schwer zu finden und zu korrigieren sein. 
+
+Leider liegt p5 manchmal bei der Zeilennummer etwas daneben. Meistens zeigt eine Fehlermeldung von p5 entweder schon auf die richtige Zeile, oder der Tippfehler ist ein, zwei Zeilen oberhalb passiert. Findest du den Verschreiber nicht in der angegebenen Zeile, lohnt es sich, auch mal weiter oben im Programm danach zu suchen.
+
+Der p5 Editor hilft dir dabei. Wie du bestimmt schon gemerkt hast, sind die Funktionen, die p5 kennt, im Editor etwas dicker in Blau geschrieben. Die vertippte Funktion "createcanvas statt "createCanvas wird jedoch in normaler Schriftstärke geschrieben, weil p5 das falsche "createcanvas nicht mehr als eigene Funktion erkennt.
+
+Auch wenn du zum Beispiel "function draw() falsch als "functionX draw() schreibst, erkennt der p5 Editor das Wort "functionX nicht mehr. Es wird dann in blauer Farbe und nicht mehr grau geschrieben. Denn Wörter wie "function haben eine ganz spezielle Bedeutung in p5. Man nennt sie "Schlüsselwörter", und Schlüsselwörter schreibt der Editor in Grau. "functionX ist aber kein Schlüsselwort und deshalb nicht grau geschrieben. Das ist auffällig, und du kannst so einen Tippfehler finden und korrigieren.
+
+Probier das alles mal selber aus und schau dir an, welche Auswirkungen Vertipper im Programm haben. Keine Angst: Du kannst nichts kaputt machen. Es passiert garantiert nichts, ausser dass das Programm nicht mehr funktioniert. Dafür lernt man für später, wenn ein richtiger Tippfehler aus Versehen passiert, wie p5 reagiert und wie eine Fehlermeldung aussehen kann.
+
+Eine Lösung funktioniert glücklicherweise immer. Wenn du das Browser-Fenster mit dem p5 Editor neu lädst, wird eine neue, frische und fehlerfreie Editor-Seite dargestellt. Der Nachteil: alles, was du bisher geschrieben hast, wird weggeworfen und ist verloren. Solange das aber nur ein oder zwei Zeilen sind, ist es manchmal einfacher, neu anzufangen, statt nach einem Vertipper zu suchen. Du kannst die Browser-Seite im Browser Menü oben links neu laden, wenn du auf den Pfeil drückst, der sich fast selber in dne Schwanz beisst. Wenn du gefragt wirst, ob du die Webseite neu laden und deine Änderungen verwerfen willst, antworte mit 'Ja' - wir wollen die Seite mit den Tippfehlern ja gerade los werden.
+
+Jedenfalls sind Fehlermeldungen nicht schlimm und kommen sehr häufig vor. Korrigiere den Schreibfehler oder lade die Browser-Seite ganz neu und alles ist wieder gut.
+
+============>
+
+
+<h2>Syntax</h2>
+
+Vielleicht ist dir aufgefallen, dass es keine Fehlermeldung gibt, wenn du den Strichpunkt $u; am Zeilenende hinter einer Anweisung weglässt oder löschst. p5 kann damit umgehen, wenn der Strichpunkt am Zeilende fehlt - meistens wenigstens. Manchmal aber nicht, ganz sicher zum Beispiel dann nicht, wenn du zwei Anweisungen in eine Zeile schreibst. Das führt zu Fehlern, die richtig schwer zu finden sind, weil es sonst ja immer ohne Strichpunkt funktioniert. Deshalb die ausdrückliche Empfehlung, an das Ende jeder Anweisung immer einen Strichpunkt $u; zu schreiben.
+
+Wahrscheinlich hast Du auch gemerkt, dass es schwieriger ist, Fehler zu finden oder den Überblick zu behalten, wenn die Programmzeilen unterschiedlich weit weg vom linken Rand stehen, also unterschiedlich eingerückt sind, oder wenn die einzelnen Anweisungen und Argumente durch Leerzeichen getrennt sind. Um die Anardung der Zeilen und so, die Formatierung des Programms, richtig schön zu machen, gibt es im Menü der p5 Programmierungebung, wenn die Leiste mit "Bearbeiten" ausgefahren wird, den Punkt $u"Code formatieren".
+<$s> Wenn das angeklickt wird, werden alle Einrückungen und Wortabstände übersichtlich angeordnet. Sollte das mal nicht klappen, fehlt wahrscheinlich irgendwo eine Klammer oder es ist irgendwo eine Klammer zuviel -  auch so kannst Du einen Tippfehler finden. Deshalb die Empfehlung: verwende $u"Code formatieren" häufig! 
+
+<h2> Programmierer Slang </h2>
+
+Bei der Gelegenheit können wir noch ein paar ziemlich coole Begriffe aus der Programmierer-Sprache kennenlernen. 
+
+Mit $b"Code formatieren" ist das Formatieren des Programms gemeint. Ein Code (sprich "koud") ist also das Programm, und manchmal doppelt gemoppelt der "Programmcode". Ein Programm schreiben heisst $b"coden" (sprich "koudn"), und manchmal auf Deutsch kodieren, obwohl das eigentlich "etwas verschlüsseln" bedeutet. $??
+
+Ein $b"Tippfehler" ist auf Englich ein "typographical error", was ziemlich umständlich auszusprechen ist. Deshalb sagen alle zu einem Vertipper nur "typo" (sprich "teipo"). Der typo kommt nicht nur beim coden, sondern auch im Deutschaufsatz vor...
+
+Die ganzen Regeln, die es in p5 und überhaupt allen Programmiersprachen gibt - wie Wörter geschrieben werden müssen, wie Klammern gesetzt werden müssen, und viele andere Vorschriften, die wir noch kennenlernen werden - nennt man die $b"Syntax" einer Programmiersprache. Syntax ist das Sammelsurium von Wörtern, die in einer Programmiersprache eine ganz bestimmte Bedeutung haben und den Regeln, wie diese Wörter geschrieben und zusammengestellt werden müssen. Jede  natürliche Sprache, wie zum Beispiel Deutsch, hat auch viele Regeln, da heissen sie "Grammatik". Die Syntax einer Programmiersprache ist wie die Grammatik einer Sprache. So wie die Grammatik einer natürlichen Sprache festlegt, wie Wörter zu sinnvollen Sätzen zusammengefügt werden, legt die Syntax einer Programmiersprache fest, wie Codezeilen zu sinnvollen Programmen zusammengefügt werden.
+
+In deinem p5 Editor werden Wörter, die p5 kennt, grau oder blau und fett geschrieben. Diese Wörter nennt man "Schlüsselwörter", weil sie wichtig in der Programmiersprache sind: sie gehören zur "Syntax" von p5. Deshalb heisst die Hervorhebung der Schlüsselwörter im Editor auch $b"Syntax-Highlighting", denn "Highlighting" (sprich "haileiting") bedeutet "Hervorhebung" auf Englisch. Das sollte jeder gute Editor können!
+
+Um auszuprobieren, wie Fehlermeldungen aussehen, haben wir vorher "createcanvas statt "createCanvas geschrieben. Das richtig geschriebene Schlüsselwort "createCanvas kommt von "create canvas", also "erzeuge Leinwand". Wenn in einem dann zusammen geschriebenen Wort das zweite mit einem Großbuchstaben anfängt ("createCanvas), heisst das "CamelCase (sprich "kämlkeis), weil ein Kamel in der Mitte einen Höcker hat. Zusammen gefügte Wörter (wie "Ja + Nein" = "Jein) nennt man im Deutschen "Kofferwort (wie zum Beispiel Sprachführer oder Mechatroniker), dann ist die Schreibweise "CamelCase auf Deutsch ein "Kamelkoffer.  
+
+<h2> Kommentare </h2>
+
+Viele ziemlich wichtige Zeilen in einem Programm sind dem Computer völlig schnurz: die Kommentare. Wenn du dir nach kurzer Zeit ein von dir selbst geschriebenes Programm wieder ansiehst, wirst du wie jeder andere Programmierer auch ganz schnell die Erfahrung machen, dass du nicht mehr weisst, warum du genau diese bestimmten Anweisungen genau an diese Stelle geschrieben hast. Deshalb solltest du so oft wie möglich Kommentarzeilen in deine Programme schreiben. Sie helfen dabei, den Code verständlicher zu machen, indem sie erklären, was bestimmte Teile des Codes tun oder warum sie dort stehen. Das gilt natürlich erst recht dann, wenn andere Leute dein Programm lesen und verstehen wollen.
+
+In p5 schreibst du Kommentare, indem du zwei Schrägstriche (//) vor einen Kommentar setzt. Alles, was nach den Schrägstrichen kommt, wird vom Computer ignoriert und nicht als Code interpretiert. Du kannst eine ganze Zeile als Kommentar schreiben, wenn du die Zeile mit zwei Schrägstrichen beginnst; oder du schreibst hinter eine Anweisung, die der Computer noch ausführen soll, zwei Schrägstrichen und danach den Kommentartext. Alles, was in einer Zeile hinter zwei Schrägstrichen steht, wird vom Computer beim Ausführen des Programms komplett ignoriert. Für längere Texte in mehreren Zeilen beginnst du einfach jede Zeile mit zwei Schrägstrichen. 
+
+$i Beispiel:
+
+
+<h2> Übersetzung </h2>
+
+==> Fehlermeldung übersetzen
+==> Referenz übersetzen
+
+
+====================================================================================================
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+	<h1>1. Wo bin ich hier?</h1>
+  <h1>1.1 Was ist denn eigentlich ein Computer-Programm?</h1>
+  <p>
+    Wie du weisst, gibt es fast überall Computer. Sie werden beispielweise verwendet
+    um sich Sachen zu merken, um zu rechnen,
+    zum Spielen und um Maschinen und Roboter zu steuern.
+    Sie stecken in jedem Auto, jeder Waschmaschine und jeder Kasse, und
+    jedes Handy ist nichts anderes als ein Computer.
+  </p> 
+	<p> </p>
+  <p>
+    Damit der Computer weiss, was er tun soll, müssen wir ihm zunächst 
+    sagen, was seine Aufgabe ist. Das muss Schritt für Schritt wie bei einer
+    Liste für die Hausaufgaben oder den Einkauf
+    aufgeschrieben werden, mit einzelnen Anweisungen, die der Computer
+    verstehen kann.
+    Alle Anweisungen für eine bestimmte Aufgabe sind schliesslich ein
+    Computerprogramm. Ein solches Programm zu schreiben nennt man Programmieren.
+    Programmieren bedeutet also, einem Computer zu sagen, was er machen
+    soll.
+    Die einzelnen Anweisungen müssen in einer Sprache geschrieben
+    werden,
+    die der Computer auch versteht: einer Programmiersprache. 
+	</p>
+  <p>
+    Es gibt viele verschiedene Programmiersprachen, die für ganz
+    unterschiedliche
+Aufgaben geeignet sind. Jede hat ihre eigenen Regeln, aber alle übersetzen deine Anweisungen in die Sprache, die der Computer versteht. 
+		
+		Wir verwenden als Programmiersprache p5
+    (englisch "pi feiv" ausgesprochen). Mit p5 kannst Du bunte und
+    bewegte Zeichnungen, Spiele und viele andere lustige, schöne und nützliche Anwendungen erschaffen.
+  </p>
+
+
+  <h2>1.2 Die Programmierumgebung</h2>	
+	<p> 
+Um unsere p5 Programme einzugeben und die Ausgabe des Computers anzusehen ist schon ein Arbeitsplatz für uns im Internet eingerichtet.  
+Hier, in dieser "Programmierumgebung" gibt es Werkzeuge, die dir helfen, dein Programm zu schreiben, zu testen und dann anzusehen, was der Computer daraus macht. Die p5 Programmierumgebung findest Du, wenn Du auf diese Internet-Seite gehst:
+</p>
+<p>
+    <a href="https://editor.p5js.org/">p5 Programmierumgebung</a>
+</p>
+
+Dein Browser-Fenster sollte jetzt ungefähr so aussehen:
+<p><img src="../Bild/p5Editor (000) - Uebersicht.png"></p>
+	
+Die oberste Zeile, die mit "p5*" anfängt, ist die "Menüleiste". Dort stellen wir als erstes die Sprache von Englisch auf Deutsch um. Klappe die Liste unter "Englisch" auf und klicke auf "Deutsch".
+  <p><img src="../Bild/p5Editor (001) - auf Deutsch umschalten.png"></p>
+
+<p>	Unter der Menüleiste ist der Startknopf, mit dem ein Programm gestartet wird und rechts daneben ist der Stopp-Knopf, mit dem das Programm wieder angehalten werden kann.</p>
+
+<p><img src="../Bild/p5Editor (002) - Start und Stopp.png"></p>
+
+<p>Unter den beiden Knöpfen, auf der linken Seite, steht die Überschrift "sketch.js" über einem Bereich, in dem es sogar schon ein paar Programm-Anweisungen gibt, die durchnummeriert sind. Wir sehen uns diesen Bereich, in dem Du gleich Dein Programm schreibst, noch genau an. </p>
+
+	<p><img src="../Bild/p5Editor (003) - Sketch und Vorschau.png"></p>
+	
+<p>Rechts davon, unter der Überschrift "Vorschau", ist eine leere Fläche, auf die der Computer zeichnet, was immer ihm das Programm vorschreibt. </p>
+
+<p>Weil wir p5-Programmier-Profis sind, nennen wir den Bereich zum Programme schreiben "Editor", und die Computer-Zeichnung, die aus dem Programm rauskommt, "Sketch" ("Skizze" auf Englisch, sprich "skätsch"). Falls der Computer einfach so einen Text schreiben muss, landet das unten links in dem mit "Konsole" bezeichneten Bereich.</p>
+
+<p>Was es in dieser Programmerumgebung sonst noch so gibt, sehen wir uns später an, wenn wir es verwenden. Jetzt wollen wir zunächst verstehen, was da schon im Editor geschrieben steht.</p>
+
+<p><img src="../Bild/p5Editor (004) - Editor, Vorschau und Konsole.png"></p>
+
+Willst Du das noch einmal probieren, starte die p5.js-Editor Browser-Seite mit dem Neu-Laden Knopf ganz neu - Neu-Laden ist in den meisten Browsern der kreisförmige Pfeil oben links. Das Neu-Laden sollte übrigens immer klappen, wenn Du meinst, der Editor reagiert nicht mehr oder falsch, oder etwas soll im Editor verschwinden und alles soll auf Anfang gestellt werden. 
+
