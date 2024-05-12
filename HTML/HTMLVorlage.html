@@ -1,3 +1,37 @@
+<!DOCTYPE html><html lang="en"><head>
+    <title>JavaScript</title>
+    <script src="../../LIB/p5.js"></script>
+    <script src="../../LIB/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8">
+
+  </head>
+  <body>
+    <script src="Sinus03.js"></script>
+</body></html>
+=================
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.1/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.1/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+
+  </head>
+  <body>
+    <main>
+    </main>
+    <script src="sketch.js"></script>
+  </body>
+</html>
+
+
+=========================
+
 <!DOCTYPE html>
 <html lang="de">
 
@@ -21,29 +55,38 @@
     Wir kennen die (<code>background()</code>) Funktion schon. Sie ist
     automatisch ganz oben im (<code>draw()</code>) Abschnitt des Editors
     vorhanden. So wird gleich am Anfang die ganze Leinwand neu übermalt und für
-    die neue Zeichnung vorbereitet. Wie du weisst, wird <code>draw()</code>
+    die neue Zeichnung vorbereitet. <br>
+    (Link zu
+    <a href="ShiffmanYTintro" /a>Daniel Shiffmans "Code! Programming with
+      p5.js"</a> YouTube Videos)
+    <br>
+    (Link zu
+    <a href="960 Quellen.html"> Datei 960 Quellen</a>
+
+    Wie du weisst, wird <code>draw()</code>
     immer und immer wieder neu durchlaufen. <code>background()</code> ganz am
     Anfang sorgt dafür, dass für einen neuen Durchlauf eine frische leere
     Leinwand zur Verfügung steht.
   </p>
 
-  <p id="merke">
-  <p id="merke"> <span class="merke">Wir merken uns:</span> <br>
+  <p id="merke"> <span class="rahmen">Wir merken uns:</span> <br>
     Wir haben auch schon gemerkt, dass der Parameter "grau" der
     (<code>background(grau)</code>) Funktion den Grauwert des Hintergrunds
     festlegt. Die möglichen Werte für "grau" sind 0 bis 255, wobei 0 einen total
     schwarzen und 255 einen ganz weißen Hintergrund zeichnet.
   </p>
 
-  <p id="ausprobieren"> <span class="ausprobieren">Mach's selbst:</span> <br>
-    Ändere in einer frisch
-    geladenen Editor-Sitzung den
-    background-Wert, und setze ihn auf einen Wert zwischen 0 und 255. Was
-    passiert, wenn du das Argument "grau" mit einer größeren Zahl als 255
-    übergibst, zum Beispiel mit (<code>background(400)</code>)? p5 ist clever
-    und denkt sich: 400 ist nicht erlaubt, weil zu groß, deshalb nehme ich einen
-    Wert, der nur so groß wie möglich ist - und das ergibt weiß (wie bei "grau"
-    = 255).
+  <p id="ausprobieren"> <span class="rahmen">Mach's selbst:</span> <br>
+    Ändere in einer frisch geladenen Editor-Sitzung den
+    background-Wert, und setze ihn auf einen Wert zwischen 0 und 255.
+  </p>
+  <p>
+    <span id="nebenbei"> <span class="rahmen">Übrigens:</span> <br>
+      Was passiert, wenn du das Argument "grau" mit einer größeren Zahl als 255
+      übergibst, zum Beispiel mit (<code>background(400)</code>)? p5 ist clever
+      und denkt sich: 400 ist nicht erlaubt, weil zu groß, deshalb nehme ich
+      einen Wert, der nur so groß wie möglich ist - und das ergibt weiß (wie bei
+      "grau" = 255).</span>
   </p>
 
   Das ist unsere erste fantastische Farbe: der Grauwert! Immer dann, wenn du
@@ -60,6 +103,53 @@
   In p5 gibt es drei Farben zur Auswahl: rot, grün und blau. Der Trick ist, dass
   man diese drei Farben - wie beim Malen mit Wasserfarben - mischen kann, um
   noch ganz andere Farben oder Farbtöne herzustellen.
+
+  ==========================
+
+
+  iframe
+  <br>
+  <iframe src="../Code/000 Sinus.html" width="400px" height="400px"></iframe>
+  <br>
+
+  p5.js-widget 1
+  <br>
+
+  <script type="text/p5" data-autoplay data-height="300"
+    data-preview-width="300" data-p5-version="1.9.1">
+function setup() {
+  createCanvas(200, 200);
+  background(220);
+  rect(100, 100, 50, 50);
+}
+</script>
+
+  <br>
+  p5.js-widget 2
+  <script type="text/p5" src="../Code/sketch.js" data-autoplay data-height="300"
+    data-preview-width="300" data-p5-version="1.9.1">
+</script>
+  <br>
+
+  sketch.js
+  <br>
+  <script src="../Code/Sinus02.js"></script>
+  <br>
+  <p>============================= kommt vorher ???</p>
+  <noscript>
+    <p>Dieser Absatz ist gehört zum Inhalt des Dokuments, ist aber
+      im Browser nur zu sehen, wenn JavaScript deaktiviert oder nicht
+      zur Verfügung steht.</p>
+  </noscript>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.1/p5.js"></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.1/addons/p5.sound.min.js"></script>
+<script src="//toolness.github.io/p5.js-widget/p5-widget.js"></script>
+
+</html>
+
 
   ==========================
 
