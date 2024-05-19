@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <title>Programmieren lernen mit p5 - Kapitel 1</title>
+</head>
+
+<body>
+
+	<h2 id="K013">Woraus besteht das Programm?</h2>
+  <p>
+    Ein Programm besteht aus einzelnen Anweisungen an den Computer. Sie werden
+    beim Abspielen des Programms Schritt für Schritt nacheinander unglaublich schnell
+    ausgeführt. Statt <span id="Begriff">Anweisung</span> kann man auch
+    "Kommando", "Befehl" oder, sehr vornehm, "Instruktion" sagen.
+  </p>
+  Ganz viele dieser Anweisungen sind fertige Bausteine, die du nur noch in
+  dein Programm
+  einsetzen musst. Eine Programmmiersprache, wie zum Beispiel p5, sorgt
+  dafür, dass es
+  diese fertigen Bausteine gibt - du musst nur lernen, sie richtig zu verwenden.
+  </p>
+	
+  <h3 id="K013A"> Funktion </h3>
+  <p>
+    So ein fertiger Baustein heisst <span id="Begriff">Funktion</span>, auf Englisch "function" (sprich "fanktschn").
+    Eine Funktion erledigt eine ganz bestimmte Aufgabe, zum Beispiel einen
+    Kreis zeichnen oder den Hintergrund eines Bildes ausmalen. Viele
+    Funktionen hintereinander ausgeführt ergeben dann das Programm,
+    das ein ganzes Bild zeichnet.
+  </p>
+
+  <p> <span id="tbd">??? >>></span>
+	  Man kann eine Funktion in einem Zeichen-Programm damit vergleichen, wie ein Künstler arbeitet. Als Künstler weisst du genau, wie man einen Kreis zeichnet. Du führst ganz
+    automatisch die Funktion 'zeichne einen Kreis aus', sobald du es willst. Du
+    rufst dich dabei sozusagen selbst mit der Funktion 'zeichne einen Kreis' auf.
+    Genauso kannst du in p5 eine bestimmte Funktion aufrufen, und ein Kreis wird
+    gezeichnet.
+  </p>
+  <p>
+    Um den Kreis zu zeichnen, gehören ganz viele Schritte, Papier hinlegen,
+    Bleistift spitzen, und so weiter, über die du gar nicht nachdenken musst.
+    Genauso enthält die entsprechende p5-Funktion schon alles, was benötigt
+    wird, um im Computer einen Kreis zu zeichnen. Alles das haben die Leute, die
+    p5 entwickelt haben, schon in die Funktion eingebaut.
+  </p>
+  <p>
+    Als Künstler willst du aber nicht nur einen Kreis zeichnen, sondern noch
+    viel mehr. Dazu führst du viele solcher Funktionen wie 'einen Kreis
+    zeichnen' oder 'einen Strich zeichnen' hintereinander aus, um ein fertiges
+    Gemälde zu erhalten. Genauso schreibst du viele Funktionen in ein
+    p5-Programm, die hintereinander aufgerufen werden und das Kunstwerk ergeben.
+  </p>
+  <p> <span id="tbd">??? oder ...>>></span>
+    Oder du stellst dir eine Funktion in einem Computer-Programm wie einen kleinen Kobold vor, den du rufen kannst, wenn du ihn benötigst, und der genau das zeichnet, was du haben möchtest. Die Arbeit verschiedener Kobolde hintereinander ergibt dann dein fertiges Bild. <br>
+    Du kannst dir auch vorstellen, du baust statt eines Programms eine Maschine
+    zusammen. Dann sind Funktionen die einzelnen, schon fertigen Bauteile,
+    die du richtig zusammensetzen musst, damit die Maschine läuft. <br>
+  </p>
+  <p>
+    Eine "Funktion" in einem Programm wird also aufgerufen, um eine ganz
+    bestimmte Aufgabe zu erledigen. Zum Aufruf der Funktion schreibst du einfach
+    den Namen der Funktion in das Programm. Wie die einzelnen Funktionen genau heissen
+    werden wir hier nach und nach kennenlernen.
+  </p>
+  <p>
+
+<h3  id="K013B"> Welche Funktionen stehen schon im Editor?</h3>
+
+  <p>
+    Im Editor stehen schon von Anfang an die <b>Aufrufe</b> von zwei Funktionen:
+    <br>
+    <code style="padding-left: 30px;"> createCanvas(200, 200); </code>
+    und
+    <br>
+    <code style="padding-left: 30px;"> background(220); </code>
+  </p>
+
+  <p>
+    Die erste Funktion ist 
+    <code>createCanvas(200, 200)</code>. Damit wird die Zeichenfläche auf der
+    linken Seite überhaupt erst erzeugt, wenn du das Programm startest.
+    Auf Englisch heisst create (sprich "cre-eit") anlegen oder erschaffen, und
+    Canvas (sprich "känws") ist die Leinwand. Der Aufruf der Funktion
+    <code>createCanvas(200, 200)</code> sorgt also dafür, dass eine
+    Zeichenfläche oder Leinwand entsteht, auf der das Programm zeichnen kann.
+  </p>
+
+<p> Die zweite Funktion malt den Hintergrund der Zeichenfläche aus.
+    Diese Funktion hat den Namen <code>background</code>. "Background" bedeutet
+    auf Englisch "Hintergrund" (sprich "bek-graund").
+    Wenn du <code>background</code> in das Programm schreibst, also die Funktion
+    <code>background</code> aufrufst, wird die ganze Zeichenfläche übermalt.
+  </p>
+
+<p> Mit diesen beiden Funktionen entsteht eine 
+    Leinwand zum Zeichnen, die durch den Aufruf von <code>createCanvas(200, 200)</code>
+    erscheint und durch den Aufruf der Funktion <code>background(220)</code>
+    grau gefärbt wird. </p>
+
+  <h3 id="K013C"> Argument </h3>
+  <p>
+    Man muss einer Funktion ganz genau sagen, was sie machen soll. Deshalb hat
+    jede Funktion hinter ihrem Namen runde Klammern, <mark> ( </mark> und
+    <mark> ) </mark>, in die Zahlen oder Wörter geschrieben werden. Diese Zahlen
+    oder Wörter in den Klammern nennt man die <span id="Begriff">Argumente</span>
+    der Funktion. Manchmal wird dafür auch das Wort <span id="Begriff">Parameter</span>
+		verwendet.
+  </p>
+
+<p> Wozu braucht eine Funktion die Argumente? <br>
+    Als Künstler weisst du, wie dick dein Bleistift-Strich sein soll und in
+    welcher Farbe etwas gemalt wird. Einer p5-Funktion musst du das sagen,
+    und dazu verwendest du das Argument der Funktion. <br>
+		<p> <span id="tbd">???</span>
+    Das ist so, als ob du deinem Funktions-Kobold genau sagen musst, was er tun
+    soll, sonst kommt bei Kobolden nur Unfug raus. Auch beim Zusammenbau einer
+    Maschine kannst du nicht einfach ein Bauteil einer Sorte nehmen, sondern die
+    Größe und Farbe des Bauteils müssen ebenfalls passen.
+  </p>
+  <p>
+    Sehen wir uns die <code>background</code> Funktion als Beispiel an. 
+		Die Funktion will von uns wissen, mit welcher Farbe die Zeichenfläche 
+    übermalt werden soll. Um diese Farbe festzulegen, verwenden wir das Argument der
+    Funktion <code>background(220)</code>. Es steht, wie immer,in runden Klammern hinter dem
+    Namen der Funktion, hier also <mark>(220)</mark>. Das Argument legt fest, wie hell
+    oder dunkel der Hintergrund der Leinwand werden soll. Das Argument kann
+    Werte zwischen 0 für weißen Hintergrund und 255 für schwarzen Hintergrund
+    annehmen.
+  </p>
+
+<p>   <span id="ausprobieren">Probier das gleich mal aus! Wie ändert sich 
+der Grauton des Hintergrunds, wenn du das Argument der Funktion 
+ <code>background(220)</code> änderst?
+			</span> </p> 
+	
+<!-- Original Inhalt des p5.js Editors: function & background -->
+  <script type="text/p5" src="../Code/010_01.js"
+	                       data-height="300" data-preview-width="400"
+                         data-p5-version="1.9.0">
+</script>
+
+<p> Also: Wenn du den Hintergrund deiner Zeichenfläche grau ausmalen willst,
+    schreibst du in das Programm die Anweisung <br>
+  <center> <code> background(200); </code> </center> <br>
+    So einfach ist das.
+    Der Wert <mark> (200) </mark> für das Argument liegt zwischen 0 für weißen
+    und 255 für schwarzen Hintergrund; das ergibt etwas wie "hell-schwarz", also
+    Grau. </p>
+
+<p> Wenn du eine neue Funktion kennenlernst, wird dir immer auch gesagt,
+    welche Werte als Argument erlaubt sind und für welchen Zweck die Funktion
+    welches Argument benötigt. Falls es mehrere Argumente für eine Funktion
+    gibt, stehen sie alle in den runden Klammern hinter der Funktion 
+		und werden dann durch Kommas getrennt. </p>
+
+<p> Es ist wichtig, den Namen einer Funktion immer ganz genau richtig
+    in das Programm zu schreiben, auch auf die Klein- und Großbuchstaben kommt
+    es dabei an.
+
+<p> Hinter jeder einzelnen Anweisung in p5 muss immer ein
+    Strichpunkt <mark> ; </mark> stehen. Nur so weiss das Programm, das diese
+    Anweisung beendet ist. Das gilt natürlich auch ganz dringend für den Aufruf einer
+    Funktion.
+  </p>
+	
+    <button onclick="document.location='010.html'">Zurück</button>
+    <button onclick="document.location='014.html'">Weiter</button>
+
+</body>
+
+<script src="//toolness.github.io/p5.js-widget/p5-widget.js"></script>
+
+</html>

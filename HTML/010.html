@@ -1,4 +1,6 @@
+
 <!DOCTYPE html>
+
 <html lang="de">
 
 <head>
@@ -133,7 +135,7 @@
   </ul>
   </p>
 
-  <h3 id="K012A">Tastatur</h3>
+  <h3 id="K012B">Tastatur</h3>
   Sicher hast du auch schon eine Tastatur vor dir liegen. Je nach Modell kann
   die
   etwas unterschiedlich aussehen, Buchstaben und Zahlen lassen sich aber
@@ -167,334 +169,118 @@
     steht noch im Anhang.
   </p>
 
-<h3> Das p5 Widget </h3>
+<h3 id="K012C">Editor und Vorschau</h3>
+
   <p>
-	  Ein Programm ist einfach nur Text, den der Computer verstehen und in eine Zeichnung umwandeln soll. Der Ort, an dem Text für ein Computer-Programm geschrieben wird, heisst  <span id="Begriff">Editor</span>. In einen Editor kannst du die Anweisungen für den Computer schreiben. Du siehst in dem Rahmen auf der linken Seite einen kleinen Editor mit Text. Den können wir verwenden, um die ersten Programm-Anweisungen kennen zu lernen, um Änderungen zu machen und herauszufinden, was dann passiert. Bald wird dieser Editor zu klein, und du lernst einen anderen Editor mit viel mehr Platz für deine eigenen Programme kennen.
-	  </p>
-		
-		<span id="tbd"> = Hier muss der eingefügte Editor stehen ! =</span>
-  <script type="text/p5" data-height="500" data-preview-width="500"
-    data-p5-version="1.9.0">
-    function setup() {
-      createCanvas(400, 400);
-    }
-    
-    function draw() {
-      background(220);
-    }
+	  Die Programm-Anweisungen an den Computer sind einfach nur Text, den der Computer verstehen und in eine Zeichnung umwandeln soll. Der Ort auf dem Bildschirm, an dem dieser Text geschrieben wird, heisst <span id="Begriff">Editor</span>. In diesen Editor kannst du die Anweisungen für den Computer schreiben. 
+		</p>
+		<p>
+Unten siehst du in dem Rahmen auf der linken Seite einen kleinen Editor. Diesen Editor können wir verwenden, um die ersten  Programm-Anweisungen kennen zu lernen, und um daran Änderungen zu machen und dann herauszufinden, was passiert. Bald wird dieser Editor für uns zu klein, und du lernst noch einen anderen Editor mit viel mehr Platz für deine eigenen Programme kennen.
+</p>	
+
+<!-- Original Inhalt des p5.js Editors: function & background -->
+  <script type="text/p5" src="../Code/010_01.js"
+	                       data-height="300" data-preview-width="400"
+                         data-p5-version="1.9.0">
 </script>
 
-
-
-
-
-
-		<span id="tbd"> Widget = ? =</span>
+<p>
+In diesem Editor stehen sogar schon ein paar Programm-Anweisungen.
+</p>
 
   <p id="ausprobieren">
-    Probier gleich aus, was das kleine Programm, das hier schon steht, so macht.
-    Dazu drückst Du die <span class="rahmen">Play</span>-Taste (die mit dem
-    Dreieck) und startest damit das Programm.
-  </p>
+    Probier doch gleich mal aus, was das kleine Programm, das da schon steht, so macht.
+		  </p>
+			<p>
+    Dazu drückst Du die <span class="rahmen">Play</span>-Taste über dem Editor (die mit dem
+    Dreieck) und startest damit das Programm. Wir werden diese Taste auch mal 
+		"Start-" oder "Abspiel-" Taste nennen; play ("plei" ausgesprochen) heisst 
+		spielen auf Englisch.
+</p>
   <p>
-    Achte darauf, wie sich der Bildschirm im Vorschau-Teil auf der linken
-    Seite ändert, wenn du den Abspiel-Knopf drückst. Zugegeben, so toll ist
-    das Ergebnis nicht: ein graues Rechteck erscheint. Das ist unsere
-    Leinwand, die durch den Aufruf von <code>createCanvas(400, 400)</code>
-    erscheint und durch den Aufruf der Funktion <code>background(220)</code>
-    grau
-    gefärbt wird.
+    Achte darauf, wie sich die rechte Seite ändert, wenn du den Abspiel-Knopf drückst.   
+		Da ist unsere erste Zeichnung, unser erster sketch! Zugegeben, so toll ist
+    das Ergebnis nicht: ein graues Rechteck taucht auf. Das ist die Leinwand für
+		eine Zeichnung. Sie wird durch die Programm-Anweisungen, die jetzt schon 
+		im Editor stehen, erzeugt, sobald du die Start- oder Play-Taste drückst.
   </p>
+	
   <p>
     Du kannst das Programm mit der <span class="rahmen">Stop</span>-Taste
-    (die mit dem Quadrat) wieder anhalten (auf Englisch hat 'Stop' nur ein
-    'p'). Die Leinwand, der Canvas, verschwindet wieder, weil das Programm jetzt
-    nicht mehr ausgeführt wird.
+    (die mit dem Quadrat) wieder anhalten (auf Englisch hat &#8222;Stop&#8220; nur ein
+    &#8222;p&#8220;). Die Leinwand, der sketch, verschwindet wieder, weil das Programm 
+		nach dem Stopp vom Computer nicht mehr ausgeführt wird.
   </p>
-  <p>
-    <span id="ausprobieren">Probiere mal aus, ob du das Programm - und die
-      Ausgabe - ändern kannst. Dazu änderst du irgendein Argument einer
-      Funktion, also eine der Zahlen in irgendeiner Klammer, egal welche.
-      Anschliessend musst du
-      noch einmal auf <span class="rahmen">Play</span> drücken, also das
-      geänderte Programm neu starten, um zu sehen, was
-      sich dadurch an der Ausgabe geändert hat.</span>
-  </p>
-  <p>
-    Nachdem du auf der linken Seite, im Editor, etwas geändert hast , kannst du
+	
+<p>    <span id="ausprobieren">Probiere mal aus, ob du das Programm - und damit
+      den sketch, der auf der rechten Seite erscheint - ändern kannst. 
+			Dazu kannst du in dem Editor eine Zahl in einer runden Klammer
+			kleiner machen, zum Beispiel <code>createCanvas(<mark>100</mark>, 200)</code> 
+			schreiben. 	</span> </p>
+			
+<p>		Wenn du eine Änderung im Editor gemacht hast, musst du
+      noch einmal neu auf <span class="rahmen">Play</span> drücken. Damit startest 
+			du das geänderte Programm von vorn und kannst genau beobachten, was sich an der Leinwand auf der rechten Seite ändert. Du kannst übrigens nach einer Änderung direkt auf "Start" drücken, ohne vorher erst auf "Stop" gedrückt zu haben - das ist bequemer.
+  </p> 
+	
+  <p> 
+    Nachdem du auf der linken Seite, im Editor, etwas geändert hast, kannst du
     diese Änderung mit der <span class="rahmen">Undo</span>-Taste (Pfeil zurück)
-    zurücknehmen oder gleich mit der <span class="rahmen">Revert</span>-Taste
-    das komplette Programm wieder in den ursprünglichen Zustand zurücksetzen.
-  </p>
-  <p>
-    Lass' das Programm nicht nur hier, sondern auch in deinem p5 Web-Editor
-    laufen. Unter 'Vorschau'
-    taucht die Zeichenfläche auf, nachdem du 'Play' (Dreieck) gedrückt hast! Sie
-    verschwindet wieder, wenn du 'Stop' (Quadrat) drückst. Es gibt keine
-    'Zurück'-Tasten im Web Editor, um Änderungen rückgängig zu machen.
+    wieder zurücknehmen. "Undo" (gesprochen &#8222;andu&#8220;) ist Englisch und bedeutet &#8222;rückgängig machen&#8220;. 
+			<br> "Undo" nimmt jedesmal nur einen einzigen Tastendruck zurück. 
+	 Ersetzt du zum Beispiel die erste "200" durch "100" in  <code>createCanvas(<mark>200</mark>, 200)</code>, steht dann <code>createCanvas(<mark>100</mark>, 200)</code> im Programm.	
+Das erste "Undo" nimmt jetzt nur das Einfügen der "1" aus "100" zurück und macht <code>createCanvas(<mark>00</mark>, 200)</code> daraus (womit die Leinwand verschwindet, wenn du "Play" drückst). Erst das zweite "Undo" macht das ursprüngliche Löschen der "2" aus "200" rückgängig und schreibt wieder <code>createCanvas(<mark>200</mark>, 200)</code> hin. Es lohnt sich also, genau hinzusehen, was im Editor steht, nachdem du "Undo" gedrückt hast. </p>
+		
+		<p> Das Zurücknehmen mit Undo kannst du selber wieder mit der <span   class="rahmen">Redo</span>-Taste rückgängig machen (die mit dem Pfeil vorwärts): dann ist alles wieder wie vor "Undo". "Redo (gesprochen &#8222;ridu&#8220;) ist Englisch und bedeutet &#8222;wiederherstellen&#8220;. 
   </p>
 
-
-  <h2 id="K021">Die Bausteine des Programms</h2>
-  <p>
-    Ein Programm besteht aus einzelnen Anweisungen an den Computer. Sie werden
-    beim
-    Abspielen des Programms Schritt für Schritt nacheinander unglaublich schnell
-    ausgeführt. Statt <span id="Begriff">Anweisung</span> kann man auch
-    "Kommando", "Befehl" oder, sehr vornehm, "Instruktion" sagen.
-  </p>
-  Ganz viele dieser Anweisungen sind fertige Bausteine, die du nur noch in
-  dein Programm
-  einsetzen musst. Eine Programmmiersprache wie p5 sorgt
-  dafür, dass es
-  diese fertigen Bausteine gibt - du musst nur lernen, sie richtig zu verwenden.
-  </p>
-	
-  <h3> Funktion </h3>
-  <p>
-    Ein solcher vorbereiteter Baustein heisst <span
-      id="Begriff">Funktion</span>, auf Englisch "function" (sprich
-    "fanktschn").
-    Eine Funktion erledigt eine ganz bestimmte Aufgabe,
-    zum Beispiel einen
-    Kreis zeichnen oder den Hintergrund eines Bildes
-    ausmalen. Viele
-    Funktionen hintereinander ausgeführt ergeben dann das Programm,
-    das ein ganzes Bild zeichnet.
+<p>	Mit der <span class="rahmen">Revert</span>-Taste kannst du schliesslich 
+    das Programm komplett auf einmal wieder in den ursprünglichen Zustand zurücksetzen. 
+		"Revert" bedeutet auf Englisch &#8222;rückgängig machen&#8220; und wird &#8222;riwört&#8220; ausgesprochen. Mit "Revert" gehen alle deine Änderungen verloren, also überlege gut, bevor du diese Taste drückst und alles zurücksetzt.
   </p>
 
-  <p> <span id="tbd">??? >>></span>
-    Als Künstler weisst du genau, wie man einen Kreis zeichnet. Du führst ganz
-    automatisch die Funktion 'zeichne einen Kreis aus', sobald du es willst. Du
-    rufst dich sozusagen selbst mit der Funktion 'zeichne einen Kreis' auf.
-    Genauso kannst du in p5 eine bestimmte Funktion aufrufen, und ein Kreis wird
-    gezeichnet.
-  </p>
   <p>
-    Um den Kreis zu zeichnen, gehören ganz viele Schritte, Papier hinlegen,
-    Bleistift spitzen, und so weiter, über die du gar nicht nachdenken musst.
-    Genauso enthält die entsprechende p5-Funktion schon alles, was benötigt
-    wird, um im Computer einen Kreis zu zeichnen. Alles das haben die Leute, die
-    p5 entwickelt haben, schon in die Funktion eingebaut.
-  </p>
-  <p>
-    Als Künstler willst du aber nicht nur einen Kreis zeichnen, sondern noch
-    viel mehr. Dazu führst du viele solcher Funktionen wie 'einen Kreis
-    zeichnen' oder 'einen Strich zeichnen' hintereinander aus, um ein fertiges
-    Gemälde zu erhalten. Genauso schreibst du viele Funktionen in ein
-    p5-Programm, die hintereinander aufgerufen werden und das Kunstwerk ergeben.
-  </p>
-  <p> <span id="tbd">??? oder ...>>></span>
-    Stell dir eine Funktion wie einen kleinen Kobold vor, den du rufen kannst,
-    wenn du ihn benötigst, und der genau das zeichnet, was du haben möchtest.
-    Die Arbeit vieler Kobolde hintereinander ergibt dein fertiges Bild. <br>
-    Du kannst dir auch vorstellen, du baust statt eines Programms eine Maschine
-    zusammen. Dann sind die Funktionen die einzelnen, schon fertigen Bauteile,
-    die du richtig zusammensetzen musst, damit die Maschine läuft. <br>
-  </p>
-  <p>
-    Eine "Funktion" in einem Programm wird also aufgerufen, um eine ganz
-    bestimmte Aufgabe zu erledigen. Zum Aufruf der Funktion schreibst du einfach
-    den Namen der Funktion in das Programm. Wie die einzelnen Funktionen heissen
-    werden wir hier nach und nach kennenlernen.
-  </p>
-  <p>
-    Nehmen wir als erstes Beispiel die
-    Funktion, die den Hintergrund der Zeichenfläche ausmalt.
-    Diese Funktion hat den Namen <code>background</code>. "Background" bedeutet
-    auf Englisch "Hintergrund" (sprich "bek-graund").
-    Wenn du <code>background</code> in das Programm schreibst, also die Funktion
-    <code>background</code> aufrufst, wird die ganze
-    Zeichenfläche übermalt.
-  </p>
-
-
-
-
-
-	
-  <h3> Argument </h3>
-  <p>
-    Man muss einer Funktion ganz genau sagen, was sie machen soll. Deshalb hat
-    jede Funktion hinter ihrem Namen runde Klammern, <mark> ( </mark> und
-    <mark> ) </mark>, in die Zahlen oder Wörter geschrieben werden. Diese Zahlen
-    oder Wörter in den Klammern nennt man das <span id="Begriff">Argument</span>
-    der Funktion.
-  </p>
-  <p>
-    <span id="tbd">???</span>
-    Als Künstler weisst du, wie dick dein Bleistift-Strich sein soll und in
-    welcher Farbe etwas gemalt wird. Einer p5-Funktion musst du das genau sagen,
-    und dazu verwendest du das 'Argument' der Funktion. <br>
-    Das ist so, als ob du deinem Funktions-Kobold genau sagen musst, was er tun
-    soll, sonst kommt bei Kobolden nur Unfug raus. Auch beim Zusammenbau einer
-    Maschine kannst du nicht einfach ein Bauteil einer Sorte nehmen, sondern die
-    Größe und Farbe des Bauteils müssen ebenfalls passen.
-  </p>
-  <p>
-    Bleiben wir bei dem Beispiel der <code>background</code> Funktion. Die
-    Funktion will von uns wissen, mit welcher Farbe die Zeichenfläche denn
-    ausgemalt
-    werden soll. Um diese Farbe festzulegen, verwenden wir das Argument der
-    Funktion
-    <code>background(220)</code>. Es steht immer in runden Klammern hinter dem
-    Namen
-    der Funktion, hier also <mark>(220)</mark>. Das Argument legt fest, wie hell
-    oder dunkel der Hintergrund der Leinwand werden soll. Das Argument kann
-    Werte zwischen 0 für weißen Hintergrund und 255 für schwarzen Hintergrund
-    annehmen.
-  </p>
-  <p>
-    Wenn du eine neue Funktion kennenlernst, wird dir immer auch gesagt,
-    welche Werte als Argument erlaubt sind und für welchen Zweck die Funktion
-    welches Argument benötigt. Falls es mehrere Argumente für eine Funktion
-    gibt, stehen sie alle in den runden Klammern und werden durch Kommas
-    getrennt.
-  </p>
-  <p>
-    Es ist wichtig, den Namen einer Funktion immer ganz genau richtig
-    in das Programm zu schreiben, auch auf die Klein- und Großbuchstaben kommt
-    es dabei an.
-  <p>
-    Hinter jeder einzelnen Anweisung in p5 muss immer ein
-    Strichpunkt <mark> ; </mark> stehen. Nur so weiss das Programm, das diese
-    Anweisung beendet ist. Das gilt natürlich auch für den Aufruf einer
-    Funktion.
-  </p>
-  <p>Also:
-    Wenn du den Hintergrund deiner Zeichenfläche grau ausmalen willst,
-    schreibst du in das Programm die Anweisung
-  </p>
-  <center> <code> background(200); </code> </center>
-  <p>
-    So einfach ist das.
-    Der Wert <mark> (200) </mark> für das Argument liegt zwischen 0 für weißen
-    und 255 für schwarzen Hintergrund; das ergibt etwas wie "hell-schwarz", also
-    Grau.
-    </div>
-  </p>
-
-  <h2 id="K022">Was steht da schon?</h2>
-
-===   E D I T O R ?? ===
-
-  <p>
-    Sehen wir uns an, was der p5 Editor für uns schon bereithält.
-    Es gibt hier mitten im Text immer mal wieder einen p5 Editor, damit du sehen
-    kannst, wovon wir reden. Du kannst dort Änderungen machen und
-    herausfinden, was dann passiert.
-  </p>
-  <p>
-    Beim Programmieren lernen kann man sich etwas nur dann merken, wenn man es
-    selbst mal getippt hat, und auch nur dann, wenn man dabei ein paar Fehler
+    Beim Programmieren lernen kann man sich eigentlich nur dann was merken, wenn man es
+    selbst mal getippt hat, und noch besser nur dann, wenn man dabei ein paar Fehler
     gemacht hat. Beim Programmieren lernen ist deshalb die wichtigste Regel:
-    Nachmachen, Ändern, Ausprobieren und kreativ selber machen!
-  </p>
+    Nachmachen, Ändern und Ausprobieren! <br>
+		Solltest du dich dabei einmal vertippt haben, schreibt p5 unter den Editor eine Zeile, 
+		die mit <span style="color: red;">Line</span> anfängt. Da steht (auf Englisch) drin, dass p5 nicht weiss, was deine (vertippte) Eingabe zu bedeuten hat. Wenn du 
+		dann aber die  "Undo"-Taste drückst, sollte alles wieder so gut funktionieren wie vorher. Also hab' bloss keine Angst, etwas auszuprobieren: du kannst nichts kaputt machen!</p>
 
-  <p>Als p5-Programmier-Profis nennen wir den Bereich zum Schreiben der
-    Programme
-    auf der linken Seite den <span id="Begriff">Editor</span>. <br>
-    Die Computer-Zeichnung auf der rechten
-    Seite heisst <span id="Begriff">Sketch</span> ("Skizze" auf
-    Englisch, sprich "skätsch").
-  </p>
+<p>   <span id="ausprobieren">Versuch' das gleich mal! Was passiert, wenn du den Funktionsaufruf &raquo;background&laquo; (&#8222;Hintergrund&#8220;) in &raquo;blackhound&laquo; (&#8222;schwarzer Hund&#8220;) änderst (und dann
+'Play' drückst)?
+</span> </p> 
 
+<!-- Original Inhalt des p5.js Editors: function & background -->
+  <script type="text/p5" src="../Code/010_01.js"
+	                       data-height="300" data-preview-width="400"
+                         data-p5-version="1.9.0">
+</script>
 
+<p>Kannst du deine Änderung mit den richtigen Tasten Schritt für Schritt rückgängig machen - und dann den &#8222;schwarzen Hund&#8220; mit den Tasten erneut einfügen?  </p> 
 
-  <h2 id="K013">Das Atelier des Programmier-Künstlers</h2>
-  <p>
-    Um p5 Programme zu schreiben, ist für dich schon eine Künstler-Werkstatt,
-    ein Atelier, im Internet eingerichtet. Hier wirst du Programme "entwickeln",
-    also schreiben, weshalb man man diese Werkstatt "Entwicklungsumgebung" oder
-    "Programmierumgebung" nennt. Hier kannst du Programme schreiben, testen und
-    gleich ansehen, ob der Computer daraus gemacht hast, was du wolltest.
-  </p>
-  <p>
-    Deine Künstler-Werkstatt, die p5 Entwicklungsumgebung, liegt auf dieser
-    Internet-Seite
-  </p>
-  <p>
-    <center>
-      <a style="text-align:center; font-size:large;"
-        href="https://editor.p5js.org/" target="_blank" ;>p5 Web Editor</a>.
-    </center>
-  </p>
-
-  <p>Rufe die Seite auf (klicke auf den Link "p5 Web Editor") und lege gleich
-    ein Lesezeichen
-    ("bookmark") im Browser dafür an. Das geht in den meisten Browsern mit dem
-    Stern rechts neben der Zeile ganz oben auf der neu geöffneten Seite, in der
-    jetzt <code>https://editor.p5js.org/</code> steht.
-  </p>
-
-  Dieses Browser-Fenster sollte ungefähr so aussehen:
-  <p><img src="../Bild/p5Editor (000) - Uebersicht.png"
-      alt="p5 Entwicklungsumgebung">
-  </p>
-  Das ist die p5 Entwicklungsumgebung.
-  <p>
-    Die oberste Zeile, die links mit
-    <span style="background-color:red"> p5* </span> anfängt, ist die
-    "Menüleiste".
-    Dort stellen wir gleich mal die Sprache von Englisch auf Deutsch um. Klappe
-    die Liste unter dem Wort "English" in der Menüleiste auf und klicke auf
-    "Deutsch".
-  </p>
-  <p><img src="../Bild/p5Editor (001) - auf Deutsch umschalten.png"
-      alt="Menüleiste">
-  </p>
-  Jetzt sollten alle Überschriften in der Menüleiste auf Deutsch geschrieben
-  sein.
-
-  <p> Unter der Menüleiste ist die Taste, um ein Programm zu starten.
-    Diese Start-Taste wird manchmal auch Play-Taste oder "Abspielknopf" genannt.
-    Rechts daneben liegt der Stopp-Knopf, mit dem das Programm wieder
-    angehalten werden kann.</p>
-  <p><img src="../Bild/p5Editor (002) - Start und Stopp.png"
-      alt="Start und Stopp-Taste">
-  </p>
+<p>
+Damit es leichter wird, etwas zu beschreiben, vergeben wir noch ein paar Bezeichnungen. <br>
+Der gesamte Rahmen oben, mit dem Editor links und der Ausgabe rechts, heisst 
+&#8222;<Begriff>p5 widget&#8220;</Begriff>. 
+Ein &#8222;widget&#8222; ist genau so ein kleiner eingebauter Rahmen - wenn du willst, kannst du dir es als &#8222;witch-et&#8220;, als &#8222;Hexchen&#8220; merken - wenigstens wird es so gesprochen. <br>
+In den <b>Editor</b> auf der linken Seite schreiben wir das Programm, das weisst du ja schon. Die rechte Seite, auf der die Leinwand und die Zeichnung erscheinen, heisst  &#8222;Vorschau&#8222;-Bereich oder kurz  &#8222;Vorschau&#8222;. <br>
+Wenn sich p5 zum Beispiel über einen Tippfehler beschwert, wie gerade eben, wird diese 
+Text-Ausgabe <br>
+<span style="background-color: grey;" <span style="color: red;"Line 6: </span> Uncaught ReferenceError: blackhound is not defined </span>
+<br> unter den Editor geschrieben. Diesen Bereich für Textausgabe nennen wir die &#8222;<Begriff>Konsole</Begriff>&#8220;.
+</p>
 
   <p>
-    Unter diesen beiden Tasten, auf der linken Seite, steht die Überschrift
-    <span class="rahmen" style="background-color:yellow"> sketch.js </span>.
-    In dem Rahmen darunter gibt es sogar schon ein paar Zeilen mit
-    Programm-Anweisungen, die auf der linken Seite nummeriert sind. Wir sehen
-    uns diesen Bereich, in den alle p5 Programme geschrieben werden, noch genau
-    an.
+    Jetzt sehen wir uns nur noch kurz an, wie genau die Leinwand und der Hintergrund entstehen, dann aber legen wir mit unseren eigenen Zeichnungen los!
   </p>
 
-  <p>Rechts davon, unter der Überschrift <span class="rahmen"
-      style="background-color:yellow">Vorschau
-    </span>, ist eine leere Fläche, auf der gezeichnet wird, was du mit deinem
-    Programm erschaffen hast.
-  </p>
-  <p>
-    <img src="../Bild/p5Editor (003) - Sketch und Vorschau.png"
-      alt="Rahmen für den Editor und die Zeichnung">
-  </p>
 
-  <p>Als p5-Programmier-Profis nennen wir den Bereich zum Schreiben der
-    Programme
-    auf der linken Seite den <span id="Begriff">Editor</span>. <br>
-    Die Computer-Zeichnung auf der rechten
-    Seite heisst <span id="Begriff">Sketch</span> ("Skizze" auf
-    Englisch, sprich "skätsch").
-  </p>
-
-  <p><img src="../Bild/p5Editor (004) - Editor, Vorschau und Konsole.png"
-      alt="Editor, Vorschau und Konsole">
-  </p>
-
-  <p>Normaler einfacher Text, den der Computer schreiben will, landet in dem
-    Rahmen ganz unten links, der mit <span class="rahmen">Konsole</span>
-    überschrieben ist.</p>
-
-  <p>Was es in dieser Entwicklungsumgebung sonst noch so gibt, sehen wir uns
-    später an, wenn wir es brauchen. Jetzt wollen wir rasch mit dem
-    Programmieren loslegen!
-
+<div><center>
     <button onclick="document.location='005.html'">Zurück</button>
-    <button onclick="document.location='014.html'">Weiter</button>
+    <button onclick="document.location='012.html'">Weiter</button>
+</center></div>
 
 </body>
 
