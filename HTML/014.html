@@ -23,21 +23,22 @@
 	
 	<p>
 		Um einen Kreis zu zeichnen, gibt es in p5 die Funktion
-		<code><mark>circle</mark>(100, 120, 50)</code>. &ldquo;Circle&rdquo; (sprich &bdquo;cörcl&rdquo;) bedeutet &bdquo;Kreis&rdquo; auf Englisch. <br>
-		Das erste Argument von <code>circle(<mark>100</mark>, 120, 50)</code>, hier
+		<code><mark>circle</mark>(100, 120, 50)</code>. &ldquo;Circle&rdquo; (sprich &bdquo;cörcl&rdquo;) bedeutet &bdquo;Kreis&rdquo; auf Englisch. </p>
+		
+<p>Wie du siehst, zeichnet die Anweisung "circle" eine Kreisscheibe mit Rand, nicht nur den Rand allein wie bei einem Zirkel. 
+<br>Jede Figur, die in p5 gezeichnet wird, besteht aus dem Rand aussenrum, <em>und</em> der gesamten Fläche, die dieser Rand umschliesst. </p> 
+		
+<p>		Das erste Argument von <code>circle(<mark>100</mark>, 120, 50)</code>, hier
 		'<mark>100</mark>', legt fest, wieviele Pixel der Mittelpunkt des Kreises vom <em>linken</em>
 			Rand der Zeichenfläche entfernt ist. <br>
 		Das zweite Argument der Funktion
 		<code>circle(100, <mark>120</mark>, 50)</code>, hier  '<mark>120</mark>',
-		legt fest, wie viele Pixel der Mittelpunkt des Kreises vom <em>oberen</em> Rand der Zeichenfläche entfernt ist. 
-				
-		<br>
+		legt fest, wie viele Pixel der Mittelpunkt des Kreises vom <em>oberen</em> Rand der Zeichenfläche entfernt ist. </p>				
+
 		Das dritte Argument der Funktion
 		<code>circle(100, 120, <mark>50</mark>)</code>, hier
-		'<mark>50</mark>', bestimmt , wie groß der Kreis ist. Dabei wird von einem 
-		Rand des Kreises durch den Mittelpunkt bis zum anderen Rand gegenüber in Pixeln gemessen. Das dritte
-		Argument von <code>circle(200, 200, 100)</code> gibt also
-		den <b>Durchmesser</b> des Kreises in Pixeln an, hier '100'.
+		'<mark>50</mark>', bestimmt , wie groß der Kreis ist. Dabei wird von einem Rand des Kreises durch den Mittelpunkt bis zum anderen Rand gegenüber gemessen. Das dritte
+		Argument von <code>circle(200, 200,  <mark>50</mark>)</code> gibt also den <b>Durchmesser</b> des Kreises in Pixeln an.
 	</p>
 	
 <script type="text/p5" src="../Code/05_Circle.js" 
@@ -46,24 +47,27 @@
 </script>
 
 <p>
-	<span id="ausprobieren"> Klar, dass du jetzt wieder dran bist.<br> Ändere den <b>Durchmesser</b> des Kreises oben auf 50 Pixel: <code>circle(200, 200, <mark>50)</mark></code>. Vergiss nicht, anschliessend wieder auf <em>Play</em> zu drücken, damit die Änderung sichbar wird. 	</span> </p>		
+	<span id="ausprobieren"> Klar, dass du jetzt wieder dran bist.<br> Ändere den <b>Durchmesser</b> des Kreises oben auf 80 Pixel: <code>circle(100, 120, <mark>80)</mark></code>. Vergiss nicht, anschliessend wieder auf <em>Play</em> zu drücken, damit die Änderung sichbar wird. 	</span> </p>		
 
 <p>
 		Probier' mal ganz verschiedene Größen, also Durchmesser, für den Kreis aus.
 		
 <ul>
-<li>Wie macht man den Kreis so groß, dass er rechts und links anstösst? Du kannst es ausprobieren oder vorher überlegen: der Durchmesser des Kreises muss dazu wie groß sein, wenn die Zeichenfläche 200 Pixel breit und 200 Pixel hoch ist?</li>
+
+<li> Damit es schön symmetrisch aussieht, kannst du den Kreis vorher genau in den Mittelpunkt der Zeichenfläche setzen: <code>circle(<mark>100, 100,</mark>, 50)</code>
+
+<li>Wie macht man den Kreis so groß, dass er rechts und links anstösst? Du kannst es ausprobieren oder schon vorher überlegen: der Durchmesser des Kreises muss wie groß sein, wenn die Zeichenfläche 200 Pixel breit und 200 Pixel hoch ist?</li>
 
 <li>Welchen Kreis mit einem winzigen Durchmesser kannst du noch erkennen - 4, 3 oder 2 Pixel?</li>
 
 <li>Zeichne den Kreis so groß, dass er ganz von der Leinwand verschwindet! Der Computer und p5 zeichnen den Kreis übrigens immer noch. Angezeigt wird aber nur das, was auf der Leinwand gezeichnet ist.</li> 
 
 <li>
-Und jetzt mach' den Kreis immer kleiner, bis er in den vier Ecken der Leinwand wieder auftaucht, an der Seite aber noch verschwunden ist. Das sieht kaum nach einem richtigen Kreis aus, eher nach vier Eckenschnipseln, oder nicht? </li> </ul> </p>	
+Und jetzt mach' den Kreis immer kleiner, bis er in den vier Ecken der Leinwand wieder auftaucht, an den Seiten aber noch verschwunden ist. Es entstehen ganz neue Formen, wenn Teile bekannter Figuren - wie einem Kreis - ausgelassen werden. </li> </ul>
 
 <p>	<span id="ausprobieren"> Kannst du den Kreis auch verschieben? </span>
 
-<p> Dazu änderst du jetzt das erste und das zweite
+<p> Dazu änderst du jetzt wieder das erste und das zweite
 		Argument der <code>circle(<mark>100, 100</mark>, 50)</code> Funktion. </p> 
 		
 <ul> 
@@ -79,9 +83,9 @@ Hier siehst du wieder: man kann Figuren ganz oder teilweise außerhalb der Leinw
 
 <h3>1.3.2 Koordinatensystem</h3>
 
-<p>Wenn wir angeben müssen, wo genau auf der Zeichenfläche etwas ist, wird es für alles, nicht nur für Kreise, so gemacht: zuerst kommt der Abstand vom Rand links, dann der Abstand vom Rand von oben; und beides wird in Pixeln gezählt. </p>
+<p>Wenn wir angeben müssen, wo genau auf der Zeichenfläche etwas ist, wird das für alles, nicht nur für Kreise, so gemacht: zuerst kommt der Abstand vom Rand von links, dann der Abstand vom Rand von oben; und beides wird in Pixeln gezählt. </p>
 
-<br> Das kennst du auch von <code>createCanvas(220, 260)</code>: diese Leinwand misst 220 Pixel von links nach rechts, und 260 Pixel von oben nach unten. <br>
+<br> Das kennst du schon von <code>createCanvas(220, 260)</code>: diese Leinwand misst 220 Pixel von links nach rechts, und 260 Pixel von oben nach unten. <br>
 
 <p> Der Profi-Ausdruck für so eine Leinwand, bei der wir genau wissen, wo etwas liegt, ist <span id="Begriff";>Koordinatensystem</span>. 
 </p>
@@ -91,7 +95,7 @@ Hier siehst du wieder: man kann Figuren ganz oder teilweise außerhalb der Leinw
 
 <p> Im <em>Nullpunkt</em> in der oberen linken Ecke ist
 ist die Anzahl der Pixel-Schritte nach rechts gleich 0, und die Anzahl der Pixel-Schritte nach unten ist auch gleich 0. Soll der Mittelpunkt deines Kreises in der linken oberen Ecke liegen, lautet der Aufruf der "circle"-Funktion also: <code>circle(<mark>0, 0</mark>, 100)</code>.
-<br><span>Ausprobieren!</span></p>
+<br><span id="ausprobieren">Ausprobieren!</span></p>
 
 <p>Weil Programmierer schreibfaul sind, sagen sie oft zu &bdquo;Schritte nach rechts&ldquo; kurz nur <em>x-Richtung</em>, 
 und zu &bdquo;Schritte nach unten&ldquo; kurz nur <em>y-Richtung</em>. 
@@ -105,519 +109,145 @@ und y = 0, der linken oberen Ecke der Zeichenfläche, liegt der <em>Nullpunkt</e
 im Kopf zu behalten, wenn man mal andere Koordinatensysteme als unsere
 Zeichenfläche, zum Beispiel auf Landkarten oder in der Mathematik, verwendet. </p>
 
-<p> Wir verwenden ein Koordinatensystem und Koordinaten, weil wir damit gut rechnen können. Die Mitte einer Leinwand <code>createCanvas(220, 260)</code> ist 220 &divide; 2 = 110 Pixel-Schritte vom linken Rand, die x-Koordinate hat den Wert 110. Die y-Koordinate hat den Wert 260 &divide; 2 = 130 Pixel vom oberen Rand. Für einen Kreis mit Mittelpunkt genau im Zentrum dieser Leinwand wird die 
+<p> Wir verwenden ein Koordinatensystem und Koordinaten, weil wir damit gut rechnen können. Die <b>Mitte</b> einer Leinwand <code>createCanvas(220, 260)</code> ist 220 &divide; 2 = 110 Pixel-Schritte vom linken Rand, das heisst: die x-Koordinate hat den Wert 110. Die y-Koordinate hat den Wert 260 &divide; 2 = 130 Pixel vom oberen Rand. Für einen Kreis mit Mittelpunkt genau im Zentrum dieser Leinwand wird die 
 <code>circle(<mark>x, y</mark>, 88)</code> Funktion so aufgerufen: 
 <code>circle(<mark>110, 130</mark>, 88)</code> </p>
 
-<br>	<span id="ausprobieren"> Haben wir uns verrechnet? Probier's im widget aus!</span>
+<br>	<span id="ausprobieren"> Haben wir uns verrechnet? Probier's hier im widget aus! Ändere die Größe der Leinwand (<code>createCanvas(220, 260)</code>) und die Koordinaten für den Mittelpunkt des Kreises (<code>circle(110, 130, 88)</code>)!</span>
 
 <script type="text/p5" src="../Code/05_Circle.js" 
 	data-autoplay data-height="300" data-preview-width="250" 
 	data-p5-version="1.9.0">
 </script>
 
-<p>Du kannst immer einfach nur ausprobieren, wo ein Kreis oder eine andere Figur auf der Leinwand liegen soll. Häufig ergeben sich dabei interessante Effekte! Ganz oft hilft aber auch, ein wenig zu rechnen.</p>
+<p>Du kannst immer ausprobieren, wo ein Kreis oder eine andere Figur auf der Leinwand liegen soll. Häufig ergeben sich dabei interessante Effekte! Ganz oft hilft es aber auch, ein wenig zu rechnen.</p>
 
 	<h3> Quadrat </h3>
 
-<p> Als nächste Figur lernen wir das hübsch symmetrische Quadrat kennen.  Die Funktion, die wir zum Zeichnen eines Quadrats aufrufen, heisst <code><mark>square</mark>(100, 100, 50)</code>. &ldquo;Square&rdquo;  (sprich &bdquo;sqär&rdquo;) nennt sich das Quadrat auf Englisch. </p>
+<p> Als nächste Figur zeichnen wir ein Quadrat.  Die Funktion, die wir zum Zeichnen eines Quadrats aufrufen, heisst <code><mark>square</mark>(100, 100, 50)</code>. &ldquo;Square&rdquo;  (sprich &bdquo;sqär&rdquo;) nennt sich das Quadrat auf Englisch. </p>
 
 <p>Was müssen wir wohl dieser Funktion mitgeben, damit klar ist, was für ein Quadrat wo gezeichnet werden muss - fachmännisch gefragt: was bedeuten  die Argumente der Funktion
-<code><mark>square</mark>(100, 100, 50)</code>? </p>
+<code>square<mark>(100, 100, 50)</mark></code>? </p>
 
-<p>Bei einem Quadrat sind alle vier Seiten gleich lang und zwei benachbarte Seiten stehen immer senkrecht aufeinander. <br>
+<p>Bei einem Quadrat sind alle vier Seiten gleich lang, und alle  benachbarten Seiten stehen senkrecht aufeinander. <br>
 Weil ein Quadrat so schön symmetrisch ist, genügt deshalb ein einziger Wert für die Seitenlänge, die ja für alle vier Seiten
-gleich ist. Wir fangen bei den Argumenten aus diesem Grund von hinten an: Die <b>Seitenlänge</b>  des Quadrats ist unser <em>drittes</em> Argument in der "square" Funktion. <br>
-Ein Quadrat <code>square(100, 100, <mark>80</mark>)</code> hat also vier Seiten der gleichen Länge <mark>80</mark> Pixel. </p>
+gleich ist. Wir fangen deshalb mal bei den Argumenten von "square"von hinten an: Die <b>Seitenlänge</b>  des Quadrats ist unser <em>drittes</em> Argument in der "square" Funktion. <br>
+Ein Quadrat <code>square(100, 100, <mark>80</mark>)</code> hat also vier Seiten mit der gleichen Länge <mark>80</mark> Pixel. </p>
 
-<p>Natürlich müssen wir wie immer auch noch sagen, wo genau das Quadrat auf der Zeichenfläche hin soll - wir müssen seine <em>Position</em> angeben. Die Leinwand wird im Programm mit <code>createCanvas(200, 250)</code> erstellt. Innerhalb dieser 200 mal 250 Pixel soll das Quadrat hin.</p>
+<p>Natürlich müssen wir wie immer dann auch noch sagen, wo genau das Quadrat auf der Zeichenfläche hin soll - wir müssen seine <em>Position</em> angeben. Die Leinwand wird im Programm mit <code>createCanvas(200, 250)</code> erstellt. Innerhalb dieser 200 mal 250 Pixel soll das Quadrat hin.</p>
 
-<p>Das <em>erste</em> Argument beim Aufruf der Funktion "square" gibt an, wie weit rechts das Quadrat liegen soll - das ist die x-Richtung. Ein Wert '0' ist ganz links am Rand, und '200' ist ganz rechts am Rand in einer 200 mal 250 Pixel großen Zeichenfläche; und 200 Pixel &divide; 2 =<mark>100</mark> Pixel ist die Mitte davon.</p>
+<p>Das <em>erste</em> Argument beim Aufruf der Funktion "square" gibt an, wie weit rechts das Quadrat liegen soll - das ist die x-Richtung. Ein Wert '0' ist ganz links am Rand, und '200' ist ganz rechts am Rand in einer 200 mal 250 Pixel großen Zeichenfläche; dann ist 200 Pixel &divide; 2 =<mark>100</mark> Pixel die Mitte davon.</p>
 
-<p>	Das <em>zweite</em> Argument beim Aufruf der Funktion square gibt an, wie weit unten auf der Zeichenfläche dein Quadrat liegen soll - das ist die y-Richtung. Ein Wert '0' ist ganz oben am Rand, und '250' ist der untere Rand in einer 200 mal 250 Pixel großen Zeichenfläche; und 250 Pixel  &divide; 2 = <mark>125</mark> Pixel ist die Mitte davon.</p>
+<p>	Das <em>zweite</em> Argument beim Aufruf der Funktion "square" gibt an, wie weit unten auf der Zeichenfläche das  Quadrat liegen soll - das ist die y-Richtung. Ein Wert '0' ist ganz oben am Rand, und '250' ist der untere Rand in einer 200 mal 250 Pixel großen Zeichenfläche; und 250 Pixel  &divide; 2 = <mark>125</mark> Pixel ist die Mitte davon.</p>
 
-<p>Zeichnen wir also jetzt ein Quadrat <code>square(100, 125, 80)</code> mit der Seitenlänge 80 Pixel an die Position x = 100 Pixel vom linken Rand und y = 125 Pixel von oben, was dann in der Mitte unser 200 mal 250 Pixel großen Leinwand sein sollte. </p>
+<p>Zeichnen wir also jetzt das Quadrat <code>square(100, 125, 80)</code> mit der Seitenlänge 80 Pixel an die Position x = 100 Pixel vom linken Rand und y = 125 Pixel von oben, was in der Mitte unser 200 mal 250 Pixel großen Leinwand sein sollte. </p>
 
 <script type="text/p5" src="../Code/06_Square.js" 
-	data-autoplay data-height="300" data-preview-width="400" 
+	data-autoplay data-height="300" data-preview-width="250" 
 	data-p5-version="1.9.0">
 </script>
 
-<p> Nanu, das Quadrat ist wirklich nicht so ganz genau in der Mitte der Leinwand gelandet. </p>
+<p> Nanu, das Quadrat ist wirklich nicht so genau in der Mitte der Leinwand gelandet, obwohl wir die Mitte doch genau ausgerechnet haben. </p>
 
 <p>	<span id="ausprobieren">Kannst du durch Experimentieren herausfinden, was da los ist? Warum ist das Quadrat nicht in der Mitte?  </span> </p>
 
 <ul>
-<li>Damit du sicher bist, dass zunächst das überhaupt funktioniert: mach' erst mal mit dem <em>dritten</em> Argument das Quadrat <code>square(100, 125, <mark>80</mark>)</code> kleiner und größer.</li>
+<li>Damit du sicher bist, dass zunächst das zunächst  funktioniert: mach' erst mal mit dem <em>dritten</em> Argument das Quadrat <code>square(100, 125, <mark>80</mark>)</code> kleiner und größer.</li>
 
-<li>Verschiebe das Quadrat <code>square(<mark>x, y,</mark> 80)</code> an eine andere Stelle der Leinwand. Ganz links ist der x-Wert = 0: <code>square(<mark>0,</mark> 125, 80</code>). Ganz nach oben verschoben ist das Quadrat, wenn der y-Wert = 0 ist: <code>square(100, <mark>0,</mark> 80</code>.</li>
+<li>Verschiebe das Quadrat <code>square(<mark>x, y,</mark> 80)</code> an eine andere Stelle der Leinwand. Ganz am linken Rand ist der <b>x</b>-Wert = 0: <code>square(<mark>0,</mark> 125, 80</code>). Ganz nach oben verschoben ist ein Quadrat, wenn der <b>y</b>-Wert = 0 ist: <code>square(100, <mark>0,</mark> 80</code>.</li>
 
 <li>Verschiebe das Quadrat an den rechten Rand der Zeichenfläche: <code>square(<mark>200,</mark> 125, 80</code>). Es verschwindet komplett, weil es jetzt nur ausserhalb der Leinwand gezeichnet wird. Das Gleiche geschieht, wenn du das Quadrat ganz an den unteren Rand der Leinwand zeichnest: <code>square(100, <mark>250,</mark> 80</code>.</li>
 </ul>
 
-<p> Was ist hier los? Hast du gemerkt, dass dein Quadrat immer ein bisschen nach rechts und nach unten verschoben ist? <br> Des Rätsels Lösung ist: Die ersten beiden Argumente geben zwar an, wo auf der Leinwand das Quadrat hingezeichnet werden soll. Aber damit ist jetzt nicht die Mitte wie beim Kreis, sondern die linke obere Ecke des Quadrats gemeint. Das ist wie bei der Leinwand, dem Canvas, selbst: in der Ecke oben links fängt die Zählung an. </p>
+<p> Was ist hier los? Hast du gemerkt, dass dein Quadrat immer ein bisschen nach rechts und nach unten verschoben ist? <br> Des Rätsels Lösung ist: Die ersten beiden Argumente von "square" geben zwar an, wo auf der Leinwand das Quadrat hingezeichnet werden soll. Aber damit ist jetzt nicht die <em>Mitte</em> wie beim Kreis, sondern die <em>linke obere Ecke</em> des Quadrats gemeint. Das ist wie bei der Leinwand, dem Canvas: in der Ecke oben links fängt die Zählung an. </p>
 
-<p>Nicht nur du findest es verwirrend, dass das Quadrat anders behandelt wird als der Kreis. Wo die Mitte des Quadrats liegt, ist auch umständlicher auszurechnen, weil von der linken Ecke aus immer noch die halbe Seitenlänge dazu addiert werden muss. Deshalb gibt es eine Anweisung, mit der geändert werden kann, was die beiden ersten Argumente in <code>square(<mark>200, 250,</mark> 80</code> bedeuten. Diese Anweisung ist <code>rectMode(CENTER)</code>. Das Argument &ldquo;CENTER&rdquo; bedeutet &bdquo;Zentrum&ldquo; (sprich &bdquo;sänta&ldquo;), und muss immer genauso mit Großbuchstaben geschrieben werden. Wenn die Anweisung <code>rectMode(CENTER)</code> vorher im Programm auftaucht, bezeichnen anschliessend im <code>square(<mark>100, 250,</mark> 80</code> Kommando die beiden ersten Argumente die Koordinaten des <em>Zentrums</em> des Quadrats, das dritte Argument ist weiterhin die Seitenlänge.</p>
+<p>Nicht nur du findest es verwirrend, dass das Quadrat anders behandelt wird als der Kreis. Wo die <em>Mitte</em> des Quadrats liegt, ist so auch umständlicher auszurechnen, weil von der linken oberen Ecke aus immer noch eine halbe Seitenlänge dazu addiert werden muss. Deshalb gibt es eine Anweisung, mit der geändert werden kann, was die beiden ersten Argumente in <code>square(<mark>200, 250,</mark> 80)</code> bedeuten. 
 
+<p>Diese Anweisung ist <code>rectMode(CENTER)</code>. Das Argument <b>“CENTER”</b> bedeutet &bdquo;Zentrum&rdquo; (sprich &bdquo;sänta&rdquo;), und muss immer genauso - mit Großbuchstaben - geschrieben werden. Wenn die Anweisung <code>rectMode(CENTER)</code> im Programm auftaucht, bezeichnen anschliessend die beiden ersten Argumente beim Funktionsaufruf die <em>Mitte</em> des Quadrats: <code>square(<mark>100, 250,</mark> 80)</code>. Das dritte Argument ist weiterhin die Seitenlänge. </p>
+
+<span id="tbd">Code/050.js</span>
 <script type="text/p5" src="../Code/07_Square.js" 
-	data-autoplay data-height="300" data-preview-width="400" 
+	data-autoplay data-height="300" data-preview-width="250" 
 	data-p5-version="1.9.0">
 </script>
 
-<p>Die <code>rectMode(CENTER)</code> schreibst du ganz am Anfang in das Programm, hinter <b>function setup(){</b>, vor die schliessende geschweifte Klammer <b> } </b>.</p>
+<p>Unser Quadrat ist jetzt genau in der Mitte!</p>
+
+<p>Die <code>rectMode(CENTER)</code> schreibst du ganz am Anfang in das Programm, in den <b>function setup(){</b> Teil vor die schliessende geschweifte Klammer <b> } </b>.</p>
 
 <p>Wenn eine ganz bestimmte Sache von vorneherein eingestellt ist, aber von dir im Programm geändert werden kann, ist das eine <span id="Begriff";>Standardeinstellung</span> oder der <span id="Begriff";>Default</span>, sprich &bdquo;di-folt&ldquo;. Wenn nichts anderes von dir festgelegt wird, zum Beispiel mit <code>rectMode(CENTER)</code>; wird solch ein <em>default</em>, die Voreinstellung, verwendet.</p>
 
-<p>Es gibt auch eine Anweisung, um die Standardeinstellung extra einzuschalten. Sie lautet <code>rectMode(CORNER)</code>, mit in Grossbuchstaben geschriebenem "CORNER" (sprich &bdquo;kornr&ldquo;) für &bdquo;Ecke&ldquo;. Anschliessend bezeichnen die ersten beiden Argumente in <code>square(<mark>100, 150,</mark> 80)</code> wieder die Koordinate der oberen linken <b>Ecke</b>. So kannst du eine Änderung durch <code>rectMode(CENTER)</code>, wodurch der <b>Mittelpunkt</b> des Kreises festgelegt wird, wieder zurücknehmen.</p>
+<p>Es gibt auch eine Anweisung, um die Standardeinstellung extra einzuschalten. Sie lautet <code>rectMode(CORNER)</code>, mit in Grossbuchstaben geschriebenem "CORNER" (sprich &bdquo;kornr&rdquo;) für &bdquo;Ecke&rdquo;. Anschliessend bezeichnen die ersten beiden Argumente in <code>square(<mark>100, 150,</mark> 80)</code> wieder die Koordinate der oberen linken <em>Ecke</em>. So kannst du eine Änderung durch die Anweisung <code>rectMode(CENTER)</code>, wodurch der <em>Mittelpunkt</em> des Kreises festgelegt wird, wieder zurücknehmen.</p>
 
+	<h3>Mehrere Figuren gleichzeitig</h3>
 
-	<h3>Kreis und Quadrat gleichzeitig</h3>
+<p>Jetzt zeichnen wir mehrere Figuren gleichzeitig in den sketch! Wir fangen mit mehreren ineinander gesteckten Kreisen an. Die Kreise sollen den gleichen Mittelpunkt, aber unterschiedlichen Durchmesser haben - das nennt man &bdquo;konzentrische&rdquo; Kreise, das heisst: Kreise mit gleichem Mittelpunkt.</p>
 
-<p>Jetzt zeichnen wir mehrere Figuren gleichzeitig in den sketch! Wir fangen mit mehreren ineinander gepackten Kreisen an. Die Kreise sollen den gleichen Mittelpunkt, aber unterschiedlichen Durchmesser haben - das nennt man &bdquo;konzentrische&ldquo; Kreise, das heisst: Kreise mit gemeinsamem  Zentrum.</p>
-
-<span id="tbd">Code/050.js</span>
-<script type="text/p5" src="../Code/050.js" 
-	data-autoplay data-height="300" data-preview-width="400" 
+<span id="tbd"> ==> Code/055.js <== </span>
+<script type="text/p5" src="../Code/055.js" 
+	data-autoplay data-height="300" data-preview-width="250" 
 	data-p5-version="1.9.0">
 </script>
 
-<p>Was genau geschieht hier, Schritt für Schritt (zur Wiederholung) aufgedröselt? </p>
-<p> Auf der 200 Pixel mal 220 Pixel großen Zeichenfläche,
-	<code>createCanvas(200, 220)</code>, wird zunächst alles mit einem  hellgrauen Hintergrund übermalt, <code>background(200)</code>. <br>
-Dann wird die Funktion <code>circle (100, 110, <mark>80</mark>)</code>
-aufgerufen, um in der Mitte der Leinwand einen Kreis mit einem Durchmesser von <mark>80</mark> Pixeln zu zeichnen. Die Mitte der Leinwand ist der Punkt mit der <b>x</b>-Koordinate nach rechts: 200 Pixel &divide 2 = 100 Pixel, und der <b>y</b>-Koordinate nach unten: 220 Pixel &divide 2 = 110 Pixel, deshalb <code>circle (<mark>100, 110</mark>, 80)</code>. Wie immer schreibfaul, sagen Programmierer und Mathematiker auch: der Mittelpunkt der Leinwand <code>createCanvas(200, 220)</code> hat die Koordinate <b>(100, 110)</b>. Die Anzahl der Pixel nach rechts, <b>x</b>, und die Anzahl der Pixel nach unten, <b>y</b>, werden einfach zusammen in eine runde Klammer verfrachtet, <b>(x, y)</b>. Schon ist ein Punkt auf der Leinwand, hier jetzt der Mittelpunkt des Kreises, genau bezeichnet. </p> 
-<p>
-Mit genau dem gleichen Mittelpunkt, aber einem kleineren Durchmesser, <mark>60</mark>, wird der mittlere der konzentrischen Kreise gezeichnet: 
-<code>circle (100, 110, <mark>60</mark>)</code>.
+<p>Was genau geschieht hier, noch einmal Schritt für Schritt aufgedröselt?</p>
+<p>Eine 220 Pixel mal 200 Pixel große Zeichenfläche, der Canvas, wird erzeugt: 
+<code>createCanvas(220, 200)</code>. Alles wird mit einem grauen Hintergrund übermalt, <code>background(200)</code>. <br>
 
-</p>
+<p>Dann wird die Funktion <code>circle (110, 100, <mark>80</mark>)</code>
+aufgerufen, um in der Mitte der Leinwand einen Kreis mit einem Durchmesser von <mark>80</mark> Pixeln zu zeichnen. Die Mitte der Leinwand ist der Punkt mit der <b>x</b>-Koordinate nach rechts: 220 Pixel &divide 2 = 110 Pixel, und der <b>y</b>-Koordinate nach unten: 200 Pixel &divide 2 = 100 Pixel, deshalb: <code>circle (<mark>110, 100</mark>, 80)</code>. </p> 
 
-<p>
-================================================================
+<p>Wie immer schreibfaul sagen Programmierer und Mathematiker auch: der Mittelpunkt der Leinwand <code>createCanvas(220, 200)</code> hat <b> die Koordinate (110, 100)</b>. Die Anzahl der Pixel nach rechts, <b>x</b>, und die Anzahl der Pixel nach unten, <b>y</b>, werden einfach zusammen in eine runde Klammer verfrachtet, <b>(x, y)</b>. Schon ist ein bestimmter Punkt auf der Leinwand, hier der Mittelpunkt unseres Kreises, (110, 100), genau bezeichnet. </p> 
 
-Zeichne selbst den dritten Kreis mit dem gleichen Zentrum, aber einem Durchmesser von nur 40 Pixeln ein. Sieht doch schon ganz hübsch aus, oder?
+<p> Mit genau dem gleichen Mittelpunkt, aber einem kleineren Durchmesser, <mark>50</mark>, ist der mittlere der konzentrischen Kreise gezeichnet: 
+<code>circle (100, 110, <mark>60</mark>)</code>. </p>
 
-</p>
+<p> <span id="ausprobieren">Zeichne noch einen dritten Kreis mit dem gleichen Zentrum, aber einem Durchmesser von nur 20 Pixeln, ein. </span> Vergiss nicht, nach jeder Programmänderung wieder auf PLAY zu drücken.
+<br> Das sieht doch schon ganz hübsch aus, oder nicht? </p>
 
-dem Punkt mit der Koordinate <code>(100, 110)</code>, circle(200, 200,
-	200)
+<p>Habe ich übrigens schon erwähnt, dass hinter jeder Anweisung in p5 ein Strichpunkt <mark> ; </mark> stehen muss? Vergiss das nicht, denn nur so weiß das Programm, wo eine Anweisung aufhört und die nächste anfängt.</p>
 
+<p> <span id="ausprobieren">Jetzt kannst du ein sehr wichtiges Experiment machen. Stelle die <em>Reihenfolge</em> um, in der die Kreise gezeichnet werden. 
+</span> 
 
+<p>Schiebe den Funktionsaufruf für den kleinsten Kreis, <code>circle (100, 110, 20)</code> 
+direkt hinter <code>background(200)</code>. </p>
 
+<p> (Arbeitest du mit  einem Windows-System kannst du die ganze Zeile mit gedrückter  Maustaste markieren, dann gleichzeitig die 'STRG' (Steuerung) und die 'X'-Taste drücken und die Zeile ist vom Editor gelöscht, aber in die Zwischenablage geschoben worden. 
+Du setzt den Mauszeiger (den &ldquo;cursor&rdquo;) an die Stelle, an der die Zeile eingefügt werden soll, und drückst gleichzeitig die 'STRG' und die 'V'-Taste; dann wird die Zeile aus der Zwischenablage wieder - an der neuen Stelle - in den Editor eingefügt.
+<br>Normales Löschen und Wieder-Eintippen ist aber auch erlaubt.) </p>
 
+<p>Wohin ist der kleinste Kreis verschwunden? </p>
 
+<p>Die Lösung ist: es kommt ganz entscheidend auf die <b>Reihenfolge</b> der Anweisungen an. <br>
+Die Anweisung für den kleinsten Kreis steht jetzt zuerst im Programm. Danach werden der mittlere und der große Kreis gezeichnet. Weil ein "circle" in p5 die ganze Kreisscheibe ist, übermalt die Scheibe für den mittleren Kreis, <code>circle (100, 110, 50)</code>, den innersten Kreis, <code>circle (100, 110, 20)</code>, komplett. Jede der drei Kreisscheiben wird vom Programm gezeichnet, aber wenn die größere Scheibe später 
+gezeichnet wird, überdeckt sie die kleinere Scheibe, die zuvor gezeichnet wurde.</p>
 
+<p>Jedes Programm läuft Anweisung für Anweisung,
+brav nacheinander, ab; und was früher gezeichnet, aber später im Programm überschrieben wird, ist dann nicht mehr sichtbar.
+Wir merken uns also: es kommt in einem Programm entscheidend auf die <b>Reihenfolge</b> der Anweisungen an. </p>
 
+<p> <span id="ausprobieren">
+Verschiebe die kleinster-Kreis-Anweisung, <code>circle (100, 110, 20)</code>, wieder zurück, sodass es das letzte "circle" Kommando ist. <br>
+Dann setzt du die  <code>background(200)</code> Anweisung 
+hinter alle "circle" Aufrufe. </span> Was passiert? </p>
 
-Dann wird auf der 400 Pixel mal 400 Pixel großen Zeichenfläche,
-	createCanvas(400, 400), zunächst alles mit dem hellgrauen Hintergrund
-	übermalt, background(220). . Anschliessend wird ein kleinerer Kreis mit dem gleichen Mittelpunkt,
-	aber einem Durchmesser von nur 100 Pixeln gezeichnet. Das Ergebnis ist ein
-	sketch, eine Zeichnung, von zwei unterschiedlich großen Kreisen mit gleichem
-	Mittelpunkt</p>
+<p>Alle Kreise sind verschwunden! Nur die graue Zeichenfläche ist noch da. Warum nur zeichnet p5 jetzt plötzlich gar keine Kreise mehr? 
+<br>Die Lösung ist wie vorher: es kommt ganz entscheidend auf die <b>Reihenfolge</b> der Anweisungen an. Die Kreise werden sehr wohl noch gezeichnet, ganz so wie es im Programm steht: Zuerst wird der kleinste, dann der mittlere und anschließend der große Kreis gezeichnet. Aber: Am Schluß kommt jetzt die  <code>background(200)</code> Anweisung, mit der alles bisher Gezeichnete wieder komplett übermalt wird. </p>
 
+<p> Es kommt also immer streng auf die Reihenfolge an! Der Aufruf von <code>circle (110, 100, 80)</code> muss hinter dem Aufruf von <code>background(200)</code> stehen, sonst wird der  Kreis wieder übermalt. </p>
 
+<p> Zum Zeichnen ist es hilfreich, dass Teile von Formen durch andere Figuren abgedeckt werden können. Nur mit Kreisen und Quadraten können wir auf diese Weise schon mal eine kleine Wackelpuppe mit Helm zeichnen. </p>
 
+<span id="tbd"> ==> Code/060.js <== </span>
+<script type="text/p5" src="../Code/060.js" 
+	data-autoplay data-height="440" data-preview-width="250" 
+	data-p5-version="1.9.0">
+</script>
 
+<p> <span id="ausprobieren">Was kannst du noch aus dieser Figur machen? Ein Mund fehlt, und zwei Ohren! Mach' mit deinen Ideen deinen eigenen kleinen sketch daraus!</span> </p>
 
-	Kannst Du Kreise ineinander zeichnen, mit gleichem Mittelpunkt aber
-	unterschiedlichem Durchmesser?
-	Nehmen wir an, dein Programm sieht so aus:
-	## function setup() {
-	createCanvas(400, 400);
-	}
-
-	function draw() {
-	background(220);
-	circle(200, 200, 200);
-	circle(200, 200, 100);
-	}
-	##
-
-	 (was übrigens "konzentrische" Kreise genannt wird).
-
-
-
-	Es kommt aber immer streng auf die Reihenfolge an! Der Aufruf von "circle
-	muss hinter dem Aufruf von "background stehen, egal ob in setup oder draw -
-	sonst wird dein Kreis wieder übermalt.
-
-	Und jetzt stell mal die Reihenfolge der Funktionsaufrufe um, und setze zum
-	Beispiel die background() Anweisung an den Schluss in draw(): alle Kreise
-	sind verschwunden, und nur die graue Zeichenfläche ist noch da. Warum
-	zeichnet p5 jetzt die Kreise nicht mehr? Die Lösung ist: es kommt ganz
-	entscheidend auf die Reihenfolge der Anweisungen an. p5 zeichnet die Kreise
-	sehr wohl, zuerst den großen, dann den kleinen, aber dann kommt die
-	background() Anweisung und übermalt alles wieder, bevor am Schluss von draw
-	die Zeichnung ausgegeben wird. Ein Programm läuft Anweisung für Anweisung,
-	brav nacheinander, ab; und was früher gezeichnet aber später im Programm
-	überschrieben wird, ist dann verschwunden.
-
-	Kannst Du erklären, warum hier der Kreis, circle(200, 200, 100), fehlt? Wie
-	macht man's richtig, um sowohl Kreis als auch Quadrat zu zeichnen?
-
-	function setup() {
-	createCanvas(400, 400);
-	}
-
-	function draw() {
-	background(220);
-	circle(200, 200, 100);
-	square(100, 100, 200);
-	}
-
-
-	Diese ganz strenge Reihenfolge, in der dein Programm abgearbeitet wird, ist
-	sehr nützlich, um neue Figuren zu zeichnen, zum Beispiel um einem Quadrat
-	einen Helm und einen Fuß-Topf, aber auch zwei riesige Augen zu verpassen:
-
-	function setup() {
-	createCanvas(400, 400);
-	}
-
-	function draw() {
-	background(220);
-	circle(200, 100, 200);
-	circle(200, 300, 200);
-	square(100, 100, 200);
-	circle(100, 200, 200);
-	circle(300, 200, 200);
-	}
-
-
-	Tippe dieses Programm ab, oder kopiere es, und ändere dann die Reihenfolge,
-	in der die Anweisungen aufgerufen werden. Dazu löscht du in draw{} eine
-	Zeile und fügst sie an einer anderen Stelle wieder ein.
-	(In Windows geht das mit CTRL-X und CTRL-V.) So wird mal mehr, mal weniger
-	vom Quadrat in der Mitte sichtbar.
-
-	function setup() {
-	createCanvas(400, 400);
-	}
-
-	function draw() {
-	background(220);
-	circle(200, 100, 200);
-	circle(200, 300, 200);
-	circle(100, 200, 200);
-	circle(300, 200, 200);
-	square(100, 100, 200);
-	}
-
-
-	So verschwindet das arme Quadrat ganz:
-
-	function setup() {
-	createCanvas(400, 400);
-	}
-
-	function draw() {
-	background(220);
-	square(100, 100, 200);
-	circle(200, 100, 200);
-	circle(200, 300, 200);
-	circle(100, 200, 200);
-	circle(300, 200, 200);
-
-	}
-
-
-
-
-		
-	<h3>1.3.3. Rechnen mit Koordinaten</h3>
-
-	Es lohnt sich auch, genau anzusehen und zu verstehen, wie hier die Position
-	der Kreise und des Quadrats zustande kommen. Dann wirst du die Koordinaten
-	in x- und y-Richtung, und was sie bedeuten, besser verstehen können.
-
-	function setup() {
-	createCanvas(400, 400);
-	}
-
-	function draw() {
-	background(220);
-	circle(200, 100, 200);
-	circle(200, 300, 200);
-	square(100, 100, 200);
-	circle(100, 200, 200);
-	circle(300, 200, 200);
-	}
-
-	Die linke obere Ecke des Quadrats square(100, 100, 200); sitzt an der
-	Position nach rechts x = 100 und nach unten y = 100, von der linken oberen
-	Ecke der Leinwand aus in Pixel-Einheiten gezählt. Weil das Quadrat,
-	square(100, 100, 200), eine Kantenlänge von 200 Pixeln hat, ist die rechte
-	obere Ecke an der Stelle 300 nach rechts und immer noch nur 100 nach unten -
-	kurz gesagt: an der Position (300, 100). Für die rechte untere Ecke bleibt
-	die x-Position gleich (300), aber es kommt eine Seitenlänge von 200 in der
-	Richtung nach unten dazu (100 + 200 = 300). Die Position unten rechts ist
-	also (300, 300). Für die Ecke unten links sind es nach rechts nur 100 Pixel,
-	wie für die Ecke oben links auch. Dann zählen wir aber die Seitenlänge von
-	200 Pixeln nach unten dazu, also sind es bis zur Ecke unten links 100 + 200
-	= 300 Pixel, was insgesamt eine Position der linken unteren Ecke von (100,
-	300) ergibt.
-
-	Die Positionsangabe eines Kreises bezeichnet seinen Mittelpunkt: circle(200,
-	100, 200) zeichnet den Mittelpunkt des Kreises an die Stelle 200 Pixel nach
-	rechts und 100 Pixel nach unten, vom oberen linken Rand der Zeichenfläche
-	aus gezählt. Der Kreis hat einen Durchmesser von 200 Pixeln, also einen
-	Radius von 100 Pixeln. Der Mittelpunkt ist 100 Pixel nach unten gezeichnet,
-	der Radius geht wieder 100 Pixel nach oben, also berührt der Kreis oben
-	genau den Rand, denn da ist y = 100 - 100 = 0.
-
-	Warum wird der Kreis vom Quadrat genau zur Hälfte abgedeckt? Erste
-	Voraussetzung: der Durchmesser des Kreises ist genau so gross wie die
-	Seitenlänge des Quadrats, nämlich 200 Pixel. Zweitens: Der Mittelpunkt des
-	Kreises liegt auf der Kante des Quadrats. Auf der linken Seite geht die
-	Kante des Quadrats vom Punkt (100, 100) zum Punkt (100, 300), denn die
-	Seitenlänge ist 200 Pixel. Also muss der Mittelpunkt des Kreises den
-	gleichen Wert für die x-Richtung nach rechts haben, nämlich 100. Und von
-	oben gezählt, in y-Richtung? Die Mitte der Quadrat-Kante ist bei der
-	Position 200 Pixel nach unten: eine halbe Seitenlänge (200 / 2 = 100) von
-	der oberen Kante (bei y = 100) aus, also y = 100 + 100 = 200. Oder: die
-	Kante läuft von (100, 100) nach (100, 300), also ist die Mitte der
-	y-Koordinate zwischen 100 und 300, das heisst 100 + 300, also 400, geteilt
-	durch 2 = 200. Der Kreis hat damit insgesamt die Position (100, 200) und den
-	Durchmesser 200; die Anweisung ist: circle(100, 200, 200).
-
-	Am einfachsten ist es, die Position und Größe einer Figur, die du zeichnen
-	willst, mit einer Mischung aus Probieren und Rechnen herauszufinden. Warum
-	ewig rechnen, wenn man durch Ausprobieren gleich sehen kann, ob eine Figur
-	an ungefähr der Stelle liegt, die man haben möchte? Und wenn es dann auf ein
-	Pixel mehr oder weniger ankommt, kann man ja immer noch rumrechnen - man
-	sollte aber wissen, wie es im Prinzip gemacht wird.
-
-
-
-** Kommentare **
-
-<p>  Habe ich übrigens schon erwähnt, dass hinter jeder Anweisung in p5 ein Strichpunkt <mark> ; </mark> stehen muss? Vergiss das nicht, denn nur so weiß das Programm, wo eine Anweisung aufhört und die nächste anfängt.
-  </p>
-
-
-
-
-========================================================================
-
-
-	<h3>1.3.3. Mehr Figuren</h3>
-
-
-
-
-	Jetzt aber endlich zu vielen weiteren Funktionen, mit denen die
-	unterschiedlichsten Formen in deine eigenen sketche gemalt werden können!
-
-
-
-	Aber endlich zurück zum Zeichnen! Es gibt natürlich noch viele andere
-	Figuren, die der p5-Kobold für uns zeichnen kann, nicht nur Quadrate und
-	Kreise. Wir müssen einfach wie immer nur wissen, welche Anweisung wir ihm
-	geben müssen, also wie der Name der jeweiligen Funktion lautet und welche
-	Argumente in den Klammern des Funktionsaufrufs mitgegeben werden müssen.
-
-	<h4>1.3.4. Rechteck </h4>
-
-	Strecken wir das Quadrat und machen ein Rechteck draus! Bei einem Rechteck
-	stehen immer noch zwei Seiten, die zusammenstoßen, senkrecht aufeinander.
-	Aber nur noch die Seiten, die einander gegenüberliegen, sind gleich lang.
-	Deshalb gibt es ein Argument für die Länge der Seite in x-Richtung (nach
-	rechts oder horizontal), und ein zweites Argument für die Länge der Seite in
-	y-Richtung (nach unten ["runter"] oder vertikal). Vorher kommen noch die
-	beiden Argumente für die x-Position und die y-Position der oberen linken
-	Ecke des Rechtecks - genau so wie vorher beim Quadrat. Rechteck ist auf
-	Englisch "rectangle" (sprich 'räktängl'), die Funktion heisst deshalb
-	rect(). Ein Aufruf mit rect(x, y, rechts, runter) zeichnet ein Rechteck an
-	der Position x Pixel in horizontaler Richtung und y Pixel in vertikaler
-	Richtung von der oberen linken Ecke der Leinwand entfernt, mit einer
-	horizontalen Seitenlänge von 'rechts' Pixeln und und einer vertikalen
-	Seitenlänge von 'runter' Pixeln. Probier's aus und schreibe die Anweisung
-	rect (130, 160, 200, 150) in die draw function des Editors! Dann ändere den
-	Wert dieser vier Argumente - was geschieht dann und warum?
-
-	# code #
-
-	<h4>1.3.4. Bonus </h4>
-
-	Probier aus, was passiert, wenn du noch eine Zahl, sprich ein weiteres
-	Argument, ganz hinten in die Klammern des rect() Aufrufs schreibst - zum
-	Ausprobieren vielleicht rect(x, y, rechts, runter, noch-eine-Zahl). Und dann
-	noch ein weiteres, sechstes Argument - und ein siebtes und achtes ...
-
-	Beim Quadrat square() und beim Rechteck rect() kannst du mit zusätzlichen
-	Argumenten die Ecken rund machen. Die Argumente geben an, wie rund die Ecke
-	sein soll - und wieviele Ecken rund gemacht werden sollen. Gibst du nur ein
-	zusätzliches Argument an, werden alle vier Ecken mit genau diesem Wert rund
-	gemacht. Gibst du mehrere zusätzliche Argumente an, steht jeder Wert für die
-	Rundung einer bestimmten Ecke - und der nachfolgenden Ecken, es sei denn,
-	dafür ist ein Argument-Wert vorhanden.
-
-	<h4>1.3.6. Dreieck </h4>
-
-	Du kannst dir bestimmt schon denken, welche Argumente für das Dreieck
-	benötigt werden. Es gibt drei Eckpunkte im Dreieck. Jeder Eckpunkt hat eine
-	bestimmte Stelle auf der Leinwand, eine Position, für die der Wert in
-	x-Richtung nach rechts und in y-Richtung nach unten angegeben werden muss.
-	Es sind also zwei Koordinaten, x und y, für einen Eck-Punkt erforderlich.
-	Bei drei Eckpunkten des Dreiecks werden drei mal zwei Werte für die
-	Argumente benötigt:, also 6 Argumente, um die Eckpunkte anzugeben. Wir
-	schreiben den ersten Eckpunkt dann so: (x1, y1), den zweiten (x2, y2) und
-	den dritten (x3, y3), wenn x und y für die Zahlenwerte der Positiion des
-	Eckpunkts stehen.
-
-	Ein Dreieck heisst auf Englisch "triangle" (sprich 'trei-ängl'), und so
-	heisst auch die Funktion, die das Dreieck zeichnet: triangle (x1, y1, x2,
-	y2, x3, y3).
-
-	Auf geht's - probier das aus und zeichne ein Dreieck - oder gleich drei
-	Dreiecke, deren Spitzen sich berühren!
-
-	# code #
-
-	<h4>1.3.7. Linie </h4>
-
-	Eine einfache Linie hat eine Anfangsposition und eine Endposition. Jede
-	Position erfordert, wie immer, die Angabe einer x- und einer y-Koordinate.
-	Also gibt es einen Anfangspunkt der Linie mit den Koordinaten (x1, y1) und
-	einen Endpunkt mit den Koordinaten (x2, y2). Linie heisst auf Englisch
-	"line" (sprich "lain"), wie die Funktion zum Zeichnen einer Linie: line(x1,
-	y1, x2, y2);
-
-	Ausprobieren! Zeichne eine Linie - oder gleich einen kleinen Stern aus drei
-	Linien.
-
-	#code#
-
-	Die Breite einer Linie ist 1 Pixel. Hast du eine Idee, wie man auch ohne
-	line-Anweisung solch eine Linie zeichnen kann? Wie schmal kann zum Beispiel
-	ein Rechteck werden - auch nur 1 Pixel breit? Kann man es dann noch von
-	einer Linie unterscheiden? Probier es aus!
-	#code#
-
-	<h4>1.3.8. Punkt </h4>
-
-	Jetzt wird's fast unsichtbar, denn wir zeichnen Punkte. Ein einzelner Punkt
-	ist nur 1 Pixel breit und 1 Pixel hoch, und deshalb auf der Leinwand kaum zu
-	erkennen.
-
-	Ein Punkt heißt auf Englisch "point" ("peunt"). Wir müssen die x-Koordinate
-	und die y-Koordinate der Position angebe, an der der Punkt liegt. Das ist
-	schon alles, mehr Argumente kann es für einen einzelnen Punkt nicht geben.
-	Die Anweisung für einen Punkt lautet: <code>point(x, y)</code>. Zeichne
-	einen Punkt und schau mal, ob du ihn auf dem Canvas findest.
-
-	#code#
-
-	Wenn du den Punkt verschiebst, also die Koordinaten seiner Position änderst,
-	und dann neu zeichnest, kannst Du erkennen, ob es wirklich dein gezeichneter
-	Punkt oder nur ein Fleck auf dem Monitor ist!
-
-	Einzelne Punkte werden wir nicht so oft benötigen. Häufig gibt ea aber
-	Ansammlungen von mehreren Punkten zu einem Muster oder einer Figur. Weil
-	Punkte so klein sind, kannst du ganz feine Strukturen und Muster mit vielen
-	miteinander verbundenen Punkten nebeneinander zeichnen.
-
-	<h4>1.4.2. Ellipse </h4>
-
-	Für den Schluss unserer Figurensammlung machen wir den Kreis zur einen Seite
-	hin länger als zur anderen und zeichnen eine Ellipse. Eine Ellipse hat zwar
-	eine Ei- oder Oval-Form, ist aber immer noch symmetrisch nach links und
-	rechts gleich gedehnt, und nach oben und unten gleich gestaucht. Wie üblich
-	müssen wir der Funktion, die die Ellipse zeichnet, die Position in x- und
-	y-Richtung auf unserer Zeichenfläche angeben, an der der Mittelpunkt der
-	Ellipse liegen soll. Zusätzlich müssen wir verraten, wie lang die Ellipse
-	horizontal in x-Richtung, und wie hoch sie vertikal in y-Richtung sein soll.
-	Diese Länge wird in beiden Fällen natürlich in Anzahl der Pixel durch den
-	Mittelpunkt gemessen. Der Funktionsaufruf sieht dann so aus:
-	<code>ellipse(x, y, horiontal, vertikal)</code>.
-
-	Gib den Funktionsaufruf in die <code>draw()</code> Funktion ein, und such
-	dir selbst geeignete Werte für die Position und die Länge und Höhe deiner
-	Ellipse aus!
-
-	#code#
-
-	Was geschieht, wenn die horizontale Länge und die vertikale Höhe gleich
-	gewählt werden? Probier es aus!
-
-	Wenn Breite und Höhe die gleiche Zahl sind, sind sie nichts anderes als ein
-	einziger Radius, und die in alle Richtungen gleich große Ellipse wird zu
-	einem Kreis. Du kannst die gleiche Figur an derselben Stelle dann auch mit
-	einer <code>circle(x, y, Radius)</code> Anweisung zeichnen.
-
-	<h4>1.4.2. Eigene Zeichnungen </h4>
-
-	<h2>Anmelden in p5 zum Sichern der sketches</h2>
-
-	Deine hübschen Zeichnungen möchtest du bestimmt behalten und deinen Freunden
-	zeigen.
-	Am einfachsten geht das, wenn du dich auf der p5 Seite registrierst, also
-	ein Konto erstellst, und dich dann dort anmeldest. Dazu musst du dir einen
-	Nutzernamen und ein passendes Passwort ausdenken, die du am besten nicht
-	mehr vergessen solltest. Ausserdem benötigst du eine Mail-Adresse, von dir
-	oder deinen Eltern, um die Registrierung mit der Antwort auf eine Mail zu
-	bestätigen.
-
-	Die Registrierung findest du im p5 Webeditor in der Menüleiste ganz oben
-	ganz rechts unter "Registrieren". Bist du registriert, kannst du dich unter
-	"Anmelden" in deinem p5 Konto mit deinem Nutzernamen und deinem Passwort
-	anmelden. Nach der Anmeldung ist es möglich, jede deiner Zeichnungen mit dem
-	Menüpunkt "Datei > speichern" für immer zu sichern.
-
-	Falls du dich nicht anmelden möchtest, kannst du einfach den gesamten
-	Programmcode für deinen sketch markieren, in einen Editor auf deinen
-	Computer kopieren und dann dort ("lokal", also nicht im Web) speichern.
-	Falls es möglich ist, empfiehlt sich eine Anmeldung bei p5 aber schon, denn
-	es gibt dann im Menü unter "Datei" noch einige Werkzeuge mehr.
-
-	Vielleicht hast du es schon bemerkt: Jeder neue sketch bekommt im p5
-	Webeditor automatisch einen Namen.
-
-	$screenshot
-
-	Dieser Datei-Name ist absichtlich wild zusammengewürfelt, maximal unsinnig
-	und deshalb ziemlich lustig. Dein sketch bekommt beim Sichern diesen Namen
-	verpasst. Willst du - vor dem Sichern - jedoch einen eigenen Datei-Namen
-	vergeben, klickst du das Stift-Symbol neben dem Namen an, füllst den von dir
-	gewünschten Namen in das Kästchen und drückst die <ENTER> (Eingabe-) Taste.
-		So sind deine Programmier-Kunstwerke sicher verwahrt und können nicht mehr
-		verloren gehen.
-
-		Oberhalb vom Editor, auf der rechten Seite, kannst du ablesen, wann dein
-		sketch zuletzt gesichert wurde. Hast du in der Zwischenzeit viele
-		Änderungen gemacht, ist es an der Zeit, wieder einmal zu sichern. Mitunter
-		funktioniert auch das automatische Sichern in der Entwicklungsumgebung, so
-		in etwa jede Minute einmal. Darauf musst du dich nicht unbedingt
-		verlassen: drücke einfach nach jeder wichtigen Änderung rasch die
-		Tastenkombinaten zum Sichern (in Windows zum Beispiel: Taste 'STRG' und
-		Taste 's' gleichzeitig).
-
-		Häufiges Sichern ist immer eine gute Idee, damit deine Änderungen nicht
-		verloren gehen. Du kannst auch bei jedem Sichern deine Datei etwas anders
-		nennen, zum Beispiel an den Namen eine Zahl anhängen. Dann ist es später
-		möglich, die aktuelle Zeichnung nach einer Änderung, die dir vielleicht
-		nicht so gefällt, zu ersetzen durch das, was früher gespeichert wurde. Die
-		Dateien mit den unterschiedlichen Namen sind die "Versionen" deines
-		sketches, und beim Zurückholen gehst du zu einer früheren
-		"Programmversion" zurück. Hochgestochen kann man das eine
-		"Versionsverwaltung" nennen.
-
-		Möchtest du deinen früheren sketch zurückholen, wählst du den Meüpunkt
-		"Datei > Öffnen. Was dann im Editor aktuell steht, wird komplett
-		überschrieben. Sichere vor dem Zurückholen also besser den aktuellen
-		sketch.
-
-		<h2>1.2 Editor</h2>
-		Beispiel für: toolness.github.io/p5.js-widget/p5-widget.js
-		<script type="text/p5" src="../Code/020_01.js" data-autoplay
-			data-height="300" data-preview-width="300" data-p5-version="1.9.0">
-		</script>
-
-
-
-		<button onclick="document.location='010.html'">Zurück</button>
-		<button onclick="document.location='030.html'">Weiter</button>
+		<button onclick="document.location='012.html'">Zurück</button>
+		<button onclick="document.location='016.html'">Weiter</button>
 
 </body>
 
