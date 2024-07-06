@@ -11,46 +11,60 @@
 
 	<h1>Mehr Figuren</h1>
 
-<p1>Hier lernen wir vielen weitere Funktionen kennen, mit denen die
+<p>Hier lernen wir viele weitere Funktionen kennen, mit denen die
 unterschiedlichsten Figuren gezeichnet werden können!
-Dazu müssen wir für jede Funktion wissen, wie der Name der jeweiligen Funktion lautet und welche Argumente in den runden Klammern des Funktionsaufrufs mitgegeben werden müssen.</p1>
+Dazu müssen wir für jede Funktion wissen, wie sie heisst und welche Argumente beim Funktionsaufruf mitgegeben werden müssen.</p>
 
 <h2>Rechteck </h2>
-<p1>Das Quadrat kennen wir schon: es wird mit der Funktion <code><mark>square</mark>(100, 120, 70)</code> gezeichnet. 
-<br>Strecken wir das Quadrat und machen ein <b>Rechteck</b> draus! Bei einem Rechteck stehen immer noch zwei Seiten, die zusammenstoßen, senkrecht aufeinander. Aber nur noch die Seiten, die einander gegenüberliegen, sind gleich lang.
-</p1>
+<p>Das Quadrat kennen wir schon: es wird mit der Funktion <code><mark>square</mark>(100, 120, 70)</code> gezeichnet. 
 
-<p>	Deshalb gibt es ein Argument für die Länge der Seite in x-Richtung (nach
-	rechts oder horizontal), und ein zweites Argument für die Länge der Seite in
-	y-Richtung (nach unten ["runter"] oder vertikal). Vorher kommen noch die
-	beiden Argumente für die x-Position und die y-Position der oberen linken
-	Ecke des Rechtecks - genau so wie vorher beim Quadrat. Rechteck ist auf
-	Englisch "rectangle" (sprich 'räktängl'), die Funktion heisst deshalb
-	rect(). Ein Aufruf mit rect(x, y, rechts, runter) zeichnet ein Rechteck an
-	der Position x Pixel in horizontaler Richtung und y Pixel in vertikaler
-	Richtung von der oberen linken Ecke der Leinwand entfernt, mit einer
-	horizontalen Seitenlänge von 'rechts' Pixeln und und einer vertikalen
-	Seitenlänge von 'runter' Pixeln. Probier's aus und schreibe die Anweisung
-	rect (130, 160, 200, 150) in die draw function des Editors! Dann ändere den
-	Wert dieser vier Argumente - was geschieht dann und warum?
-</p1>
+<p>Strecken wir das Quadrat und machen ein <b>Rechteck</b> draus! Rechteck heisst auf Englisch &ldquo;rectangle&rdquo; (sprich &bdquo;räktängl&rdquo;), die Funktion lautet deshalb <code><mark>rect</mark>(110, 100, 95, 70)</code>.</p>
 
-	# code #
+<p>Bei einem Rechteck stehen - wie beim Quadrat - zwei Seiten, die zusammenstoßen, senkrecht aufeinander. Aber nur noch die zwei Seiten, die einander gegenüberliegen, sind gleich lang. Wir müssen also einmal für die kurzen Seiten und einmal für die langen Seiten angeben, wie lang sie sein sollen. </p>
 
-	<h4>1.3.4. Bonus </h4>
+<p>Deshalb gibt es ein Argument für die <b>Länge der Seite in x-Richtung</b> (nach rechts oder horizontal). Im Beispiel hier ist diese Länge 95 Pixel,    <code>rect(110, 100, <mark>95</mark>, 70). </p>
 
-	Probier aus, was passiert, wenn du noch eine Zahl, sprich ein weiteres
-	Argument, ganz hinten in die Klammern des rect() Aufrufs schreibst - zum
-	Ausprobieren vielleicht rect(x, y, rechts, runter, noch-eine-Zahl). Und dann
-	noch ein weiteres, sechstes Argument - und ein siebtes und achtes ...
+<p>Und es gibt ein zweites Argument für die <b>Länge der Seite in y-Richtung</b> (nach unten oder vertikal). Im Beispiel hier ist diese Länge 70 Pixel, <code>rect(110, 100, 95, <mark>70</mark>).</p>
 
-	Beim Quadrat square() und beim Rechteck rect() kannst du mit zusätzlichen
-	Argumenten die Ecken rund machen. Die Argumente geben an, wie rund die Ecke
-	sein soll - und wieviele Ecken rund gemacht werden sollen. Gibst du nur ein
-	zusätzliches Argument an, werden alle vier Ecken mit genau diesem Wert rund
-	gemacht. Gibst du mehrere zusätzliche Argumente an, steht jeder Wert für die
-	Rundung einer bestimmten Ecke - und der nachfolgenden Ecken, es sei denn,
-	dafür ist ein Argument-Wert vorhanden.
+<p>Natürlich müssen wir auch - wie immer - sagen, wie weit rechts und wie weit unten das Rechteck liegen soll. Das legen die zwei Argumente für die x-Position und die y-Position der oberen linken Ecke des Rechtecks fest. Es ist genauso wie vorher beim Quadrat. Und genau so wie vorher beim Quadrat können wir die Anweisung <code>rectMode(CENTER)</code> in den "setup" Teil schreiben, wenn diese beiden Argumente den <em>Mittelpunkt</em> des Rechtecks bezeichnen sollen. Im Beispiel hier ist die Position dieses  Mittelpunkts 110 Pixel nach rechts und 100 Pixel nach unten, <code>rect(<mark>110, 100,</mark> 95, 70). Die Werte für die Position des Rechtecks kommen also in den runden Klammern für die Argumente zuerst. Das ist bei fast allen anderen Figuren übrigens auch so.</p>
+
+<span id="tbd">Code/040.js</span>	
+<script type="text/p5" src="../Code/040.js" 
+	data-autoplay data-height="300" data-preview-width="250" 
+	data-p5-version="1.9.0">
+</script>
+
+<br> <span id="ausprobieren"> Probiere aus, wie sich die Argumente beim Rechteck verhalten.</span> 
+
+<ul>
+
+<li> Mach' doch mal das Rechteck so groß wie die ganze Leinwand, so dass die Ränder der Leinwand mit den Rändern des Rechtecks zusammenfallen!</li>
+
+<li>Wie macht man aus einem Rechteck ein Quadrat? Kannst du ein Rechteck <b>und</b> ein Quadrat zeichnen, so dass es wie nur eine Figur aussieht?</li>
+
+<li>Verschiebe es in die linke obere Ecke! Das geht ohne <code>rectMode(Center)</code> einfacher. Bekommst du es auch hin, wenn <code>rectMode(Center)</code> angeschaltet bleibt? 
+<br>Tipp: Wenn du eine Programmzeile mal ausschalten möchtest, sie aber später doch wieder brauchst, verwende zwischendrin Kommentarzeichen <mark>//</mark> am Anfang der Zeile. </li> 
+
+<li>Probier aus, was passiert, wenn du eine weitere Zahl, ein weiteres
+Argument, ganz hinten in die Klammern des "rect" Aufrufs schreibst, zum Beispiel <code>rect(110, 100, 95, 70, <mark>20</mark>)</code>. Siehst du, was dann passiert? </li>
+
+<li>
+Das geht auch mit mehreren zusätzlichen Argumenten. Versuch's doch mal mit  der Anweisung <code>rect(110, 100, 95, 70, <mark> 0, 80, 0, 20</mark>)</code>! Hast du eine Idee, welche Logik hinter den zusätzlichen Argumenten steckt?
+</li>
+</ul>
+
+<p>Beim Quadrat "square" und beim Rechteck "rect" werden mit zusätzlichen Argumenten die Ecken rund gemacht. Der <em>Wert</em> des Arguments gibt an, wie rund die Ecke werden soll. Eine '0' lässt die Ecke eine Ecke sein, während eine große Zahl die Ecke sehr rund macht. Das zusätzliche Argument gibt den Radius der Rundung an, also wie stark die Ecke abgerundet wird.</p>
+
+<p>Die <em>Anzahl</em> der zusätzlichen Argumente legt fest, wie viele Ecken mit welchem Radius rund gemacht werden. Gibst du nur ein
+zusätzliches Argument an, werden alle vier Ecken mit genau diesem Wert gerundet. Mehrere zusätzliche Argumente legen jeweils den Wert für die
+Rundung einer bestimmten Ecke fest, wobei eine Ecke nach der anderen im Uhrzeigersinn dran kommt: oben links, oben rechts, unten rechts und unten links.</p>
+
+<p>Wenn für eine Ecke kein Argument vorhanden ist, gilt der Wert der Ecke vorher. Die Anweisung <code>rect(110, 100, 95, 70, <mark>20</mark>)</code> rundet alle vier Ecken des Rechtecks mit dem Radius <mark>20</mark>. Die Anweisung <code>rect(110, 100, 95, 70, 20, 60, <mark>0</mark> rundet die Ecke oben links ein wenig ("20"), die Ecke oben rechts deutlich mehr ("60"), aber unten rechts bleibt es eine richtige Ecke ("0") - und unten links ebenfalls, weil ein eigener Wert dafür fehlt. 
+<br> <span id="ausprobieren"> Setz' diese Anweisungen in den Editor ein und schau dir an, wie es aussieht!</span> </p>
+
+<p>Argumente in Funktionen, die man angeben kann, aber nicht muss, nennt man <span id="Begriff">optional</span>. Beim Rechteck ist es optional, ob du Werte für die Rundung, den Radius, der Ecken angibst. Wenn solche optionalen Werte beim Funktionsaufruf fehlen, wird verwendet, was die p5 Programmierer sich dafür heimlich ausgedacht haben: der <span id="Begriff">Default</span> oder <span id="Begriff">Defaultwert</span>. Optionale Argumente kannst du also jederzeit weglassen, wenn du mit den Defaultwerten zufrieden bist - zum Beipiel wenn du mit den spitzen Ecken bei deinen Rechtecken ganz zufrieden bist. </p>
+
+=====================================================================
 
 	<h4>1.3.6. Dreieck </h4>
 
@@ -134,6 +148,10 @@ Dazu müssen wir für jede Funktion wissen, wie der Name der jeweiligen Funktion
 	Gib den Funktionsaufruf in die <code>draw()</code> Funktion ein, und such
 	dir selbst geeignete Werte für die Position und die Länge und Höhe deiner
 	Ellipse aus!
+
+
+// Ellipse mit optionalen Parametern für die Winkel (hier nicht verwendet)
+  ellipse(200, 200, 100, 50, 0, PI);
 
 	#code#
 
