@@ -1,9 +1,10 @@
 function setup() {
+//Leinwand und Hintergrund
   createCanvas(220, 200);
   background(235);
-	rectMode(CENTER);
 }
 
 function draw() {
-  square(110, 100, 60);
+// Ein Dreieck
+  triangle(115, 15, 200, 190, 15, 70);
 }

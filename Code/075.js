@@ -1,9 +1,10 @@
 function setup() {
   createCanvas(220, 200);
   background(235);
-	rectMode(CENTER);
 }
 
 function draw() {
-  square(110, 100, 60);
+// Eine Ellipse, 130 Pixel breit
+// und 90 Pixel hoch
+ellipse(110, 100, 130, 90)  
 }
