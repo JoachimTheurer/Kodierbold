@@ -9,132 +9,189 @@
 
 <body>
 
-11.7.24
-
-==> Farbe
-
 	<h1>Farbe!</h1>
-
-Wir können zwar schon verschiedene Formen zeichnen, und einen tollen p5 sketch erstellen. Unsere Zeichnung ist aber nur schwarz-weiss mit einem grauen Hintergrund. Das muss sich ändern und alles deutlich bunter werden!
-
-In p5 kann sowohl der Umriss als auch das Innere jeder Figur farbig gemacht werden. Auch der Hintergrund kann eine Farbe bekommen. Beim Hintergrund (<code>background()</code>) sieht man am besten, wie das mit der Farbe in p5 funktioniert: deshalb fangen wir damit an.
 	
-	<h3>1.3.1 background</h3>
+<p>Es wird wirklich Zeit, dass hier Farbe in's Spiel kommt.
+Wir können zwar schon viele verschiedene Formen zeichnen und damit einen tollen p5 sketch erstellen. Unsere Zeichnung ist aber nur schwarz-weiss mit einem grauen Hintergrund. Das sollte sich ändern und alles deutlich bunter werden!</p>
 
-Wir kennen die (<code>background()</code>) Funktion schon. Sie ist automatisch ganz oben im (<code>draw()</code>) Abschnitt des Editors vorhanden. So wird gleich am Anfang die ganze Leinwand neu übermalt und für die neue Zeichnung vorbereitet. Wie du weisst, wird <code>draw()</code> immer und immer wieder neu durchlaufen. <code>background()</code> ganz am Anfang sorgt dafür, dass für einen neuen Durchlauf eine frische leere Leinwand zur Verfügung steht. 
+<p>Bei jeder Figur gibt es zwei Bereiche, die mit Farbe gefüllt werden können. Nicht nur das Innere, die Fläche, sondern auch der Rand, der Umriss, jeder Figur kann mit einer Farbe gezeichnet werden. Sehen wir uns zunächst an, wie eine Fläche, also das Innere eines Kreises oder irgend einer anderen Figur, mit Farbe gefüllt werden kann.</p>
+
 	
-	Wir haben auch schon gemerkt, dass der Parameter "grau" der (<code>background(grau)</code>) Funktion den Grauwert des Hintergrunds festlegt. Die möglichen Werte für "grau" sind 0 bis 255, wobei 0 einen total schwarzen und 255 einen ganz weißen Hintergrund zeichnet.
+	<h3>Fläche</h3>
 
-	Ausprobieren! Ändere in einer frisch geladenen Editor-Sitzung den background-Wert, und setze ihn auf einen Wert zwischen 0 und 255. Was passiert, wenn du das Argument "grau" mit einer größeren Zahl als 255 übergibst, zum Beispiel mit (<code>background(400)</code>)? p5 ist clever und denkt sich: 400 ist nicht erlaubt, weil zu groß, deshalb nehme ich einen Wert, der nur so groß wie möglich ist - und das ergibt weiß (wie bei "grau" = 255).
+<p>Um Flächen farbig anzumalen, gibt es die Anweisung "fill". Eine Fläche ist der Inhalt einer Figur, oder der gesamte Hintergrund - alles, was nicht wie eine Linie aussieht.
+Passenderweise heisst &ldquo;fill&rdquo; auf Englisch &bdquo;füllen&rdquo; und es wird genau so gesprochen:&bdquo;fill&rdquo;. Die Anweisung "fill" funktioniert wieder wie ein Schalter: sie schaltet das Malen mit einer bestimmten Farbe ein. Alle Flächen, die danach gezeichnet werden, bekommen diese Farbe. Um die Farbe irgendwann zu ändern, muss eine neue  "fill" Anweisung mit einer anderen Farbe aufgerufen werden. </p>
 
-	Das ist unsere erste fantastische Farbe: der Grauwert! Immer dann, wenn du eine Anweisung verwendest, mit der eine Farbe festgelegt wird, und wenn du dann nur eine einzige Zahl übergibst, wird ein Grauwert verwendet. Du kannst damit immerhin schon mal festlegen, ob etwas schwarz ('0'), grau (so etwa '150') oder weiß ('255') sein soll.
+<p>Welches Argument kann für "fill" verwendet werden? Das Argument sollte die Farbe festlegen, die ab jetzt gelten soll. Es gibt dafür verschiedene Möglichkeiten. Die schnellste und einfachste ist der Name der Farbe - in Englisch. Die üblichsten Farbnamen findest du in dieser Tabelle in der Spalte &bdquo;Farbname&rdquo;:
 
-	Das reicht uns natürlich bei weitem nicht. Wir wollen richtige Farben!
+<p><caption>Kleine Farbtabelle (VGA-Palette, 16 Farben)</caption></p>
 
-	In p5 gibt es drei Farben zur Auswahl: rot, grün und blau. Der Trick ist, dass man diese drei Farben - wie beim Malen mit Wasserfarben - mischen kann, um noch ganz andere Farben oder Farbtöne herzustellen. 
+<table style="border-collapse: collapse; width: 100%;">
+  <thead>
+    <tr style="background-color: #f2f2f2;">
+      <th style="border: 1px solid #ddd; padding: 8px;">Farbe</th>
+      <th style="border: 1px solid #ddd; padding: 8px;">Farbname</th>
+      <th style="border: 1px solid #ddd; padding: 8px;">R G B</th>
+    </tr>
+  </thead>
+  <tbody>
+	    <tr>
+      <td style="color: black; background-color: white; text-align: center">Weiß</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">white</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">255, 255, 255</td>
+    </tr>
+    <tr>
+		  <td style="color: black; background-color: yellow; text-align: center">Gelb</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">yellow</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">255, 255, 0</td>
+    </tr>
+    <tr>
+      <td style="color: white; background-color: red; text-align: center">Rot</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">red</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">255, 0, 0</td>
+    </tr>
+    <tr>
+		  <td style="color: white; background-color: magenta; text-align: center">Magenta</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">magenta</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">255, 0, 255</td>
+    </tr>
+    <tr>
+		  <td style="color: white; background-color: purple; text-align: center">Lila</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">purple</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">128, 0, 128</td>
+    </tr>
+		<tr>
+		 <td style="color: white; background-color: maroon; text-align: center">Braun</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">maroon</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">128, 0, 0</td>
+    </tr>
+    <tr>
+		 <td style="color: white; background-color: olive; text-align: center">Olivgrün</td>		
+      <td style="border: 1px solid #ddd; padding: 8px;">olive</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">128, 128, 0</td>
+    </tr>	
+		<tr>
+			<td style="color: white; background-color: navy; text-align: center">Marineblau</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">navy</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">0, 0, 128</td>
+    </tr>
+    <tr>
+		  <td style="color: white; background-color: blue; text-align: center">Blau</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">blue</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">0, 0, 255</td>
+    </tr>
+    <tr>
+		 <td style="color: white; background-color: teal; text-align: center">Blaugrün</td>		
+      <td style="border: 1px solid #ddd; padding: 8px;">teal</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">0, 128, 128</td>
+    </tr>
+    <tr>
+      <td style="color: white; background-color: cyan; text-align: center">Cyan</td>
+     <td style="border: 1px solid #ddd; padding: 8px;">cyan</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">0, 255, 255</td>
+    </tr>
+		<tr>
+		  <td style="color: white; background-color: lime; text-align: center">Limette</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">lime</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">0, 255, 0</td>
+    </tr>		
+    <tr>
+		 <td style="color: white; background-color: green; text-align: center">Grün</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">green</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">0, 128, 0</td>
+    </tr>
+    <tr>
+		 <td style="color: white; background-color: silver; text-align: center">Silber</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">silver</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">192, 192, 192</td>
+    </tr>
+    <tr>
+		  <td style="color: white; background-color: gray; text-align: center">Grau</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">gray</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">128, 128, 128</td>
+    </tr>
 
-	Wir geben also jeder Funktion, die mit Farben zu tun hat, drei Argumente mit. Das erste Argument ist der Anteil an Rot, der (wie bei der Graustufe) als Zahlenwert von '0' bis '255' laufen kann. Das zweite Argument ist der Anteil an Grün, auch hier läuft der Zahlenwert von '0' für gar kein Grün bis zu '255' für maximales Grün. Das dritte Argument, mit einem Wert ebenfalls zwischen '0' und '255', steht für den Blau-Anteil an der gemischten Farbe.  
+    <tr>
+      <td style="color: white; background-color: black; text-align: center">Schwarz</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">black</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">0, 0, 0</td>
+    </tr>
+  </tbody>
+</table>
 
-	Probier' erst mal die Farben einzeln als Hintergrund auf der Leinwand aus. Setze den Wert des Arguments "rot" in der Funktion <code>background(rot, grün, blau)</code> auf verschiedene Werte, und lasse "grün" und "blau" auf dem Wert '0'. 
-	
-	#code#
-	
-	Für verschiedene Werte des Arguments "rot" ändern sich die Farben von einem ganz dunklen Purpur (mit dem Argument "50') über ein Weinrot (mit dem Argument '150') zu einem zuerst satten (mit dem Argument '200') und dann ziemlich grellen Rot (mit dem Argument '250'). Wenn du ungültige Werte größer als 255 eingibst, sorgt p5 automatisch dafür, dass nur der Maximalwert '255' genommen wird, damit das Programm nicht wegen eines Fehlers abbricht. Das hatten wir bei XXX schon gesehen.
+<p>Du schaltest eine Farbe für Flächen ein, indem du die Anweisung <code><mark>fill</mark>('purple')</code> verwendest. Wie du siehst, kommt der englische Farbname aus der Tabelle in die runden Klammern des Arguments: <code>fill(<mark>'olive'</mark>)</code>, mit einfachen Anführungszeichen drumrum. Der Name muss, wie alle Anweisungen in p5, ganz genau richtig geschrieben werden.</p>
 
-Jetzt probier' die anderen beiden Farben einzeln. Setze "rot" auf '0' zurück. Dann wähle für "grün" der <code>background(rot, grün, blau)</code> Funktion verschiedene Wert zwischen '0' und '255', vielleicht in 50er Schritten (50, 100, 150, 200, 250) zum Testen. Schliesslich setze das Argument "grün" auf '0' zurück und wähle für das Argument "blau" der <code>background(rot, grün, blau)</code> Funktion verschiedene Werte zwischen '0' und '255', testweise vielleicht wieder in 50er Schritten (50, 100, 150, 200, 250). Du siehst: je größer der Zahlenwert, desto heller wird jede Farbe. Welcher Hintergrund gefällt die am besten?
-
-Falls deine Lieblingsfarbe noch nicht dabei war, geht es jetzt an das Mischen der einzelnen Farbanteile.
-Setze alle drei Werte für die Argumente rot, grün und blau der <code>background(rot, grün, blau)</code> Funktion auf verschiedene Werte, zum Testen vielleicht jeweils zwischen 100 und '200' - sonst wird eine bestimmte Farbe zu kräftig. Zum Beispiel ergibt diese Kombination  <code>background(150, 100, 140); </code> ein hübsches Lila:
-
-#code#   background(150, 100, 140);
-
-	und diese ein goldenes Gelb. 
-	
-#code#   background(250, 220, 10); 
+<p>Um die Füllfarbe zu ändern, brauchen wir eine neue "fill" Anweisung - wie bei einem Schalter.
+"fill" legt die Farbe fest, mit der alle Formen gefüllt werden, die im Programm danach gezeichnet werden - bis die nächste "fill" Anweisung kommt. </p>
 
 
-In jeder Programmiersprache, wo Farben beim Zeichnen mit Computerprogrammen verwendet werden, gibt es zum Mischen diese drei Farben:  Rot (R), Grün (G) und Blau (B). Das kürzt man zu RGB  oder RGB-Farbpalette ab. Weil es jeder braucht, und weil man nicht ewig selbst probieren will, welche RGB Werte  eine ganz bestimmte Farbe hat, gibt es fertige Tabellen im Internet, in denen du zu einem gewünschten Farbton die RGB Kombinationa ablesen kannst.
-	# link https://www.farb-tabelle.de/de/farbtabelle.htm
-Am besten, du merkst dir gleich mal die RGB-Kombinationen deiner Lieblingsfarben.
+<span id="tbd">Code/080.js</span>	
+<script type="text/p5" src="../Code/080.js" 
+	data-autoplay data-height="520" data-preview-width="270" 
+	data-p5-version="1.9.0">
+</script>
 
-Was passiert übrigens, wenn du den Wert für alle drei Argumente "rot", "grün" und "blau" in  der <code>background(rot, grün, blau)</code> Funktion auf die gleiche Zahl setzt, sagen wir <code>background(200, 200, 200)</code>? Du erhälst eine graue Farbe! Genau die gleiche graue Farbe bekommst du aber auch, wenn du nur ein einziges Argument mitgibst: <code>background(200)</code>. Das kennen wir schon: das ist der Wert für die Graustufe, die nur ein einziges Argument erfordert. Der einzige Wert für die Graustufe ist einfach eine Abkürzung für drei Argumente, die die völlig gleichen Werte für die Farben "rot", "grün" und "blau" (du weisst schon, Programmierer sind schreibfaul) haben.
+<p> <span id="ausprobieren">Setze deine Lieblingsfarben ein!</span> </p> 
 
-			<h3>1.3.1 fill</h3>
-Jetzt hat der Hintergrund schon die Farbe, die du mit den RGB-Werten vorgegeben hast. Das machen wir zuerst in <code>draw()</code>, damit die Zeichnung anschliessend auf den Hintergrund gemalt wird und nicht umgekehrt der Hintergrund die Zeichnung wieder übermalt.
+<ul>
+<li>Funktioniert der Farbname auch mit der "background" Funktion, zum Beispiel mit <code>background('lime')</code>? Anführungszeichen <mark>'</mark> um den Farbnamen nicht vergessen!</li>
 
-	Zeichnen wir jetzt ein paar Formen auf die schon grundierte Leinwand: einen Kreis mit einem Quadrat drin, und da drin ein Dreieck. Die Zeichnung ist ziemlich einfach, damit wir gleich genau verstehen, wie  diese Formen mit Farbe gefüllt werden können.
-	
-	function setup() {
-    createCanvas(250, 240);
-}
+<li>Die Farbe &bdquo;Grau&rdquo; heisst auf Englisch &ldquo;gr<b>e</b>y&rdquo;. Die farbgewaltigen amerikanischen Programmierer sind damit nicht ganz klar gekommen und haben den Farbnamen &ldquo;gr<b>a</b>y&rdquo; in die Welt gesetzt. Also verwendet p5 &rdquo;gray&ldquo;.</li>
 
-function draw() {
-    background(200, 100, 50);
-    circle(125, 125, 200);
-    square(65, 65, 120);
-    triangle(125, 85, 95, 150, 155, 150);
-}
+<li>Im Internet kannst du Tabellen mit viel viel mehr Farben finden, wenn du mit dem Begriff &bdquo;CSS Farbtabelle&rdquo; suchst. Dann kannst du probieren, ob p5 Farben wie <span style="background-color: wheat; color: black;">wheat</span>, <span style="background-color: aqua;  color: white;">aqua</span>,  <span style="background-color: fuchsia; color: white;">fuchsia</span> oder <span style="background-color: midnightblue; color: white;">midnightblue</span> auch kennt. Fürs Erste könnte die Liste oben schon mal genügen.</li>
 
-Wegen der <code>background(200, 100, 50);</code> Anweisung hat der Hintergrund schon eine rötliche Farbe. Die drei Formen sind mit weißer Farbe gefüllt, das ist immer die Voreinstellung, wenn wir keine andere Anweisung geben.
-	
-	Die Farbe der Füllung können wir mit der <code>fill()</code> Anweisung ändern. Passenderweise heisst "fill" (sprich genau so: "fill") auf Englisch "füllen". Die Argumente von <code>fill(rot, grün, blau)</code> sind, wie bei background, die Farbanteile von rot, grün und blau (RGB), mit der dann die Form gefüllt wird.
+<li> Der Web-Editor, den wir später kennenlernen, zeigt dir sogar die gewählte Farbe in einem kleinen Kästchen vor dem Farbnamen an. So weisst du sofort, ob dieser Farbname bekannt ist oder ob du dich vielleicht vertippt hast. </li> </ul>
 
-Wichtig ist: Es kommt genau auf die Stelle im Programm an, an der die <code>fill(rot, grün, blau)</code> Anweisung steht. Es gilt dann: ab dieser Stelle alles mit dieser Farbe füllen! 
-<code>fill()</code> legt also nur die Farbe fest, mit der alle die Formen gefüllt werden, die im Programm erst danach kommen. 
-Die <code>fill()</code> Anweisung gilt so lange, bis im Programmcode eine andere <code>fill()</code> Anweisung mit neuen  Farben kommt - oder zum Beispiel eine background-Anweisung, die alles wieder übermalt. Und was vor der <code>fill()</code> Anweisung im Programm steht, weiss noch nichts davon.
+<p> In der Tabelle gibt es eine Spalte <b>R G B</b> mit jeweils drei Zahlen für eine bestimmte Farbe. Was hat das zu bedeuten? 
+<br> RGB ist die zweite Methode, um an die "fill" Anweisung eine Farbe zu übergeben. Die RGB-Methode  mischt die drei Farben: rot, grün und blau. Der Trick ist, dass diese drei Farben, wenn sie gemischt werden, andere Farben oder Farbtöne ergeben - wie beim Malen mit Wasserfarben. Die Zahlenwerte in der Spalte <b>RGB</b> der Tabelle geben an, wie groß der Anteil an <b>Rot</b> (erste Zahl), <b>Grün</b> (zweite Zahl) und <b>Blau</b> (dritte Zahl) an der gemischten Farbe ist. Die möglichen Zahlenwerte liegen zwischen '0' (gar nichts) und '255' (maximal). Wie lauten demnach die drei Zahlen für die Farbe &bdquo;Blau&ldquo;?</p>
 
-Probieren wir das an unserer einfachen Zeichnung mal aus und setzen die Füllfarbe mit <code>fill(130, 250, 0);</code> zu grasgrün:
+<p>Wir geben also, wenn wir das RGB Verfahren verwenden, jeder Funktion, die mit Farben zu tun hat, drei Argumente mit. Das erste Argument ist der Anteil an Rot, der als Zahlenwert von '0' bis '255' laufen kann. Das zweite Argument ist der Anteil an Grün, auch hier läuft der Zahlenwert von '0' für gar kein Grün bis zu '255' für maximales Grün. Das dritte Argument, mit einem Wert ebenfalls zwischen '0' und '255', steht für den Blau-Anteil an der gemischten Farbe. em zuerst satten (mit dem Argument '200') und dann ziemlich grellen Rot (mit dem Argument '250'). 
 
-	function setup() {
-    createCanvas(250, 240);
-}
+<span id="tbd">Code/085.js</span>	
+<script type="text/p5" src="../Code/085.js" 
+	data-autoplay data-height="520" data-preview-width="270" 
+	data-p5-version="1.9.0">
+</script>
 
-function draw() {
-    background(200, 100, 50);
-	  fill(130, 250, 0);
-    circle(125, 125, 200);
-    square(65, 65, 120);
-    triangle(125, 85, 95, 150, 155, 150);
-}
+<p> <span id="ausprobieren">Probier' die RGB-Farbmischung ausgiebig aus und ändere die Zahlenwerte!</span> </p> 
 
-Alles, was nach der <code>fill(130, 250, 0);</code> Anweisung steht, wird mit grüner Farbe gefüllt: das Quadrat, der Kreis und das Dreieck.
+<ul><li>Je größer der Zahlenwert, desto heller wird die Farbe. Stimmt das immer?</li>
 
-Es ist bei unkomplizierten Farben auch möglich, auch einfach den englischen Farbnamen als Argument zu verwenden. Gelb zum Beispiel ist "yellow", die Anweisung ist dann <code>fill("yellow");</code>. So kannst du beispielsweise "olive" (dunkles Grün), "fuchsia" (Lila) und "maroon" (Braun) erhalten, ohne Farben zu mischen. Diese Farbnamen kann man in einer Tabelle (( link CSS Farbnamen )) nachsehen.
+<li>Wenn deine Lieblingsfarbe nicht schon in der Tabelle vorkommt: Merke dir die drei Werte, die deine Lieblingsfarbe in der RGB Methode ergeben!</li>
 
-Wollen wir	das Quadrat (und das Dreieck) rot ausmalen, müssen wir eine weitere  <code>fill()</code> Anweisung schreiben, bevor square und triangle gezeichnet werden. Damit gilt die erste fill Anweisung mit Grasgrün nur noch für den Kreis.
+<li>Wähle alle drei RGB Zahlen gleich! Was geschieht? Ändert sich etwas, wenn du eine andere Zahl für die drei RGB Werte nimmst? Mach' das Dreieck grau!</li>
+</ul>
 
-function setup() {
-    createCanvas(250, 240);
-}
+<p> Die dritte Methode, um eine Farbe festzulegen, hast du gerade ausprobiert: es ist die <b>Graustufe</b>. Sind alle drei Werte für rot, grün und blau in der "fill" Anweisung gleich, wird eine Figur mit weißer, grauer oder schwarzer Farbe ausgefüllt. </p>
 
-function draw() { 
-    background(200, 100, 50);
-	    fill(130, 250, 0);
-    circle(125, 125, 200);
-	    fill(250, 50, 0);
-    square(65, 65, 120);
-    triangle(125, 85, 95, 150, 155, 150);
-}
+<p> Genau die gleiche graue Farbe bekommst du, wenn du nur ein einziges Argument mitgibst: <code>fill(200)</code> ergibt genau das gleiche Grau wie <code>fill(200, 200, 200)</code>. Diese  Graustufe, die nur ein einziges Argument erfordert, kennen wir schon lange von der <code>background(200)</code> Funktion. Der einzige Wert im Argument für die Graustufe ist einfach eine Abkürzung für die drei Argumente rot, grün und blau, wenn sie alle gleich sind. </p>
 
-Für ein blaues Dreieck müssen wir noch eine <code>fill(130, 250, 0);</code> Anweisung, nach square und vor triangle, in das Programm einfügen. Diesmal verwenden wir zum Testen den Farbnamen "blue" für die blaue Farbe:
+<p>Wenn du für die RGB Zahlen ungültige Werte eingibst, die größer als '255' sind, sorgt p5 automatisch dafür, dass nur der Maximalwert '255' genommen wird. Mit dieser automatischen Korrektur vermeidet p5, dass das Programm wegen eines Fehlers abbrechen muss. 
+<br>Natürlich sollte man sich darauf nicht verlassen und stets nur Werte aus dem erlaubten Bereich verwenden. Vielleicht geht ja trotz der automatischen Korrektur etwas schief, und selbst wenn nicht, wirst du (oder andere, die dein Programm verstehen wollen) später niemals mehr verstehen, warum ein ungültiger Wert verwendet wurde.</p>
 
-	function setup() {
-    createCanvas(250, 240);
-}
+<p>In jeder vernünftigen Programmiersprache, wo Farben beim Zeichnen mit Computerprogrammen verwendet werden, gibt es zum Mischen diese drei Farben: Rot (R), Grün (G) und Blau (B). Damit lässt sich die gewünschte Farbe genauer bestimmen als nur mit Farbnamen, und nicht jeder Name lässt sich so leicht merken wie <span style="background-color: lightgoldenrodyellow; color: black;"> lightgoldenrodyellow</span>. </p>
 
-function draw() { 
-    background(200, 100, 50);
-    fill(130, 250, 0);
-    circle(125, 125, 200);
-    fill(250, 50, 0);
-    square(65, 65, 120);
-    fill("blue");
-    triangle(125, 85, 95, 150, 155, 150);
-}
+<h3>Hexadezimale Farbwerte</h3>
 
-Die Reihenfolge der Anweisungen im Programm ist also superwichtig! Das gilt für die Farbe, mit der die Formen gefüllt werden. Es gilt aber auch für die Reihenfolge der Figuren selbst: wird eine kleinere Figur vor einer größeren gezeichnet, wird sie überdeckt und ist gar nicht mehr zu sehen. Das Programm läuft Anweisung für Anweisung ab, Schritt für Schritt, und eine Anweisung weiter hinten im Programm wird später ausgeführt als eine Anweisung vorne im Programm - auch wenn damit etwas übermalt oder rückgängig gemacht wird.
-	
-	Jetzt solltest du an deiner eigenen Zeichnung ausprobieren, welche Farben du an welcher Stelle in die Formen füllen willst. Endlich wird es bunt! Probier' auch mal aus, die Reihenfolge der Farben und Formen zu ändern, und überlege dir, warum es die Zeichnung wie verändert.
+<p>
+In einer Tabelle mit CSS-Farbnamen aus dem Internet stehen neben den Namen der Farben und den drei RGB Zahlen häufig auch Werte, die mit einem &bdquo;Gartenzaun&rdquo;-Zeichen <mark>#</mark> anfangen. Das Gartenzaun '#' Zeichen nennt man beim Programmieren das &bdquo;Nummernzeichen&rdquo; oder schlicht eine Raute. In den sozialen Medien hat es natürlich eine coole englische Bezeichnung und heisst &bdquo;Hashtag&rdquo;, sprich &ldquo;häschtäg&bdquo;. </p>
+
+<p>Die Zahlen hinter '#' sind sogenannte <em>hexadezimale</em> Zahlenwerte. Hexadezimale Zahlen verwenden ein anderes Zahlensystem als die RGB Werte. Man kann jede hexadezimale Zahl in einen RGB Wert umrechnen und umgekehrt, es sind also die gleichen Zahlne. In den hexadezimalen Angaben sind die RGB Werte nur anders verschlüsselt (soll heissen: ein bisschen mehr <em>verhext</em>). Hexadezimale Werte kannst du in der "fill" Funktion eben so gut verwenden wie RGB Werte. Du musst nur aus der Farb-Tabelle statt der drei RGB Werte den entsprechenden einzigen hexadezimalen Wert ablesen und als Argument verwenden.</p>
+
+<p>Zum Beispiel bewirkt <code>fill('gold')</code> das Gleiche wie <code>fill(255, 215, 0)</code> oder <code><mark>fill('#FFD700')</mark></code>: Flächen werden mit der Farbe Gold ausgemalt. Wollt ihr einen Rasen in Grasgrün zeichnen, verwendet ihr den Farbnamen <code>fill('lawngreen')</code> oder	die hexadezimale Farbbezeichnung <code>fill('#7CFC00')</code> oder den RGB Wert	<code>fill(124; 252; 0)</code> - was davon, bleibt ganz euch überlassen. 
+<br>Die Farbnamen werden in p5 mit Kleinbuchstaben geschrieben (), die hexadezimalen Werte müssen immer mit den Großbuchstaben geschrieben werden (). Vergesst nur die Anführungszeichen für den Farbnamen oder die Hex-Darstellung nicht, oder in der RGB Darstellung die Kommas zwischen den drei Zahlen. 
+<br>(Und auf gar keinen Fall den Strichpunkt <mark>;</mark> hinter der fill Anweisung - niemals!)
+<br>Eine weiße Füllung bekommt man also mit <code>fill('white')</code> oder mit <code>fill(255, 255, 255)</code> oder mit <code>fill(255)</code> oder mit <code>fill('#FFFFFF')</code> hin. Wir erinnern uns: hier sind die RGB Werte gleich und es muss nur ein einziger Wert für die Graustufe vorhanden sein.
+<br>Alles schwarz ausgemalt wird nach der Anweisung <code>fill('black')</code> oder  <code>fill(0, 0, 0)</code> oder <code>fill(0)</code> oder <code>fill('#000000')</code>. Ganz so, wie es dir am besten gefällt!</p>
+
+<h2>Rand</h2>
+
+<p>Der zweite Bereich, der in einem p5 sketch mit Farbe gefüllt werden kann, ist der Rand einer Figur, also die Linie aussenrum: der Umriss. Auch Linien und Punkte, die nicht so recht eine Fläche haben, bekommen so eine Farbe.</p> 
+
+
+
+
+==========================================================================
 
 			<h3>1.3.1 alpha()</h3>
 
@@ -161,30 +218,9 @@ function draw() {
 
 	 <p> Probier's aus und gib dem vierten Parameter in der <code>fill(rot, grün, blau, alpha);</code> Funktion unterschiedliche Werte. Welche neuen Farbmischungen kannst du entdecken?</p>
 
-	
-			<h3>1.3.1 Eigenschaft von draw()</h3>
+==========================================================================
 
-	Zwischendrin ein Rätsel: Kannst du erkären, was in diesem Programm geschieht?
-
-	function setup() {
-    createCanvas(250, 240);
-}
-
-function draw() { 
-    background(200, 100, 50);
-    circle(125, 125, 200);
-    square(65, 65, 120);
-    triangle(125, 85, 95, 150, 155, 150);
-    fill(130, 250, 0);
-}
-
-Obwohl <code>fill(130, 250, 0);</code> ganz am Schluss von draw() steht, sind trotzdem alle drei Figuren grasgrün. Warum?
-
-	draw() wird immer und immer wieder aufgerufen, solange das Programm läuft. Und diese Aufrufe von draw() finden superschnell hintereinander statt - so schnell, dass du den allerersten Aufruf gar nicht sehen kannst. Am Ende des allerersten Aufrufs steht <code>fill(130, 250, 0);</code>, und ab dann wird jede Figur grasgrün gefüllt. Beim zweiten blitzschnellen Aufruf von <code>draw();</code> wird diese Füllfarbe verwendet, denn es gibt kein neues <code>fill(130, 250, 0);</code> irgendwo anders im Programm, das dieses <code>fill(130, 250, 0);</code> überschreibt - es gilt also ab sofort für immer. 
-
-	Wenn du den allerersten Aufruf von draw() in einem winzigen Bruchteil einer Sekunde sehen könntest, wären alle Figuren noch mit der Voreinstellung "weiß" gefüllt, solange die <code>fill(130, 250, 0);</code> vom Programm noch nicht erreicht wird. Es ist aber Absicht, draw() ganz schnell aufzurufen, damit mögliche Änderungen der Figuren ohne Ruckeln erscheinen. Momentan zeichnen wir immer das Gleiche und dieser blitzschnelle Aufruf von draw() ganz schnell hintereinander ist noch gar nicht zu sehen. Man muss aber im Hinterkopf behalten, dass draw() nicht nur einmal - wie setup() -, sondern ganz viele Male schnell hintereinander aufgerufen wird, um zu verstehen, was im Programm passiert.
-
-Verschiebe den gesamten Code von aus draw() nach setup, hinter createCanvas, lasse draw() leer und beobachte, was dann geschieht. Kannst du es erklären?
+** Linien und Umrisse
 	
 			<h3>1.3.1 Umriss</h3>
 
@@ -226,7 +262,151 @@ function draw() {
 
 	Jetzt bist du wieder dran: Ändere die Dicke und die Farbe der Figuren-Ränder, Linien und Punkte in deiner Zeichnung! Nimm mal versuchsweise richtig große Werte (sagen wir Breite = 100) für das "Strichgewicht" strokeWeight(Breite). 
 
+stroke, noStroke
+
+** Graustufen
+background
+
+240713
+==========================================================================
+
+
+			<h3>1.3.1 fill</h3>
+Jetzt hat der Hintergrund schon die Farbe, die du mit den RGB-Werten vorgegeben hast. Das machen wir zuerst in <code>draw()</code>, damit die Zeichnung anschliessend auf den Hintergrund gemalt wird und nicht umgekehrt der Hintergrund die Zeichnung wieder übermalt.
+
+	Zeichnen wir jetzt ein paar Formen auf die schon grundierte Leinwand: einen Kreis mit einem Quadrat drin, und da drin ein Dreieck. Die Zeichnung ist ziemlich einfach, damit wir gleich genau verstehen, wie  diese Formen mit Farbe gefüllt werden können.
+	
+	function setup() {
+    createCanvas(250, 240);
+}
+
+function draw() {
+    background(200, 100, 50);
+    circle(125, 125, 200);
+    square(65, 65, 120);
+    triangle(125, 85, 95, 150, 155, 150);
+}
+
+Wegen der <code>background(200, 100, 50);</code> Anweisung hat der Hintergrund schon eine rötliche Farbe. Die drei Formen sind mit weißer Farbe gefüllt, das ist immer die Voreinstellung, wenn wir keine andere Anweisung geben.
+	
+xx>>	Die Farbe der Füllung können wir mit der <code>fill()</code> Anweisung ändern. Passenderweise heisst "fill" (sprich genau so: "fill") auf Englisch "füllen". Die Argumente von <code>fill(rot, grün, blau)</code> sind, wie bei background, die Farbanteile von rot, grün und blau (RGB), mit der dann die Form gefüllt wird.
+
+Wichtig ist: Es kommt genau auf die Stelle im Programm an, an der die <code>fill(rot, grün, blau)</code> Anweisung steht. Es gilt dann: ab dieser Stelle alles mit dieser Farbe füllen! 
+<code>fill()</code> legt also nur die Farbe fest, mit der alle die Formen gefüllt werden, die im Programm erst danach kommen. 
+Die <code>fill()</code> Anweisung gilt so lange, bis im Programmcode eine andere <code>fill()</code> Anweisung mit neuen  Farben kommt - oder zum Beispiel eine background-Anweisung, die alles wieder übermalt. Und was vor der xx <code>fill()xx</code> Anweisung im Programm steht, weiss noch nichts davon.
+<<xx
+
+Probieren wir das an unserer einfachen Zeichnung mal aus und setzen die Füllfarbe mit <code>fill(130, 250, 0);</code> zu grasgrün:
+
+	function setup() {
+    createCanvas(250, 240);
+}
+
+function draw() {
+    background(200, 100, 50);
+	  fill(130, 250, 0);
+    circle(125, 125, 200);
+    square(65, 65, 120);
+    triangle(125, 85, 95, 150, 155, 150);
+}
+
+Alles, was nach der <code>fill(130, 250, 0);</code> Anweisung steht, wird mit grüner Farbe gefüllt: das Quadrat, der Kreis und das Dreieck.
+
+xx >>
+Es ist bei unkomplizierten Farben auch möglich, auch einfach den englischen Farbnamen als Argument zu verwenden. Gelb zum Beispiel ist "yellow", die Anweisung ist dann <code>fill("yellow");</code>. So kannst du beispielsweise "olive" (dunkles Grün), "fuchsia" (Lila) und "maroon" (Braun) erhalten, ohne Farben zu mischen. Diese Farbnamen kann man in einer Tabelle (( link CSS Farbnamen )) nachsehen.
+xx<<
+
+Wollen wir	das Quadrat (und das Dreieck) rot ausmalen, müssen wir eine weitere  <code>fill()</code> Anweisung schreiben, bevor square und triangle gezeichnet werden. Damit gilt die erste fill Anweisung mit Grasgrün nur noch für den Kreis.
+
+function setup() {
+    createCanvas(250, 240);
+}
+
+function draw() { 
+    background(200, 100, 50);
+	    fill(130, 250, 0);
+    circle(125, 125, 200);
+	    fill(250, 50, 0);
+    square(65, 65, 120);
+    triangle(125, 85, 95, 150, 155, 150);
+}
+
+Für ein blaues Dreieck müssen wir noch eine <code>fill(130, 250, 0);</code> Anweisung, nach square und vor triangle, in das Programm einfügen. Diesmal verwenden wir zum Testen den Farbnamen "blue" für die blaue Farbe:
+
+	function setup() {
+    createCanvas(250, 240);
+}
+
+function draw() { 
+    background(200, 100, 50);
+    fill(130, 250, 0);
+    circle(125, 125, 200);
+    fill(250, 50, 0);
+    square(65, 65, 120);
+    fill("blue");
+    triangle(125, 85, 95, 150, 155, 150);
+}
+
+	
+	Jetzt solltest du an deiner eigenen Zeichnung ausprobieren, welche Farben du an welcher Stelle in die Formen füllen willst. Endlich wird es bunt! Probier' auch mal aus, die Reihenfolge der Farben und Formen zu ändern, und überlege dir, warum es die Zeichnung wie verändert.
+
+
+
+	Die Reihenfolge der Anweisungen im Programm ist also superwichtig! Das gilt für die Farbe, mit der die Formen gefüllt werden. Es gilt aber auch für die Reihenfolge der Figuren selbst: wird eine kleinere Figur vor einer größeren gezeichnet, wird sie überdeckt und ist gar nicht mehr zu sehen. Das Programm läuft Anweisung für Anweisung ab, Schritt für Schritt, und eine Anweisung weiter hinten im Programm wird später ausgeführt als eine Anweisung vorne im Programm - auch wenn damit etwas übermalt oder rückgängig gemacht wird.
+
+
+
+
+Die Argumente von <code>fill(rot, grün, blau)</code> sind, wie bei background, die Farbanteile von rot, grün und blau (RGB), mit der dann die Form gefüllt wird.
+ </p>
+
+<p>Die Fläche, die wir schon gut kennen, ist der Hintergrund. Ein grauer Hintergrund wird mit <code>background(235)</code> erzeugt.  
+Das Argument in Klammern, hier '235', legt die <em>Graustufe</em> des Hintergrunds fest. Die möglichen Werte für das Argument von "background" sind '0' bis '255', wobei '0' einen total schwarzen und '255' einen ganz weißen Hintergrund zeichnet.</p>
+
+<p>Das ist unsere erste fantastische Farbe: der Grauwert! Immer dann, wenn du eine Anweisung verwendest, mit der eine Farbe festgelegt wird, und wenn du dann nur eine einzige Zahl übergibst, wird ein Grauwert verwendet. Du kannst damit festlegen, ob eine Fläche oder ein Rand schwarz ('0'), grau (so etwa '150') oder weiß ('255') sein soll. </p>
+
+
+	Ausprobieren! Ändere in einer frisch geladenen Editor-Sitzung den background-Wert, und setze ihn auf einen Wert zwischen 0 und 255. Was passiert, wenn du das Argument "grau" mit einer größeren Zahl als 255 übergibst, zum Beispiel mit (<code>background(400)</code>)? p5 ist clever und denkt sich: 400 ist nicht erlaubt, weil zu groß, deshalb nehme ich einen Wert, der nur so groß wie möglich ist - und das ergibt weiß (wie bei "grau" = 255).
+
+
+	Das reicht uns natürlich bei weitem nicht. Wir wollen richtige Farben!
+
+	In p5 gibt es drei Farben zur Auswahl: rot, grün und blau. Der Trick ist, dass man diese drei Farben - wie beim Malen mit Wasserfarben - mischen kann, um noch ganz andere Farben oder Farbtöne herzustellen. 
+
+	Wir geben also jeder Funktion, die mit Farben zu tun hat, drei Argumente mit. Das erste Argument ist der Anteil an Rot, der (wie bei der Graustufe) als Zahlenwert von '0' bis '255' laufen kann. Das zweite Argument ist der Anteil an Grün, auch hier läuft der Zahlenwert von '0' für gar kein Grün bis zu '255' für maximales Grün. Das dritte Argument, mit einem Wert ebenfalls zwischen '0' und '255', steht für den Blau-Anteil an der gemischten Farbe.  
+
+	Probier' erst mal die Farben einzeln als Hintergrund auf der Leinwand aus. Setze den Wert des Arguments "rot" in der Funktion <code>background(rot, grün, blau)</code> auf verschiedene Werte, und lasse "grün" und "blau" auf dem Wert '0'. 
+	
+	#code#
+
 =======================================
+
+
+
+			<h3>1.3.1 Eigenschaft von draw()</h3>
+
+	Zwischendrin ein Rätsel: Kannst du erkären, was in diesem Programm geschieht?
+
+	function setup() {
+    createCanvas(250, 240);
+}
+
+function draw() { 
+    background(200, 100, 50);
+    circle(125, 125, 200);
+    square(65, 65, 120);
+    triangle(125, 85, 95, 150, 155, 150);
+    fill(130, 250, 0);
+}
+
+Obwohl <code>fill(130, 250, 0);</code> ganz am Schluss von draw() steht, sind trotzdem alle drei Figuren grasgrün. Warum?
+
+	draw() wird immer und immer wieder aufgerufen, solange das Programm läuft. Und diese Aufrufe von draw() finden superschnell hintereinander statt - so schnell, dass du den allerersten Aufruf gar nicht sehen kannst. Am Ende des allerersten Aufrufs steht <code>fill(130, 250, 0);</code>, und ab dann wird jede Figur grasgrün gefüllt. Beim zweiten blitzschnellen Aufruf von <code>draw();</code> wird diese Füllfarbe verwendet, denn es gibt kein neues <code>fill(130, 250, 0);</code> irgendwo anders im Programm, das dieses <code>fill(130, 250, 0);</code> überschreibt - es gilt also ab sofort für immer. 
+
+	Wenn du den allerersten Aufruf von draw() in einem winzigen Bruchteil einer Sekunde sehen könntest, wären alle Figuren noch mit der Voreinstellung "weiß" gefüllt, solange die <code>fill(130, 250, 0);</code> vom Programm noch nicht erreicht wird. Es ist aber Absicht, draw() ganz schnell aufzurufen, damit mögliche Änderungen der Figuren ohne Ruckeln erscheinen. Momentan zeichnen wir immer das Gleiche und dieser blitzschnelle Aufruf von draw() ganz schnell hintereinander ist noch gar nicht zu sehen. Man muss aber im Hinterkopf behalten, dass draw() nicht nur einmal - wie setup() -, sondern ganz viele Male schnell hintereinander aufgerufen wird, um zu verstehen, was im Programm passiert.
+
+Verschiebe den gesamten Code von aus draw() nach setup, hinter createCanvas, lasse draw() leer und beobachte, was dann geschieht. Kannst du es erklären?
+	
 
 		<button onclick="document.location='016.html'">Zurück</button>
 		<button onclick="document.location='020.html'">Weiter</button>
