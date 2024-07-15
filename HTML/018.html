@@ -22,7 +22,7 @@ Wir können zwar schon viele verschiedene Formen zeichnen und damit einen tollen
 <p>Um Flächen farbig anzumalen, gibt es die Anweisung "fill". Eine Fläche ist der Inhalt einer Figur, oder der gesamte Hintergrund - alles, was nicht wie eine Linie aussieht.
 Passenderweise heisst &ldquo;fill&rdquo; auf Englisch &bdquo;füllen&rdquo; und es wird genau so gesprochen:&bdquo;fill&rdquo;. Die Anweisung "fill" funktioniert wieder wie ein Schalter: sie schaltet das Malen mit einer bestimmten Farbe ein. Alle Flächen, die danach gezeichnet werden, bekommen diese Farbe. Um die Farbe irgendwann zu ändern, muss eine neue  "fill" Anweisung mit einer anderen Farbe aufgerufen werden. </p>
 
-<p>Welches Argument kann für "fill" verwendet werden? Das Argument sollte die Farbe festlegen, die ab jetzt gelten soll. Es gibt dafür verschiedene Möglichkeiten. Die schnellste und einfachste ist der Name der Farbe - in Englisch. Die üblichsten Farbnamen findest du in dieser Tabelle in der Spalte &bdquo;Farbname&rdquo;:
+<p>Welches Argument kann für "fill" verwendet werden? Das Argument soll die Farbe festlegen, die ab jetzt gelten soll. Es gibt dafür verschiedene Möglichkeiten. Die schnellste und einfachste ist der Name der Farbe - in Englisch. Die üblichsten Farbnamen findest du in dieser Tabelle in der Spalte &bdquo;Farbname&rdquo;:
 
 <p><caption>Kleine Farbtabelle (VGA-Palette, 16 Farben)</caption></p>
 
@@ -176,22 +176,92 @@ Passenderweise heisst &ldquo;fill&rdquo; auf Englisch &bdquo;füllen&rdquo; und 
 <p>
 In einer Tabelle mit CSS-Farbnamen aus dem Internet stehen neben den Namen der Farben und den drei RGB Zahlen häufig auch Werte, die mit einem &bdquo;Gartenzaun&rdquo;-Zeichen <mark>#</mark> anfangen. Das Gartenzaun '#' Zeichen nennt man beim Programmieren das &bdquo;Nummernzeichen&rdquo; oder schlicht eine Raute. In den sozialen Medien hat es natürlich eine coole englische Bezeichnung und heisst &bdquo;Hashtag&rdquo;, sprich &ldquo;häschtäg&bdquo;. </p>
 
-<p>Die Zahlen hinter '#' sind sogenannte <em>hexadezimale</em> Zahlenwerte. Hexadezimale Zahlen verwenden ein anderes Zahlensystem als die RGB Werte. Man kann jede hexadezimale Zahl in einen RGB Wert umrechnen und umgekehrt, es sind also die gleichen Zahlne. In den hexadezimalen Angaben sind die RGB Werte nur anders verschlüsselt (soll heissen: ein bisschen mehr <em>verhext</em>). Hexadezimale Werte kannst du in der "fill" Funktion eben so gut verwenden wie RGB Werte. Du musst nur aus der Farb-Tabelle statt der drei RGB Werte den entsprechenden einzigen hexadezimalen Wert ablesen und als Argument verwenden.</p>
+<p>Die Zahlen hinter '#' sind sogenannte <em>hexadezimale</em> Zahlenwerte. Hexadezimale Zahlen verwenden ein anderes Zahlensystem als die normalen RGB Werte. Man kann jede hexadezimale Zahl in einen RGB Wert umrechnen und umgekehrt, es sind also die gleichen Zahlen, nur anders dargestellt (soll heissen: ein bisschen mehr <em>verhext</em>). Hexadezimale Werte kannst du in der "fill" Funktion eben so gut verwenden wie RGB Werte. Du musst nur aus der Farb-Tabelle statt der drei RGB Werte den entsprechenden einzigen hexadezimalen Wert ablesen und als Argument verwenden. Wenn dir aber hexadezimale Werte nie unterkommen sollten, hast du nichts verpasst: RGB macht exakt das Gleiche.</p>
 
-<p>Zum Beispiel bewirkt <code>fill('gold')</code> das Gleiche wie <code>fill(255, 215, 0)</code> oder <code><mark>fill('#FFD700')</mark></code>: Flächen werden mit der Farbe Gold ausgemalt. Wollt ihr einen Rasen in Grasgrün zeichnen, verwendet ihr den Farbnamen <code>fill('lawngreen')</code> oder	die hexadezimale Farbbezeichnung <code>fill('#7CFC00')</code> oder den RGB Wert	<code>fill(124; 252; 0)</code> - was davon, bleibt ganz euch überlassen. 
-<br>Die Farbnamen werden in p5 mit Kleinbuchstaben geschrieben (), die hexadezimalen Werte müssen immer mit den Großbuchstaben geschrieben werden (). Vergesst nur die Anführungszeichen für den Farbnamen oder die Hex-Darstellung nicht, oder in der RGB Darstellung die Kommas zwischen den drei Zahlen. 
-<br>(Und auf gar keinen Fall den Strichpunkt <mark>;</mark> hinter der fill Anweisung - niemals!)
-<br>Eine weiße Füllung bekommt man also mit <code>fill('white')</code> oder mit <code>fill(255, 255, 255)</code> oder mit <code>fill(255)</code> oder mit <code>fill('#FFFFFF')</code> hin. Wir erinnern uns: hier sind die RGB Werte gleich und es muss nur ein einziger Wert für die Graustufe vorhanden sein.
+<p>Zum Beispiel bewirkt <code>fill('gold')</code> das Gleiche wie <code>fill(255, 215, 0)</code> oder <code><mark>fill('#FFD700')</mark></code>: Flächen werden mit der Farbe Gold ausgemalt. Willst du einen Rasen in Grasgrün zeichnen, verwendest du den Farbnamen <code>fill('lawngreen')</code> oder	die hexadezimale Farbbezeichnung <code>fill('#7CFC00')</code> oder den RGB Wert	<code>fill(124; 252; 0)</code> - was davon, bleibt komplett dir  überlassen. 
+<br>Eine weiße Füllung bekommt man beispielsweise mit <code>fill('white')</code> oder mit <code>fill(255, 255, 255)</code> oder mit <code>fill(255)</code> oder mit <code>fill('#FFFFFF')</code> hin. Wir erinnern uns: hier sind die RGB Werte gleich und es muss nur ein einziger Wert für die Graustufe vorhanden sein.
 <br>Alles schwarz ausgemalt wird nach der Anweisung <code>fill('black')</code> oder  <code>fill(0, 0, 0)</code> oder <code>fill(0)</code> oder <code>fill('#000000')</code>. Ganz so, wie es dir am besten gefällt!</p>
+
+<p>Die Farbnamen werden in p5 mit Kleinbuchstaben geschrieben, die hexadezimalen Werte müssen immer mit Großbuchstaben geschrieben werden. Vergiss die Anführungszeichen für den Farbnamen oder für die Hex-Darstellung nicht, oder in der RGB Darstellung die Kommas zwischen den drei Zahlen. 
+<br>Und auf gar keinen Fall jemals den Strichpunkt <mark>;</mark> hinter der fill Anweisung - wie hinter jeder anderen Anweisung auch!</p>
+
 
 <h2>Rand</h2>
 
-<p>Der zweite Bereich, der in einem p5 sketch mit Farbe gefüllt werden kann, ist der Rand einer Figur, also die Linie aussenrum: der Umriss. Auch Linien und Punkte, die nicht so recht eine Fläche haben, bekommen so eine Farbe.</p> 
+<p>Der zweite Bereich, der in einem p5 sketch mit Farbe gefüllt werden kann, ist der Rand einer Figur, also die Konturlinie aussenrum: die Umrandung. Auch Linien und Punkte, die ja nicht so recht eine Innen-Fläche haben, bekommen so eine Farbe.</p> 
+
+<p>Die Anweisung, um Linien oder Umrisse breiter zu machen, kennst du schon: <code>strokeWeight(5)</code> macht alle (Rand-)Linien 5 Pixel breit. Normalerweise ist eine Linie nur einen Pixel breit, das ist der Default. "strokeWeight" legt sozusagen das Gewicht (&ldquo;weight&rdquo;) der Linie (&ldquo;stroke&rdquo;) fest.</p>
+
+Wir streichen also mit stroke den Rand unserer Figur entlang und wählen dazu eine bestimmte Farbe aus, die wie bei fill in den Argumenten von stroke mit einer Mischung aus r g b festgelegt wird. Um einem Rand zum Beispiel eine blaue Farbe zu geben, rufst du stroke(0, 0, 255); auf.
+
+	Damit man den Rand erst Mal überhaupt sehen kann, und er dicker als nur ein einziges Pixel wird, kannst Du die Funktion strokeWeight(4); aufrufen. Der Wert des Arguments gibt die Breite in Pixel an, die der Rand bekommen soll.
+
+stroke und strokeweight sind, wie fill, Anweisungen, die solange gelten, bis eine neue Anweisung die Werte ändert. Es sind wieder Schilder, die wir an die Wand unserer Malerstube hängen: ab jetzt wird alles mit einem Rand mit dieser Farbe, wie sie in stroke steht, gemalt, und jeder Rand wird ab sofort strokeweight breit - bis du eine neue Anweisung gibst, also ein neues Schild aufhängst.
 
 
+<p>Die Anweisung für die Farbe einer (Rand-)Linie ist einfach nur "stroke". Mit dem Aufruf <code>stroke('blue')</code> legst du fest, dass alle Linien oder Umrisse ab jetzt Blau (&ldquo;blue&rdquo;) gezeichnet werden. "stroke" verhält sich wieder wie ein Schalter: welche Farbe gesetzt wird, gilt, bis ein neuer Wert mit einer anderen "stroke" Anweisung bestimmt wird.</p>
+
+<p>Die Farbe, das Argument der Funktion "stroke", kann wie gehabt ein Farbname, oder ein RGB Wert aus drei Zahlen zwischen '0' und '255', oder ein Hex-Wert sein. </p>
+
+<span id="tbd">Code/090.js</span>	
+<script type="text/p5" src="../Code/090.js" 
+	data-autoplay data-height="250" data-preview-width="270" 
+	data-p5-version="1.9.0">
+</script>
+
+<p> In dem sketch hier sind drei Kreise gezeichnet. Jeder Kreis hat einen superbreiten Rand von 25 Pixeln: das macht das "strokeWeight" Kommando: <code>strokeWeight(25)</code>. </p>
+
+<p>Kannst du herausfinden, warum die Farben so zu sehen sind? Das hängt von der Reihenfolge ab, in der die Kreise gezeichnet werden. Welche Anweisung im Programm später kommt, übermalt, was bisher an der Stelle schon gezeichnet ist. Sehen wir uns das genauer an.</p>
+
+<ul>
+<li>Zunächst bekommt der Hintergrund eine braune Farbe. Denn die Anweisung "background" wird mit der Farbe &bdquo;Braun&rdquo; aufgerufen: <code>background("brown")</code>. </li>
+
+<li>Dann wird der äußere grösste Kreis gezeichnet. Er übermalt den Hintergrund, wo er eben hinkommt, und hat wegen der <code>stroke("blue")</code> Anweisung einen <em>blauen Rand</em>. </li>
+
+<li>Die Innenfläche dieses äußeren Kreises ist aber gar nicht zu sehen. Jede sichtbare Fläche, wie das Innere eines Kreises, ist <em>eigentlich</em> mit roter Farbe gefüllt: <code>fill(255, 0, 0);</code>. Die drei RGB Zahlen, (255, 0, 0) haben einen maximal roten ('255') Anteil, aber einen grünen und blauen Anteil von Null. <em>Aber:</em> die rote Farbe ist nur ganz innen zu sehen. Der innere Kreis, der später gezeichnet wird, übermalt jeweils die Fläche des äusseren Kreises. </li>
+
+<li>Der mittlere Kreis übermalt das Innere des äusseren Kreises. Der Rand des mittleren Kreises ist grün: <code>stroke(0, 255, 0);</code>: in der RGB Angabe ist grün auf '255', rot und blau sind auf Null. Dieser mittlere Kreis ist kleiner als der äußere Kreis, deshalb wird nur die Innenfläche, aber nicht der blaue Rand des äußeren Kreises übermalt. Die Kreisscheibe, das Innere des mittleren Kreises, ist nicht zu sehen. Denn: </li>
+
+<li>Der innere Kreis übermalt die Kreisfläche des mittleren Kreises. Der innere Kreis hat einen gelben Rand: <code>stroke("yellow")</code>. Und: Die rote Kreisfläche dieses Kreises ist zu sehen, denn sie wird nicht wie die anderen von einem nachfolgenden Kreis übermalt. Die Kreisfläche des inneren Kreises ist rot, weil weit vorher der Schalter für die Flächenfarbe auf Rot gestellt wurde: <code>fill(255, 0, 0)</code>. </li>
+</ul>
+
+<p>Wir lernen daraus: Die <b>Reihenfolge</b> der Anweisungen im Programm ist superwichtig! Was später kommt, wird übermalt! Wird eine kleinere Figur vor einer größeren gezeichnet, wird sie möglicherweise überdeckt und ist dann gar nicht mehr zu sehen. Oder, es werden - wie im sketch oben - Teile größerer Figuren von kleineren Figuren übermalt. Wenn du genau das willst, kannst  du damit schöne Effekte erreichen - wie im sketch oben. </p>
+
+<p>Man muss einfach nur daran denken, wenn man programmiert: Ein Programm läuft Anweisung für Anweisung ab, Schritt für Schritt. Eine Anweisung weiter hinten wird später ausgeführt als eine Anweisung weiter vorne im Programm. Mit den späteren Anweisungen werden Figuren, die vorher gezeichnet worden sind, übermalt, und Schalter-Einstellungen wie zum Beispiel "fill" geändert.
+</p>
+
+
+<p> <span id="ausprobieren">Ändere die Reihenfolge der Kreise!</span> </p> 
+
+<ul> <li>Ändere die Breite der Kreisränder. Wo ist der "strokeWeight" Aufruf?
+<br> Machst du die Breite kleiner, werden Teile der roten Kreisflächen des großen und des mittleren Kreises sichtbar. Der innere Kreis verdeckt die Kreisfläche des äußeren nicht mehr vollständig.</li>
+
+<li>Ändere die Farbe der Flächen. Wo ist der "fill" Aufruf?
+<br>Jetzt kannst du deutlich sehen, was Kreisrand und Kreisfläche ist.</li>
+
+<li>Ändere nur die Farbe der innersten Kreis-Fläche. Wo muss ein weiterer "fill" Aufruf eingefügt werden? 
+<br>Der neue "fill" Aufruf kommt später im Programm, der "fill" Schalter wird umgelegt und ab jetzt gilt die neu Farbe.</li>
+
+<li>Gib jeder Kreis-Fläche eine eigene Farbe mit "fill", wie sie jeder Rand mit "stroke" schon hat. Warum nochmal kann man die Auswirkung der neuen "fill" Anweisungen nicht immer sehen?</li>
+
+<li>Verschiebe die beiden Aufrufe für den mittleren Kreis, "stroke" und "circle", <em>vor</em> die Aufrufe für den großen Kreis.
+<br>Der mittlere Kreis verschwindet! Er wird jetzt vom großen Kreis, der später im Programm gezeichnet wird, übermalt.</li>
+
+<li>Verschiebe die beiden Aufrufe für den mittleren Kreis, "stroke" und "circle", jetzt <em>hinter</em> die Aufrufe für den <em>kleinen</em> Kreis.
+<br>Der kleine Kreis verschwindet! Er wird vom mittleren Kreis, der jetzt später im Programm gezeichnet wird, übermalt. Was wir sehen ist der grüne Rand und die gesamte Innen-Fläche des mittleren Kreises, der gelbe Rand und die Fläche des inneren Kreises sind übermalt.</li>
+
+</ul>
+
+<p>Es ist tasächlich os, dass p5 jede Anweisung ausführt und möglicherweise die selbe Stelle im Programm wieder übermalt. Wenn du sicher weisst, dass etwas soweiso nie zu shene ist, weil es später übermalt oder vor der ersten Verwendung geändert wird, lässt di diese Anweisung besser gleich weg, um p5 Arbeit und Zeitaufand zu ersparen.</p>
 
 
 ==========================================================================
+
+
+
+	Mit dieser Funktion kann auch die Farbe von Punkten und Linien geändert werden. fill funktioniert bei point und line nicht, sondern nur stroke: Punkte und Linien - mit einer Dicke von nur einem Pixel, bestehen sozusagen nur aus Rand. Deshalb klappt strokeweight hier: wie dick die Linie oder wie groß der Punkt wird, können wir damit bestimmen.
+
+
 
 			<h3>1.3.1 alpha()</h3>
 
@@ -348,12 +418,6 @@ function draw() {
 }
 
 	
-	Jetzt solltest du an deiner eigenen Zeichnung ausprobieren, welche Farben du an welcher Stelle in die Formen füllen willst. Endlich wird es bunt! Probier' auch mal aus, die Reihenfolge der Farben und Formen zu ändern, und überlege dir, warum es die Zeichnung wie verändert.
-
-
-
-	Die Reihenfolge der Anweisungen im Programm ist also superwichtig! Das gilt für die Farbe, mit der die Formen gefüllt werden. Es gilt aber auch für die Reihenfolge der Figuren selbst: wird eine kleinere Figur vor einer größeren gezeichnet, wird sie überdeckt und ist gar nicht mehr zu sehen. Das Programm läuft Anweisung für Anweisung ab, Schritt für Schritt, und eine Anweisung weiter hinten im Programm wird später ausgeführt als eine Anweisung vorne im Programm - auch wenn damit etwas übermalt oder rückgängig gemacht wird.
-
 
 
 
