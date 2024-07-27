@@ -10,6 +10,40 @@
 <body>
 	<h1>Welche Formen gibt's?</h1>
 
+
+	[$merk] Nur noch eine kleine Zusammenfassung vorher: Ein p5 Programm läuft
+	los, wenn du auf den Abspiel-Knopf drückst. Es besteht von Vorneherein aus
+	zwei Bausteinen oder Funktionen, in die wir unsere Anweisungen schreiben.
+
+	Im ersten Teil, der Funktion "setup, wird deine Zeichnung, der sketch,
+	vorbereitet. Zuerst ist es sinnvoll, die Leinwand, den canvas, zu erstellen.
+	Dazu wird eine schon vorhandene Funktion aufgerufen, der du die gewünschte
+	Größe der Leinwand in Pixeln mitgibst: createCanvas(400, 400) mit zum
+	Beispiel 400 Pixel-nach-Rechts und 400 Pixel-nach-Unten).
+
+	Wir dürfen nicht vergessen, zum Abschluss jeder Anweisung einen Strichpunkt
+	an das Ende der Zeile zu setzen.
+
+	Der zweite Teil ist die Funktion "draw()", in den die Anweisungen für die
+	Zeichnung geschrieben werden. Zuerst wird eine Funktion aufgerufen, um den
+	Hintergrund der Leinwand in einer bestimmten Graustufe auszumalen, zum
+	Beispiel grau-blau mit "background(200). Je größer die Zahl in Klammern für
+	die Graustufe, das sogenannte Argument des Funktionsaufrufs, desto heller
+	wird der Hintergrund.
+
+	Wenn du das Programm startest, ruft p5 den "setup" Teil nur einmal auf, aber
+	den "draw" Teil ganz oft immer wieder. Das ist für bewegte Zeichnungen, die
+	man Animationen nennt, sehr hilfreich. Momentan macht das für uns keinen
+	Unterschied, und wir können sowohl in setup als auch in draw zeichnen, wie
+	es uns besser gefällt.
+
+	[$prog Kreis in draw]
+	[$prog Kreis in setup]
+
+	
+
+
+
 	<div id="merke">
 		Wir wissen jetzt: Anweisungen an den Computer in einem p5 Programm bestehen
 		aus für uns bereit liegenden Funktionen, die wir nur noch aufrufen müssen.

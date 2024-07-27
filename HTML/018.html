@@ -266,6 +266,10 @@ Ein Wert von '0' bedeutet, dass die Farbe ganz durchsichtig und deswegen gar nic
 <p> Den Alpha-Wert kannst du in der "fill" Funktion für Füllfarben, in der "stroke" Funktion für Randfarben und in der Funktion "background" für die Hintergrundfarbe verwenden. Dort gibst du den Alpha-Wert zusammen mit den drei Werten für RGB an: <code>fill(110, 220, 80, 100)</code>. Einen Alpha Wert für "background" anzugeben zu ist eigentlich nicht besonders sinnvoll, weil hinter dem Hintergrund nichts mehr ist, was durchscheinen kann.
 <br>Was nicht funktioniert, ist Alpha zusammen mit Farbnamen oder der hexadezimalen Farbkennzeichnung zu verwenden. Du musst hier also RGB Farbskalen verwenden, deswegen ist es gut, damit vertraut zu sein.</p>
 
+<p>Wenn du dich an die CSS-Darstellung von RGB erinnerst: damit funktioniert Alpha auch, aber ein klein wenig anders.  In CSS werden RGB Farben so geschrieben: <code>rgb(0, 0, 255)</code>.
+Soll zusätzlich die Transparenz angegeben werden, schreibt man "rgba" statt "rgb". Ausserdem 
+bekommt Alpha hier nicht ganze Zahlenwerte zwischen '0' und '255', sondern Kommazahlen zwischen '0' und '1'. Auch hier gilt: Je <em>kleiner</em> die Zahl, desto transparenter die Farbe. &bdquo;Kommazahlen&rdquo; gibt es vorwiegend in Europa. In der übrigen Welt, in wissenschaftlichen Darstellungen und beim Programmieren wird der Dezimalpunkt verwendet. Alpha in der CSS-Darstellung kann also den Wert '0', '0<mark>.</mark>2', '0<mark>.</mark>5', usw., haben - aber <em>nicht</em> '0<mark>,</mark>5' oder so - das kennt p5 nicht und macht daraus eine glatte '0'. </p>
+
 <span id="tbd">Code/095.js</span>	
 <script type="text/p5" src="../Code/095.js" 
 	data-autoplay data-height="250" data-preview-width="270" 
@@ -281,113 +285,34 @@ Ein Wert von '0' bedeutet, dass die Farbe ganz durchsichtig und deswegen gar nic
 <p>Da ist noch eine vierte Möglichkeit, um eine Füll-Farbe festzulegen: Man kann Flächen auch überhaupt nicht mit Farbe füllen.  
 <br> Du hast diese Möglichkeit gerade eben ausprobiert, indem du Alpha für das gelbe Quadrat  auf '0' gesetzt hast. Der Effekt: Das Quadrat ist vollkommen durchsichtig geworden, kein Gelb ist mehr vorhanden und nur die Randlinie bleibt stehen.</p>
 
-Wenn du willst, dass nur der Rand, die Konturlinie einer Form sichtbar ist, kannst du den Alpha Wert auf '0' setzen. Weil das öfter mal vorkommst und ziemlich praktisch ist ...
+<p>Wenn du willst, dass nur der Rand, die Konturlinie einer Form sichtbar ist, kannst du den Alpha Wert auf '0' setzen in einer beliebigen Farb-Anweisung, die RGB verwendet. Nur den Rand einer Form zeichnen zu wollen kommt bei einer künstlerischen Darstellung ziemlich oft vor, deshalb gibt es dafür eine eigene Funktion. Sie heisst passenderweise <code>noFill()</code>, also &Bdquo;nicht füllen&rdquo;. "noFill" wird ohne ein Argument, mit leeren runden Klammern, aufgerufen. Sobald "noFill" aufgerufen wurde, haben sämtliche Flächen, die danach gezeichnet werden, keine Füllung. Es wird nur der Rand einer Form gezeichnet und der Inhalt ist durchsichtig (wie bei Alpha gleich '0').
+<br>Die Funktion "noFill" ist wieder mal ein Schalter. Die Anweisung "noFill" gilt solange, bis du eine neue "fill" Anweisung verwendest, um wieder eine Füllung mit Füllfarbe festzulegen. 
+</p>
 
+<p>So wie es "noFill" für die Füllung einer Form gibt (um sie nicht zu zeichnen), gibt es die Funktion "noStroke" für die Randlinie einer Form (um sie nicht zu zeichnen). Auch  <code>noStroke()</code>, sprich &bdquo;nou-strouk&rdquo;, hat keine Argumente, nur die leeren Klammern. Der Aufruf von <code>noStroke()</code> sorgt dafür, dass ab sofort keine Randlinien für alle nachfolgenden Formen gezeichnet werden. Auch "noStroke" ist also ein Schalter. Wenn du nach "noStroke" wieder Randlinien haben möchtest, kannst du die Funktion "stroke" mit einem bestimmten Farbwert aufrufen. Mit <code>noStroke()</code> verschwinden alle Ränder, mit <code>stroke(0)</code> gibt es wieder einen schwarzen Rand; mit <code>stroke(0, 0, 255)</code> und <code>strokeWeight(10)</code> einen dicken blauen Rand.</p>
 
+<p>Machen wir ein ausführliches Beispiel, um alle Farb-Funktionen in Aktion zu sehen!</p> 
 
+<!-- 240723 -->
 
-Dafür gibt es die Funktion <code>noFill()</code>, die ohne ein Argument, mit leeren runden Klammern, aufgerufen wird. Wenn "noFill" aufgerufen wird, sind sämtliche Flächen durchsichtig: die darunterliegende Farbe - häufig der Hintergrund - wird für die Fläche verwendet und nur die Randlinie gezeichnet.</p>
+<span id="tbd">Code/100.js</span>	
+<script type="text/p5" src="../Code/100.js" 
+	data-autoplay data-height="250" data-preview-width="270" 
+	data-p5-version="1.9.0">
+</script>
 
- Randlinie und Fläche sind beim Zeichnen unabhängig voneinander, das wissen wir schon: fill und stroke.unterschiedliche Dinge beim Zeichnen
+<p> <span id="ausprobieren">Bastle am sketch herum und ändere, was immer dir einfällt.</span> </p>
 
+<p>Es gibt noch eine weitere Möglichkeit, Farben einzustellen. Künstler legen eben Wert auf Farbigkeit. 
 
-noStroke(); // Deaktiviert die Randlinie
-strokeWeight(10); // Setzt die Dicke der Randlinie
-
-Die noFill()-Funktion ist nützlich, wenn du nur die Konturen von Formen zeichnen möchtest. In Kombination mit der stroke()-Funktion kannst du die Farbe und Dicke der Konturen anpassen, während noFill() dafür sorgt, dass die Innenbereiche der Formen transparent bleiben.
-
-ellen, dass Formen keine Füllfarbe haben, also transparent sind. Dies bedeutet, dass nur die Konturlinien der Formen sichtbar sind, die mit der stroke()-Funktion gesetzt wurden.
-
-
-
-<p>Wenn du dich an die CSS-Darstellung von RGB erinnerst: damit funktioniert Alpha auch, aber ein klein wenig anders.  In CSS werden RGB Farben so geschrieben: <code>rgb(0, 0, 255)</code>.
-Soll zusätzlich die Transparenz angegeben werden, schreibt man "rgba" statt "rgb". Ausserdem 
-bekommt Alpha hier nicht ganze Zahlenwerte zwischen '0' und '255', sondern Kommazahlen zwischen '0' und '1'. Auch hier gilt: Je <em>kleiner</em> die Zahl, desto transparenter die Farbe. &bdquo;Kommazahlen&rdquo; gibt es vorwiegend in Europa. In der übrigen Welt, in wissenschaftlichen Darstellungen und beim Programmieren wird der Dezimalpunkt verwendet. Alpha in der CSS-Darstellung kann also den Wert '0', '0<mark>.</mark>2', '0<mark>.</mark>5', usw., haben - aber <em>nicht</em> '0<mark>,</mark>5' oder so - das kennt p5 nicht und macht daraus eine glatte '0'. </p>
+.............
+HUE
+.............
 
 
 
 </p>
-function setup() {
-  createCanvas(400, 400);
-  background(220);
 
-  // Blau ohne Transparenz mit rgb()
-  fill('rgb(0, 0, 255)');
-  noStroke();
-  rect(50, 50, 150, 150);
-
-  // Blau ohne Transparenz mit rgba() und Alpha-Wert 1
-  fill('rgba(0, 0, 255, 1)');
-  rect(200, 50, 150, 150);
-}
-
-
-<p>fill('rgba(0, 0, 255, 0.5)'); // Halbtransparentes Blau</p>
-noStroke(); // Deaktiviert die Randlinie
-strokeWeight(10); // Setzt die Dicke der Randlinie
-  noFill(); // Deaktiviert die Füllfarbe
-  rect(50, 50, 300, 300);
-
-
-function setup() {
-  createCanvas(400, 400);
-  background(220);
-
-  // Rechtecke ohne Füllung
-  stroke(255, 0, 0); // Setzt die Randfarbe auf Rot
-  strokeWeight(4); // Setzt die Dicke der Randlinie
-  noFill(); // Deaktiviert die Füllfarbe
-  rect(50, 50, 100, 100); // Zeichnet ein Rechteck ohne Füllung
-
-  // Rechtecke mit Füllung
-  fill(0, 255, 0); // Setzt die Füllfarbe auf Grün
-  rect(200, 50, 100, 100); // Zeichnet ein Rechteck mit grüner Füllung
-
-  // Ellipsen ohne Füllung
-  stroke(0, 0, 255); // Setzt die Randfarbe auf Blau
-  noFill(); // Deaktiviert die Füllfarbe
-  ellipse(100, 300, 100, 100); // Zeichnet eine Ellipse ohne Füllung
-
-  // Ellipsen mit Füllung
-  fill(255, 255, 0); // Setzt die Füllfarbe auf Gelb
-  ellipse(300, 300, 100, 100); // Zeichnet eine Ellipse mit gelber Füllung
-}
-
-
-
-
-
-
-
-	
-	==========================================================================
-
-
-// Blau ohne Transparenz mit rgb()
-  fill('rgb(0, 0, 255)');
-  noStroke();
-  rect(50, 50, 150, 150);
-
-
-
-
-	
-	
-	
-	noFill(); // Deaktiviert die Füllfarbe
-// fülle mit halb-durchsichtigem Grasgrün
-  noFill();
-  strokeWeight(30);
-  stroke(130, 250, 0, 60);
-  circle(200, 200, 300);
-
-Wenn du eine Farbe mit Transparenz verwenden möchtest, kannst du den Hexadezimalwert nicht direkt verwenden, da der Hexadezimalwert keine Transparenz unterstützt. Stattdessen kannst du die rgba()-Funktion verwenden oder fill() mit vier Parametern aufrufen, um Transparenz hinzuzufügen:
-
-Wenn du eine Farbe mit Transparenz verwenden möchtest, kannst du den Hexadezimalwert nicht direkt verwenden, da der Hexadezimalwert keine Transparenz unterstützt. Stattdessen kannst du die rgba()-Funktion verwenden oder fill() mit vier Parametern aufrufen, um Transparenz hinzuzufügen:
-
-
-
-Hier steht &bdquo;Rot-Wert&rdquo; für eine Zahl von '0' bis '255', &bdquo;Grün-Wert&rdquo; und &bdquo;Blau-Wert&rdquo; ebenso: die Bezeichnungen sind die <span id="Begriff";>Platzhalter<
 
 
 
