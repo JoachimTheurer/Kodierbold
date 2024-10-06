@@ -33,4 +33,4 @@ ellipse(170, 160, 40, 40); // Zeichnet eine Ellipse ohne Füllung
 // Ellipsen mit Füllung
 fill(255, 255, 0); // Setzt die Füllfarbe auf Gelb
 ellipse(70, 160, 40, 40); // Zeichnet eine Ellipse mit gelber Füllung
-}
+

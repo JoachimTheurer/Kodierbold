@@ -11,20 +11,20 @@
 
 <h2>setup und draw</h2>
 
+<p>Jedes p5 Programm enthält von Anfang an die beiden Anweisungen <code>setup()</code> und <code>draw()</code>. Bisher haben wir diese beiden Anweisungen im &bdquo;widget&rdquo; unterdrückt, damit nichts zusätzlich Verwirrendes im Editor drinsteht. Im Normalfall sind diese beiden Anweisungen jedoch in jedem p5 Programm vorhanden - und sogar ziemlich nützlich. Deshalb sollten wir verstehen, was genau hinter den Aufrufen von <code>setup</code> und <code>draw</code> steckt.</p>
+
+<p> Mit den Funktionen, wie <code>background(210)</code> oder <code>circle(100, 120, 88)</code>, die in Anweisungen verwendet, also aufgerufen werden können, bist du schon gut vertraut. Eine Funktion enthält alle Programmanweisungen, die für eine bestimmte Aufgabe nötig sind, zum Beispiel die Funktion "circle" für &bdquo;zeichne einen Kreis&rdquo;. Viele dieser fertigen Funktionen sind in p5 vorhanden und können direkt verwendet werden.</p>  
+
+<p>Es gibt aber auch Funktionen, die noch nicht fertig sind. Sie müssen erst von dir zusammengebastelt werden, damit sie dann eine bestimmte, von dir ausgedachte Aufgabe erledigen können. Ein solches Beispiel für Funktionen, die noch nicht fertig sind, sondern noch zusammengebaut werden müssen, sind "setup" und "draw". Eine Funktion, die gerade neu gebaut werden soll, erkennst du an dem Wort <code>function</code> vor ihrem Namen. Man sagt, die neue Funktion wird &bdquo;angelegt&rdquo; oder &bdquo;deklariert&rdquo;. </p>
+
+<p>Du siehst das hier am Beispiel der beiden Funktionen <code>setup</code> und <code>draw</code>, die in jedem p5 Programm vorhanden sind und von dir gefüllt werden
+ wollen.</p>
 
 <span id="tbd">Code/0001.js</span>	
 <script type="text/p5" src="../Code/0001.js" 
 	data-autoplay data-height="450" data-preview-width="270" 
 	data-p5-version="1.9.0">
 </script>
-
-
-
-<p>Jedes p5 Programm enthält von Anfang an die beiden Anweisungen <code>setup()</code> und <code>draw()</code>. Bisher haben wir diese Anweisungen großzügig überlesen. Bevor wir weiter zeichnen, sollten wir noch verstehen, was denn dahinter steckt.</p>
-
-<p> Mit den Funktionen, wie <code>background(210)</code> oder <code>circle(100, 120, 88)</code>, die in Anweisungen verwendet, also aufgerufen werden können, bist du schon gut vertraut. Eine Funktion enthält alle Programmanweisungen, die für eine bestimmte Aufgabe nötig sind, zum Beispiel die Funktion "circle" für &bdquo;zeichne einen Kreis&rdquo;. Viele dieser fertigen Funktionen sind in p5 vorhanden und können direkt verwendet werden.</p>  
-
-<p>Es gibt aber auch Funktionen, die noch nicht fertig sind. Sie müssen erst von dir zusammengebastelt werden, damit sie dann eine bestimmte, von dir ausgedachte Aufgabe erledigen können. Ein solches Beispiel für Funktionen, die noch nicht fertig sind, sondern noch zusammengebaut werden müssen, sind "setup" und "draw". Eine Funktion, die gerade neu gebaut werden soll, erkennst du an dem Wort <code>function</code> vor ihrem Namen. Man sagt, die neue Funktion wird &bdquo;angelegt&rdquo; oder &bdquo;deklariert&rdquo;. </p>
 
 <p>Was diese neue Funktion alles machen soll, wird in den Bereich zwischen den <b>geschweiften</b> Klammern <mark>{</mark> und <mark>}</mark> geschrieben. In die  <b>runden</b> Klammern <mark>(</mark> und <mark>)</mark>, die direkt hinter dem Namen der Funktion stehen, kommen die Argumente, die die Funktion verwenden soll - das kennen wir ja schon.</p>
 

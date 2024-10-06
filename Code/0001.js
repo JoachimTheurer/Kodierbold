@@ -1,4 +1,7 @@
-createCanvas(210, 200);
-background(225);
-circle(53, 50, 20);
-rect(100, 100, 100);
+function setup() {
+  createCanvas(220, 200);
+}
+
+function draw() {
+  background(220);
+}

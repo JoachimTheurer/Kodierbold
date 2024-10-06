@@ -1,7 +1,7 @@
 
 # = Der Kodierbold =
 
-## Programmieren lernen mit p5
+## Programmieren mit p5
 
 <p><a href="./HTML/index.html">Inhaltsverzeichnis</a></p>
 
