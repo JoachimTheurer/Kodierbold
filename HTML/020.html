@@ -11,11 +11,20 @@
 
 <h2>setup und draw</h2>
 
+
+<span id="tbd">Code/0001.js</span>	
+<script type="text/p5" src="../Code/0001.js" 
+	data-autoplay data-height="450" data-preview-width="270" 
+	data-p5-version="1.9.0">
+</script>
+
+
+
 <p>Jedes p5 Programm enthält von Anfang an die beiden Anweisungen <code>setup()</code> und <code>draw()</code>. Bisher haben wir diese Anweisungen großzügig überlesen. Bevor wir weiter zeichnen, sollten wir noch verstehen, was denn dahinter steckt.</p>
 
 <p> Mit den Funktionen, wie <code>background(210)</code> oder <code>circle(100, 120, 88)</code>, die in Anweisungen verwendet, also aufgerufen werden können, bist du schon gut vertraut. Eine Funktion enthält alle Programmanweisungen, die für eine bestimmte Aufgabe nötig sind, zum Beispiel die Funktion "circle" für &bdquo;zeichne einen Kreis&rdquo;. Viele dieser fertigen Funktionen sind in p5 vorhanden und können direkt verwendet werden.</p>  
 
-<p>Es gibt aber auch Funktionen, die noch nicht fertig sind. Sie müssen erst von dir zusammengebastelt werden, damit sie dann eine bestimmte, von dir ausgedachte Aufgabe erledigen können. Ein solches Beispiel für Funktionen, die noch nicht fertig sind, sondern noch zusammengebaut werden müssen, sind "setup" und "draw". Eine Funktion, die gerade neu gebaut werden soll, erkennst du an dem Wort <code>function</code> vor ihrem Namen. Man sagt, die neue Funktion wird &bdquo;angelegt&rdquo; oder &bdquo;definiert&rdquo;. </p>
+<p>Es gibt aber auch Funktionen, die noch nicht fertig sind. Sie müssen erst von dir zusammengebastelt werden, damit sie dann eine bestimmte, von dir ausgedachte Aufgabe erledigen können. Ein solches Beispiel für Funktionen, die noch nicht fertig sind, sondern noch zusammengebaut werden müssen, sind "setup" und "draw". Eine Funktion, die gerade neu gebaut werden soll, erkennst du an dem Wort <code>function</code> vor ihrem Namen. Man sagt, die neue Funktion wird &bdquo;angelegt&rdquo; oder &bdquo;deklariert&rdquo;. </p>
 
 <p>Was diese neue Funktion alles machen soll, wird in den Bereich zwischen den <b>geschweiften</b> Klammern <mark>{</mark> und <mark>}</mark> geschrieben. In die  <b>runden</b> Klammern <mark>(</mark> und <mark>)</mark>, die direkt hinter dem Namen der Funktion stehen, kommen die Argumente, die die Funktion verwenden soll - das kennen wir ja schon.</p>
 
@@ -34,17 +43,17 @@
 <p>Wie vorher in "setup", werden in "draw" nacheinander alle Anweisungen abgearbeitet, die im Bereich zwischen den geschweiften Klammern <mark>{</mark> und <mark>}</mark> stehen. 
 Aber was ist dann der Unterschied zu "setup"? </p>
 
-<p>"draw" wird von p5 <b>immer und immer wieder</b>, ohne Ende, aufgerufen. Alles, was innerhalb von "draw" steht, wird der Reihe nach verarbeitet. Sobald jedoch p5 am Schluss von "draw" angekommen ist, wird sofort wieder zum Anfang von "draw" gesprungen. Dort beginnt die Verarbeitung aller Anweisungen wieder von vorn. Die Anweisungen, die in "draw" stehen, werden <b>endlos oft ganz schnell</b> der Reihe nach aufgerufen. </p>
+<p>"draw" wird von p5 <b>immer und immer wieder</b>, ohne Ende, aufgerufen. Alles, was innerhalb von "draw" steht, wird der Reihe nach verarbeitet. Sobald jedoch p5 am Schluss von "draw" angekommen ist, wird sofort wieder zum Anfang von "draw" gesprungen. Dort beginnt die Verarbeitung aller Anweisungen wieder von vorn. Die Anweisungen, die in "draw" stehen, werden also <b>endlos oft ganz schnell</b> der Reihe nach aufgerufen, bis Du auf STOPP drückst. </p>
 
-<p> In "draw" kommen alle die Anweisungen rein, die sich bei bewegten Zeichnungen ändern sollen, zum Beispiel welche Farbe oder Position eine Form hat. Weil "draw" ganz oft und schnell hintereinander aufgerufen wird, sieht das dann aus wie ein fliessender Übergang oder eine gleichmässige Änderung aus. "draw" bringt Bewegung auf die Bühne, die setup" vorbereitet hat. Wenn etwas, wie zum Beispiel die "draw" Funktion, immer und immer wieder ausgeführt wird, nennt man das beim Programmieren eine <span id="Begriff";>Schleife</span>. Falls nicht gesagt wird, wann die Schleife aufhören soll, und sie deshalb vom Programm immer wieder ohne Ende ausgeführt wird, wird das als eine <span id ="Begriff";>Endlosschleife</span> bezeichnet. Der Aufruf von "draw" ist eine Endlosschleife, die nur durch das Ende des Programms, wenn du die Stopp Taste drückst, beendet wird, aber nicht innerhalb des Programms.</p>
+<p> In "draw" kommen alle die Anweisungen rein, die sich bei bewegten Zeichnungen ändern sollen, zum Beispiel welche Farbe oder Position eine Form hat. Weil "draw" ganz oft und schnell hintereinander aufgerufen wird, sieht das dann aus wie ein fliessender Übergang oder eine gleichmässige Änderung aus. "draw" bringt Bewegung auf die Bühne, die "setup" vorbereitet hat. Wenn etwas, wie zum Beispiel die "draw" Funktion, immer und immer wieder ausgeführt wird, nennt man das beim Programmieren eine <span id="Begriff";>Schleife</span>. Falls nicht gesagt wird, wann die Schleife aufhören soll, und sie deshalb vom Programm immer wieder ohne Ende ausgeführt wird, wird das als eine <span id ="Begriff";>Endlosschleife</span> bezeichnet. Der Aufruf von "draw" ist eine Endlosschleife, die nur durch das Ende des Programms, wenn du die Stopp Taste drückst, beendet wird, aber nicht innerhalb des Programms.</p>
 
-<p>Wir brauchen den Unterschied zwischen "setup" und "draw", wenn wir gleich nachher bewegte Zeichnungen, sogenannte &bdquo;Animationen&rdquo; machen. Bei unseren Zeichnungen jetzt, bei denen sich nichts bewegt, spielt der Unterschied zwischen "setup" und "draw" noch keine Rolle. Du kannst also - momentan noch - alle Anweisungen entweder in den "setup"-Bereich oder in den "draw"-Bereich schreiben, ganz wie du willst - es macht keinen Unterschied. </p>
+<p>Wir brauchen den Unterschied zwischen "setup" und "draw", wenn wir bewegte Zeichnungen, sogenannte &bdquo;Animationen&rdquo; machen. Bei unseren Zeichnungen bisher, bei denen sich nichts bewegt, spielt der Unterschied zwischen "setup" und "draw" noch keine Rolle. Du kannst also - momentan noch - alle Anweisungen entweder in den "setup"-Bereich oder in den "draw"-Bereich schreiben, ganz wie du willst - es macht keinen Unterschied. Du kannst sogar die ganze Deklaration der Funktion "draw" löschen, wenn du sie zum Zeichnen nicht benötigst.</p>
 
 <p>Kannst du dieses Programm erklären?</p>
 
-<span id="tbd">Code/110.js</span>	
-<script type="text/p5" src="../Code/110.js" 
-	data-autoplay data-height="250" data-preview-width="270" 
+<span id="tbd">Code/0110.js</span>	
+<script type="text/p5" src="../Code/0110.js" 
+	data-autoplay data-height="450" data-preview-width="270" 
 	data-p5-version="1.9.0">
 </script>
 
@@ -52,10 +61,9 @@ Aber was ist dann der Unterschied zu "setup"? </p>
 
 <p>	"draw" wird immer und immer wieder aufgerufen, solange das Programm läuft, und diese Aufrufe von "draw" finden superschnell hintereinander statt - so schnell, dass du den allerersten Aufruf gar nicht richtig mitbekommen kannst. Am Ende des allerersten Aufrufs steht schon <code>fill('green');</code>, und ab dann wird jede Figur grasgrün gefüllt. Jetzt springt p5 sofort auf den Anfang von "draw" zurück und läuft dann alle Anweisungen in "draw" von vorne ab. Deshalb wird beim zweiten Durchlauf für die Füllfarbe das Grün verwendet, das wir im sketch auch sehen. Es gibt nämlich kein neues <code>fill('red')</code> in "draw", das die grüne Füllfarbe überschreibt - und zu "setup" kommen wir nicht mehr zurück. </p>
 
-<p> <span id="ausprobieren">Mach' die Kreisscheibe rot! Bevor der Kreis gezeichnet wird, muss dazu eine andere Füllfarbe als grün gesetzt werden - innerhalb von "draw", zum Beispiel gleich am Anfang. So wird die Füllfarbe grün, die am Ende der Schleife als Schalter gesetzt wird, gleich wieder überschrieben.</span> </p>
+<p> <span id="ausprobieren">Mach' die Kreisscheibe rot! Bevor der Kreis gezeichnet wird, muss dazu eine andere Füllfarbe als grün gesetzt werden - innerhalb von "draw", zum Beispiel gleich am Anfang. So wird die Füllfarbe grün, die am Ende der Schleife als Schalter gesetzt wird, beim Sprung zurück auf den Anfang von "draw", gleich wieder überschrieben.</span> </p>
 
-<p> Es ist Absicht, "draw" superschnell immer wieder aufzurufen, damit mögliche Änderungen der gezeichnet Figuren ohne Ruckeln erscheinen. Zeichnet man Formen, die sich gar nicht ändern sollen, kann man dem Computer den Aufwand ersparen, immer wieder die Endlosschleife auszuführen.
-Dazu gibt es die Funktion <code>noLoop()</code>, von &ldquo;no&rdquo; für &bdquo;Nein&rdquo; und &ldquo;loop&rdquo;, sprich &bdquo;luup&rdquo; für &bdquo;Schleife&rdquo;. Der Aufruf der Funktion "noLoop", vorzugsweise in "setup", sorgt dafür, dass die "draw" Schleife nur ein einziges Mal durchlaufen wird.
+<p> Es ist Absicht, "draw" superschnell immer wieder aufzurufen, damit mögliche Änderungen der gezeichneten Figuren ohne Ruckeln erscheinen. Zeichnet man Formen, die sich gar nicht ändern sollen, kann man jedoch dem Computer den Aufwand ersparen, immer wieder die Endlosschleife auszuführen. Dazu gibt es die Funktion <code>noLoop()</code>, von &ldquo;no&rdquo; für &bdquo;Nein&rdquo; und &ldquo;loop&rdquo;, sprich &bdquo;luup&rdquo; was &bdquo;Schleife&rdquo; beduetet. Der Aufruf der Funktion "noLoop", am besten in "setup", sorgt dafür, dass die "draw" Schleife nur ein einziges Mal durchlaufen wird.
 
 <p> <span id="ausprobieren">Füge eine "noLoop" Anweisung in die ursprünglichen Version des Programms oben (ohne zweite "fill" Anweisung) ein. Jetzt wird der Kreis mit roter Farbe gefüllt. Warum?</span> </p>
 
@@ -63,7 +71,7 @@ Dazu gibt es die Funktion <code>noLoop()</code>, von &ldquo;no&rdquo; für &bdqu
 
 <p>Das Gegenteil von "noLoop" ist die <code>loop()</code> Anweisung. Damit läuft die mit "noLoop" gestoppte "draw" Schleife wieder los und endlos weiter. Das ist zum Beispiel nützlich, wenn das Programm zwischen "noLoop" und "loop" darauf warten muss, dass jemand etwas eintippt oder einen Mausklick macht. </p>
 
-<p> Normalerweise, &ldquo;per default&rdquo; wird die "draw" Funktion superschnell endlos wiederholt. Das Tempo, mit der die "draw" Schleife wiederholt wird, lässt sich aber auch steuern. Die Zeichnung, die gezeigt wird, wenn die "draw" Schleife einmal durchlaufen wird, heisst auf Englisch &ldquo;frame&bdquo;, sprich &bdquo;freihm&ldquo; wie &ldquo;name&rdquo;, was Rahmen, Gestell oder Bild bedeutet. Die Geschwindigkeit, mit der "draw" wiederholt wird und ein Bild nach dem anderen zeigt, kann durch die Funktion <code>frameRate(60)</code>, sprich &ldquo;freihm-reit&rdquo; gesteuert werden. Das Argument von "frameRate" in den runden Klammern bestimmt die Anzahl der frames, der Bilder pro Sekunde - wie oft also die "draw" Funktion in einer Sekunde aufgerufen und durchlaufen wird. Der Defaultwert für die "frameRate" ist 60 Bilder in der Sekunde. Das ist mehr als doppelt so schnell, wie das menschliche Auge und Gehirn Bilder verarbeitet, also wirklich superschnell. Viel mehr als eine Frame-Rate von 60 Bildern schaffen wahrscheinlich die meisten Computer nicht; <code>frameRate(60)</code> ist deshalb eine sinnvolle obere Grenze.</p>
+<p> Normalerweise, &ldquo;per default&rdquo; wird die "draw" Funktion superschnell endlos wiederholt. Das Tempo, mit der die "draw" Schleife wiederholt wird, lässt sich aber auch steuern. Die Zeichnung, die gezeigt wird, wenn die "draw" Schleife einmal durchlaufen wird, heisst auf Englisch &ldquo;frame&bdquo;, sprich &bdquo;freihm&ldquo; wie &ldquo;name&rdquo;, was Rahmen, Gestell oder Bild bedeutet. Die Geschwindigkeit, mit der "draw" wiederholt wird und ein Bild nach dem anderen zeigt, kann durch die Funktion <code>frameRate(60)</code>, sprich &ldquo;freihm-reit&rdquo; gesteuert werden. Das Argument von "frameRate" in den runden Klammern bestimmt die Anzahl der frames, der Bilder pro Sekunde - wie oft also die "draw" Funktion in einer Sekunde aufgerufen und durchlaufen wird. Der Defaultwert für die "frameRate" ist 60 Bilder in der Sekunde. Das ist mehr als doppelt so schnell, als das menschliche Auge und Gehirn Bilder verarbeitet, also wirklich superschnell. Viel mehr als eine Frame-Rate von 60 Bildern schaffen wahrscheinlich die meisten Computer auch gar nicht; <code>frameRate(60)</code> ist deshalb eine sinnvolle obere Grenze.</p>
 
 <p> <span id="ausprobieren"> <ul>Füge eine "frameRate" Anweisung in die ursprünglichen Version des Programms (ohne "noFill") oben ein. 
 <li>Ein Wert von 2 Bildern pro Sekunde wäre gut, also <code>frameRate(2)</code>. Kannst du sehen, wie eine rote Kreisscheibe gezeichnet und dann grün übermalt wird? </li>
@@ -72,24 +80,13 @@ Dazu gibt es die Funktion <code>noLoop()</code>, von &ldquo;no&rdquo; für &bdqu
 </ul>
 </span> </p>
 
-<p>Was wir gelernt haben: Wenn du ein p5 Programm schreibst, solltest du zweierlei im Auge behalten:
-<ul><li>Ein Programm wird Anweisung für Anweisung abgearbeitet. Was später im Programm drankommt, übermalt oder ändert, was zuvor bestimmt oder gezeichnet worden ist. Es kommt strikt auf die Reihenfolge der Programmanweisungen an! </li>
-
-<li> Die "draw" Funktion wird kontinuierlich in einer Schleife ausgeführt. Ist das Programm am Ende von "draw" angekommen, fängt es sofort am Anfang von "draw" wieder an. Was am Ende von "draw" steht, kann deshalb den Anfang von "draw" beeinflussen, wie wir an dem Beispielprogramm gesehen haben. </li> 
-</ul>
-
-=============================================================================
-
-eigene Funktion
-
-<!-- Kommentar -->
-<!-- Kommentar -->
-<!-- Kommentar -->
-
-=============================================
-
-		<button onclick="document.location='014.html'">Zurück</button>
-		<button onclick="document.location='018.html'">Weiter</button>
+  <div>
+    <center>
+      <button onclick="document.location='016.html'">Zurück</button>
+			<button onclick="document.location='index.html'">Inhalt</button>
+      <button onclick="document.location='020.html'">Weiter</button>
+    </center>
+  </div>
 
 </body>
 

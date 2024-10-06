@@ -1,10 +1,7 @@
-function setup() {
-  createCanvas(220, 200);
-  background("brown");
-}
+createCanvas(220, 200);
+background("brown");
 
 /*  Kreise von außen nach innen */
-function draw() {
   strokeWeight(25);// Randdicke
 	fill(255, 0, 0);//  rote Füllung
 
@@ -16,4 +13,3 @@ function draw() {
 
   stroke("yellow");// gelber Rand
   circle(110, 100, 60);//Innerer Kreis
-}

@@ -1,10 +1,6 @@
-function setup() {
-  createCanvas(200, 200);
-  background(235);
-}
+createCanvas(200, 200);
+background(235);
 
-function draw() {
-  
   strokeWeight(14); // dicker Rand
   rect(20, 20, 160, 160); // Kasten aussenrum
 
@@ -22,4 +18,4 @@ function draw() {
 
   strokeWeight(35); // richtig massiver Rand
   circle(96, 96, 60); // Kreis wird zur Scheibe
-}  
+	

@@ -7,3 +7,274 @@
 	data-autoplay data-height="300" data-preview-width="400" 
 	data-p5-version="1.9.0">
 </script>
+
+
+
+
+
+=================
+
+  createCanvas(220, 200);
+  background(235);
+
+<span id="tbd"> ==> Code/000.js <== </span>
+<script type="text/p5" src="../Code/sketch.js" 
+	data-autoplay data-height="300" data-preview-width="250" 
+	data-p5-version="1.9.0">
+</script>
+
+=================
+
+  <!-- Original Inhalt des p5.js Editors: function & background -->
+
+
+
+
+
+
+
+<!DOCTYPE html><html lang="en"><head>
+    <title>JavaScript</title>
+    <script src="../../LIB/p5.js"></script>
+    <script src="../../LIB/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8">
+
+  </head>
+  <body>
+    <script src="Sinus03.js"></script>
+</body></html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.1/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.1/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+
+  </head>
+  <body>
+    <main>
+    </main>
+    <script src="sketch.js"></script>
+  </body>
+</html>
+
+Fachbegriff: id = Begriff
+Code: id = code
+markieren (gelb): id = mark
+Tastendruck, Referenz <em></em> oder <i></i> : kursiv, italic
+Anführungszeichen:
+Texte, Aussprache, &bdquo;pi feiv&rdquo;
+ &raquo; (») und &laquo; («)
+Englische/Amerikanische Anführungszeichen
+&ldquo;Text&rdquo;
+
+<i>...</i>	Kursiv
+<b>...</b>	Fett
+<tt>...</tt>	Dicktengleich
+<big>...</big>	Größer als normal
+<small>...</small>	Kleiner als normal
+<sub>...</sub>	Tiefgestellt
+<sup>...</sup>	Hochgestellt
+<span>...</span>	Inline-Element ohne Wirkung
+Deutsche Guillemets
+&raquo;Text&laquo;
+Anführungszeichen
+ &raquo; (») und &laquo; («)
+Entweder »Deutsch« (ohne Leerraum) oder « Français » (mit Leerraum, aber Spitzen nach außen) 
+
+„Die deutschen Anführungszeichen“
+ &#8222; („) und &#8220; (“)
+=========================
+
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="utf-8" />
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <title>Programmieren lernen mit p5 - Kapitel 1</title>
+</head>
+
+<body>
+
+  <p> Hier ist ein Absatz.</p>
+  <p> Und hier ist ein <span> spannender Absatz</span> gewesen.</p>
+
+  Dies ist ein
+  <span style="color:aquamarine; background-color:blueviolet;">
+    Span - Test
+  </span>
+
+  <p>
+    Wir kennen die (<code>background()</code>) Funktion schon. Sie ist
+    automatisch ganz oben im (<code>draw()</code>) Abschnitt des Editors
+    vorhanden. So wird gleich am Anfang die ganze Leinwand neu übermalt und für
+    die neue Zeichnung vorbereitet. <br>
+    (Link zu
+    <a href="ShiffmanYTintro" /a>Daniel Shiffmans "Code! Programming with
+      p5.js"</a> YouTube Videos)
+    <br>
+    (Link zu
+    <a href="960 Quellen.html"> Datei 960 Quellen</a>
+
+    Wie du weisst, wird <code>draw()</code>
+    immer und immer wieder neu durchlaufen. <code>background()</code> ganz am
+    Anfang sorgt dafür, dass für einen neuen Durchlauf eine frische leere
+    Leinwand zur Verfügung steht.
+  </p>
+
+  <p id="merke"> <span class="rahmen">Wir merken uns:</span> <br>
+    Wir haben auch schon gemerkt, dass der Parameter "grau" der
+    (<code>background(grau)</code>) Funktion den Grauwert des Hintergrunds
+    festlegt. Die möglichen Werte für "grau" sind 0 bis 255, wobei 0 einen total
+    schwarzen und 255 einen ganz weißen Hintergrund zeichnet.
+  </p>
+
+  <p id="ausprobieren"> <span class="rahmen">Mach's selbst:</span> <br>
+    Ändere in einer frisch geladenen Editor-Sitzung den
+    background-Wert, und setze ihn auf einen Wert zwischen 0 und 255.
+  </p>
+  <p>
+    <span id="nebenbei"> <span class="rahmen">Übrigens:</span> <br>
+      Was passiert, wenn du das Argument "grau" mit einer größeren Zahl als 255
+      übergibst, zum Beispiel mit (<code>background(400)</code>)? p5 ist clever
+      und denkt sich: 400 ist nicht erlaubt, weil zu groß, deshalb nehme ich
+      einen Wert, der nur so groß wie möglich ist - und das ergibt weiß (wie bei
+      "grau" = 255).</span>
+  </p>
+
+  Das ist unsere erste fantastische Farbe: der Grauwert! Immer dann, wenn du
+  eine Anweisung verwendest, <span class="Klasse"> mit der eine Farbe festgelegt
+    wird, und wenn du
+    dann nur eine einzige Zahl übergibst, wird ein Grauwert verwendet. Du kannst
+    damit immerhin </span> schon mal festlegen, ob etwas schwarz ('0'), grau (so
+  etwa
+  '150') oder weiß ('255') sein soll.
+
+  <span class="Klasse nacht">Das reicht uns natürlich bei weitem nicht. Wir
+    wollen richtige Farben!</span>
+
+  In p5 gibt es drei Farben zur Auswahl: rot, grün und blau. Der Trick ist, dass
+  man diese drei Farben - wie beim Malen mit Wasserfarben - mischen kann, um
+  noch ganz andere Farben oder Farbtöne herzustellen.
+
+  ==========================
+
+
+<!-- Kommentar -->
+<!-- Kommentar -->
+<!-- Kommentar -->
+
+
+  iframe
+  <br>
+  <iframe src="../Code/000 Sinus.html" width="400px" height="400px"></iframe>
+  <br>
+
+  p5.js-widget 1
+  <br>
+
+  <script type="text/p5" data-autoplay data-height="300"
+    data-preview-width="300" data-p5-version="1.9.1">
+function setup() {
+  createCanvas(200, 200);
+  background(220);
+  rect(100, 100, 50, 50);
+}
+</script>
+
+  <br>
+  p5.js-widget 2
+  <script type="text/p5" src="../Code/sketch.js" data-autoplay data-height="300"
+    data-preview-width="300" data-p5-version="1.9.1">
+</script>
+  <br>
+
+  sketch.js
+  <br>
+  <script src="../Code/Sinus02.js"></script>
+  <br>
+  <p>============================= kommt vorher ???</p>
+  <noscript>
+    <p>Dieser Absatz ist gehört zum Inhalt des Dokuments, ist aber
+      im Browser nur zu sehen, wenn JavaScript deaktiviert oder nicht
+      zur Verfügung steht.</p>
+  </noscript>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.1/p5.js"></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.1/addons/p5.sound.min.js"></script>
+<script src="//toolness.github.io/p5.js-widget/p5-widget.js"></script>
+
+</html>
+
+
+Lila (150, 100, 140)
+Gelb (250, 220, 10) 
+
+  ==========================
+
+
+  iframe
+  <br>
+  <iframe src="../Code/000 Sinus.html" width="400px" height="400px"></iframe>
+  <br>
+
+  p5.js-widget 1
+  <br>
+
+  <script type="text/p5" data-autoplay data-height="300"
+    data-preview-width="300" data-p5-version="1.9.1">
+function setup() {
+  createCanvas(200, 200);
+  background(220);
+  rect(100, 100, 50, 50);
+}
+</script>
+
+  <br>
+  p5.js-widget 2
+  <script type="text/p5" src="../Code/sketch.js" data-autoplay data-height="300"
+    data-preview-width="300" data-p5-version="1.9.1">
+</script>
+  <br>
+
+  sketch.js
+  <br>
+  <script src="../Code/Sinus02.js"></script>
+  <br>
+  <p>============================= kommt vorher ???</p>
+  <noscript>
+    <p>Dieser Absatz ist gehört zum Inhalt des Dokuments, ist aber
+      im Browser nur zu sehen, wenn JavaScript deaktiviert oder nicht
+      zur Verfügung steht.</p>
+  </noscript>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.1/p5.js"></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.1/addons/p5.sound.min.js"></script>
+<script src="//toolness.github.io/p5.js-widget/p5-widget.js"></script>
+
+</html>
+
+
+
+
+
+
+
+=============================================================================
+
+eigene Funktion
+
+<!-- Kommentar -->
+<!-- Kommentar -->
+<!-- Kommentar -->
+
+=============================================

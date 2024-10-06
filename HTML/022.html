@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<title>Programmieren lernen mit p5 - Kapitel 3</title>
+</head>
+
+<body>
+
+<h2>Variablen</h2>
+
+<p>Damit wir die Endlos-Schleife in "draw" richtig nutzen können, und aus vielen anderen guten Gründen, lernen wir jetzt eine weitere enorm wichtige Sache für die Programmierung kennen: die  <span id="Begriff";>Variable</span>. Eine Variable ist wie eine kleine Schublade, die einen Namen hat und in der eine Zahl liegt. Überall im Programm können wir dann den Namen verwenden statt der Zahl. Der Name der Variable ist ein <em>Platzhalter</em> für die Zahl.</p>
+
+<p>Der Trick ist: wir können in der Schublade, in der Variable, die Zahl ändern. Dann wird an jeder Stelle im Programm, wo der Name steht, gleichzeitig der Zahlenwert geändert. Eben weil sich in  der Variablen die zugeordnete Zahl immerzu ändern kann, heisst sie &bdquo;Änderbare&rdquo;, sprich &bdquo;Variable&rdquo;.</p>
+
+<p>Irgendwie muss p5 mitkriegen, dass wir einem bestimmtem Namen eine Zahl zuordnen, also eine Variable anlegen wollen. Dazu verwenden wir ganz am Anfang des Programms die Anweisung <b>"let"</b>, gefolgt vom Variablennamen und, nach einem Gleichheitszeichen, der zugeordneten Zahl. Zum Beispiel legen wir den Durchmesser eines Kreises als Variable mit dem Namen "durchmesser" so an:</p>
+
+<p><code>let durchmesser = 1;</code></p>
+
+<p>So weiss p5, dass es im ganzen Programm eine Variable namens "durchmesser" gibt, auf deren Zahlenwert zugegriffen werden kann, zum Beispiel so: <code>circle(100, 100, durchmesser)</code>. Du kannst ganz einfach den Variablennamen hinschreiben statt einer bestimmten Zahl.</p>
+
+<p>Der Anfangswert für die Zahl, der zu Beginn in die Schublade namens <code>durchmesser</code> gelegt wird, ist - im Beispiel oben - 1 Pixel. Man sagt, die Variable "durchmesser" wird mit dem Wert "1" <span id="Begriff";>initialisiert</span>: <code>durchmesser</code> erhält den <em>initialen</em> (anfänglichen) Wert "1".</p>
+
+<p>Das Gleichheitszeichen <code>=</code> wird beim Programmieren ein bisschen anders verwendet als in Mathe. Alles, was auf der rechten Seite des Gleichheitszeichens steht, wird in die Variablen-Schublade auf der linken Seite geworfen. Links darf nur der Name der Variable stehen! Was auf der rechten Seite steht, wird der Variablen &bdquo;zugeordnet&rdquo;; man sagt, es ist eine <span id="Begriff";>Zuordnung</span>. Auf der rechten Seite kann häufiger mal etwas ausgerechnet werden, es kann da aber auch nur ein bestimmter Wert - zum Beispiel der Anfangswert - stehen, wie hier: <code>let durchmesser = 456</code>.</p>
+
+<p>Wollen wir den Wert der Variablen ändern, dann rechnen wir auf der rechten Seite irgend etwas aus und weisen es der linken Seite zu. Die rechte Seite nach dem  <code>=</code> Zeichen wird zuerst vollständig ausgerechnet, dann wird das Ergebnis der linken Seite zugewiesen. 
+<br>In der Programm-Zeile 
+
+<p><code>durchmesser = durchmesser + 1;</code></p>
+
+nimmt palso 5 zuerst den alten Wert von <code>durchmesser</code> auf der rechten Seite, zählt die Zahl "1" dazu und weist das Ergebnis dann wieder der gleichen Variable <code>durchmesser</code> auf der linken Seite zu. Mit einem initialen Wert von "1" erhält die Variable <code>durchmesser</code>, wenn der Schritt ausgeführt worden ist, damit den Wert "2". Jedesmal, wenn diese Anweisung im Programm aufgerufen wird, erhöht sich der Wert der Variablen <code>durchmesser</code> um "1". Beim nächsten Aufruf dieser Zeile wird also aus der "2" in der Variablen <code>durchmesser</code> eine "3", und so weiter.</p> 
+
+<p>Natürlich muss auf der linken Seite der Zuweisung nicht die gleiche Variable stehen wie rechts. Falls wir aber den Wert einer bestimmten Variablen immer um "1" erhöhen wollen, muss der Wert aus der Variablen-Schublade, zu dem "1" dazugezählt wird, wieder in die gleiche Variablen-Schublade - mit dem gleichen Namen - gelegt werden. Du siehst den Unterschied einer Zuweisung mit "=" beim Programmieren im Vergleich zum Gleichheitszeichen "=" in Mathe: bei einer Programmier-Zuweisung steht links und rechts des Gleichheitszeichens nicht das Gleiche, in Mathe (hoffentlich) schon.</p> 
+
+<h3>Variablen-Namen</h3>
+
+<p>Im Prinzip ist es egal, wie deine Variable heisst. Du musst nur an jeder Stelle im Programm, an der die Variable verwendet wird, genau diesen Namen verwenden. </p>
+
+<p> <span id="ausprobieren">Gib der Variablem "durchmesser" einen anderen Namen, zum Beispiel "radiusMalZwei". Wo überall im Programm musst du den Namen ändern?</span> </p>
+
+<p>Es ist eine ziemlich gute Idee, jeder Variablen einen &bdquo;sprechenden&rdquo; Namen zu geben, also einen Namen, der aussagt, wofür die Variable steht. Jeder, der dein Programm liest, sollte zumindest ahnen können, für was die Variable steht. Eine Variable "var1" oder "xxx" zu nennen ist ganz übel - und du wirst dich selbst am meisten darüber ärgern, wenn du dein eigenes Programm nach ein paar Wochen nicht mehr verstehst. Schreibfaulheit ist in Ordnung, wenn sie Dinge vereinfacht, aber bei Variablen-Namen (und Kommentaren) ist sie nicht am Platz.</p>
+
+<p>Ein paar Vorschriften für erlaubte Variablen-Namen gibt es; und typische weil bewährte Arten, Variablen zu benennen. Sowas nennt sich dann vornehm <span id="begriff";>Namenskonvention</span>.</p>
+
+<ul><li>Der Name einer Variable muss mit einem Buchstaben anfangen; eine Zahl ist nicht erlaubt. Von den ganzen Sonderzeichen auf der Tastatur, wie / oder % oder §, sind nur $ (Dollar) oder _ (Unterstrich) als Anfang einer Variable erlaubt - diese beiden solltest du aber im Normalfall trotzdem nicht verwenden.</li>
+
+<li>
+
+</li>
+
+
+</ul>
+
+<p></p>
+camelCase, snake_case
+
+Name der Variable
+- ist beliebig
+- Namenskonventionen, reserviert
+
+Verwendung 
+- als Variable
+- oder als Platzhalter für viele gleiche Zahlen
+
+
+<h2>Variablen in draw</h2>
+<p>Warum wird der "durchmesser" immer größer? Klar, wir zählen "1" dazu, aber dann? 
+<br>Du erinnerst dich: die Funktion "draw" wird immer und immer wieder von Anfang bis Ende durchlaufen - was wir eine &bdquo;Endlosschleife&rdquo; genannt haben. Das Programm kommt also ständig, kurz nachdem es den Kreis gezeichnet hat, bei 
+<code>durchmesser = durchmesser + 1</code> vorbei. Beim nächsten Durchlauf von "draw" wird damit der Durchmesser des Kreises um 1 Pixel größer.</p>
+
+<p>Diese Anweisung wird von rechts nach links ausgeführt: die &bdquo;Zuordnung&rdquo; passiert ganz am Schluss. Also steht auf der rechten Seite der <em>alte</em> Wert von "durchmesser", zu dem "1" dazugezählt wird. Dann erst wird die Zuordnung mit dem Gleichheitszeichen gemacht, und der <em>neue</em>, gerade eben ausgerechnete Wert in die Schublade "durchmesser" geworfen. Dann hat die Variable "durchmesser" den Wert "2", der alte Wert "1" wurde überschrieben.</p>
+
+<p>Beim nächsten Mal, wenn <code>durchmesser = durchmesser + 1;</code> wieder ausgeführt wird, wächst der "durchmesser" auf "3", und so weiter. Die Wert der Variablen "durchmesser" ändert sich - und zwar in "draw" wegen der Endlosschleife ziemlich schnell.</p>
+
+<span id="tbd"> ==> Code/0120.js <== </span>
+<script type="text/p5" src="../Code/0120.js" 
+	data-autoplay data-height="300" data-preview-width="250" 
+	data-p5-version="1.9.0">
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>Wir haben festgestellt, dass der "draw" Block in p5 immer und immer wieder durchlaufen wird, damit sich eine Zeichnung ändern kann. Wie genau können wir diese Eigenschaft von "draw" ausnutzen? </p>
+
+<p>Sagen wir mal, wir wollen, dass ein Kreis auf dem Canvas von rechts nach links wandert. Dann muss sich die Stelle, an der der Kreis gezeichnet wird, ändern. Der waagrechte, horizontale Abstand vom rechten Rand - was wir x-Richtung genannt haben - muss immer größer werden. Der Durchmesser des Kreises und sein senkrechter, vertikaler Abstand - was wir y-Richtung nennen - bleiben gleich. </p>
+
+<p>Wollen wir die x-Richtung ändern, dürfen wir logischerweise dafür in der <code>circle (10, 50, 30)</code> Funktion nicht immer die Zahl "10" verwenden, sondern diese Zahl muss größer werden. Deshalb können wir an der Stelle der "10" einen "Platzhalter" verwenden, in dem wie in einer Schublade der aktuelle Wert der x-Richtung steckt. Wollen wir den aktuellen Wert verwenden, nehmen wir den Wert aus der Schublade heraus, indem wir an der Stelle der "10" den Namen des Platzhalters verwenden.
+
+Den Platzhalter nennt man Variable, weil sich sein Wert ständig ändern kann, also "varrrriabl" ist.
+
+
+Das ändern wir gleich; dazu müssen wir uns aber zuerst mit einer Sache vertraut machen, die für Programmiersprachen mindestens so wichtig ist wie die &bdquoFunktion&rdquo: das ist die <span id="Begriff";>Variable</span>. </p>
+
+=============================================================================
+
+<!-- Kommentar -->
+<!-- Kommentar -->
+<!-- Kommentar -->
+
+  <div>
+    <center>
+      <button onclick="document.location='018.html'">Zurück</button>
+			<button onclick="document.location='index.html'">Inhalt</button>
+      <button onclick="document.location='022.html'">Weiter</button>
+    </center>
+  </div>
+
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.1/p5.js"></script>
+<script src="//toolness.github.io/p5.js-widget/p5-widget.js"></script>
+
+</html>
+

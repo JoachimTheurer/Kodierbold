@@ -126,7 +126,7 @@
 
 
 <span id="tbd">Code/080.js</span>	
-<script type="text/p5" src="../Code/080.js" 
+<script type="text/p5" src="../Code/0080.js" 
 	data-autoplay data-height="520" data-preview-width="270" 
 	data-p5-version="1.9.0">
 </script>
@@ -142,6 +142,9 @@
 
 <li> Der Web-Editor, den wir später kennenlernen, zeigt dir sogar die gewählte Farbe in einem kleinen Kästchen vor dem Farbnamen an. So weisst du sofort, ob dieser Farbname bekannt ist oder ob du dich vielleicht vertippt hast. </li> </ul>
 
+
+	<h3>Rot - Grün - Blau: RGB</h3>
+
 <p> In der Tabelle gibt es für jede Farbe eine Spalte <b>R G B</b> mit drei Zahlen. Was hat das zu bedeuten? 
 <br> RGB ist die zweite Methode, um an die "fill" Funktion eine Farbe zu übergeben. Die RGB-Methode  mischt die drei Farben: rot, grün und blau. Der Trick ist, dass diese drei Farben, wenn sie gemischt werden, andere Farben oder Farbtöne ergeben - wie beim Malen mit Wasserfarben. 
 <br>Die Zahlenwerte in der Spalte RGB der Tabelle geben an, wie groß der Anteil an Rot (erste Zahl), Grün (zweite Zahl) und Blau (dritte Zahl) an der gemischten Farbe ist. Die möglichen Zahlenwerte für jeden Anteil liegen zwischen '0' (gar nichts) und '255' (maximal).</p>
@@ -153,7 +156,7 @@
 </p>
 
 <span id="tbd">Code/085.js</span>	
-<script type="text/p5" src="../Code/085.js" data-autoplay 
+<script type="text/p5" src="../Code/0085.js" data-autoplay 
   data-height="400" data-preview-width="270" 
 	data-p5-version="1.9.0">
 </script>
@@ -179,21 +182,6 @@ noch reden werden, funktionieren auch nur mit RGB Argumenten und nicht mit den F
 &ldquo;Cascading Style Sheet&rdquo;: der &ldquo;Style&rdquo; legt den Stil der Webseite fest. 
 In CSS werden RGB Farben so geschrieben: <code>rgb(0, 0, 255)</code>. Weil CSS viel mehr verwendet wird als p5, nämlich für jede Browser-Seite, kannst du diesen Ausdruck auch in p5 verwenden: <code>fill('rgb(0, 0, 255)')</code> ist das Gleiche wie <code>fill(0, 0, 255)</code>. Du willst die umständlichere CSS Anweisung wahrscheinlich nicht verwenden; häufig sind aber andere p5 Programme, die du verstehen möchtest, so geschrieben. Man kann viel dabei lernen, wenn man p5 Programme von Anderen liest und zu verstehen versucht.</p>
 
-
-<h3>Hexadezimale Farbwerte</h3>
-
-<p> In einer Tabelle mit CSS-Farbnamen aus dem Internet stehen neben den Namen der Farben und den drei RGB Zahlen häufig auch Werte, die mit einem &bdquo;Gartenzaun&rdquo;-Zeichen <mark>#</mark> anfangen. Das Gartenzaun '#' Zeichen nennt man beim Programmieren das &bdquo;Nummernzeichen&rdquo; oder schlicht eine Raute. In den sozialen Medien hat es natürlich eine coole englische Bezeichnung und heisst &bdquo;Hashtag&rdquo;, sprich &bdquo;häschtäg&rdquo;. </p>
-
-<p>Die Zahlen hinter '#' sind sogenannte <em>hexadezimale</em> Zahlenwerte. Hexadezimale Zahlen verwenden ein anderes Zahlensystem als die normalen RGB Werte, nämlich das Sechszehner-System.  Man kann jede hexadezimale Zahl in einen RGB Wert umrechnen und umgekehrt, es sind also die gleichen Zahlen, nur anders dargestellt (soll heissen: ein bisschen mehr <em>verhext</em>). Hexadezimale Werte kannst du in der "fill" Funktion ebensogut verwenden wie RGB Werte. Du musst nur aus der Farb-Tabelle statt der drei RGB Werte den entsprechenden einzigen hexadezimalen Wert ablesen und als Argument verwenden. Falls dir aber hexadezimale Werte nie unterkommen sollten, hast du nichts verpasst: RGB macht exakt das Gleiche.</p>
-
-<p>Zum Beispiel bewirkt <code>fill('gold')</code> das Gleiche wie <code>fill(255, 215, 0)</code> oder <code>fill('rgb(255, 215, 0)')</code> oder <code><mark>fill('#FFD700')</mark></code>: Flächen werden mit der Farbe Gold ausgemalt. Willst du einen Rasen in Grasgrün zeichnen, verwendest du den Farbnamen <code>fill('lawngreen')</code> oder	die hexadezimale Farbbezeichnung <code>fill('#7CFC00')</code> oder den RGB Wert	<code>fill(124; 252; 0)</code> - was davon, bleibt komplett dir  überlassen. 
-<br>Eine weiße Füllung bekommt man beispielsweise mit <code>fill('white')</code> oder mit <code>fill(255, 255, 255)</code> oder mit <code>fill(255)</code> oder mit <code>fill('#FFFFFF')</code> hin. Wir erinnern uns: hier sind die RGB Werte gleich und es muss nur ein einziger Wert für die Graustufe vorhanden sein.
-<br>Alles schwarz ausgemalt wird mit der Anweisung <code>fill('black')</code> oder  <code>fill(0, 0, 0)</code> oder <code>fill(0)</code> oder <code>fill('#000000')</code>. Ganz so, wie es dir am besten gefällt!</p>
-
-<p>Die Farbnamen werden in p5 mit Kleinbuchstaben geschrieben, die hexadezimalen Werte normalerweise mit Großbuchstaben ('#7CFC00' statt '#7cfc00'). Vergiss die einfachen Anführungszeichen <mark>'</mark> für den Farbnamen oder für die Hex-Darstellung nicht, und vergiss in der RGB Darstellung die Kommas zwischen den drei Zahlen nicht. 
-<br>Ebensowenig darfst du den Strichpunkt <mark>;</mark> hinter der fill Anweisung - wie hinter jeder anderen p5 Anweisung auch - vergessen!</p>
-
-
 <h2>Rand</h2>
 
 <p>Der zweite Bereich, der in einem p5 sketch mit Farbe gefüllt werden kann, ist der Rand einer Figur, also die Umrandung aussenrum: die sogenannte Konturlinie. Auch Linien und Punkte, die ja nicht so recht eine Innen-Fläche haben, bekommen so eine Farbe.</p> 
@@ -205,7 +193,7 @@ In CSS werden RGB Farben so geschrieben: <code>rgb(0, 0, 255)</code>. Weil CSS v
 <p>Die Farbe, das Argument der Funktion "stroke", kann wie gehabt ein Farbname, oder ein RGB Wert aus drei Zahlen zwischen '0' und '255', oder ein Hex-Wert sein. </p>
 
 <span id="tbd">Code/090.js</span>	
-<script type="text/p5" src="../Code/090.js" 
+<script type="text/p5" src="../Code/0090.js" 
 	data-autoplay data-height="470" data-preview-width="270" 
 	data-p5-version="1.9.0">
 </script>
@@ -271,8 +259,8 @@ Soll zusätzlich die Transparenz angegeben werden, schreibt man "rgba" statt "rg
 bekommt Alpha hier nicht ganze Zahlenwerte zwischen '0' und '255', sondern Kommazahlen zwischen '0' und '1'. Auch hier gilt: Je <em>kleiner</em> die Zahl, desto transparenter die Farbe. &bdquo;Kommazahlen&rdquo; gibt es vorwiegend in Europa. In der übrigen Welt, in wissenschaftlichen Darstellungen und beim Programmieren wird der Dezimalpunkt verwendet. Alpha in der CSS-Darstellung kann also den Wert '0', '0<mark>.</mark>2', '0<mark>.</mark>5', usw., haben - aber <em>nicht</em> '0<mark>,</mark>5' oder so - das kennt p5 nicht und macht daraus eine glatte '0'. </p>
 
 <span id="tbd">Code/095.js</span>	
-<script type="text/p5" src="../Code/095.js" 
-	data-autoplay data-height="250" data-preview-width="270" 
+<script type="text/p5" src="../Code/0095.js" 
+	data-autoplay data-height="450" data-preview-width="270" 
 	data-p5-version="1.9.0">
 </script>
 
@@ -293,33 +281,21 @@ bekommt Alpha hier nicht ganze Zahlenwerte zwischen '0' und '255', sondern Komma
 
 <p>Machen wir ein ausführliches Beispiel, um alle Farb-Funktionen in Aktion zu sehen!</p> 
 
-<!-- 240723 -->
-
 <span id="tbd">Code/100.js</span>	
-<script type="text/p5" src="../Code/100.js" 
-	data-autoplay data-height="250" data-preview-width="270" 
+<script type="text/p5" src="../Code/0100.js" 
+	data-autoplay data-height="550" data-preview-width="270" 
 	data-p5-version="1.9.0">
 </script>
 
 <p> <span id="ausprobieren">Bastle am sketch herum und ändere, was immer dir einfällt.</span> </p>
 
-<p>Es gibt noch eine weitere Möglichkeit, Farben einzustellen. Künstler legen eben Wert auf Farbigkeit. 
-
-.............
-HUE
-.............
-
-
-
-</p>
-
-
-
-
-
-
-		<button onclick="document.location='016.html'">Zurück</button>
-		<button onclick="document.location='020.html'">Weiter</button>
+  <div>
+    <center>
+      <button onclick="document.location='016.html'">Zurück</button>
+			<button onclick="document.location='index.html'">Inhalt</button>
+      <button onclick="document.location='020.html'">Weiter</button>
+    </center>
+  </div>
 
 </body>
 

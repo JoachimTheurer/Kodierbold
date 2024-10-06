@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <link rel="stylesheet" type="text/css" href="style.css" />
-  <title>Programmieren lernen mit p5 - Kapitel 1 - 2 </title>
+  <title>Programmieren lernen mit p5 - Kapitel 2 </title>
 </head>
 
 <body>
@@ -64,16 +64,17 @@
 <p>
     Im Editor stehen schon von Anfang an die Aufrufe von zwei Funktionen:
 <p>
-    <code style="padding-left: 30px;"> createCanvas(200, 200) </code>
+    <code style="padding-left: 30px;"> createCanvas(220, 200) </code>
     und
     <br>
     <code style="padding-left: 30px;"> background(220) </code>
   </p>
 	</p>
   
-	<!-- Original Inhalt des p5.js Editors: function & background -->
-  <script type="text/p5" src="../Code/010_01.js" data-height="300"
-    data-preview-width="400" data-p5-version="1.9.0">
+  <!-- Original Inhalt des p5.js Editors: function & background -->
+  <script type="text/p5" src="../Code/0000.js" 
+	        data-height="300" data-preview-width="400" 
+		      data-p5-version="1.9.0">
 </script>
 
   <p>
@@ -139,11 +140,12 @@ sondern die Größe und Farbe dieses Bauteils müssen ebenfalls passen.
  <code>background(220)</code> änderst?
 			</span> </p> 
 	
-<!-- Original Inhalt des p5.js Editors: function & background -->
-  <script type="text/p5" src="../Code/010_01.js"
-	                       data-height="300" data-preview-width="400"
-                         data-p5-version="1.9.0">
+  <!-- Original Inhalt des p5.js Editors: function & background -->
+  <script type="text/p5" src="../Code/0000.js" 
+	        data-height="300" data-preview-width="400" 
+		      data-p5-version="1.9.0">
 </script>
+
 <p>Drücke nach jeder Änderung <em>Play</em> und sicherheitshalber vorher <em>Stop</em>.
 
 <p> Also: Wenn du den Hintergrund deiner Zeichenfläche grau ausmalen willst,
@@ -167,7 +169,7 @@ sondern die Größe und Farbe dieses Bauteils müssen ebenfalls passen.
 <h4 id="K013C2" >Die 'createCanvas' Funktion</h4>
   <p>
     Die andere Funktion, die schon im Editor steht, ist
-    <code>createCanvas(200, 200)</code>. Damit wird die Zeichenfläche auf der
+    <code>createCanvas(220, 200)</code>. Damit wird die Zeichenfläche auf der
     rechten Vorschau-Seite überhaupt erst erzeugt.
     Auf Englisch heisst &ldquo;create&rdquo; (sprich &bdquo;cre-eit&rdquo;) anlegen oder erschaffen, und
     &ldquo;Canvas&rdquo; (sprich &bdquo;känws&rdquo;) heisst  Leinwand. Der Aufruf der Funktion
@@ -175,27 +177,26 @@ sondern die Größe und Farbe dieses Bauteils müssen ebenfalls passen.
     Zeichenfläche oder Leinwand entsteht, auf der das Programm dann erst zeichnen kann. 'createCanvas' muss deshalb beim Start des Programms aufgerufen werden, so wie ein Maler erst die Leinwand aufstellen muss, bevor er anfangen kann. Deswegen steht 'createCanvas' schon gleich im Programm, wenn der Editor  gestartet wird.
   </p>
   <p>
-    Die Funktion <code>createCanvas(200, 200)</code> hat zwei
-    <span id="Begriff">Argumente</span> in den runden Klammern. Beide Argumente haben hier - zufällig -
-    den gleichen Wert '200'. Was bedeuten sie?
-    <br>Der <em>erste</em> Wert '200' bestimmt die <em>Breite</em> der
+    Die Funktion <code>createCanvas(220, 200)</code> hat zwei
+    <span id="Begriff">Argumente</span> in den runden Klammern. Was bedeuten sie?
+    <br>Der <em>erste</em> Wert '220' bestimmt die <em>Breite</em> der
     Leinwand, also wie groß die Leinwand in der Richtung nach rechts ist. 
 		<br>Der <em>zweite</em> Wert '200' bestimmt die <em>Höhe</em> der Leinwand, also wie groß die Leinwand in der Richtung nach unten ist.
   </p>
 
 	<p> <span id="ausprobieren">
-      Ändere jetzt die Argumente der Funktion <code>createCanvas(200, 200)</code> und probiere mit <em>Play</em> aus, wie sich die Ausdehnung der Leinwand dadurch ändert.</span>  </p>
+      Ändere jetzt die Argumente der Funktion <code>createCanvas(220, 200)</code> und probiere mit <em>Play</em> aus, wie sich die Ausdehnung der Leinwand dadurch ändert.</span>  </p>
 
 <p> 
 <!-- Original Inhalt des p5.js Editors: function & background -->
-  <script type="text/p5" src="../Code/010_01.js"
+  <script type="text/p5" src="../Code/0000.js"
 	                       data-height="300" data-preview-width="400"
                          data-p5-version="1.9.0">
 </script>
 </p>
 
   <p>
-    Was gefällt Dir besser als Zeichenfläche - ein Quadrat, das entsteht, wenn das erste und das zweite Argument gleich sind  oder ein Rechteck - im Längs- oder Querformat?
+    Was gefällt Dir besser als Zeichenfläche - ein Quadrat, das entsteht, wenn das erste und das zweite Argument gleich sind, oder ein Rechteck - im Längs- oder Querformat?
 		<br>
     Kannst Du die Leinwand fast so gross wie den gesamten Platz in der Vorschau machen, so dass kaum noch ein Rand zu sehen ist? <br>
     Oder kannst du den Canvas so klein machen, dass er kaum noch zu erkennen ist - versuch's doch zum Beispiel mal mit <code>createCanvas(5, 5)</code>. 
@@ -215,8 +216,13 @@ macht die Leinwand ordentliche 222 &times 333 = 73&nbsp;926 Pixel groß. </p>
 <p> Jetzt haben wir eine Leinwand (den <em>Canvas</em>) und einen Hintergrund, und es wird wirklich
 mal Zeit, so richtig mit dem Zeichnen anzufangen. </p>
 	
-    <button onclick="document.location='010.html'">Zurück</button>
-    <button onclick="document.location='014.html'">Weiter</button>
+  <div>
+    <center>
+      <button onclick="document.location='010.html'">Zurück</button>
+			<button onclick="document.location='index.html'">Inhalt</button>
+      <button onclick="document.location='014.html'">Weiter</button>
+    </center>
+  </div>
 
 </body>
 

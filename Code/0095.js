@@ -1,8 +1,6 @@
-function setup() {
-  createCanvas(200, 200);
-  background('brown');
-}
-function draw() {
+createCanvas(200, 200);
+background('brown');
+
   /* Die fill Funktion bekommt ein 
      viertes Argument: "Alpha" */
 
@@ -17,4 +15,3 @@ function draw() {
 
   fill(255, 255, 0, 160); //alpha=160
   square(100, 100, 80); //gelbes Quadrat
-}

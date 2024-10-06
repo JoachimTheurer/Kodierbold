@@ -1,9 +1,6 @@
-function setup() {
-  createCanvas(220, 200);
-  background(220);
-}
+createCanvas(220, 200);
+background(220);
 
-function draw(){
 // Erste Reihe
   fill('red');       // >>> setze Rot <<<
   circle(050, 50, 50);//  1. Kreis: rot
@@ -17,4 +14,3 @@ function draw(){
   circle(110, 140, 50);// grüner Kreis 
   fill('white');    // >>> setze Weiss <<<
   circle(180, 140, 50);// weisser Kreis
-}

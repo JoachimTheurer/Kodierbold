@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<title>Programmieren mit p5 - Kapitel 3</title>
+</head>
+
+<body>
+
+	<h1>Der Web-Editor</h1>
+
+  <h2 id="K013">Die Werkstatt des Programmier-Künstlers</h2>
+  <p>
+    Um p5 Programme zu schreiben, ist für dich schon eine Künstler-Werkstatt
+    im Internet eingerichtet. Hier wirst du Programme &bdquo;entwickeln&rdquo;,
+    weshalb man man diese Werkstatt <span id="Begriff";>Entwicklungsumgebung</span>
+    nennt. In dieser Umgebung kannst du Programme schreiben, testen, ändern und dann  
+    gleich ansehen, ob der Computer daraus gemacht hast, was du wolltest.
+  </p>
+  <p>
+    Deine Künstler-Werkstatt, die p5 Entwicklungsumgebung, liegt auf dieser
+    Internet-Seite
+    <center>
+      <a style="text-align:center; font-size:125%;"
+        href="https://editor.p5js.org/" target="_blank";>p5 Web Editor</a>.
+    </center>
+</p>
+
+  <p>Du kannst die Seite aufrufen, indem du auf diesen Link &bdquo;p5 Web Editor&rdquo; klickst. Am besten ist es, wenn du die Seite in einem <em>neuen Fenster</em> aufrufst. Diese 
+		Möglichkeit wird dir angeboten, wenn du mit der rechten Maustaste auf den Link klickst.
+	  Dann kanst du diesen Text und den p5-Webeditor gleichzeitig nebeneinander auf dem Bildschirm ansehen.</p>  
+
+		<p> Für die Webseite mit dem p5 Editor legst du am besten gleich
+    ein Lesezeichen im Browser an. Das geht in den meisten Browsern durch einen 
+		Klick auf den Stern rechts neben der Zeile ganz oben auf der Seite, in der
+    jetzt <code>https://editor.p5js.org/</code> steht. </p>
+
+  Das neue Browser-Fenster, die p5 Entwicklungsumgebung, sieht ungefähr so aus:
+  <p><img src="../Bild/p5Editor (000) - Uebersicht.png"
+      alt="p5 Entwicklungsumgebung">
+  </p>
+
+<p>Von Zeit zu Zeit wird eine Kleinigkeit daran verbessert oder geändert, dann kann sich das Aussehen ein bisschen ändern. Lass' dich davon nicht davon stören: die wesentlichen Sachen bleiben sicher so, wie sie jetzt schon sind. </p>
+	 
+	<p> Die oberste Zeile, die links mit <span style="background-color:red"> p5* </span> anfängt, ist die <span id="Begriff";>Menüleiste</span>. Dort stellen wir gleich mal die Sprache von Englisch auf Deutsch um. Klappe die Liste unter dem Wort &bdquo;English&rdquo; 
+	in der Menüleiste auf und klicke dann auf &bdquo;Deutsch&rdquo;.
+  </p>
+	
+  <p><img src="../Bild/p5Editor (001) - auf Deutsch umschalten.png"
+      alt="Menüleiste">
+  </p>
+	
+  Jetzt sollten alle Überschriften in der Menüleiste auf Deutsch geschrieben
+  sein.
+
+  <p> Unter der Menüleiste ist die Taste, um ein Programm zu starten.
+    Diese Start-Taste wird manchmal auch Play-Taste oder &bdquo;Abspielknopf&rdquo; 
+		genannt.
+    Rechts daneben liegt der Stopp-Knopf, mit dem jedes gestartete Programm wieder
+    angehalten werden kann.</p>
+		
+  <p><img src="../Bild/p5Editor (002) - Start und Stopp.png"
+      alt="Start und Stopp-Taste">
+  </p>
+
+  <p>
+    Unter diesen beiden Tasten, auf der linken Seite, steht die Überschrift
+    <span class="rahmen" style="background-color:yellow"> sketch.js </span>.
+    In dem Bereich darunter gibt es sogar schon ein paar Zeilen mit
+    Programm-Anweisungen, die am linken Rand nummeriert sind. 
+		<br> Diesen Bereich zum Schreiben des Programms 
+    nennt man <span id="Begriff">Editor</span>.</p>
+
+  <p>
+    <img src="../Bild/p5Editor (003) - Sketch und Vorschau.png"
+      alt="Rahmen für den Editor und die Zeichnung">
+  </p>
+
+	<p>Rechts davon, unter der Überschrift 
+	  <span class="rahmen" style="background-color:yellow">Vorschau</span>, 
+		ist eine leere Fläche. Dort erscheint die Zeichnung, die du mit deinem
+    Programm erschaffen hast. 
+		<br>Diese Zeichnung nennt man <span id="Begriff">Sketch</span> ("Skizze" auf
+    Englisch, sprich "skätsch").
+  </p>
+
+  <p>Einfacher Text, den dir der Computer schreiben will, landet in dem
+    Bereich ganz unten links, der mit <span class="rahmen">Konsole</span>
+    überschrieben ist.</p>
+
+  <p><img src="../Bild/p5Editor (004) - Editor, Vorschau und Konsole.png"
+      alt="Editor, Vorschau und Konsole">
+  </p>
+
+  <p>Was es in der Entwicklungsumgebung sonst noch so gibt, sehen wir uns
+    später an, wenn wir es brauchen. Jetzt wollen wir rasch mit dem
+    Programmieren loslegen!</p>
+
+
+	<h2>Anmelden im p5 Web Editor</h2>
+
+	<p>Deine tollen Programme möchtest du bestimmt behalten und deinen Freunden
+	zeigen. Am einfachsten geht das, wenn du dich auf der Seite mit dem p5 Web Editor registrierst, also ein Konto erstellst, und dich dann dort anmeldest. Dazu musst du dir einen
+	Nutzernamen und ein passendes Passwort ausdenken, die du am besten nicht
+	mehr vergessen solltest. Ausserdem benötigst du eine Mail-Adresse um die Registrierung mit der Antwort auf eine Mail zu bestätigen. </p>
+
+	<p>Die Registrierung findest du im p5 Webeditor in der Menüleiste ganz oben
+	ganz rechts unter "Registrieren". Bist du registriert, kannst du dich unter
+	"Anmelden" in deinem p5 Konto mit deinem Nutzernamen und deinem Passwort
+	anmelden. Nach der Anmeldung ist es möglich, jede deiner Zeichnungen mit dem
+	Menüpunkt "Datei > speichern" für immer zu sichern. </p>
+
+	<p>Falls du dich nicht anmelden möchtest, kannst du einfach das ganze 
+	Programm markieren, in einen Editor auf deinen
+	Computer kopieren und dann dort speichern.</p>
+	
+	<p>Falls es möglich ist, empfiehlt sich eine Registrierung im p5 Web-Editor
+	aber schon, denn es gibt dann im Menü noch ein paar zusätzliche Werkzeuge.</p>
+
+	<h2>Dein Programm sichern</h2>
+
+	<p>Vielleicht hast du es schon bemerkt: Jeder neue sketch bekommt im p5
+	Webeditor automatisch einen Namen.</p>
+
+	$screenshot
+
+	<p>Dieser Datei-Name ist absichtlich wild zusammengewürfelt, maximal unsinnig
+	und deshalb ziemlich lustig. Dein sketch bekommt beim Sichern diesen Namen
+	verpasst. Willst du - vor dem Sichern - jedoch einen eigenen Datei-Namen
+	vergeben, klickst du das Stift-Symbol neben dem Namen an, füllst den von dir
+	gewünschten Namen in das Kästchen und drückst die <ENTER> (Eingabe-) Taste.</p>
+
+		<p>Oberhalb vom Editor, auf der rechten Seite, kannst du ablesen, wann dein
+		sketch zuletzt gesichert wurde. Hast du in der Zwischenzeit viele
+		Änderungen gemacht, ist es an der Zeit, wieder einmal zu sichern. Mitunter
+		funktioniert auch das automatische Sichern in der Entwicklungsumgebung, so
+		in etwa jede Minute einmal. Darauf musst du dich nicht unbedingt
+		verlassen: drücke einfach nach jeder wichtigen Änderung rasch die
+		Tastenkombinaten zum Sichern (in Windows zum Beispiel: Taste 'STRG' und
+		Taste 's' gleichzeitig).</p>
+
+		<p>Häufiges Sichern ist immer eine gute Idee, damit deine Änderungen nicht
+		verloren gehen. Du kannst auch bei jedem Sichern deine Datei etwas anders
+		nennen, zum Beispiel an den Namen eine Zahl anhängen. Dann ist es später
+		möglich, die aktuelle Zeichnung nach einer Änderung, die dir vielleicht
+		nicht so gefällt, zu ersetzen durch das, was früher gespeichert wurde. Die
+		Dateien mit den unterschiedlichen Namen sind die 
+		<span id="Begriff";>Versionen</span> deines
+		sketches. Beim Zurückholen kannst du zu einer früheren
+		Programmversion zurück gehen. Hochgestochen kann man das eine
+		<span id="Begriff";>Versionsverwaltung</span> nennen.</p>
+
+		<p>Möchtest du deinen früheren sketch zurückholen, wählst du den Meüpunkt
+		"Datei > Öffnen". Was dann im Editor aktuell steht, wird komplett
+		überschrieben. Sichere vor dem Zurückholen also unbedingt den aktuellen
+		sketch.</p>
+
+  <div>
+    <center>
+      <button onclick="document.location='016.html'">Zurück</button>
+			<button onclick="document.location='index.html'">Inhalt</button>
+      <button onclick="document.location='020.html'">Weiter</button>
+    </center>
+  </div>
+
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.1/p5.js"></script>
+<script src="//toolness.github.io/p5.js-widget/p5-widget.js"></script>
+
+</html>
+
