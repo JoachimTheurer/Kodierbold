@@ -1,0 +1,17 @@
+  createCanvas(220, 200);
+  background("purple");
+  fill("aqua");
+  circle(110, 100, 190);
+  fill("lime");
+  circle(110, 100, 170);
+  fill("fuchsia");
+  circle(110, 100, 150);
+  fill("cyan");
+  circle(110, 100, 130);
+  fill("red");
+  circle(110, 100, 110);
+  fill("magenta");
+  circle(110, 100, 90);
+  rectMode(CENTER);
+  fill("teal");
+  square(110, 100, 50);
