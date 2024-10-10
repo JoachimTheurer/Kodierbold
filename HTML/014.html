@@ -22,7 +22,7 @@
 <h3> Kreis </h3>
 	
 <p>Um einen Kreis zu zeichnen, gibt es in p5 die Funktion
-		<code><mark>circle</mark>(100, 120, 50)</code>. &ldquo;Circle&rdquo; (sprich &bdquo;cörcl&rdquo;) bedeutet &bdquo;Kreis&rdquo; auf Englisch. </p>
+		<code><mark>circle</mark>(100, 120, 50)</code>. &ldquo;Circle&rdquo; (sprich &bdquo;sörcl&rdquo;) bedeutet &bdquo;Kreis&rdquo; auf Englisch. </p>
 		
 <p>Wie du unten siehst, zeichnet die Anweisung "circle" eine ganze Kreisscheibe mit Rand - nicht nur den Rand allein wie bei einem Zirkel. 
 <br>Jede Figur, die in p5 gezeichnet wird, besteht aus dem Rand aussenrum <em>und</em> der gesamten Fläche, die dieser Rand umschliesst. </p> 
@@ -165,12 +165,18 @@ Ein Quadrat <code>square(110, 100, <mark>60</mark>)</code> hat also vier Seiten 
 
 <p>Unser Quadrat ist jetzt genau in der Mitte!</p>
 
-<p>Die <code>rectMode(CENTER)</code> Anweisung schreibst du vor die <code>rect</code> Anweisung, mit der das Quadrat gezeichnet wird.</p>
+<p>Die <code>rectMode(CENTER)</code> Anweisung schreibst du vor die <code>square</code> Anweisung, mit der das Quadrat gezeichnet wird.</p>
 
 <p>Wenn eine ganz bestimmte Sache von vorneherein eingestellt ist, aber von dir im Programm geändert werden kann, ist das eine <span id="Begriff";>Standardeinstellung</span> oder der <span id="Begriff";>Default</span>, sprich &bdquo;di-folt&ldquo;. Wenn nichts anderes von dir festgelegt wird, zum Beispiel mit <code>rectMode(CENTER)</code>; wird solch ein <em>default</em>, die Voreinstellung, verwendet.</p>
 
 <p>Es gibt auch eine Anweisung, um die Standardeinstellung extra einzuschalten. Sie lautet <code>rectMode(CORNER)</code>, mit in Grossbuchstaben geschriebenem <code>CORNER</code> (sprich &bdquo;kornr&rdquo;) für &bdquo;Ecke&rdquo;. Anschliessend bezeichnen die ersten beiden Argumente in <code>square(110, 100, 60)</code> wieder die Koordinate der <em>oberen linken Ecke</em>. So kannst du die Anweisung <code>rectMode(CENTER)</code>, wodurch der <em>Mittelpunkt</em> des Kreises festgelegt wird, wieder zurücknehmen.</p>
 
+<p>Du kannst jetzt schon ein Planetarium zeichnen!</p>
+
+<script type="text/p5" src="../Code/0022.js" 
+	data-autoplay data-height="350" data-preview-width="250" 
+	data-p5-version="1.9.0">
+</script>
 
 	<h3>Mehrere Figuren gleichzeitig</h3>
 
