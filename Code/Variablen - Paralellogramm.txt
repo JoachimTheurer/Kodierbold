@@ -1,0 +1,22 @@
+function setup() {
+  createCanvas(400, 300);
+}
+
+function draw() {
+  background(220);
+  
+  // Parameter für das Parallelogramm
+  let x1 = 100;  // x-Position des ersten Punkts
+  let y1 = 100;  // y-Position des ersten Punkts
+  let breite = 200;  // Breite des Parallelogramms
+  let hoehe = 100;   // Höhe des Parallelogramms
+  let verschiebung = 50;  // Verschiebung der oberen Kante
+  
+  // Zeichnet das Parallelogramm
+  quad(
+    x1, y1,                    // Punkt oben links
+    x1 + breite, y1,          // Punkt oben rechts
+    x1 + breite - verschiebung, y1 + hoehe,  // Punkt unten rechts
+    x1 - verschiebung, y1 + hoehe            // Punkt unten links
+  );
+}

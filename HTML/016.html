@@ -8,7 +8,7 @@
 </head>
 
 <body>
-241007
+
 	<h1>Mehr Figuren</h1>
 
 <p>Hier lernen wir viele weitere Funktionen kennen, mit denen die
@@ -65,6 +65,50 @@ Rundung einer bestimmten Ecke fest, wobei eine Ecke nach der anderen im Uhrzeige
 
 <p>Argumente in Funktionen, die man angeben kann, aber nicht muss, nennt man <span id="Begriff">optional</span>. Beim Rechteck ist es optional, ob du Werte für die Rundung der Ecken angibst. Wenn solche optionalen Werte beim Funktionsaufruf fehlen, wird verwendet, was die p5 Programmierer sich heimlich dafür ausgedacht haben: das ist dann der <span id="Begriff">Default</span> oder <span id="Begriff">Defaultwert</span>. 
 <br>Optionale Argumente kannst du also jederzeit weglassen, wenn du mit den Defaultwerten zufrieden bist - zum Beipiel wenn du verständlicherweise Rechtecke mit &bdquo;richtigen&rdquo; Ecken haben möchtest. </p>
+
+<h2 id="016-quad">Das Viereck</h2>
+<p>Natürlich können wir in p5, außer Quadrat und Rechteck, noch mehr Figuren zeichnen, die vier Ecken haben. Wir geben einfach die Koordinaten aller vier Eckpunkte an, und p5 verbindet diese Punkte mit Linien, um ein Viereck zu zeichnen. Die Funktion, die das kann, ist <code>quad</code>.</p>
+
+<p>Üblicherweise werden die Koordinaten der Eckpunkte im Uhrzeigersinn oder im Gegenuhrzeigersinn an <code>quad</code> übergeben. Mit vier Eckpunkten sind also acht Argumente  erforderlich: <code>quad(40, 10, 110, 10, 90, 90, 20, 90)</code>. </p> 
+
+<p>Damit lassen sich die typischen geometrischen Figuren erzeugen, die im Mathe-Unterricht so vorkommen. Wir geben im folgenden Beispiel die vier x- und y-Koordinaten für die Eckpunkte im Uhrzeigersinn an. </p>
+
+<span id="tbd">Code/0042.js</span>	
+<script type="text/p5" src="../Code/0042.js" 
+	data-autoplay data-height="370" data-preview-width="250" 
+	data-p5-version="1.9.0">
+</script>
+
+<ul>Wenn wir schon beim Mathe-Unterricht sind:
+<li>Beim <em>Parallelogramm</em> oben links sind einander gegenüberliegende Seiten parallel und auch noch gleich lang</li>
+<li>Beim <em>Trapez</em> unten links sind einander gegenüberliegende Seiten parallel, aber nicht gleich lang</li>
+<li>Beim <em>Drachen</em>, der größeren Figur rechts, sind zweimal diejenigen Seiten gleich lang, die miteinander verbunden sind.</li>
+<li>Bei der <em>Raute</em>, der Figur im Drachen, sind alle Seiten gleich lang.</li>
+</ul>
+
+<p> <span id="ausprobieren"> Wenn wir <code>quad</code> kennen, verwenden wir <code>square</code> und <code>rect</code> nur noch aus Programmier-Bequemlichkeit, damit wir nicht immer die Koordinaten aller vier Ecken des Quadrats oder Rechtecks eingeben müssen.
+<ul>  <span id="ausprobieren">
+<li>(a) Kannst Du aus dem Parallelogramm - mit der <code>quad</code> Funktion - ein Rechteck machen? Welche Eck-Punkte musst Du verschieben, damit sie passend auf gleicher Höhe liegen und das Rechteck seine vier rechten Winkel bekommt?  </li>
+<li>(b) Kannst Du aus diesem Rechteck - mit der <code>quad</code> Funktion - jetzt auch noch ein Quadrat machen?</li>
+<li>(c) Wie sieht es mit dem Trapez aus - was muss man verändern, um ein Rechteck oder sogar ein Quadrat daraus zu machen?</li>
+ </span> </ul> </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <h2>Dreieck </h2>
