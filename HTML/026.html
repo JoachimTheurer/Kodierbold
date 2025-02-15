@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="de">
 
@@ -10,96 +9,157 @@
 
 <body>
 
-<h2>Eigene Funktionen</h2>
+	<h1 id="h1">Eigene Funktionen</h1>
 
-<p>Wir können auch für uns selbst eigene Funktionen zusammenbauen, nicht nur - wie "setup" und "draw" - für p5. Mit einer eigenen Funktion fassen wir eine Liste von Anweisungen zusammen. Statt jedesmal die ganze Liste wieder hinzuschreiben, genügt es, nur die Funktion aufzurufen. Das spart Schreibarbeit, ist übersichtlicher und vermeidet deshalb Fehler.</p>
+	<p>Wir können auch für uns selbst eigene Funktionen zusammenbauen, nicht nur -
+		wie "setup" und "draw" - für p5. Mit einer eigenen Funktion fassen wir eine
+		Liste von Anweisungen zusammen. Statt jedesmal die ganze Liste wieder
+		hinzuschreiben, genügt es, nur die Funktion aufzurufen. Das spart
+		Schreibarbeit, ist übersichtlicher und vermeidet deshalb Fehler.</p>
 
-<p>Eine Funktion ist ein Codeblock, der einem bestimmten Funktionsnamen zugewiesen ist und eine definierte Aufgabe ausführt. Sehen wir uns das am Beispiel des Hasen an.</p>
+	<p>Eine Funktion ist ein Codeblock, der einem bestimmten Funktionsnamen
+		zugewiesen ist und eine definierte Aufgabe ausführt. Sehen wir uns das am
+		Beispiel des Hasen an.</p>
 
-<!-- Hase 1 -->
-<span id="tbd">Code/150.js</span>	
-<script type="text/p5" src="../Code/150.js" 
-	data-autoplay data-height="250" data-preview-width="270" 
-	data-p5-version="1.9.0">
+	<!-- Hase 1 -->
+	<span id="tbd">Code/150.js</span>
+	<script type="text/p5" src="../Code/150.js" data-autoplay data-height="250"
+		data-preview-width="270" data-p5-version="1.9.0">
 </script>
 
-<p>Um Kopf, Augen und Ohren des Hasen zu zeichnen, sind schon mal eine ganze Reihe von Anweisungen erforderlich. Wollen wir noch mehr Hasen oder noch andere Figuren zeichnen, wird es im Editor ganz schön voll und unübersichtlich. Fassen wir deshalb alle Anweisungen, mit denen der Hase gezeichnet wird, zu einer Funktion namens &bdquo;hase&rdquo; zusammen. Diese neue Funktion können wir dann nur mit ihrem Namen aufrufen und unten im Editor parken. Es ist üblich - eine sogenannte <span id="Begriff";>&bdquo;Konvention&rdquo;</span> -, den Namen von Funktionen in p5 klein zu schreiben, denn p5 selbst macht es so, wie zum Beispiel mit "draw" oder "circle". Eine Großschreibung wie "Hase" wäre demnach erlaubt, ist aber nicht üblich.</p>
+	<p>Um Kopf, Augen und Ohren des Hasen zu zeichnen, sind schon mal eine ganze
+		Reihe von Anweisungen erforderlich. Wollen wir noch mehr Hasen oder noch
+		andere Figuren zeichnen, wird es im Editor ganz schön voll und
+		unübersichtlich. Fassen wir deshalb alle Anweisungen, mit denen der Hase
+		gezeichnet wird, zu einer Funktion namens &bdquo;hase&rdquo; zusammen. Diese
+		neue Funktion können wir dann nur mit ihrem Namen aufrufen und unten im
+		Editor parken. Es ist üblich - eine sogenannte <span id="Begriff"
+			;>&bdquo;Konvention&rdquo;</span> -, den Namen von Funktionen in p5 klein
+		zu schreiben, denn p5 selbst macht es so, wie zum Beispiel mit "draw" oder
+		"circle". Eine Großschreibung wie "Hase" wäre demnach erlaubt, ist aber
+		nicht üblich.</p>
 
-<p>Eine Funktion wird angelegt, indem der Funktionsname und die runden Klammern hinter das <em>Schlüsselwort</em> <b>function</b> geschrieben werden, also <code>function hase()</code>.Dann kommt die öffnende geschweifte Klammer, <mark>{</mark> vor dem Inhalt der Funktion, dem <em>Funktionsrumpf</em> mit der Liste von Anweisungen. Die Funktion endet an der schließenden geschweiften Klammer <mark>}</mark> hinter der Liste von Anweisungen. Der Funktionskopf umfasst den Namen und die Parameter der Funktion, und der Funktionsrumpf ist das, was die Funktion ausführt. </p>
+	<p>Eine Funktion wird angelegt, indem der Funktionsname und die runden
+		Klammern hinter das <em>Schlüsselwort</em> <b>function</b> geschrieben
+		werden, also <code>function hase()</code>.Dann kommt die öffnende
+		geschweifte Klammer, <mark>{</mark> vor dem Inhalt der Funktion, dem
+		<em>Funktionsrumpf</em> mit der Liste von Anweisungen. Die Funktion endet an
+		der schließenden geschweiften Klammer <mark>}</mark> hinter der Liste von
+		Anweisungen. Der Funktionskopf umfasst den Namen und die Parameter der
+		Funktion, und der Funktionsrumpf ist das, was die Funktion ausführt. </p>
 
-<!-- Hase 2 -->
-<span id="tbd">Code/155.js</span>	
-<script type="text/p5" src="../Code/155.js" 
-	data-autoplay data-height="450" data-preview-width="270" 
-	data-p5-version="1.9.0">
+	<!-- Hase 2 -->
+	<span id="tbd">Code/155.js</span>
+	<script type="text/p5" src="../Code/155.js" data-autoplay data-height="450"
+		data-preview-width="270" data-p5-version="1.9.0">
 </script>
 
-<p>Wir haben die eigene Funktion <code>hase()</code> nach der "draw" Funktion angelegt oder   <span id="Begriff";>&bdquo;deklariert&rdquo;</span>. p5 hat das gemerkt und springt in diese Definition, sobald <code>hase()</code> in "draw" aufgerufen wird. Alle Anweisungen in  <code>hase()</code> werden so ausgeführt, als stünden sie an der aufrufenden Stelle innerhalb von "draw". Es hat sich nichts am Ablauf des Programms geändert, jedoch ist das Programm übersichtlicher geworden.</p>
+	<p>Wir haben die eigene Funktion <code>hase()</code> nach der "draw" Funktion
+		angelegt oder <span id="Begriff" ;>&bdquo;deklariert&rdquo;</span>. p5 hat
+		das gemerkt und springt in diese Definition, sobald <code>hase()</code> in
+		"draw" aufgerufen wird. Alle Anweisungen in <code>hase()</code> werden so
+		ausgeführt, als stünden sie an der aufrufenden Stelle innerhalb von "draw".
+		Es hat sich nichts am Ablauf des Programms geändert, jedoch ist das Programm
+		übersichtlicher geworden.</p>
 
-<p> <span id="ausprobieren"> <ul>Ändere Anweisungen in der Funktion <code>hase()</code>. Wie du siehst, hat es den gleichen Effekt als ob der Inhalt der Funktion <code>hase()</code> in "draw" stünde. 
-<li>Benenne die Funktion um: mache aus "hase" zum Beispiel "karnickel". An welchen Stellen musst du den Namen ändern?</li>
-<li>Füge weitere Anweisungen in "draw" ein, zum Beispiel einen großen Kreis hinter , der alles Vorherige überzeichnet. Oder einen großen Kreis vor <code>hase()</code>, der dann überzeichnet wird. Du siehst: alle  Anweisungen der Funktion <code>hase()</code> werden so ausgeführt, als ob sie direkt an der Stelle stünden, an der die Funktion aufgerufen wird.</li>
-<li>Verschiebe die gesamte Funktionsdefinition der Funktion <code>hase()</code> an andere Stellen im Editor, zum Beispiel vor "setup", zwischen "setup" und "draw" oder innerhalb von "draw". Du siehst: eine Funktion kann überall ausserhalb anderer Funktionen deklariert werden, aber nicht innerhalb einer anderen Funktion. Dort kann sie nur aufgerufen werden, damit sie ausgeführt werden kann. Wird sie nicht aufgerufen, wird sie natürlich auch nicht ausgeführt: teste das, indem du den Aufruf von <code>hase()</code> auskommentierst.</li>
-<li>Rufe die neue Funktion hase in draw mehrfach auf, indem du den Funktionsaufruf ein paarmal hinschreibst oder kopierst? Ändert sich etwas am sketch? Warum nicht?</li>
-</ul>
-</span> </p>
+	<p> <span id="ausprobieren">
+			<ul>Ändere Anweisungen in der Funktion <code>hase()</code>. Wie du siehst,
+				hat es den gleichen Effekt als ob der Inhalt der Funktion
+				<code>hase()</code> in "draw" stünde.
+				<li>Benenne die Funktion um: mache aus "hase" zum Beispiel "karnickel".
+					An welchen Stellen musst du den Namen ändern?</li>
+				<li>Füge weitere Anweisungen in "draw" ein, zum Beispiel einen großen
+					Kreis hinter , der alles Vorherige überzeichnet. Oder einen großen
+					Kreis vor <code>hase()</code>, der dann überzeichnet wird. Du siehst:
+					alle Anweisungen der Funktion <code>hase()</code> werden so
+					ausgeführt, als ob sie direkt an der Stelle stünden, an der die
+					Funktion aufgerufen wird.</li>
+				<li>Verschiebe die gesamte Funktionsdefinition der Funktion
+					<code>hase()</code> an andere Stellen im Editor, zum Beispiel vor
+					"setup", zwischen "setup" und "draw" oder innerhalb von "draw". Du
+					siehst: eine Funktion kann überall ausserhalb anderer Funktionen
+					deklariert werden, aber nicht innerhalb einer anderen Funktion. Dort
+					kann sie nur aufgerufen werden, damit sie ausgeführt werden kann. Wird
+					sie nicht aufgerufen, wird sie natürlich auch nicht ausgeführt: teste
+					das, indem du den Aufruf von <code>hase()</code> auskommentierst.</li>
+				<li>Rufe die neue Funktion hase in draw mehrfach auf, indem du den
+					Funktionsaufruf ein paarmal hinschreibst oder kopierst? Ändert sich
+					etwas am sketch? Warum nicht?</li>
+			</ul>
+		</span> </p>
 
-<h3>Einer Funktion Werte mitgeben</h3>
+	<h3 id="FWerte">Einer Funktion Werte mitgeben</h3>
 
-<p>Wenn unsere neue Funktion <code>hase()</code> mehrfach aufgerufen wird, wird sie auch genau so oft ausgeführt und der Hasenkopf tatsächlich mehrfach gezeichnet. Du siehst das aber nicht, denn die Zeichnung wird jedes Mal an genau derselben Stelle der Leinwand gemacht - ein Hase übermalt den Nächsten! 
-<br> Eigentlich wollten wir aber unsere eigene Funktion mehrfach wiederverwenden und viele Hasen an unterschiedlichen Stellen des Canvas zeichnen. Das machen wir jetzt und verwenden dazu die Argumente unserer Funktion.</p>
+	<p>Wenn unsere neue Funktion <code>hase()</code> mehrfach aufgerufen wird,
+		wird sie auch genau so oft ausgeführt und der Hasenkopf tatsächlich mehrfach
+		gezeichnet. Du siehst das aber nicht, denn die Zeichnung wird jedes Mal an
+		genau derselben Stelle der Leinwand gemacht - ein Hase übermalt den
+		Nächsten!
+		<br> Eigentlich wollten wir aber unsere eigene Funktion mehrfach
+		wiederverwenden und viele Hasen an unterschiedlichen Stellen des Canvas
+		zeichnen. Das machen wir jetzt und verwenden dazu die Argumente unserer
+		Funktion.
+	</p>
 
-<p>Fangen wir, um es übersichtlicher zu machen, nur mal mit dem Kreis für den Hasenkopf an. Alles andere wird gelöscht und später wieder eingefügt. </p>
+	<p>Fangen wir, um es übersichtlicher zu machen, nur mal mit dem Kreis für den
+		Hasenkopf an. Alles andere wird gelöscht und später wieder eingefügt. </p>
 
-<p>Wir wollen, dass der Kreis an einer Stelle auf der Leinwand gezeichnet wird, die wir frei wählen können. Die Position wird durch einen Wert für die horizontale x-Richtung und einen Wert für die vertikale y-Richtung bestimmt. Also geben wir geben diese beiden Zahlen beim Aufruf der Funktion jetzt mit: <code>hase(40, 65)</code>. Unsere Funktion "hase" wird also jetzt mit zwei Argumenten aufgerufen. </p>
+	<p>Wir wollen, dass der Kreis an einer Stelle auf der Leinwand gezeichnet
+		wird, die wir frei wählen können. Die Position wird durch einen Wert für die
+		horizontale x-Richtung und einen Wert für die vertikale y-Richtung bestimmt.
+		Also geben wir geben diese beiden Zahlen beim Aufruf der Funktion jetzt mit:
+		<code>hase(40, 65)</code>. Unsere Funktion "hase" wird also jetzt mit zwei
+		Argumenten aufgerufen. </p>
 
-<p>Damit das klappt, muss unsere Funktion so deklariert sein, dass sie diese beiden Werte erwartet und etwas damit anfangen kann. Dazu bekommt die Liste der Argumente jeweils einen ""Platzhalter"" für das erwartete Argument. Der ""Platzhalter"" steht an der gleichen Stelle  der Funktions-Argumente wie die zugeordnete Zahl. Beim Aufruf der Funktion bekommt der ""Platzhalter"" diesen Zahlenwert.</p>
+	<p>Damit das klappt, muss unsere Funktion so deklariert sein, dass sie diese
+		beiden Werte erwartet und etwas damit anfangen kann. Dazu bekommt die Liste
+		der Argumente jeweils einen ""Platzhalter"" für das erwartete Argument. Der
+		""Platzhalter"" steht an der gleichen Stelle der Funktions-Argumente wie die
+		zugeordnete Zahl. Beim Aufruf der Funktion bekommt der ""Platzhalter""
+		diesen Zahlenwert.</p>
 
-<p>Ein "Platzhalter" kann ein ganzes Wort oder auch nur ein Buchstabe sein. Wir wollen eine Position auf der Leinwand festlegen, wozu ein x- und ein y-Wert benötigt wird. Deshalb verwenden wir für die beiden Platzhalter, die wir brauchen, die Buchstaben 'x' und 'y'.
-Die Deklaration der Funktion "hase" ist dann: <code>function hase(x, y)</code>.</p>
+	<p>Ein "Platzhalter" kann ein ganzes Wort oder auch nur ein Buchstabe sein.
+		Wir wollen eine Position auf der Leinwand festlegen, wozu ein x- und ein
+		y-Wert benötigt wird. Deshalb verwenden wir für die beiden Platzhalter, die
+		wir brauchen, die Buchstaben 'x' und 'y'.
+		Die Deklaration der Funktion "hase" ist dann:
+		<code>function hase(x, y)</code>.</p>
 
-<p>Beim Aufruf von "hase" mit <code>hase(40, 65)</code> wird der erste Zahlenwert '40' in den "Platzhalter" x geschrieben, und der zweite Zahlenwert '65' in den Platzhalter y. Diese beiden Zahlen geben wir weiter, wenn wir den Kreis für den Hasenkopf zeichnen: wir schreiben jetzt   circle(x, y, 40); statt circle(40, 65, 40);. </p>
+	<p>Beim Aufruf von "hase" mit <code>hase(40, 65)</code> wird der erste
+		Zahlenwert '40' in den "Platzhalter" x geschrieben, und der zweite
+		Zahlenwert '65' in den Platzhalter y. Diese beiden Zahlen geben wir weiter,
+		wenn wir den Kreis für den Hasenkopf zeichnen: wir schreiben jetzt circle(x,
+		y, 40); statt circle(40, 65, 40);. </p>
 
-<p>Damit wird der Kreis an der Stelle gezeichnet, die beim Aufruf der Funktion "hase" mitgegeben wird. Die Funktion "hase" bestimmt nicht mehr selbst, wo gezeichnet wird. Das ist der wesentliche Trick: wir können "hase" immer wieder aufrufen, aber jedes Mal mit anderen Werten für seine Position.</p>
+	<p>Damit wird der Kreis an der Stelle gezeichnet, die beim Aufruf der Funktion
+		"hase" mitgegeben wird. Die Funktion "hase" bestimmt nicht mehr selbst, wo
+		gezeichnet wird. Das ist der wesentliche Trick: wir können "hase" immer
+		wieder aufrufen, aber jedes Mal mit anderen Werten für seine Position.</p>
 
-<p>Zugegeben, das ist nicht so einfach zu verstehen. Du wirst aber am Beispiel sehen, dass die Sache viel verwirrender klingt als sie ist.</p>
+	<p>Zugegeben, das ist nicht so einfach zu verstehen. Du wirst aber am Beispiel
+		sehen, dass die Sache viel verwirrender klingt als sie ist.</p>
 
-<!-- Hase 3 -->
-<span id="tbd">Code/160.js</span>	
-<script type="text/p5" src="../Code/160.js" 
-	data-autoplay data-height="350" data-preview-width="270" 
-	data-p5-version="1.9.0">
+	<!-- Hase 3 -->
+	<span id="tbd">Code/160.js</span>
+	<script type="text/p5" src="../Code/160.js" data-autoplay data-height="350"
+		data-preview-width="270" data-p5-version="1.9.0">
 </script>
 
-<p>Schauen wir uns das Programm an. 
+	<p>Schauen wir uns das Programm an.
 
-Unten im Editor wird die Funktion "hase" angelegt. In den runden Klammern gibt es zwei Parameter, x und y. 
+		Unten im Editor wird die Funktion "hase" angelegt. In den runden Klammern
+		gibt es zwei Parameter, x und y.
 
-In "draw" wird <code>hase(40, 65)</code> mit den Zahlenwerten 40 und 65 aufgerufen. Diese Werte werden an die "Platzhalter" x und y vergeben. Überall, wo in "hase" x und y auftauchen, ist deren Wert jetzt 40 und 65.
-
-
-Beim Aufruf von "circle" in "hase" werden diese beiden Parameter weitergegeben: <code>circle(x, y, 40)</code>. 
-wird der Kreis an der Stelle x = 40 Pixel und y = 65 Pixel gezeichnet. Die Argumente beim Aufruf, x und y, können innerhalb der Funktion an beliebigen Stellen verwendet werden.
-
+		In "draw" wird <code>hase(40, 65)</code> mit den Zahlenwerten 40 und 65
+		aufgerufen. Diese Werte werden an die "Platzhalter" x und y vergeben.
+		Überall, wo in "hase" x und y auftauchen, ist deren Wert jetzt 40 und 65.
 
 
-
-
-
-
-
-
-
-
-
-
-Zahlenwert geschrieben wird, wenn die Funktion aufgerufen wird. Jedes Wor 
-
-Wir deklarieren also
-
-
-Wir legen die neue Funktion hase mit zwei Buchstaben in den runden Klammern an: hase(x, y). An dieser Stelle (x, y) ist der Mittelpunkt des Kreises für den Hasenkopf. Bis jetzt ist aber nicht klar, was der Zahlenwert von x oder y sein soll - die beiden Buchstaben sind nur ""Platzhalter"" für eine richtige Zahl. Die Platzhalter werden in die Deklaration einer  Funktion geschrieben, damit jeder, der die Funktion verwendet, weiss, dass er diese beiden Werte beim Aufruf der Funktion mitliefern muss.</p>
-</p>
+		Beim Aufruf von "circle" in "hase" werden diese beiden Parameter
+		weitergegeben: <code>circle(x, y, 40)</code>.
+		wird der Kreis an der Stelle x = 40 Pixel und y = 65 Pixel gezeichnet. Die
+		Argumente beim Aufruf, x und y, können innerhalb der Funktion an beliebigen
+		Stellen verwendet werden.
 
 
 
@@ -107,7 +167,36 @@ Wir legen die neue Funktion hase mit zwei Buchstaben in den runden Klammern an: 
 
 
 
-, zum Beispiel mit dem Wert 65. Dazu kommt als drittes Argument der Durchmesser, den wir jetzt mit dem Buchstaben "d" bezeichnen und der den Wert 40 haben soll. Der Funktionsaufruf sieht so aus:<code>circle(40,
+
+
+
+
+
+
+		Zahlenwert geschrieben wird, wenn die Funktion aufgerufen wird. Jedes Wor
+
+		Wir deklarieren also
+
+
+		Wir legen die neue Funktion hase mit zwei Buchstaben in den runden Klammern
+		an: hase(x, y). An dieser Stelle (x, y) ist der Mittelpunkt des Kreises für
+		den Hasenkopf. Bis jetzt ist aber nicht klar, was der Zahlenwert von x oder
+		y sein soll - die beiden Buchstaben sind nur ""Platzhalter"" für eine
+		richtige Zahl. Die Platzhalter werden in die Deklaration einer Funktion
+		geschrieben, damit jeder, der die Funktion verwendet, weiss, dass er diese
+		beiden Werte beim Aufruf der Funktion mitliefern muss.</p>
+	</p>
+
+
+
+
+
+
+
+	, zum Beispiel mit dem Wert 65. Dazu kommt als drittes Argument der
+	Durchmesser, den wir jetzt mit dem Buchstaben "d" bezeichnen und der den Wert
+	40 haben soll. Der Funktionsaufruf sieht so
+	aus:<code>circle(40,
 
 Genau das Gleiche geschieht, wenn wir in p5 schon vorhandene Funktionen wie circle verwenden - nur gibt es für "circle
 
@@ -119,28 +208,25 @@ Genau das Gleiche geschieht, wenn wir in p5 schon vorhandene Funktionen wie circ
 
 
 
-Was du schon weisst: Um einen Kreis an einer bestimmten Stelle zu zeichnen, rufst du eine in p5 vorhandene "circle" Funktion auf, mit Werten für die horizontale x-Richtung, zum Beispiel mit dem Wert 40 in Pixel-Einheiten, und für die vertikale y-Richtung, zum Beispiel mit dem Wert 65. Dazu kommt als drittes Argument der Durchmesser, den wir jetzt mit dem Buchstaben "d" bezeichnen und der den Wert 40 haben soll. Der Funktionsaufruf sieht so aus:<code>circle(40, 65, 40)</code>. </p>
+Was du schon weisst: Um einen Kreis an einer bestimmten Stelle zu zeichnen, rufst du eine in p5 vorhandene "circle" Funktion auf, mit Werten für die horizontale x-Richtung, zum Beispiel mit dem Wert 40 in Pixel-Einheiten, und für die vertikale y-Richtung, zum Beispiel mit dem Wert 65. Dazu kommt als drittes Argument der Durchmesser, den wir jetzt mit dem Buchstaben "d" bezeichnen und der den Wert 40 haben soll. Der Funktionsaufruf sieht so aus:<code>circle(40, 65, 40)</code>.
+	</p>
 
-<p>Wir können die Deklaration der Funktion circle in p5 nicht sehenWenn die Funktion angelegt wird</p>
-
-
-
-
-
-Die circle Funktion hat also die Argumente x, y, durchmesser, und als drittes Argument den Durchmesser des Kreises: circle(x, y, durchmesser). 
-
-<p> Genau das bauen wir in unserer eigenen Funktion hase nach. </p>
-
-
-<p>Beim Aufruf von hase müssen diese beiden Argumente (x, y) mit Zahlenwerten versorgt werden. Diese Zahlenwerte sind die tatsächliche Position (): da auf der Leinwand soll der Kreismittelpunkt hin.</p>
+	<p>Wir können die Deklaration der Funktion circle in p5 nicht sehenWenn die
+		Funktion angelegt wird</p>
 
 
 
 
 
+	Die circle Funktion hat also die Argumente x, y, durchmesser, und als drittes
+	Argument den Durchmesser des Kreises: circle(x, y, durchmesser).
+
+	<p> Genau das bauen wir in unserer eigenen Funktion hase nach. </p>
 
 
-<p>Bis jetzt wird die neue Funktion <code>hase()</code> ohne Argumente aufgerufen: die runden Klammern sind sowohl in der Deklaration der Funktion als auch beim Aufruf leer.  </p>
+	<p>Beim Aufruf von hase müssen diese beiden Argumente (x, y) mit Zahlenwerten
+		versorgt werden. Diese Zahlenwerte sind die tatsächliche Position (): da auf
+		der Leinwand soll der Kreismittelpunkt hin.</p>
 
 
 
@@ -148,24 +234,38 @@ Die circle Funktion hat also die Argumente x, y, durchmesser, und als drittes Ar
 
 
 
+	<p>Bis jetzt wird die neue Funktion <code>hase()</code> ohne Argumente
+		aufgerufen: die runden Klammern sind sowohl in der Deklaration der Funktion
+		als auch beim Aufruf leer. </p>
 
 
-Dazu geben wir jetzt die Position des Hasenkopfs in der Liste der Argumente an. Wie üblich, soll x die Koordinate in waagrechter Richtung, und y die Koordinate in senkrechter Richtung angeben. Die Funktion wird damit so angelegt: . Innerhalb von hase können diese beiden Werte, x und y, jetzt verwendet werden. Wir ersetzen damit den Mittelpunkt des Hasenkopfs. 
 
 
 
 
 
-Willst du mehrere Hasen an verschiedenen Stellen des Canvas zeichen.
 
 
-  <div>
-    <center>
-      <button onclick="document.location='016.html'">Zurück</button>
+	Dazu geben wir jetzt die Position des Hasenkopfs in der Liste der Argumente
+	an. Wie üblich, soll x die Koordinate in waagrechter Richtung, und y die
+	Koordinate in senkrechter Richtung angeben. Die Funktion wird damit so
+	angelegt: . Innerhalb von hase können diese beiden Werte, x und y, jetzt
+	verwendet werden. Wir ersetzen damit den Mittelpunkt des Hasenkopfs.
+
+
+
+
+
+	Willst du mehrere Hasen an verschiedenen Stellen des Canvas zeichen.
+
+
+	<div>
+		<center>
+			<button onclick="document.location='016.html'">Zurück</button>
 			<button onclick="document.location='index.html'">Inhalt</button>
-      <button onclick="document.location='020.html'">Weiter</button>
-    </center>
-  </div>
+			<button onclick="document.location='020.html'">Weiter</button>
+		</center>
+	</div>
 
 </body>
 
@@ -173,5 +273,3 @@ Willst du mehrere Hasen an verschiedenen Stellen des Canvas zeichen.
 <script src="//toolness.github.io/p5.js-widget/p5-widget.js"></script>
 
 </html>
-
-

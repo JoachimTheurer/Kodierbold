@@ -9,241 +9,430 @@
 
 <body>
 
-	<h1>Mehr Figuren</h1>
+	<h1 id="h1">Mehr Figuren</h1>
 
-<p>Hier lernen wir viele weitere Funktionen kennen, mit denen die
-unterschiedlichsten Figuren gezeichnet werden können!
-Dazu müssen wir für jede Funktion wissen, wie sie heisst und welche Argumente beim Funktionsaufruf mitgegeben werden müssen.</p>
+	<p>Hier lernen wir viele weitere Funktionen kennen, mit denen die
+		unterschiedlichsten Figuren gezeichnet werden können!
+		Dazu müssen wir für jede Funktion wissen, wie sie heisst und welche
+		Argumente beim Funktionsaufruf mitgegeben werden müssen.</p>
 
-<h2>Rechteck </h2>
-<p>Das Quadrat kennen wir schon: es wird mit der Funktion <code><mark>square</mark>(100, 120, 70)</code> gezeichnet. 
+	<h2 id="Rechteck">Rechteck </h2>
+	<p>Das Quadrat kennen wir schon: es wird mit der Funktion
+		<code><mark>square</mark>(100, 120, 70)</code> gezeichnet.
 
-<p>Strecken wir das Quadrat und machen ein <b>Rechteck</b> draus! Rechteck heisst auf Englisch &ldquo;rectangle&rdquo; (sprich &bdquo;räktängl&rdquo;), die Funktion lautet deshalb <code><mark>rect</mark>(110, 100, 95, 70)</code>.</p>
+	<p>Strecken wir das Quadrat und machen ein <b>Rechteck</b> draus! Rechteck
+		heisst auf Englisch &ldquo;rectangle&rdquo; (sprich &bdquo;räktängl&rdquo;),
+		die Funktion lautet deshalb
+		<code><mark>rect</mark>(110, 100, 95, 70)</code>.</p>
 
-<p>Natürlich müssen wir auch beim Rechteck sagen, wie weit rechts und wie weit unten es auf der Zeichenfläche liegen soll, also seine <b>Position</b> angeben. Diesen Ort legen die zwei Argumente fest, die als erstes im Funktionsaufruf stehen. Wir haben einen Wert für die x-Position und einen Wert für die y-Position der oberen linken Ecke des Rechtecks. Im Beispiel hier ist diese Position 110 Pixel nach rechts und 100 Pixel nach unten, <code>rect(<mark>110, 100,</mark> 95, 70)</code>. </p>
+	<p>Natürlich müssen wir auch beim Rechteck sagen, wie weit rechts und wie weit
+		unten es auf der Zeichenfläche liegen soll, also seine <b>Position</b>
+		angeben. Diesen Ort legen die zwei Argumente fest, die als erstes im
+		Funktionsaufruf stehen. Wir haben einen Wert für die x-Position und einen
+		Wert für die y-Position der oberen linken Ecke des Rechtecks. Im Beispiel
+		hier ist diese Position 110 Pixel nach rechts und 100 Pixel nach unten,
+		<code>rect(<mark>110, 100,</mark> 95, 70)</code>. </p>
 
-<p>Genau so wie vorher beim Quadrat können wir die Anweisung <code>rectMode(CENTER)</code> in den "setup" Teil schreiben, wenn diese beiden Argumente den <em>Mittelpunkt</em> des Rechtecks bezeichnen sollen, und nicht die obere linke Ecke.  
-<br> Die Werte für die Position des Rechtecks kommen also in den runden Klammern für die Argumente von "rect" zuerst. Bei fast allen anderen Figuren in p5 ist das genau so: die beiden ersten Argumente der Funktion bestimmen, wo sie auf der Zeichenfläche hin kommt.</p>
+	<p>Genau so wie vorher beim Quadrat können wir die Anweisung
+		<code>rectMode(CENTER)</code> in den "setup" Teil schreiben, wenn diese
+		beiden Argumente den <em>Mittelpunkt</em> des Rechtecks bezeichnen sollen,
+		und nicht die obere linke Ecke.
+		<br> Die Werte für die Position des Rechtecks kommen also in den runden
+		Klammern für die Argumente von "rect" zuerst. Bei fast allen anderen Figuren
+		in p5 ist das genau so: die beiden ersten Argumente der Funktion bestimmen,
+		wo sie auf der Zeichenfläche hin kommt.
+	</p>
 
-<p>Bei einem Rechteck stehen - wie beim Quadrat - zwei Seiten, die zusammenstoßen, senkrecht aufeinander. Aber nur noch die zwei Seiten, die einander gegenüberliegen, sind in einem Rechteck gleich lang. Wir müssen also einmal für die kurzen Seiten und einmal für die langen Seiten getrennt angeben, wie lang sie sein sollen.</p>
+	<p>Bei einem Rechteck stehen - wie beim Quadrat - zwei Seiten, die
+		zusammenstoßen, senkrecht aufeinander. Aber nur noch die zwei Seiten, die
+		einander gegenüberliegen, sind in einem Rechteck gleich lang. Wir müssen
+		also einmal für die kurzen Seiten und einmal für die langen Seiten getrennt
+		angeben, wie lang sie sein sollen.</p>
 
-<p>Deshalb gibt es ein Argument für die <b>Länge der Seite in x-Richtung</b> (nach rechts oder horizontal). Im Beispiel hier ist diese Länge 95 Pixel:    <code>rect(110, 100, <mark>95</mark>, 70)</code>. </p>
+	<p>Deshalb gibt es ein Argument für die <b>Länge der Seite in x-Richtung</b>
+		(nach rechts oder horizontal). Im Beispiel hier ist diese Länge 95 Pixel:
+		<code>rect(110, 100, <mark>95</mark>, 70)</code>. </p>
 
-<p>Und es gibt ein zweites Argument für die <b>Länge der Seite in y-Richtung</b> (nach unten oder vertikal). Im Beispiel hier ist diese Länge 70 Pixel, <code>rect(110, 100, 95, <mark>70</mark>)</code>.</p>
+	<p>Und es gibt ein zweites Argument für die <b>Länge der Seite in
+			y-Richtung</b> (nach unten oder vertikal). Im Beispiel hier ist diese
+		Länge 70 Pixel, <code>rect(110, 100, 95, <mark>70</mark>)</code>.</p>
 
-<span id="tbd">Code/040.js</span>	
-<script type="text/p5" src="../Code/0040.js" 
-	data-autoplay data-height="370" data-preview-width="250" 
-	data-p5-version="1.9.0">
+	<span id="tbd">Code/040.js</span>
+	<script type="text/p5" src="../Code/0040.js" data-autoplay data-height="370"
+		data-preview-width="250" data-p5-version="1.9.0">
 </script>
 
-<p> <span id="ausprobieren"> Probiere aus, wie sich die Argumente beim Rechteck verhalten.</span> </p> 
+	<p> <span id="ausprobieren"> Probiere aus, wie sich die Argumente beim
+			Rechteck verhalten.</span> </p>
 
-<li>Wie macht man aus einem Rechteck ein Quadrat? Kannst du ein Rechteck <b>und</b> ein Quadrat zeichnen, so dass es wie nur eine Figur aussieht?</li>
+	<li>Wie macht man aus einem Rechteck ein Quadrat? Kannst du ein Rechteck
+		<b>und</b> ein Quadrat zeichnen, so dass es wie nur eine Figur aussieht?
+	</li>
 
-<li>Verschiebe das Rechteck in die linke obere Ecke! Das geht ohne <code>rectMode(CENTER)</code> einfacher. Bekommst du es auch hin, wenn <code>rectMode(CENTER)</code> angeschaltet bleibt? 
-<br>Tipp: Wenn du eine Programmzeile mal ausschalten möchtest, sie aber später doch wieder brauchst, verwende Kommentarzeichen <mark>//</mark> am Anfang der Zeile. Diese Zeile wird dann nicht mehr ausgeführt. Später kannst du die Kommentarzeichen wegmachen und die Zeile wird wieder verarbeitet.</li> 
+	<li>Verschiebe das Rechteck in die linke obere Ecke! Das geht ohne
+		<code>rectMode(CENTER)</code> einfacher. Bekommst du es auch hin, wenn
+		<code>rectMode(CENTER)</code> angeschaltet bleibt?
+		<br>Tipp: Wenn du eine Programmzeile mal ausschalten möchtest, sie aber
+		später doch wieder brauchst, verwende Kommentarzeichen <mark>//</mark> am
+		Anfang der Zeile. Diese Zeile wird dann nicht mehr ausgeführt. Später kannst
+		du die Kommentarzeichen wegmachen und die Zeile wird wieder verarbeitet.
+	</li>
 
-<ul> <li> Mach' doch mal das Rechteck so groß wie die ganze Leinwand, so dass die Ränder der Leinwand mit den Rändern des Rechtecks zusammenfallen!</li>
+	<ul>
+		<li> Mach' doch mal das Rechteck so groß wie die ganze Leinwand, so dass die
+			Ränder der Leinwand mit den Rändern des Rechtecks zusammenfallen!</li>
 
-<li>Probier aus, was passiert, wenn du eine weitere Zahl, ein weiteres
-Argument, ganz hinten in die Klammern des "rect" Aufrufs schreibst, zum Beispiel <code>rect(110, 100, 95, 70, <mark>20</mark>)</code>. Siehst du, was dann passiert? </li>
+		<li>Probier aus, was passiert, wenn du eine weitere Zahl, ein weiteres
+			Argument, ganz hinten in die Klammern des "rect" Aufrufs schreibst, zum
+			Beispiel <code>rect(110, 100, 95, 70, <mark>20</mark>)</code>. Siehst du,
+			was dann passiert? </li>
 
-<li>Das geht auch mit mehreren zusätzlichen Argumenten. Versuch's doch mal mit  der Anweisung <code>rect(110, 100, 95, 70, <mark> 0, 80, 0, 20</mark>)</code>! Hast du eine Idee, welche Logik hinter den zusätzlichen Argumenten steckt?</li>
-</ul>
+		<li>Das geht auch mit mehreren zusätzlichen Argumenten. Versuch's doch mal
+			mit der Anweisung
+			<code>rect(110, 100, 95, 70, <mark> 0, 80, 0, 20</mark>)</code>! Hast du
+			eine Idee, welche Logik hinter den zusätzlichen Argumenten steckt?</li>
+	</ul>
 
-<p>Beim Quadrat "square" und beim Rechteck "rect" werden mit zusätzlichen Argumenten die Ecken rund gemacht. Der <em>Wert</em> des Arguments gibt an, wie rund die Ecke werden soll. Eine '0' lässt die Ecke eine Ecke sein, während eine große Zahl die Ecke sehr rund macht. Das zusätzliche Argument gibt den Radius der Rundung an, also wie stark die Ecke abgerundet wird. Eine ganz große Zahl macht aus dem Rechteck (fast) einen Kreis.</p>
+	<p>Beim Quadrat "square" und beim Rechteck "rect" werden mit zusätzlichen
+		Argumenten die Ecken rund gemacht. Der <em>Wert</em> des Arguments gibt an,
+		wie rund die Ecke werden soll. Eine '0' lässt die Ecke eine Ecke sein,
+		während eine große Zahl die Ecke sehr rund macht. Das zusätzliche Argument
+		gibt den Radius der Rundung an, also wie stark die Ecke abgerundet wird.
+		Eine ganz große Zahl macht aus dem Rechteck (fast) einen Kreis.</p>
 
-<p>Die <em>Anzahl</em> der zusätzlichen Argumente legt fest, <em>wie viele</em> Ecken mit welchem Radius rund gemacht werden. Gibst du nur ein
-zusätzliches Argument an, werden alle vier Ecken mit genau diesem Wert gerundet. Mehrere zusätzliche Argumente legen jeweils den Wert für die
-Rundung einer bestimmten Ecke fest, wobei eine Ecke nach der anderen im Uhrzeigersinn dran kommt: oben links, oben rechts, unten rechts und unten links.</p>
+	<p>Die <em>Anzahl</em> der zusätzlichen Argumente legt fest, <em>wie
+			viele</em> Ecken mit welchem Radius rund gemacht werden. Gibst du nur ein
+		zusätzliches Argument an, werden alle vier Ecken mit genau diesem Wert
+		gerundet. Mehrere zusätzliche Argumente legen jeweils den Wert für die
+		Rundung einer bestimmten Ecke fest, wobei eine Ecke nach der anderen im
+		Uhrzeigersinn dran kommt: oben links, oben rechts, unten rechts und unten
+		links.</p>
 
-<p>Wenn für eine Ecke kein Argument vorhanden ist, gilt der Wert der Ecke vorher. Die Anweisung <code>rect(110, 100, 95, 70, <mark>20</mark>)</code> rundet alle vier Ecken des Rechtecks mit dem Radius <mark>20</mark>. 
-<br>Die Anweisung <code>rect(110, 100, 95, 70, <mark>20, 60, 0</mark>)</code> rundet die Ecke oben links ein wenig (<mark>20</mark>), die Ecke oben rechts deutlich mehr (<mark>60</mark>), unten rechts bleibt es eine richtige Ecke (<mark>0</mark>) - und unten links ebenfalls, weil ein eigener Wert dafür fehlt.</p> 
+	<p>Wenn für eine Ecke kein Argument vorhanden ist, gilt der Wert der Ecke
+		vorher. Die Anweisung <code>rect(110, 100, 95, 70, <mark>20</mark>)</code>
+		rundet alle vier Ecken des Rechtecks mit dem Radius <mark>20</mark>.
+		<br>Die Anweisung
+		<code>rect(110, 100, 95, 70, <mark>20, 60, 0</mark>)</code> rundet die Ecke
+		oben links ein wenig (<mark>20</mark>), die Ecke oben rechts deutlich mehr
+		(<mark>60</mark>), unten rechts bleibt es eine richtige Ecke
+		(<mark>0</mark>) - und unten links ebenfalls, weil ein eigener Wert dafür
+		fehlt.
+	</p>
 
-<p> <span id="ausprobieren"> Gib diese Anweisungen im Editor ein und schau dir an, wie es jeweils aussieht!</span> </p>
+	<p> <span id="ausprobieren"> Gib diese Anweisungen im Editor ein und schau dir
+			an, wie es jeweils aussieht!</span> </p>
 
-<p>Argumente in Funktionen, die man angeben kann, aber nicht muss, nennt man <span id="Begriff">optional</span>. Beim Rechteck ist es optional, ob du Werte für die Rundung der Ecken angibst. Wenn solche optionalen Werte beim Funktionsaufruf fehlen, wird verwendet, was die p5 Programmierer sich heimlich dafür ausgedacht haben: das ist dann der <span id="Begriff">Default</span> oder <span id="Begriff">Defaultwert</span>. 
-<br>Optionale Argumente kannst du also jederzeit weglassen, wenn du mit den Defaultwerten zufrieden bist - zum Beipiel wenn du verständlicherweise Rechtecke mit &bdquo;richtigen&rdquo; Ecken haben möchtest. </p>
+	<p>Argumente in Funktionen, die man angeben kann, aber nicht muss, nennt man
+		<span id="Begriff">optional</span>. Beim Rechteck ist es optional, ob du
+		Werte für die Rundung der Ecken angibst. Wenn solche optionalen Werte beim
+		Funktionsaufruf fehlen, wird verwendet, was die p5 Programmierer sich
+		heimlich dafür ausgedacht haben: das ist dann der <span
+			id="Begriff">Default</span> oder <span id="Begriff">Defaultwert</span>.
+		<br>Optionale Argumente kannst du also jederzeit weglassen, wenn du mit den
+		Defaultwerten zufrieden bist - zum Beipiel wenn du verständlicherweise
+		Rechtecke mit &bdquo;richtigen&rdquo; Ecken haben möchtest.
+	</p>
 
-<h2 id="016-quad">Das Viereck</h2>
-<p>Natürlich können wir in p5, außer Quadrat und Rechteck, noch mehr Figuren zeichnen, die vier Ecken haben. Wir geben einfach die Koordinaten aller vier Eckpunkte an, und p5 verbindet diese Punkte mit Linien, um ein Viereck zu zeichnen. Die Funktion, die das kann, ist <code>quad</code>.</p>
+	<h2 id="016-quad">Das Viereck</h2>
+	<p>Natürlich können wir in p5, außer Quadrat und Rechteck, noch mehr Figuren
+		zeichnen, die vier Ecken haben. Wir geben einfach die Koordinaten aller vier
+		Eckpunkte an, und p5 verbindet diese Punkte mit Linien, um ein Viereck zu
+		zeichnen. Die Funktion, die das kann, ist <code>quad</code>.</p>
 
-<p>Üblicherweise werden die Koordinaten der Eckpunkte im Uhrzeigersinn oder im Gegenuhrzeigersinn an <code>quad</code> übergeben. Mit vier Eckpunkten sind also acht Argumente  erforderlich: <code>quad(40, 10, 110, 10, 90, 90, 20, 90)</code>. </p> 
+	<p>Üblicherweise werden die Koordinaten der Eckpunkte im Uhrzeigersinn oder im
+		Gegenuhrzeigersinn an <code>quad</code> übergeben. Mit vier Eckpunkten sind
+		also acht Argumente erforderlich:
+		<code>quad(40, 10, 110, 10, 90, 90, 20, 90)</code>. </p>
 
-<p>Damit lassen sich die typischen geometrischen Figuren erzeugen, die im Mathe-Unterricht so vorkommen. Wir geben im folgenden Beispiel die vier x- und y-Koordinaten für die Eckpunkte im Uhrzeigersinn an. </p>
+	<p>Damit lassen sich die typischen geometrischen Figuren erzeugen, die im
+		Mathe-Unterricht so vorkommen. Wir geben im folgenden Beispiel die vier x-
+		und y-Koordinaten für die Eckpunkte im Uhrzeigersinn an. </p>
 
-<span id="tbd">Code/0042.js</span>	
-<script type="text/p5" src="../Code/0042.js" 
-	data-autoplay data-height="370" data-preview-width="250" 
-	data-p5-version="1.9.0">
+	<span id="tbd">Code/0042.js</span>
+	<script type="text/p5" src="../Code/0042.js" data-autoplay data-height="370"
+		data-preview-width="250" data-p5-version="1.9.0">
 </script>
 
-<ul>Und da wir sowieso schon beim Mathe-Unterricht sind:
-<li>Beim <em>Parallelogramm</em> - oben links - sind einander gegenüberliegende Seiten parallel und auch noch gleich lang.</li>
-<li>Beim <em>Trapez</em> - unten links - sind einander gegenüberliegende Seiten parallel, aber nicht gleich lang.<span id="tbd">??</span></li>
-<li>Beim <em>Drachen</em> - der größeren Figur rechts - sind zweimal diejenigen Seiten gleich lang, die miteinander verbunden sind.</li>
-<li>Bei der <em>Raute</em> - der Figur im Drachen - sind alle Seiten gleich lang.</li>
-</ul>
+	<ul>Und da wir sowieso schon beim Mathe-Unterricht sind:
+		<li>Beim <em>Parallelogramm</em> - oben links - sind einander
+			gegenüberliegende Seiten parallel und auch noch gleich lang.</li>
+		<li>Beim <em>Trapez</em> - unten links - sind einander gegenüberliegende
+			Seiten parallel, aber nicht gleich lang.<span id="tbd">??</span></li>
+		<li>Beim <em>Drachen</em> - der größeren Figur rechts - sind zweimal
+			diejenigen Seiten gleich lang, die miteinander verbunden sind.</li>
+		<li>Bei der <em>Raute</em> - der Figur im Drachen - sind alle Seiten gleich
+			lang.</li>
+	</ul>
 
-Wenn wir <code>quad</code> kennen, verwenden wir <code>square</code> und <code>rect</code> eigentlich nur noch aus Programmier-Bequemlichkeit, damit wir nicht immer die Koordinaten aller vier Ecken des Quadrats oder Rechtecks eingeben müssen.
+	Wenn wir <code>quad</code> kennen, verwenden wir <code>square</code> und
+	<code>rect</code> eigentlich nur noch aus Programmier-Bequemlichkeit, damit
+	wir nicht immer die Koordinaten aller vier Ecken des Quadrats oder Rechtecks
+	eingeben müssen.
 
-<ul>  <span id="ausprobieren">
-<li>(a) Kannst Du aus dem Parallelogramm - mit der <code>quad</code> Funktion - ein Rechteck machen? Welche Eck-Punkte musst Du verschieben, damit sie passend auf gleicher Höhe liegen und das Rechteck seine vier rechten Winkel bekommt?
-<a href="L016.html#L016-Viereck-a">Lösungsvorschlag</a>
-</li>
-<li>(b) Kannst Du aus diesem Rechteck - mit der <code>quad</code> Funktion - jetzt auch noch ein Quadrat machen?
-<a href="L016.html#L016-Viereck-b">Lösungsvorschlag</a>
-</li>
-<li>(c) Wie sieht es mit dem Trapez aus - was muss man verändern, um ein Rechteck oder sogar ein Quadrat daraus zu machen?
-<a href="L016.html#L016-Viereck-c">Lösungsvorschlag</a>
-</li>
- </span> </ul>
+	<ul> <span id="ausprobieren">
+			<li>(a) Kannst Du aus dem Parallelogramm - mit der <code>quad</code>
+				Funktion - ein Rechteck machen? Welche Eck-Punkte musst Du verschieben,
+				damit sie passend auf gleicher Höhe liegen und das Rechteck seine vier
+				rechten Winkel bekommt?
+				<a href="L016.html#L016-Viereck-a">Lösungsvorschlag</a>
+			</li>
+			<li>(b) Kannst Du aus diesem Rechteck - mit der <code>quad</code> Funktion
+				- jetzt auch noch ein Quadrat machen?
+				<a href="L016.html#L016-Viereck-b">Lösungsvorschlag</a>
+			</li>
+			<li>(c) Wie sieht es mit dem Trapez aus - was muss man verändern, um ein
+				Rechteck oder sogar ein Quadrat daraus zu machen?
+				<a href="L016.html#L016-Viereck-c">Lösungsvorschlag</a>
+			</li>
+		</span> </ul>
 
-<p> Spannender wird es, wenn du die vier Punkte <b>nicht</b> in der &bdquo;richtigen&rdquo; 
-Reihenfolge angibst, also nicht nacheinander im Uhrzeigersinn oder Gegen-Uhrzeigersinn, sondern über Kreuz. Dann überschneiden sich die Linien, die die Punkte verbinden, und es entsteht ein &bdquo;verdrehtes&rdquo; Viereck. Noch eine weitere Möglichkeit, einen Schmetterling zu zeichnen! 
-</p>
+	<p> Spannender wird es, wenn du die vier Punkte <b>nicht</b> in der
+		&bdquo;richtigen&rdquo;
+		Reihenfolge angibst, also nicht nacheinander im Uhrzeigersinn oder
+		Gegen-Uhrzeigersinn, sondern über Kreuz. Dann überschneiden sich die Linien,
+		die die Punkte verbinden, und es entsteht ein &bdquo;verdrehtes&rdquo;
+		Viereck. Noch eine weitere Möglichkeit, einen Schmetterling zu zeichnen!
+	</p>
 
-<p> <span id="ausprobieren">(d) Probier' es aus! Bekommst du trotzdem etwas halbwegs Symmetrisches hin? </span>
-<a href="L016.html#L016-Viereck-d">Lösungsvorschlag</a>
-<p>
+	<p> <span id="ausprobieren">(d) Probier' es aus! Bekommst du trotzdem etwas
+			halbwegs Symmetrisches hin? </span>
+		<a href="L016.html#L016-Viereck-d">Lösungsvorschlag</a>
+	<p>
 
 
-<h2>Dreieck </h2>
+	<h2>Dreieck </h2>
 
-<p>Wenn es ein Rechteck mit vier Ecken gibt, sollte es auch ein Drei-Eck mit drei Ecken - und deshalb drei Seiten - geben. Weil jede der drei Seiten im Dreieck  unterschiedlich lang sein kann, und nicht wie beim Rechteck zwei gegenüberliegende Seiten immer gleich sind, brauchen wir diesmal mehr Argumente. Bestimmt kannst du dir schon denken, wie das gemacht wird. </p> 
+	<p>Wenn es ein Rechteck mit vier Ecken gibt, sollte es auch ein Drei-Eck mit
+		drei Ecken - und deshalb drei Seiten - geben. Weil jede der drei Seiten im
+		Dreieck unterschiedlich lang sein kann, und nicht wie beim Rechteck zwei
+		gegenüberliegende Seiten immer gleich sind, brauchen wir diesmal mehr
+		Argumente. Bestimmt kannst du dir schon denken, wie das gemacht wird. </p>
 
-<p>Es gibt drei Eckpunkte im Dreieck. Jeder Eckpunkt soll eine
-bestimmte Stelle auf der Leinwand, eine Position, haben. Für jede Position muss der Wert in x-Richtung (nach rechts) und in y-Richtung (nach unten) angegeben werden. Bei drei Eckpunkten werden drei mal zwei Werte benötigt. Wir brauchen also insgesamt sechs Argumente, um die Eckpunkte eines Dreiecks anzugeben. Dazwischen zeichnet p5 dann automatisch gerade Linien.</p>
+	<p>Es gibt drei Eckpunkte im Dreieck. Jeder Eckpunkt soll eine
+		bestimmte Stelle auf der Leinwand, eine Position, haben. Für jede Position
+		muss der Wert in x-Richtung (nach rechts) und in y-Richtung (nach unten)
+		angegeben werden. Bei drei Eckpunkten werden drei mal zwei Werte benötigt.
+		Wir brauchen also insgesamt sechs Argumente, um die Eckpunkte eines Dreiecks
+		anzugeben. Dazwischen zeichnet p5 dann automatisch gerade Linien.</p>
 
-<p>Ein Dreieck heisst auf Englisch &rdquo;triangle&ldquo;, sprich &bdquo;trei-ängl&rdquo;. Die Funktion, mit der wir ein Dreieck zeichnen, heisst genauso: <code><mark>triangle</mark></code>(115, 15, 200, 190, 15, 70)</code>, mit sechs Argumenten für drei Eckpunkte.</p>
+	<p>Ein Dreieck heisst auf Englisch &rdquo;triangle&ldquo;, sprich
+		&bdquo;trei-ängl&rdquo;. Die Funktion, mit der wir ein Dreieck zeichnen,
+		heisst genauso: <code><mark>triangle</mark></code>(115, 15, 200, 190, 15,
+		70)</code>, mit sechs Argumenten für drei Eckpunkte.</p>
 
-<span id="tbd">Code/045.js</span>	
-<script type="text/p5" src="../Code/0045.js" 
-	data-autoplay data-height="300" data-preview-width="250" 
-	data-p5-version="1.9.0">
+	<span id="tbd">Code/045.js</span>
+	<script type="text/p5" src="../Code/0045.js" data-autoplay data-height="300"
+		data-preview-width="250" data-p5-version="1.9.0">
 </script>
 
-<p> <span id="ausprobieren"> Verändere die Werte für die Argumente im Funktionsaufruf und finde heraus, wie sich das Dreieck dabei verändert!</span> </p> 
+	<p> <span id="ausprobieren"> Verändere die Werte für die Argumente im
+			Funktionsaufruf und finde heraus, wie sich das Dreieck dabei
+			verändert!</span> </p>
 
-<ul> 
-<li>Was passiert, wenn du die Reihenfolge der Argumente vertauschst? Zum Beispiel so: <code>triangle(200, 190, 15, 70, 115, 15)</code>. Du siehst: Das erste Argument ist nicht zwingend der Punkt oben links: p5 zieht einfach passend gerade Linien zwischen den drei Punkten, die du als Argumente mitgegeben hast. </li>
+	<ul>
+		<li>Was passiert, wenn du die Reihenfolge der Argumente vertauschst? Zum
+			Beispiel so: <code>triangle(200, 190, 15, 70, 115, 15)</code>. Du siehst:
+			Das erste Argument ist nicht zwingend der Punkt oben links: p5 zieht
+			einfach passend gerade Linien zwischen den drei Punkten, die du als
+			Argumente mitgegeben hast. </li>
 
-<li>Kannst du das Dreieck <code>triangle(115, 15, 200, 190, 15, 70)</code> um seine lange Seite klappen, so dass die Ecke oben in der Mitte nach unten halblinks wandert? Zumindest so ungefähr: du darfst, musst aber nicht die Abstände zum Rand ausrechnen - gutes Augenmass gilt auch! Zeichne beide Dreiecke ein!</li> 
+		<li>Kannst du das Dreieck <code>triangle(115, 15, 200, 190, 15, 70)</code>
+			um seine lange Seite klappen, so dass die Ecke oben in der Mitte nach
+			unten halblinks wandert? Zumindest so ungefähr: du darfst, musst aber
+			nicht die Abstände zum Rand ausrechnen - gutes Augenmass gilt auch!
+			Zeichne beide Dreiecke ein!</li>
 
-<li>Zeichne zwei Dreiecke, deren Spitzen sich in der Mitte der Leinwand berühren! Dazu müssen beide Dreiecke den Punkt in der Mitte gemeinsam haben. Es ist auch erlaubt, die Leinwand (den Canvas) symmetrisch zu machen, <code>createCanvas(200, 200)</code>, damit es schöner aussieht.</li></ul>
+		<li>Zeichne zwei Dreiecke, deren Spitzen sich in der Mitte der Leinwand
+			berühren! Dazu müssen beide Dreiecke den Punkt in der Mitte gemeinsam
+			haben. Es ist auch erlaubt, die Leinwand (den Canvas) symmetrisch zu
+			machen, <code>createCanvas(200, 200)</code>, damit es schöner aussieht.
+		</li>
+	</ul>
 
-<br>Mein sketch mit zwei Dreiecken, deren Spitzen sich berühren, sieht, nach langem Ausprobieren, so aus:
+	<br>Mein sketch mit zwei Dreiecken, deren Spitzen sich berühren, sieht, nach
+	langem Ausprobieren, so aus:
 
-<br><span id="tbd">Code/050.js</span>	
-<script type="text/p5" src="../Code/0050.js" 
-	data-autoplay data-height="330" data-preview-width="250" 
-	data-p5-version="1.9.0">
+	<br><span id="tbd">Code/050.js</span>
+	<script type="text/p5" src="../Code/0050.js" data-autoplay data-height="330"
+		data-preview-width="250" data-p5-version="1.9.0">
 </script>
 
-<p>Tipp: Wie du siehst, kann man bei einer Zahl auch '020' (oder '0020') statt einfach nur '20' schreiben. Damit kommt eine gute Programmiersprache klar. Das Programm sieht dadurch einfach übersichtlicher aus. Ein aufgeräumtes Programm ist einfacher zu lesen, und du kannst leichter Fehler darin finden.</p>
+	<p>Tipp: Wie du siehst, kann man bei einer Zahl auch '020' (oder '0020') statt
+		einfach nur '20' schreiben. Damit kommt eine gute Programmiersprache klar.
+		Das Programm sieht dadurch einfach übersichtlicher aus. Ein aufgeräumtes
+		Programm ist einfacher zu lesen, und du kannst leichter Fehler darin finden.
+	</p>
 
-<p><span id="ausprobieren">Kannst du in den sketch noch zwei zusätzliche Dreiecke einbauen und so ein Quadrat entstehen lassen, dessen Diagonalen durchgekreuzt sind? </span></p>
+	<p><span id="ausprobieren">Kannst du in den sketch noch zwei zusätzliche
+			Dreiecke einbauen und so ein Quadrat entstehen lassen, dessen Diagonalen
+			durchgekreuzt sind? </span></p>
 
 
-<h2>Linie </h2>
+	<h2>Linie </h2>
 
-<p>Natürlich müssen wir auch einfach eine Linie zwischen zwei Punkten zeichnen können. Eine gerade Linie zwischen zwei Punkten ist genau genommen eine &bdquo;Strecke&rdquo; (im Matheunterricht), aber wir machen hier kreatives Programmieren, also ist die &bdquo;Strecke&rdquo; für uns eine gerade Linie.</p1>
+	<p>Natürlich müssen wir auch einfach eine Linie zwischen zwei Punkten zeichnen
+		können. Eine gerade Linie zwischen zwei Punkten ist genau genommen eine
+		&bdquo;Strecke&rdquo; (im Matheunterricht), aber wir machen hier kreatives
+		Programmieren, also ist die &bdquo;Strecke&rdquo; für uns eine gerade Linie.
+		</p1>
 
-<p>Eine Linie hat eine Anfangsposition und eine Endposition auf unserer Leinwand. 
-Jede Position erfordert, wie immer, die Angabe von zwei Koordinaten: einer x-Koordinate (vom Nullpunkt nach rechts) für den Startpunkt der Linie, und die Angabe einer y-Koordinate (vom Nullpunkt nach unten) für den Endpunkt der Linie.</p>
+	<p>Eine Linie hat eine Anfangsposition und eine Endposition auf unserer
+		Leinwand.
+		Jede Position erfordert, wie immer, die Angabe von zwei Koordinaten: einer
+		x-Koordinate (vom Nullpunkt nach rechts) für den Startpunkt der Linie, und
+		die Angabe einer y-Koordinate (vom Nullpunkt nach unten) für den Endpunkt
+		der Linie.</p>
 
-<p>Linie heisst auf Englisch &ldquo;line&rdquo;, sprich &bdquo;lain&rdquo;. Die Funktion, um eine Linie zu zeichnen, hat eben diesen Namen: 
-<code><mark>line</mark>(20, 25, 200, 175)</code>.</p>
+	<p>Linie heisst auf Englisch &ldquo;line&rdquo;, sprich &bdquo;lain&rdquo;.
+		Die Funktion, um eine Linie zu zeichnen, hat eben diesen Namen:
+		<code><mark>line</mark>(20, 25, 200, 175)</code>.
+	</p>
 
-<span id="tbd">Code/060.js</span>	
-<script type="text/p5" src="../Code/0060.js" 
-	data-autoplay data-height="320" data-preview-width="250" 
-	data-p5-version="1.9.0">
+	<span id="tbd">Code/060.js</span>
+	<script type="text/p5" src="../Code/0060.js" data-autoplay data-height="320"
+		data-preview-width="250" data-p5-version="1.9.0">
 </script>
 
-<p> <span id="ausprobieren">Kannst du deinen sketch von oben, das durchgekreuzte Quadrat, allein mit Linien zeichnen? </span> </p> 
+	<p> <span id="ausprobieren">Kannst du deinen sketch von oben, das
+			durchgekreuzte Quadrat, allein mit Linien zeichnen? </span> </p>
 
-<p>Eine Linie ist nur ein einziges Pixel breit - das ist zumindest der <em>Defaultwert</em>, wenn wir nichts daran ändern. In p5 gibt es aber eine Anweisung, mit der sich die <b>Dicke von Linien</b> ändern lässt. Diese Anweisung heisst <code><mark>strokeWeight</mark>(5)</code>. In Klammern, als Argument von "strokeWeight", steht, wie breit die Linie in Pixel-Einheiten werden soll. Der Default mit <em>einem</em> Pixel Breite ist also <code>strokeWeight<mark>(1)</mark></code>. </p>
+	<p>Eine Linie ist nur ein einziges Pixel breit - das ist zumindest der
+		<em>Defaultwert</em>, wenn wir nichts daran ändern. In p5 gibt es aber eine
+		Anweisung, mit der sich die <b>Dicke von Linien</b> ändern lässt. Diese
+		Anweisung heisst <code><mark>strokeWeight</mark>(5)</code>. In Klammern, als
+		Argument von "strokeWeight", steht, wie breit die Linie in Pixel-Einheiten
+		werden soll. Der Default mit <em>einem</em> Pixel Breite ist also
+		<code>strokeWeight<mark>(1)</mark></code>. </p>
 
-<p>Das Tolle ist: Du kannst <code>strokeWeight(5)</code> nicht nur für gerade Linien verwenden, sondern auch für alle Linien, die den Rand oder Umfang einer Figur darstellen. Mit "strokeWeight" machst du den Rand von allen Kreisen, Rechtecken und Dreiecken so dick oder dünn, wie du möchtest. </p>
+	<p>Das Tolle ist: Du kannst <code>strokeWeight(5)</code> nicht nur für gerade
+		Linien verwenden, sondern auch für alle Linien, die den Rand oder Umfang
+		einer Figur darstellen. Mit "strokeWeight" machst du den Rand von allen
+		Kreisen, Rechtecken und Dreiecken so dick oder dünn, wie du möchtest. </p>
 
-<p>Im Englischen ist &ldquo;weight&rdquo;, sprich &bdquo;weiht&rdquo;, das &bdquo;Gewicht&rdquo; oder die Gewichtung. &ldquo;Stroke&rdquo;, sprich &bdquo;strouk&rdquo; kann &bdquo;Strich&rdquo; oder &bdquo;streicheln&rdquo; bedeuten. "strokeWeight" ist also das &bdquo;Liniengewicht&rdquo;, das heisst die Dicke einer Linie oder des Randes einer Figur. Der Funktionsaufruf "strokeWeight" muss immer genau so geschrieben werden: mit großem 'W' in der Mitte. </p>
+	<p>Im Englischen ist &ldquo;weight&rdquo;, sprich &bdquo;weiht&rdquo;, das
+		&bdquo;Gewicht&rdquo; oder die Gewichtung. &ldquo;Stroke&rdquo;, sprich
+		&bdquo;strouk&rdquo; kann &bdquo;Strich&rdquo; oder &bdquo;streicheln&rdquo;
+		bedeuten. "strokeWeight" ist also das &bdquo;Liniengewicht&rdquo;, das
+		heisst die Dicke einer Linie oder des Randes einer Figur. Der
+		Funktionsaufruf "strokeWeight" muss immer genau so geschrieben werden: mit
+		großem 'W' in der Mitte. </p>
 
-<p>"strokeWeight" mit einem bestimmten Pixelwert als Argument gilt so lange, bis die nächste "strokeWeight" Anweisung mit einer anderen Pixelgröße im Programm steht. "strokeWeight" ist wie ein Schalter, der gesetzt wird: das Programm läuft anschließend mit dieser Schalter-Einstellung weiter. Soll der Schalter-Wert  geändert werden, muss "strokeWeight" mit einer weiteren Anweisung auf einen anderen Wert gesetzt werden.</p>
+	<p>"strokeWeight" mit einem bestimmten Pixelwert als Argument gilt so lange,
+		bis die nächste "strokeWeight" Anweisung mit einer anderen Pixelgröße im
+		Programm steht. "strokeWeight" ist wie ein Schalter, der gesetzt wird: das
+		Programm läuft anschließend mit dieser Schalter-Einstellung weiter. Soll der
+		Schalter-Wert geändert werden, muss "strokeWeight" mit einer weiteren
+		Anweisung auf einen anderen Wert gesetzt werden.</p>
 
-<span id="tbd">Code/065.js</span>	
-<script type="text/p5" src="../Code/0065.js" 
-	data-autoplay data-height="600" data-preview-width="250" 
-	data-p5-version="1.9.0">
+	<span id="tbd">Code/065.js</span>
+	<script type="text/p5" src="../Code/0065.js" data-autoplay data-height="600"
+		data-preview-width="250" data-p5-version="1.9.0">
 </script>
 
-<p> <span id="ausprobieren">Experimentiere mit der Dicke der Linien! Es ist erstaunlich zu sehen, wie sehr sich eine Zeichnung dadurch verändern kann! </span> </p> 
+	<p> <span id="ausprobieren">Experimentiere mit der Dicke der Linien! Es ist
+			erstaunlich zu sehen, wie sehr sich eine Zeichnung dadurch verändern kann!
+		</span> </p>
 
 
 	<h2>Punkt</h2>
 
-<p>Jetzt wird's fast unsichtbar, denn wir zeichnen einzelne Punkte. Ein Punkt
-ist nur ein einziges Pixel groß und deshalb auf der Leinwand kaum zu erkennen. </p>
+	<p>Jetzt wird's fast unsichtbar, denn wir zeichnen einzelne Punkte. Ein Punkt
+		ist nur ein einziges Pixel groß und deshalb auf der Leinwand kaum zu
+		erkennen. </p>
 
 	<p> Einzelne Punkte werden wir nicht so oft benötigen. Häufig gibt es aber
-	Ansammlungen von mehreren Punkten zu einem Muster oder einer Figur. Weil
-	Punkte so klein sind, kannst du ganz feine Strukturen und Muster mit vielen
-	miteinander verbundenen Punkten nebeneinander oder beieinander zeichnen.</p>
+		Ansammlungen von mehreren Punkten zu einem Muster oder einer Figur. Weil
+		Punkte so klein sind, kannst du ganz feine Strukturen und Muster mit vielen
+		miteinander verbundenen Punkten nebeneinander oder beieinander zeichnen.</p>
 
-<p>Ein Punkt heisst auf Englisch &ldquo;point&rdquo;, sprich &bdquo;peunt&rdquo;. Wir brauchen die x-Koordinate und die y-Koordinate für die Position auf der Leinwand, an der der Punkt liegt. Das ist schon alles, mehr Argumente kann es für einen einzelnen Punkt nicht geben. Der Funktionsaufruf für einen Punkt lautet: <code>point(80, 70)</code>. Findest du den Punkt auf der Leinwand?</p>	
+	<p>Ein Punkt heisst auf Englisch &ldquo;point&rdquo;, sprich
+		&bdquo;peunt&rdquo;. Wir brauchen die x-Koordinate und die y-Koordinate für
+		die Position auf der Leinwand, an der der Punkt liegt. Das ist schon alles,
+		mehr Argumente kann es für einen einzelnen Punkt nicht geben. Der
+		Funktionsaufruf für einen Punkt lautet: <code>point(80, 70)</code>. Findest
+		du den Punkt auf der Leinwand?</p>
 
-<span id="tbd">Code/070.js</span>	
-<script type="text/p5" src="../Code/0070.js" 
-	data-autoplay data-height="300" data-preview-width="250" 
-	data-p5-version="1.9.0">
+	<span id="tbd">Code/070.js</span>
+	<script type="text/p5" src="../Code/0070.js" data-autoplay data-height="300"
+		data-preview-width="250" data-p5-version="1.9.0">
 </script>
 
-<p> <span id="ausprobieren">
-	<ul><li>Wenn du den Punkt verschiebst, also die Koordinaten seiner Position änderst, und neu zeichnest, kannst Du erkennen, ob es wirklich der gezeichnete
-Punkt ist oder nur ein Fleck auf dem Monitor war! </li>
-	
-	<li> Vielleicht funktioniert das "strokeWeight" Kommando auch beim Punkt? </li>	 </ul> </span> </p> 
+	<p> <span id="ausprobieren">
+			<ul>
+				<li>Wenn du den Punkt verschiebst, also die Koordinaten seiner Position
+					änderst, und neu zeichnest, kannst Du erkennen, ob es wirklich der
+					gezeichnete
+					Punkt ist oder nur ein Fleck auf dem Monitor war! </li>
+
+				<li> Vielleicht funktioniert das "strokeWeight" Kommando auch beim
+					Punkt? </li>
+			</ul>
+		</span> </p>
 
 	<h3>Ellipse </h3>
-	
-<p> Zum vorläufigen Ende unserer Figurensammlung machen wir den Kreis zur einen Seite hin länger als zur anderen. Auf diese Weise zeichnen wir eine <b>Ellipse</b>. 
-<br>Eine Ellipse hat zwar eine Ei- oder Oval-Form, ist aber schön symmetrisch nach links und rechts gedehnt, und auch schön symmetrisch nach oben und unten gestaucht.</p> 
 
-<p>Wie üblich müssen wir der Funktion, die die Ellipse zeichnet, als Argumente die Positionen in x- und y-Richtung mitgeben, an der der Mittelpunkt der
-	Ellipse liegen soll. </p>
-	
+	<p> Zum vorläufigen Ende unserer Figurensammlung machen wir den Kreis zur
+		einen Seite hin länger als zur anderen. Auf diese Weise zeichnen wir eine
+		<b>Ellipse</b>.
+		<br>Eine Ellipse hat zwar eine Ei- oder Oval-Form, ist aber schön
+		symmetrisch nach links und rechts gedehnt, und auch schön symmetrisch nach
+		oben und unten gestaucht.
+	</p>
+
+	<p>Wie üblich müssen wir der Funktion, die die Ellipse zeichnet, als Argumente
+		die Positionen in x- und y-Richtung mitgeben, an der der Mittelpunkt der
+		Ellipse liegen soll. </p>
+
 	<p>Weiter müssen wir der Funktion verraten, wie lang denn die Ellipse
-	horizontal in x-Richtung, und wie hoch sie vertikal in y-Richtung sein soll. Die <b>Länge</b> in Pixel-Einheiten ist das dritte Argument der Funktion; die <b>Höhe</b> in Pixel-Einheiten ist das vierte Argument.</p>
-	
-	<p>Die &bdquo;Ellipse&rdquo; ist im Englischen &ldquo;the ellipse&rdquo;, sprich &bdquo;elibs&rdquo;: wir müssen keine neue Vokabel lernen.</p>
+		horizontal in x-Richtung, und wie hoch sie vertikal in y-Richtung sein soll.
+		Die <b>Länge</b> in Pixel-Einheiten ist das dritte Argument der Funktion;
+		die <b>Höhe</b> in Pixel-Einheiten ist das vierte Argument.</p>
+
+	<p>Die &bdquo;Ellipse&rdquo; ist im Englischen &ldquo;the ellipse&rdquo;,
+		sprich &bdquo;elibs&rdquo;: wir müssen keine neue Vokabel lernen.</p>
 
 	<p>Der Funktionsaufruf ist somit:
-	<code>ellipse(110, 100, 130, 90)</code>.</p>
+		<code>ellipse(110, 100, 130, 90)</code>.
+	</p>
 
-<span id="tbd">Code/075.js</span>	
-<script type="text/p5" src="../Code/0075.js" 
-	data-autoplay data-height="300" data-preview-width="250" 
-	data-p5-version="1.9.0">
+	<span id="tbd">Code/075.js</span>
+	<script type="text/p5" src="../Code/0075.js" data-autoplay data-height="300"
+		data-preview-width="250" data-p5-version="1.9.0">
 </script>
 
-<p><span id="ausprobieren">Vor einiger Zeit gab es noch keine "circle" Funktion in p5. Der Kreis wurde immer mit "ellipse" gezeichnet. Wie wird das gemacht; was muss dann gleich sein?
-<br>Probier' es aus!</span></p>
+	<p><span id="ausprobieren">Vor einiger Zeit gab es noch keine "circle"
+			Funktion in p5. Der Kreis wurde immer mit "ellipse" gezeichnet. Wie wird
+			das gemacht; was muss dann gleich sein?
+			<br>Probier' es aus!</span></p>
 
-<p> Wenn <em>Breite</em> und <em>Höhe</em> der Ellipse die gleiche Zahl sind, sind sie nichts anderes als <em>ein Radius</em>. Die in alle Richtungen gleich große Ellipse wird zu einem Kreis. 
-<br>Es gibt viele p5 Programme, in denen der Kreis durch die "ellipse" Funktion gezeichnet wird. Das funktioniert, und man muss sich keine "circle" Funktion merken. Du kannst einen Kreis mit "circle" oder mit "ellipse" zeichnen, so wie du möchtest. Eindeutiger für einen Kreis ist natürlich "circle".</p>
+	<p> Wenn <em>Breite</em> und <em>Höhe</em> der Ellipse die gleiche Zahl sind,
+		sind sie nichts anderes als <em>ein Radius</em>. Die in alle Richtungen
+		gleich große Ellipse wird zu einem Kreis.
+		<br>Es gibt viele p5 Programme, in denen der Kreis durch die "ellipse"
+		Funktion gezeichnet wird. Das funktioniert, und man muss sich keine "circle"
+		Funktion merken. Du kannst einen Kreis mit "circle" oder mit "ellipse"
+		zeichnen, so wie du möchtest. Eindeutiger für einen Kreis ist natürlich
+		"circle".
+	</p>
 
-<p>In der Geometrie im Mathe-Unterricht wird eine Ellipse durch ihre beiden <em>Halbachsen</em> festgelegt. Die Breite und Höhe der p5 Ellipse in den "ellipse" Argumenten sind <em>das Doppelte</em> dieser Halbachsen (sozusagen die &bdquo;Ganz-Achsen&rdquo;). Daran sollte man denken, wenn man mal mit p5 eine geometrische Zeichnung machen möchte.</p>
+	<p>In der Geometrie im Mathe-Unterricht wird eine Ellipse durch ihre beiden
+		<em>Halbachsen</em> festgelegt. Die Breite und Höhe der p5 Ellipse in den
+		"ellipse" Argumenten sind <em>das Doppelte</em> dieser Halbachsen (sozusagen
+		die &bdquo;Ganz-Achsen&rdquo;). Daran sollte man denken, wenn man mal mit p5
+		eine geometrische Zeichnung machen möchte.</p>
 
-<p>Es ist so ähnlich wie beim Kreis. Auch beim Kreis wird in der Geometrie im Mathe-Unterricht eher mal der <em>Kreis-Radius</em> verwendet. In den Argumenten der "circle" Funktion taucht hingegen der <em>Durchmesser</em> auf, also <em>das Doppelte</em> des Kreis-Radius.</p>
+	<p>Es ist so ähnlich wie beim Kreis. Auch beim Kreis wird in der Geometrie im
+		Mathe-Unterricht eher mal der <em>Kreis-Radius</em> verwendet. In den
+		Argumenten der "circle" Funktion taucht hingegen der <em>Durchmesser</em>
+		auf, also <em>das Doppelte</em> des Kreis-Radius.</p>
 
-  <div>
-    <center>
-      <button onclick="document.location='014.html'">Zurück</button>
-		  <button onclick="document.location='index.html'">Inhalt</button>
-      <button onclick="document.location='018.html'">Weiter</button>
-    </center>
-  </div>
+	<div>
+		<center>
+			<button onclick="document.location='014.html'">Zurück</button>
+			<button onclick="document.location='index.html'">Inhalt</button>
+			<button onclick="document.location='018.html'">Weiter</button>
+		</center>
+	</div>
 
 </body>
 

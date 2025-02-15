@@ -9,204 +9,286 @@
 
 <body>
 
-	<h2 id="K013">Woraus besteht ein Programm?</h2>
+  <h2 id="h1">Woraus besteht ein Programm?</h2>
 
   <p>
     Ein Programm besteht aus einzelnen Anweisungen an den Computer. Sie werden
-    beim Abspielen des Programms Schritt für Schritt nacheinander unglaublich schnell
-    ausgeführt. Statt <span id="Begriff">Anweisung</span> kann man auch &bdquo;Kommando&rdquo;, &bdquo;Befehl&rdquo; oder, sehr vornehm, &bdquo;Instruktion&rdquo; sagen. </p>
-	
-  <p>  Ganz viele dieser Anweisungen sind bereits fertige Bausteine, die du nur noch in dein Programm
-  einsetzen musst. Jede Programmmiersprache, wie zum Beispiel unser <em>p5</em>, sorgt
-  dafür, dass es diese Bausteine schon fertig gibt - man muss nur noch lernen, sie richtig zu verwenden.
+    beim Abspielen des Programms Schritt für Schritt nacheinander unglaublich
+    schnell
+    ausgeführt. Statt <span id="Begriff">Anweisung</span> kann man auch
+    &bdquo;Kommando&rdquo;, &bdquo;Befehl&rdquo; oder, sehr vornehm,
+    &bdquo;Instruktion&rdquo; sagen. </p>
+
+  <p> Ganz viele dieser Anweisungen sind bereits fertige Bausteine, die du nur
+    noch in dein Programm
+    einsetzen musst. Jede Programmmiersprache, wie zum Beispiel unser
+    <em>p5</em>, sorgt
+    dafür, dass es diese Bausteine schon fertig gibt - man muss nur noch lernen,
+    sie richtig zu verwenden.
   </p>
-	
-  <h3 id="K013A"> Funktionen </h3>
+
+  <h3 id="Fkt"> Funktionen </h3>
   <p>
-    So ein fertiger Baustein heisst <span id="Begriff">Funktion</span>, auf Englisch &ldquo;function&rdquo; (sprich &bdquo;fanktschn&rdquo;).
-    Eine Funktion erledigt eine ganz bestimmte Aufgabe, zum Beispiel einen Kreis zeichnen oder den Hintergrund eines Bildes ausmalen. Viele Funktionen hintereinander ausgeführt ergeben ein Programm, das dann ein ganzes Bild zeichnet.
+    So ein fertiger Baustein heisst <span id="Begriff">Funktion</span>, auf
+    Englisch &ldquo;function&rdquo; (sprich &bdquo;fanktschn&rdquo;).
+    Eine Funktion erledigt eine ganz bestimmte Aufgabe, zum Beispiel einen Kreis
+    zeichnen oder den Hintergrund eines Bildes ausmalen. Viele Funktionen
+    hintereinander ausgeführt ergeben ein Programm, das dann ein ganzes Bild
+    zeichnet.
   </p>
 
   <p> <span id="tbd">??? >>></span>
-	  Man kann eine Funktion in einem Zeichen-Programm damit vergleichen, wie ein Künstler arbeitet. Als Künstler weisst du genau, wie man einen Kreis zeichnet. Du führst ganz
-    automatisch die Funktion &raquo;zeichne einen Kreis&laquo; aus, sobald du es willst. Du
-    rufst dich als Zeichen-Künstler dabei sozusagen selbst mit der Funktion &raquo;zeichne einen Kreis&laquo; auf.
-    Genauso kannst du in p5 eine bestimmte Funktion aufrufen, und ein Kreis wird gezeichnet.
+    Man kann eine Funktion in einem Zeichen-Programm damit vergleichen, wie ein
+    Künstler arbeitet. Als Künstler weisst du genau, wie man einen Kreis
+    zeichnet. Du führst ganz
+    automatisch die Funktion &raquo;zeichne einen Kreis&laquo; aus, sobald du es
+    willst. Du
+    rufst dich als Zeichen-Künstler dabei sozusagen selbst mit der Funktion
+    &raquo;zeichne einen Kreis&laquo; auf.
+    Genauso kannst du in p5 eine bestimmte Funktion aufrufen, und ein Kreis wird
+    gezeichnet.
   </p>
   <p>
     Um den Kreis zu zeichnen, gehören ganz viele Schritte, Papier hinlegen,
-    Bleistift spitzen, und so weiter, über die du gar nicht erst nachdenken musst.
+    Bleistift spitzen, und so weiter, über die du gar nicht erst nachdenken
+    musst.
     Genauso enthält die entsprechende p5-Funktion schon alles, was benötigt
     wird, um im Computer einen Kreis zu zeichnen. Alles das haben die Leute, die
-    p5 entwickelt haben, schon in die Funktion &raquo;zeichne einen Kreis&laquo; eingebaut.
+    p5 entwickelt haben, schon in die Funktion &raquo;zeichne einen Kreis&laquo;
+    eingebaut.
   </p>
   <p>
     Als Künstler willst du aber nicht nur einen Kreis zeichnen, sondern noch
     viel mehr. Dazu führst du viele solcher Funktionen wie &raquo;einen Kreis
-    zeichnen&laquo; oder &raquo;einen Strich zeichnen&laquo; hintereinander aus, um ein fertiges
-    Gemälde zu erhalten. Genauso schreibst du viele Funktionen in ein p5-Programm, die nacheinander aufgerufen werden und schliesslich ein Kunstwerk ergeben.
+    zeichnen&laquo; oder &raquo;einen Strich zeichnen&laquo; hintereinander aus,
+    um ein fertiges
+    Gemälde zu erhalten. Genauso schreibst du viele Funktionen in ein
+    p5-Programm, die nacheinander aufgerufen werden und schliesslich ein
+    Kunstwerk ergeben.
   </p>
   <p> <span id="tbd">??? oder ...>>></span>
-    Oder du stellst dir eine Funktion in einem Computer-Programm wie einen kleinen Kobold vor, den du rufen kannst, wenn du ihn benötigst, und der genau das zeichnet, was du haben möchtest. Die Arbeit verschiedener Kobolde hintereinander ergibt dann dein fertiges Bild. <br>
+    Oder du stellst dir eine Funktion in einem Computer-Programm wie einen
+    kleinen Kobold vor, den du rufen kannst, wenn du ihn benötigst, und der
+    genau das zeichnet, was du haben möchtest. Die Arbeit verschiedener Kobolde
+    hintereinander ergibt dann dein fertiges Bild. <br>
     Du kannst dir auch vorstellen, du baust statt eines Programms eine Maschine
     zusammen. Dann sind Funktionen die einzelnen, schon fertigen Bauteile,
     die du richtig zusammensetzen musst, damit die Maschine läuft. <br>
   </p>
   <p>
-    Eine <span id ="Begriff";>Funktion</span> in einem Programm wird also aufgerufen, um eine ganz
+    Eine <span id="Begriff" ;>Funktion</span> in einem Programm wird also
+    aufgerufen, um eine ganz
     bestimmte Aufgabe zu erledigen. Zum Aufruf der Funktion schreibst du einfach
-    den Namen der Funktion in das Programm. Wie die einzelnen Funktionen genau heissen
+    den Namen der Funktion in das Programm. Wie die einzelnen Funktionen genau
+    heissen
     werden wir hier nach und nach kennenlernen.
   </p>
 
-<h3  id="K013B"> Welche Funktionen stehen schon im Editor?</h3>
+  <h3 id="Fed"> Welche Funktionen stehen schon im Editor?</h3>
 
-<p>
+  <p>
     Im Editor stehen schon von Anfang an die Aufrufe von zwei Funktionen:
-<p>
+  <p>
     <code style="padding-left: 30px;"> createCanvas(220, 200) </code>
     und
     <br>
     <code style="padding-left: 30px;"> background(220) </code>
   </p>
-	</p>
-  
+  </p>
+
   <!-- Original Inhalt des p5.js Editors: function & background -->
-  <script type="text/p5" src="../Code/0000.js" 
-	        data-height="300" data-preview-width="400" 
-		      data-p5-version="1.9.0">
+  <script type="text/p5" src="../Code/0000.js" data-height="300"
+    data-preview-width="400" data-p5-version="1.9.0">
 </script>
 
   <p>
-    Die erste Funktion ist 
+    Die erste Funktion ist
     <code>createCanvas(200, 200)</code>. Damit wird die Zeichenfläche auf der
-    rechten Seite, der Vorschau, überhaupt erst erzeugt, wenn du das Programm startest.
-    Auf Englisch heisst &ldquo;create&rdquo; (sprich &bdquo;cre-eit&rdquo;) anlegen oder erschaffen, und
-    &ldquo;Canvas&rdquo; (sprich &bdquo;känws&rdquo;) ist eine  Leinwand zum Zeichnen. Der Aufruf der Funktion
-    <code>createCanvas(200, 200)</code> sorgt also dafür, dass eine Zeichenfläche oder Leinwand entsteht, auf der das weitere Programm anschliessend zeichnen wird.
+    rechten Seite, der Vorschau, überhaupt erst erzeugt, wenn du das Programm
+    startest.
+    Auf Englisch heisst &ldquo;create&rdquo; (sprich &bdquo;cre-eit&rdquo;)
+    anlegen oder erschaffen, und
+    &ldquo;Canvas&rdquo; (sprich &bdquo;känws&rdquo;) ist eine Leinwand zum
+    Zeichnen. Der Aufruf der Funktion
+    <code>createCanvas(200, 200)</code> sorgt also dafür, dass eine
+    Zeichenfläche oder Leinwand entsteht, auf der das weitere Programm
+    anschliessend zeichnen wird.
   </p>
 
-<p> Die zweite Funktion malt den Hintergrund der Zeichenfläche aus.
-    Diese Funktion ist <code>background(220)</code>. &ldquo;Background&rdquo; bedeutet
+  <p> Die zweite Funktion malt den Hintergrund der Zeichenfläche aus.
+    Diese Funktion ist <code>background(220)</code>. &ldquo;Background&rdquo;
+    bedeutet
     auf Englisch &bdquo;Hintergrund&rdquo; (sprich &bdquo;bek-graund&rdquo;).
-    Wenn du <code>background(220)</code> in das Programm schreibst, also die Funktion
-    'background' aufrufst, wird die ganze Zeichenfläche übermalt. Genau genommen ist die Bezeichnung  &bdquo;Hintergrund&rdquo; also
-    nicht ganz richtig: die Funktion sollte besser &bdquo;totaler Übermaler&rdquo;
-    genannt werden. 
+    Wenn du <code>background(220)</code> in das Programm schreibst, also die
+    Funktion
+    'background' aufrufst, wird die ganze Zeichenfläche übermalt. Genau genommen
+    ist die Bezeichnung &bdquo;Hintergrund&rdquo; also
+    nicht ganz richtig: die Funktion sollte besser &bdquo;totaler
+    Übermaler&rdquo;
+    genannt werden.
   </p>
 
-<p> Mit diesen beiden Funktionen entsteht eine 
-    Leinwand zum Zeichnen, die durch den Aufruf von <code>createCanvas(200, 200)</code>
-    in einer bestimmten Größe erscheint und durch den Aufruf der Funktion <code>background(220)</code>
-    grau gefärbt wird. </p>
+  <p> Mit diesen beiden Funktionen entsteht eine
+    Leinwand zum Zeichnen, die durch den Aufruf von
+    <code>createCanvas(200, 200)</code>
+    in einer bestimmten Größe erscheint und durch den Aufruf der Funktion
+    <code>background(220)</code>
+    grau gefärbt wird.
+  </p>
 
-  <h3 id="K013C"> Argumente </h3>
+  <h3 id="Args"> Argumente </h3>
   <p>
     Man muss einer Funktion ganz genau sagen, was sie machen soll. Deshalb hat
-    jede Funktion hinter ihrem Namen runde Klammern, <mark> ( </mark> und <mark> ) </mark>. In die runden Klammern werden Zahlen oder Wörter geschrieben. Diese Zahlen oder Wörter nennt man die <span id="Begriff">Argumente</span> der Funktion. Manchmal wird dafür auch das Wort <span id="Begriff">Parameter</span>
-verwendet.
+    jede Funktion hinter ihrem Namen runde Klammern, <mark> ( </mark> und <mark>
+      ) </mark>. In die runden Klammern werden Zahlen oder Wörter geschrieben.
+    Diese Zahlen oder Wörter nennt man die <span id="Begriff">Argumente</span>
+    der Funktion. Manchmal wird dafür auch das Wort <span
+      id="Begriff">Parameter</span>
+    verwendet.
   </p>
 
-<p> Wozu braucht eine Funktion die Argumente? <br>
-    Als Künstler weisst du, wie dick dein Bleistift-Strich sein soll und in welcher Farbe etwas gemalt werden muss. Einer p5-Funktion musst du das sagen,
-und dazu verwendest du das Argument der Funktion. 
-<br>
- 
-	<h4 id="K013C1" >Die 'background' Funktion</h4>
+  <p> Wozu braucht eine Funktion die Argumente? <br>
+    Als Künstler weisst du, wie dick dein Bleistift-Strich sein soll und in
+    welcher Farbe etwas gemalt werden muss. Einer p5-Funktion musst du das
+    sagen,
+    und dazu verwendest du das Argument der Funktion.
+    <br>
+
+  <h4 id="Bckg">Die 'background' Funktion</h4>
   <p>
-    Sehen wir uns die 'background' Funktion als Beispiel an. 
-		Diese Funktion will von uns wissen, mit welcher Farbe die Zeichenfläche 
-    übermalt werden soll. Um die Farbe festzulegen, verwenden wir das Argument der
-    Funktion <code>background(220)</code>. Es steht, wie alle Argumente, in runden Klammern hinter dem
-    Namen der Funktion, hier also <mark>(220)</mark>. Das Argument der 'background' Funktion legt fest, wie hell
+    Sehen wir uns die 'background' Funktion als Beispiel an.
+    Diese Funktion will von uns wissen, mit welcher Farbe die Zeichenfläche
+    übermalt werden soll. Um die Farbe festzulegen, verwenden wir das Argument
+    der
+    Funktion <code>background(220)</code>. Es steht, wie alle Argumente, in
+    runden Klammern hinter dem
+    Namen der Funktion, hier also <mark>(220)</mark>. Das Argument der
+    'background' Funktion legt fest, wie hell
     oder dunkel der Hintergrund der Leinwand werden soll. Dieses Argument kann
-    Werte zwischen 0 für schwarzen Hintergrund und 255 für weißen Hintergrund annehmen.
+    Werte zwischen 0 für schwarzen Hintergrund und 255 für weißen Hintergrund
+    annehmen.
   </p>
 
-<p>   <span id="ausprobieren">Probier das gleich mal aus! Wie ändert sich der Grauton des Hintergrunds, wenn du im Editor unten das Argument der Funktion 
- <code>background(220)</code> änderst?
-			</span> </p> 
-	
+  <p> <span id="ausprobieren">Probier das gleich mal aus! Wie ändert sich der
+      Grauton des Hintergrunds, wenn du im Editor unten das Argument der
+      Funktion
+      <code>background(220)</code> änderst?
+    </span> </p>
+
   <!-- Original Inhalt des p5.js Editors: function & background -->
-  <script type="text/p5" src="../Code/0000.js" 
-	        data-height="300" data-preview-width="400" 
-		      data-p5-version="1.9.0">
+  <script type="text/p5" src="../Code/0000.js" data-height="300"
+    data-preview-width="400" data-p5-version="1.9.0">
 </script>
 
-<p>Drücke nach jeder Änderung <em>Play</em> und sicherheitshalber vorher <em>Stop</em>.
+  <p>Drücke nach jeder Änderung <em>Play</em> und sicherheitshalber vorher
+    <em>Stop</em>.
 
-<p> Also: Wenn du den Hintergrund deiner Zeichenfläche grau ausmalen willst,
+  <p> Also: Wenn du den Hintergrund deiner Zeichenfläche grau ausmalen willst,
     schreibst du in das Programm die Anweisung <br>
-  <center> <code> background(200); </code> </center> <br>
+    <center> <code> background(200); </code> </center> <br>
     So einfach ist das.
     Der Wert <mark> (200) </mark> für das Argument liegt zwischen 0 für weißen
-    und 255 für schwarzen Hintergrund; das ergibt etwas wie &bdquo;hell-schwarz&rdquo;, also einen Grau-Ton. </p>
-
-<p> Wenn du eine neue Funktion kennenlernst, wird dir immer auch gesagt,
-    welche Werte als Argument erlaubt sind und für welchen Zweck die Funktion das Argument benötigt. Falls es mehrere Argumente für eine Funktion
-    gibt, stehen sie alle in den runden Klammern hinter der Funktion und werden dann durch Kommas getrennt. </p>
-
-<p> Es ist wichtig, den Namen einer Funktion immer ganz genau richtig zu schreiben, auch auf die Klein- und Großbuchstaben kommt es dabei an.
-
-<p> Hinter jeder einzelnen Anweisung in p5 muss immer ein
-    Strichpunkt <mark> ; </mark> stehen. Nur so weiss das Programm, dass diese
-    Anweisung beendet ist. Das gilt unbedingt auch dann, wenn eine Funktion aufgerufen wird.
+    und 255 für schwarzen Hintergrund; das ergibt etwas wie
+    &bdquo;hell-schwarz&rdquo;, also einen Grau-Ton.
   </p>
 
-<h4 id="K013C2" >Die 'createCanvas' Funktion</h4>
+  <p> Wenn du eine neue Funktion kennenlernst, wird dir immer auch gesagt,
+    welche Werte als Argument erlaubt sind und für welchen Zweck die Funktion
+    das Argument benötigt. Falls es mehrere Argumente für eine Funktion
+    gibt, stehen sie alle in den runden Klammern hinter der Funktion und werden
+    dann durch Kommas getrennt. </p>
+
+  <p> Es ist wichtig, den Namen einer Funktion immer ganz genau richtig zu
+    schreiben, auch auf die Klein- und Großbuchstaben kommt es dabei an.
+
+  <p> Hinter jeder einzelnen Anweisung in p5 muss immer ein
+    Strichpunkt <mark> ; </mark> stehen. Nur so weiss das Programm, dass diese
+    Anweisung beendet ist. Das gilt unbedingt auch dann, wenn eine Funktion
+    aufgerufen wird.
+  </p>
+
+  <h4 id="CrCa">Die 'createCanvas' Funktion</h4>
   <p>
     Die andere Funktion, die schon im Editor steht, ist
     <code>createCanvas(220, 200)</code>. Damit wird die Zeichenfläche auf der
     rechten Vorschau-Seite überhaupt erst erzeugt.
-    Auf Englisch heisst &ldquo;create&rdquo; (sprich &bdquo;cre-eit&rdquo;) anlegen oder erschaffen, und
-    &ldquo;Canvas&rdquo; (sprich &bdquo;känws&rdquo;) heisst  Leinwand. Der Aufruf der Funktion
+    Auf Englisch heisst &ldquo;create&rdquo; (sprich &bdquo;cre-eit&rdquo;)
+    anlegen oder erschaffen, und
+    &ldquo;Canvas&rdquo; (sprich &bdquo;känws&rdquo;) heisst Leinwand. Der
+    Aufruf der Funktion
     <code>createCanvas(200, 200)</code> sorgt also dafür, dass eine
-    Zeichenfläche oder Leinwand entsteht, auf der das Programm dann erst zeichnen kann. 'createCanvas' muss deshalb beim Start des Programms aufgerufen werden, so wie ein Maler erst die Leinwand aufstellen muss, bevor er anfangen kann. Deswegen steht 'createCanvas' schon gleich im Programm, wenn der Editor  gestartet wird.
+    Zeichenfläche oder Leinwand entsteht, auf der das Programm dann erst
+    zeichnen kann. 'createCanvas' muss deshalb beim Start des Programms
+    aufgerufen werden, so wie ein Maler erst die Leinwand aufstellen muss, bevor
+    er anfangen kann. Deswegen steht 'createCanvas' schon gleich im Programm,
+    wenn der Editor gestartet wird.
   </p>
   <p>
     Die Funktion <code>createCanvas(220, 200)</code> hat zwei
-    <span id="Begriff">Argumente</span> in den runden Klammern. Was bedeuten sie?
+    <span id="Begriff">Argumente</span> in den runden Klammern. Was bedeuten
+    sie?
     <br>Der <em>erste</em> Wert '220' bestimmt die <em>Breite</em> der
-    Leinwand, also wie groß die Leinwand in der Richtung nach rechts ist. 
-		<br>Der <em>zweite</em> Wert '200' bestimmt die <em>Höhe</em> der Leinwand, also wie groß die Leinwand in der Richtung nach unten ist.
+    Leinwand, also wie groß die Leinwand in der Richtung nach rechts ist.
+    <br>Der <em>zweite</em> Wert '200' bestimmt die <em>Höhe</em> der Leinwand,
+    also wie groß die Leinwand in der Richtung nach unten ist.
   </p>
 
-	<p> <span id="ausprobieren">
-      Ändere jetzt die Argumente der Funktion <code>createCanvas(220, 200)</code> und probiere mit <em>Play</em> aus, wie sich die Ausdehnung der Leinwand dadurch ändert.</span>  </p>
-
-<p> 
-<!-- Original Inhalt des p5.js Editors: function & background -->
-  <script type="text/p5" src="../Code/0000.js"
-	                       data-height="300" data-preview-width="400"
-                         data-p5-version="1.9.0">
-</script>
-</p>
+  <p> <span id="ausprobieren">
+      Ändere jetzt die Argumente der Funktion
+      <code>createCanvas(220, 200)</code> und probiere mit <em>Play</em> aus,
+      wie sich die Ausdehnung der Leinwand dadurch ändert.</span> </p>
 
   <p>
-    Was gefällt Dir besser als Zeichenfläche - ein Quadrat, das entsteht, wenn das erste und das zweite Argument gleich sind, oder ein Rechteck - im Längs- oder Querformat?
-		<br>
-    Kannst Du die Leinwand fast so gross wie den gesamten Platz in der Vorschau machen, so dass kaum noch ein Rand zu sehen ist? <br>
-    Oder kannst du den Canvas so klein machen, dass er kaum noch zu erkennen ist - versuch's doch zum Beispiel mal mit <code>createCanvas(5, 5)</code>. 
+    <!-- Original Inhalt des p5.js Editors: function & background -->
+    <script type="text/p5" src="../Code/0000.js" data-height="300"
+      data-preview-width="400" data-p5-version="1.9.0">
+</script>
+  </p>
 
-<p>
-Wie groß etwas auf einem Bildschirm ist, wird üblicherweise in der Einheit <span id="Begriff">Pixel</span> angegeben. Eine  Fläche zum Zeichnen ist 222 Pixel breit und 333 Pixel hoch, wenn die Funktion <code>createCanvas(222, 333)</code> wie hier die Argumente '222' und '333' hat. Was aber ist so ein Pixel? 
-</p>
+  <p>
+    Was gefällt Dir besser als Zeichenfläche - ein Quadrat, das entsteht, wenn
+    das erste und das zweite Argument gleich sind, oder ein Rechteck - im Längs-
+    oder Querformat?
+    <br>
+    Kannst Du die Leinwand fast so gross wie den gesamten Platz in der Vorschau
+    machen, so dass kaum noch ein Rand zu sehen ist? <br>
+    Oder kannst du den Canvas so klein machen, dass er kaum noch zu erkennen ist
+    - versuch's doch zum Beispiel mal mit <code>createCanvas(5, 5)</code>.
 
-<p> Jeder Bildschirm besteht aus winzig kleinen Quadraten, die man <em>Pixel</em> nennt. Alles, was auf einem Bildschirm oder Monitor zu sehen
-    ist, wird durch ganz viele Pixel neben- und übereinander  dargestellt. Die Pixel sind so klein und so eng aneinander, dass man die Lücken dazwischen nicht sehen kann. Dadurch entsteht für unsere Augen ein einziges durchgehendes Bild, obwohl es aus einzelnen Bildschirm-Pünktchen gemacht ist. Das ist wie bei einem Mosaik, das du von ganz weit weg anschaust. </p>
-	
-  <p>Wenn im Beispiel mit <code>createCanvas(5, 5)</code> die  winzige Leinwand kaum zu sehen ist, sie aber immerhin noch 5 Pixel nach rechts und 5 Pixel nach unten groß ist, kannst du
-dir vorstellen, wie winzig klein ein einziges Pixel ist.
-<br> Deshalb werden für eine Leinwand auch ganz viele Pixel gebraucht: die Funktion <code>createCanvas(222, 333)</code>
-macht die Leinwand ordentliche 222 &times 333 = 73&nbsp;926 Pixel groß. </p>
-	
-<p> Jetzt haben wir eine Leinwand (den <em>Canvas</em>) und einen Hintergrund, und es wird wirklich
-mal Zeit, so richtig mit dem Zeichnen anzufangen. </p>
-	
+  <p>
+    Wie groß etwas auf einem Bildschirm ist, wird üblicherweise in der Einheit
+    <span id="Begriff">Pixel</span> angegeben. Eine Fläche zum Zeichnen ist 222
+    Pixel breit und 333 Pixel hoch, wenn die Funktion
+    <code>createCanvas(222, 333)</code> wie hier die Argumente '222' und '333'
+    hat. Was aber ist so ein Pixel?
+  </p>
+
+  <p> Jeder Bildschirm besteht aus winzig kleinen Quadraten, die man
+    <em>Pixel</em> nennt. Alles, was auf einem Bildschirm oder Monitor zu sehen
+    ist, wird durch ganz viele Pixel neben- und übereinander dargestellt. Die
+    Pixel sind so klein und so eng aneinander, dass man die Lücken dazwischen
+    nicht sehen kann. Dadurch entsteht für unsere Augen ein einziges
+    durchgehendes Bild, obwohl es aus einzelnen Bildschirm-Pünktchen gemacht
+    ist. Das ist wie bei einem Mosaik, das du von ganz weit weg anschaust.
+  </p>
+
+  <p>Wenn im Beispiel mit <code>createCanvas(5, 5)</code> die winzige Leinwand
+    kaum zu sehen ist, sie aber immerhin noch 5 Pixel nach rechts und 5 Pixel
+    nach unten groß ist, kannst du
+    dir vorstellen, wie winzig klein ein einziges Pixel ist.
+    <br> Deshalb werden für eine Leinwand auch ganz viele Pixel gebraucht: die
+    Funktion <code>createCanvas(222, 333)</code>
+    macht die Leinwand ordentliche 222 &times 333 = 73&nbsp;926 Pixel groß.
+  </p>
+
+  <p> Jetzt haben wir eine Leinwand (den <em>Canvas</em>) und einen Hintergrund,
+    und es wird wirklich
+    mal Zeit, so richtig mit dem Zeichnen anzufangen. </p>
+
   <div>
     <center>
       <button onclick="document.location='010.html'">Zurück</button>
-			<button onclick="document.location='index.html'">Inhalt</button>
+      <button onclick="document.location='index.html'">Inhalt</button>
       <button onclick="document.location='014.html'">Weiter</button>
     </center>
   </div>

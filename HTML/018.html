@@ -2,297 +2,558 @@
 <html lang="de">
 
 <head>
-	<meta charset="utf-8" />
-	<link rel="stylesheet" type="text/css" href="style.css" />
-	<title>Programmieren lernen mit p5 - Kapitel 3</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <title>Programmieren lernen mit p5 - Kapitel 3</title>
 </head>
 
 <body>
 
-	<h1>Farbe</h1>
-	
-<p>Es ist wirklich Zeit, dass hier Farbe in's Spiel kommt!
-<br>Wir können zwar schon viele verschiedene Formen zeichnen und damit einen tollen p5 sketch erstellen. Unsere Zeichnung ist aber nur schwarz-weiss mit einem grauen Hintergrund. Das sollte sich ändern: alles muss bunter werden!</p>
+  <h1 id=h1>Farbe</h1>
 
-<p>Bei jeder Figur gibt es zwei Bereiche, die mit Farbe gefüllt werden können. Nicht nur das Innere, die <em>Fläche</em>, sondern auch der <em>Rand</em>, der Umriss jeder Figur kann mit einer Farbe gezeichnet werden. Sehen wir uns zunächst an, wie eine Fläche, das Innere eines Kreises oder einer anderen Figur, mit Farbe gefüllt werden kann.</p>
+  <p>Es ist wirklich Zeit, dass hier Farbe in's Spiel kommt!
+    <br>Wir können zwar schon viele verschiedene Formen zeichnen und damit einen
+    tollen p5 sketch erstellen. Unsere Zeichnung ist aber nur schwarz-weiss mit
+    einem grauen Hintergrund. Das sollte sich ändern: alles muss bunter werden!
+  </p>
 
-	
-	<h3>Fläche</h3>
-
-<p>Um Flächen farbig anzumalen gibt es die Funktion <b>"fill"</b>. Eine Fläche ist zum Beispiel die Kreisscheibe, das Innere des Kreises, oder auch der Hintergrund der Leinwand - alles, was nicht wie eine Linie aussieht.</p>
-
-<p>Passenderweise heisst &ldquo;fill&rdquo; auf Englisch &bdquo;füllen&rdquo; und es wird genau so gesprochen:&bdquo;fill&rdquo;. Die Anweisung "fill" funktioniert wie ein Schalter: sie schaltet das Ausmalen mit einer bestimmten Farbe ein. Alle Flächen, die im Programm danach gezeichnet werden, bekommen diese Farbe. Um die Farbe wieder zu ändern, muss eine neue "fill" Funktion mit einer anderen Farbe aufgerufen werden.</p>
-
-<p>Welches Argument kann für die Funktion "fill" verwendet werden? Das Argument ist natürlich die Farbe, mit der ab jetzt gemalt werden soll. Es gibt verschiedene Möglichkeiten, das Argument der Funktion "fill" anzugeben. Die einfachste ist der Name der Farbe in Englisch. Die gebräuchlichsten Farbnamen findest du in dieser Tabelle, wenn du in der Spalte &bdquo;Farbname&rdquo; nachschaust:
-
-<p><caption>Kleine Farbtabelle (VGA-Palette, 16 Farben)</caption></p>
-
-<table style="border-collapse: collapse; width: 100%;">
-  <thead>
-    <tr style="background-color: #f2f2f2;">
-      <th style="border: 1px solid #ddd; padding: 8px;">Farbe</th>
-      <th style="border: 1px solid #ddd; padding: 8px;">Farbname</th>
-      <th style="border: 1px solid #ddd; padding: 8px;">R G B</th>
-    </tr>
-  </thead>
-  <tbody>
-	    <tr>
-      <td style="color: black; background-color: white; text-align: center">Weiß</td>
-      <td style="border: 1px solid #ddd; padding: 8px;">white</td>
-      <td style="border: 1px solid #ddd; padding: 8px;">255, 255, 255</td>
-    </tr>
-    <tr>
-		  <td style="color: black; background-color: yellow; text-align: center">Gelb</td>
-      <td style="border: 1px solid #ddd; padding: 8px;">yellow</td>
-      <td style="border: 1px solid #ddd; padding: 8px;">255, 255, 0</td>
-    </tr>
-    <tr>
-      <td style="color: white; background-color: red; text-align: center">Rot</td>
-      <td style="border: 1px solid #ddd; padding: 8px;">red</td>
-      <td style="border: 1px solid #ddd; padding: 8px;">255, 0, 0</td>
-    </tr>
-    <tr>
-		  <td style="color: white; background-color: magenta; text-align: center">Magenta</td>
-      <td style="border: 1px solid #ddd; padding: 8px;">magenta</td>
-      <td style="border: 1px solid #ddd; padding: 8px;">255, 0, 255</td>
-    </tr>
-    <tr>
-		  <td style="color: white; background-color: purple; text-align: center">Lila</td>
-      <td style="border: 1px solid #ddd; padding: 8px;">purple</td>
-      <td style="border: 1px solid #ddd; padding: 8px;">128, 0, 128</td>
-    </tr>
-		<tr>
-		 <td style="color: white; background-color: maroon; text-align: center">Braun</td>
-      <td style="border: 1px solid #ddd; padding: 8px;">maroon</td>
-      <td style="border: 1px solid #ddd; padding: 8px;">128, 0, 0</td>
-    </tr>
-    <tr>
-		 <td style="color: white; background-color: olive; text-align: center">Olivgrün</td>		
-      <td style="border: 1px solid #ddd; padding: 8px;">olive</td>
-      <td style="border: 1px solid #ddd; padding: 8px;">128, 128, 0</td>
-    </tr>	
-		<tr>
-			<td style="color: white; background-color: navy; text-align: center">Marineblau</td>
-      <td style="border: 1px solid #ddd; padding: 8px;">navy</td>
-      <td style="border: 1px solid #ddd; padding: 8px;">0, 0, 128</td>
-    </tr>
-    <tr>
-		  <td style="color: white; background-color: blue; text-align: center">Blau</td>
-      <td style="border: 1px solid #ddd; padding: 8px;">blue</td>
-      <td style="border: 1px solid #ddd; padding: 8px;">0, 0, 255</td>
-    </tr>
-    <tr>
-		 <td style="color: white; background-color: teal; text-align: center">Blaugrün</td>		
-      <td style="border: 1px solid #ddd; padding: 8px;">teal</td>
-      <td style="border: 1px solid #ddd; padding: 8px;">0, 128, 128</td>
-    </tr>
-    <tr>
-      <td style="color: white; background-color: cyan; text-align: center">Cyan</td>
-     <td style="border: 1px solid #ddd; padding: 8px;">cyan</td>
-      <td style="border: 1px solid #ddd; padding: 8px;">0, 255, 255</td>
-    </tr>
-		<tr>
-		  <td style="color: white; background-color: lime; text-align: center">Limette</td>
-      <td style="border: 1px solid #ddd; padding: 8px;">lime</td>
-      <td style="border: 1px solid #ddd; padding: 8px;">0, 255, 0</td>
-    </tr>		
-    <tr>
-		 <td style="color: white; background-color: green; text-align: center">Grün</td>
-      <td style="border: 1px solid #ddd; padding: 8px;">green</td>
-      <td style="border: 1px solid #ddd; padding: 8px;">0, 128, 0</td>
-    </tr>
-    <tr>
-		 <td style="color: white; background-color: silver; text-align: center">Silber</td>
-      <td style="border: 1px solid #ddd; padding: 8px;">silver</td>
-      <td style="border: 1px solid #ddd; padding: 8px;">192, 192, 192</td>
-    </tr>
-    <tr>
-		  <td style="color: white; background-color: gray; text-align: center">Grau</td>
-      <td style="border: 1px solid #ddd; padding: 8px;">gray</td>
-      <td style="border: 1px solid #ddd; padding: 8px;">128, 128, 128</td>
-    </tr>
-
-    <tr>
-      <td style="color: white; background-color: black; text-align: center">Schwarz</td>
-      <td style="border: 1px solid #ddd; padding: 8px;">black</td>
-      <td style="border: 1px solid #ddd; padding: 8px;">0, 0, 0</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>Du schaltest eine Farbe für Flächen ein, indem du die Anweisung <code><mark>fill</mark>('purple')</code> verwendest. Wie du siehst, wird der englische Farbname aus der Tabelle in die runden Klammern des Arguments geschrieben: <code>fill(<mark>'olive'</mark>)</code>, mit einfachen Anführungszeichen <mark>'</mark> drumrum. Der Farbname muss, wie alle Anweisungen und Funktionsnamen in einer Programmiersprache, ganz genau richtig geschrieben werden.</p>
-
-<p>Um die Füllfarbe wieder zu ändern, brauchen wir eine neue "fill" Anweisung - wie bei einem Schalter. "fill" legt die Farbe fest, mit der alle Formen gefüllt werden, die im Programm danach gezeichnet werden - bis die nächste "fill" Anweisung kommt. </p>
+  <p>Bei jeder Figur gibt es zwei Bereiche, die mit Farbe gefüllt werden können.
+    Nicht nur das Innere, die <em>Fläche</em>, sondern auch der <em>Rand</em>,
+    der Umriss jeder Figur kann mit einer Farbe gezeichnet werden. Sehen wir uns
+    zunächst an, wie eine Fläche, das Innere eines Kreises oder einer anderen
+    Figur, mit Farbe gefüllt werden kann.</p>
 
 
-<span id="tbd">Code/080.js</span>	
-<script type="text/p5" src="../Code/0080.js" 
-	data-autoplay data-height="520" data-preview-width="270" 
-	data-p5-version="1.9.0">
+  <h3 id=Flaeche>Fläche</h3>
+
+  <p>Um Flächen farbig anzumalen gibt es die Funktion <b>"fill"</b>. Eine Fläche
+    ist zum Beispiel die Kreisscheibe, das Innere des Kreises, oder auch der
+    Hintergrund der Leinwand - alles, was nicht wie eine Linie aussieht.</p>
+
+  <p>Passenderweise heisst &ldquo;fill&rdquo; auf Englisch &bdquo;füllen&rdquo;
+    und es wird genau so gesprochen:&bdquo;fill&rdquo;. Die Anweisung "fill"
+    funktioniert wie ein Schalter: sie schaltet das Ausmalen mit einer
+    bestimmten Farbe ein. Alle Flächen, die im Programm danach gezeichnet
+    werden, bekommen diese Farbe. Um die Farbe wieder zu ändern, muss eine neue
+    "fill" Funktion mit einer anderen Farbe aufgerufen werden.</p>
+
+  <p>Welches Argument kann für die Funktion "fill" verwendet werden? Das
+    Argument ist natürlich die Farbe, mit der ab jetzt gemalt werden soll. Es
+    gibt verschiedene Möglichkeiten, das Argument der Funktion "fill" anzugeben.
+    Die einfachste ist der Name der Farbe in Englisch. Die gebräuchlichsten
+    Farbnamen findest du in dieser Tabelle, wenn du in der Spalte
+    &bdquo;Farbname&rdquo; nachschaust:
+
+  <p>
+    <caption>Kleine Farbtabelle (VGA-Palette, 16 Farben)</caption>
+  </p>
+
+  <table style="border-collapse: collapse; width: 100%;">
+    <thead>
+      <tr style="background-color: #f2f2f2;">
+        <th style="border: 1px solid #ddd; padding: 8px;">Farbe</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">Farbname</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">R G B</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="color: black; background-color: white; text-align: center">
+          Weiß</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">white</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">255, 255, 255</td>
+      </tr>
+      <tr>
+        <td style="color: black; background-color: yellow; text-align: center">
+          Gelb</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">yellow</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">255, 255, 0</td>
+      </tr>
+      <tr>
+        <td style="color: white; background-color: red; text-align: center">Rot
+        </td>
+        <td style="border: 1px solid #ddd; padding: 8px;">red</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">255, 0, 0</td>
+      </tr>
+      <tr>
+        <td style="color: white; background-color: magenta; text-align: center">
+          Magenta</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">magenta</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">255, 0, 255</td>
+      </tr>
+      <tr>
+        <td style="color: white; background-color: purple; text-align: center">
+          Lila</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">purple</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">128, 0, 128</td>
+      </tr>
+      <tr>
+        <td style="color: white; background-color: maroon; text-align: center">
+          Braun</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">maroon</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">128, 0, 0</td>
+      </tr>
+      <tr>
+        <td style="color: white; background-color: olive; text-align: center">
+          Olivgrün</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">olive</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">128, 128, 0</td>
+      </tr>
+      <tr>
+        <td style="color: white; background-color: navy; text-align: center">
+          Marineblau</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">navy</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">0, 0, 128</td>
+      </tr>
+      <tr>
+        <td style="color: white; background-color: blue; text-align: center">
+          Blau</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">blue</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">0, 0, 255</td>
+      </tr>
+      <tr>
+        <td style="color: white; background-color: teal; text-align: center">
+          Blaugrün</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">teal</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">0, 128, 128</td>
+      </tr>
+      <tr>
+        <td style="color: white; background-color: cyan; text-align: center">
+          Cyan</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">cyan</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">0, 255, 255</td>
+      </tr>
+      <tr>
+        <td style="color: white; background-color: lime; text-align: center">
+          Limette</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">lime</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">0, 255, 0</td>
+      </tr>
+      <tr>
+        <td style="color: white; background-color: green; text-align: center">
+          Grün</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">green</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">0, 128, 0</td>
+      </tr>
+      <tr>
+        <td style="color: white; background-color: silver; text-align: center">
+          Silber</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">silver</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">192, 192, 192</td>
+      </tr>
+      <tr>
+        <td style="color: white; background-color: gray; text-align: center">
+          Grau</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">gray</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">128, 128, 128</td>
+      </tr>
+
+      <tr>
+        <td style="color: white; background-color: black; text-align: center">
+          Schwarz</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">black</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">0, 0, 0</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>Du schaltest eine Farbe für Flächen ein, indem du die Anweisung
+    <code><mark>fill</mark>('purple')</code> verwendest. Wie du siehst, wird der
+    englische Farbname aus der Tabelle in die runden Klammern des Arguments
+    geschrieben: <code>fill(<mark>'olive'</mark>)</code>, mit einfachen
+    Anführungszeichen <mark>'</mark> drumrum. Der Farbname muss, wie alle
+    Anweisungen und Funktionsnamen in einer Programmiersprache, ganz genau
+    richtig geschrieben werden.</p>
+
+  <p>Um die Füllfarbe wieder zu ändern, brauchen wir eine neue "fill" Anweisung
+    - wie bei einem Schalter. "fill" legt die Farbe fest, mit der alle Formen
+    gefüllt werden, die im Programm danach gezeichnet werden - bis die nächste
+    "fill" Anweisung kommt. </p>
+
+
+  <span id="tbd">Code/080.js</span>
+  <script type="text/p5" src="../Code/0080.js" data-autoplay data-height="520"
+    data-preview-width="270" data-p5-version="1.9.0">
 </script>
 
-<p> <span id="ausprobieren">Setze deine Lieblingsfarben ein!</span> </p> 
+  <p> <span id="ausprobieren">Setze deine Lieblingsfarben ein!</span> </p>
 
-<ul>
-<li>Funktioniert der Farbname auch mit der "background" Funktion, zum Beispiel mit <code>background('lime')</code>? Anführungszeichen <mark>'</mark> um den Farbnamen nicht vergessen!</li>
+  <ul>
+    <li>Funktioniert der Farbname auch mit der "background" Funktion, zum
+      Beispiel mit <code>background('lime')</code>? Anführungszeichen
+      <mark>'</mark> um den Farbnamen nicht vergessen!</li>
 
-<li>Die Farbe &bdquo;Grau&rdquo; heisst auf Englisch &ldquo;gr<b>e</b>y&rdquo;. Die farbgewaltigen amerikanischen Programmierer sind damit nicht ganz klar gekommen und haben den Farbnamen &ldquo;gr<b>a</b>y&rdquo; in die Welt gesetzt. Also verwendet p5 &rdquo;gray&ldquo;.</li>
+    <li>Die Farbe &bdquo;Grau&rdquo; heisst auf Englisch
+      &ldquo;gr<b>e</b>y&rdquo;. Die farbgewaltigen amerikanischen Programmierer
+      sind damit nicht ganz klar gekommen und haben den Farbnamen
+      &ldquo;gr<b>a</b>y&rdquo; in die Welt gesetzt. Also verwendet p5
+      &rdquo;gray&ldquo;.</li>
 
-<li>Im Internet kannst du Tabellen mit viel viel mehr Farben finden, wenn du mit dem Begriff &bdquo;CSS Farbtabelle&rdquo; suchst. Dann kannst du probieren, ob p5 Farben wie <span style="background-color: wheat; color: black;">wheat</span>, <span style="background-color: aqua;  color: white;">aqua</span>,  <span style="background-color: fuchsia; color: white;">fuchsia</span> oder <span style="background-color: midnightblue; color: white;">midnightblue</span> auch kennt. Fürs Erste könnte die Liste oben genügen.</li>
+    <li>Im Internet kannst du Tabellen mit viel viel mehr Farben finden, wenn du
+      mit dem Begriff &bdquo;CSS Farbtabelle&rdquo; suchst. Dann kannst du
+      probieren, ob p5 Farben wie <span
+        style="background-color: wheat; color: black;">wheat</span>, <span
+        style="background-color: aqua;  color: white;">aqua</span>, <span
+        style="background-color: fuchsia; color: white;">fuchsia</span> oder
+      <span
+        style="background-color: midnightblue; color: white;">midnightblue</span>
+      auch kennt. Fürs Erste könnte die Liste oben genügen.</li>
 
-<li> Der Web-Editor, den wir später kennenlernen, zeigt dir sogar die gewählte Farbe in einem kleinen Kästchen vor dem Farbnamen an. So weisst du sofort, ob dieser Farbname bekannt ist oder ob du dich vielleicht vertippt hast. </li> </ul>
+    <li> Der Web-Editor, den wir später kennenlernen, zeigt dir sogar die
+      gewählte Farbe in einem kleinen Kästchen vor dem Farbnamen an. So weisst
+      du sofort, ob dieser Farbname bekannt ist oder ob du dich vielleicht
+      vertippt hast. </li>
+  </ul>
 
 
-	<h3>Rot - Grün - Blau: RGB</h3>
+  <h3 id="RGB">Rot - Grün - Blau: RGB</h3>
 
-<p> In der Tabelle gibt es für jede Farbe eine Spalte <b>R G B</b> mit drei Zahlen. Was hat das zu bedeuten? 
-<br> RGB ist die zweite Methode, um an die "fill" Funktion eine Farbe zu übergeben. Die RGB-Methode  mischt die drei Farben: rot, grün und blau. Der Trick ist, dass diese drei Farben, wenn sie gemischt werden, andere Farben oder Farbtöne ergeben - wie beim Malen mit Wasserfarben. 
-<br>Die Zahlenwerte in der Spalte RGB der Tabelle geben an, wie groß der Anteil an Rot (erste Zahl), Grün (zweite Zahl) und Blau (dritte Zahl) an der gemischten Farbe ist. Die möglichen Zahlenwerte für jeden Anteil liegen zwischen '0' (gar nichts) und '255' (maximal).</p>
+  <p> In der Tabelle gibt es für jede Farbe eine Spalte <b>R G B</b> mit drei
+    Zahlen. Was hat das zu bedeuten?
+    <br> RGB ist die zweite Methode, um an die "fill" Funktion eine Farbe zu
+    übergeben. Die RGB-Methode mischt die drei Farben: rot, grün und blau. Der
+    Trick ist, dass diese drei Farben, wenn sie gemischt werden, andere Farben
+    oder Farbtöne ergeben - wie beim Malen mit Wasserfarben.
+    <br>Die Zahlenwerte in der Spalte RGB der Tabelle geben an, wie groß der
+    Anteil an Rot (erste Zahl), Grün (zweite Zahl) und Blau (dritte Zahl) an der
+    gemischten Farbe ist. Die möglichen Zahlenwerte für jeden Anteil liegen
+    zwischen '0' (gar nichts) und '255' (maximal).
+  </p>
 
-<p>Wenn wir das <b>R G B</b> Verfahren verwenden, geben wir jeder Funktion, die mit Farben zu tun hat, diese drei Zahlenwerte als Argumente mit. 
-<br>Das erste Argument ist der Anteil an <b>Rot</b>, der als Zahlenwert von '0' bis '255' laufen kann. 
-<br>Das zweite Argument ist der Anteil an <b>Grün</b>, auch hier läuft der Zahlenwert von '0' für gar kein Grün bis zu '255' für maximales Grün. 
-<br>Das dritte Argument, mit einem Wert ebenfalls zwischen '0' und '255', steht für den <b>Blau</b>-Anteil an der gemischten Farbe. Um nur die Farbe &bdquo;Blau&rdquo; zu bekommen, ist die RGB Kombination also '(0, 0, 255)'.
-</p>
+  <p>Wenn wir das <b>R G B</b> Verfahren verwenden, geben wir jeder Funktion,
+    die mit Farben zu tun hat, diese drei Zahlenwerte als Argumente mit.
+    <br>Das erste Argument ist der Anteil an <b>Rot</b>, der als Zahlenwert von
+    '0' bis '255' laufen kann.
+    <br>Das zweite Argument ist der Anteil an <b>Grün</b>, auch hier läuft der
+    Zahlenwert von '0' für gar kein Grün bis zu '255' für maximales Grün.
+    <br>Das dritte Argument, mit einem Wert ebenfalls zwischen '0' und '255',
+    steht für den <b>Blau</b>-Anteil an der gemischten Farbe. Um nur die Farbe
+    &bdquo;Blau&rdquo; zu bekommen, ist die RGB Kombination also '(0, 0, 255)'.
+  </p>
 
-<span id="tbd">Code/085.js</span>	
-<script type="text/p5" src="../Code/0085.js" data-autoplay 
-  data-height="400" data-preview-width="270" 
-	data-p5-version="1.9.0">
+  <span id="tbd">Code/085.js</span>
+  <script type="text/p5" src="../Code/0085.js" data-autoplay data-height="400"
+    data-preview-width="270" data-p5-version="1.9.0">
 </script>
 
-<p> <span id="ausprobieren">Ändere die Zahlenwerte in "fill" und probier' die RGB-Farbmischung ausgiebig aus!</span> </p> 
+  <p> <span id="ausprobieren">Ändere die Zahlenwerte in "fill" und probier' die
+      RGB-Farbmischung ausgiebig aus!</span> </p>
 
-<ul><li>Wenn deine Lieblingsfarbe nicht in der Tabelle vorkommt: Merke dir die drei Werte für  deine Lieblingsfarbe in der RGB Methode!</li>
+  <ul>
+    <li>Wenn deine Lieblingsfarbe nicht in der Tabelle vorkommt: Merke dir die
+      drei Werte für deine Lieblingsfarbe in der RGB Methode!</li>
 
-<li>Wähle alle drei RGB Zahlen im "fill" Argument gleich! Was geschieht? Ändert sich etwas, wenn du <em>eine</em> andere Zahl für alle drei RGB Werte nimmst? Mach' das Dreieck grau!</li>
-</ul>
+    <li>Wähle alle drei RGB Zahlen im "fill" Argument gleich! Was geschieht?
+      Ändert sich etwas, wenn du <em>eine</em> andere Zahl für alle drei RGB
+      Werte nimmst? Mach' das Dreieck grau!</li>
+  </ul>
 
-<p> Die dritte Methode, eine Farbe festzulegen, hast du damit gerade ausprobiert: es ist die <b>Graustufe</b>. Sind alle drei Werte für rot, grün und blau in der "fill" Anweisung gleich, wird eine Figur mit weißer, grauer oder schwarzer Farbe ausgefüllt. Die &bdquo;Farbe&rdquo; ist dann ein mehr oder weniger helles Grau (oder Weiß oder Schwarz).</p>
+  <p> Die dritte Methode, eine Farbe festzulegen, hast du damit gerade
+    ausprobiert: es ist die <b>Graustufe</b>. Sind alle drei Werte für rot, grün
+    und blau in der "fill" Anweisung gleich, wird eine Figur mit weißer, grauer
+    oder schwarzer Farbe ausgefüllt. Die &bdquo;Farbe&rdquo; ist dann ein mehr
+    oder weniger helles Grau (oder Weiß oder Schwarz).</p>
 
-<p> Die gleiche graue Farbe wie mit drei gleichen Zahlenwerten bekommst du, wenn du nur ein einziges Argument mitgibst: <code>fill(200)</code> ergibt genau das gleiche Grau wie <code>fill(200, 200, 200)</code>. Diese Graustufe, die nur ein einziges Argument erfordert, kennen wir schon lange von der <code>background(200)</code> Funktion. Der einzige Wert im Argument für die Graustufe ist einfach eine Abkürzung für drei RGB Argumente rot, grün und blau, wenn sie alle gleich sind. </p>
+  <p> Die gleiche graue Farbe wie mit drei gleichen Zahlenwerten bekommst du,
+    wenn du nur ein einziges Argument mitgibst: <code>fill(200)</code> ergibt
+    genau das gleiche Grau wie <code>fill(200, 200, 200)</code>. Diese
+    Graustufe, die nur ein einziges Argument erfordert, kennen wir schon lange
+    von der <code>background(200)</code> Funktion. Der einzige Wert im Argument
+    für die Graustufe ist einfach eine Abkürzung für drei RGB Argumente rot,
+    grün und blau, wenn sie alle gleich sind. </p>
 
-<p>Falls du für die RGB Zahlen ungültige Werte eingibst, die größer als '255' sind, sorgt p5 automatisch dafür, dass nur der Maximalwert '255' genommen wird. Mit dieser automatischen Korrektur vermeidet p5, dass das Programm wegen eines Fehlers abbrechen muss. 
-<br>Natürlich sollte man sich darauf nicht verlassen und stets nur Werte aus dem erlaubten Bereich verwenden. Vielleicht geht ja trotz der automatischen Korrektur etwas schief, und selbst wenn nicht, wirst du (oder andere, die dein Programm verstehen wollen) später niemals mehr verstehen, warum ein ungültiger Wert verwendet wurde.</p>
+  <p>Falls du für die RGB Zahlen ungültige Werte eingibst, die größer als '255'
+    sind, sorgt p5 automatisch dafür, dass nur der Maximalwert '255' genommen
+    wird. Mit dieser automatischen Korrektur vermeidet p5, dass das Programm
+    wegen eines Fehlers abbrechen muss.
+    <br>Natürlich sollte man sich darauf nicht verlassen und stets nur Werte aus
+    dem erlaubten Bereich verwenden. Vielleicht geht ja trotz der automatischen
+    Korrektur etwas schief, und selbst wenn nicht, wirst du (oder andere, die
+    dein Programm verstehen wollen) später niemals mehr verstehen, warum ein
+    ungültiger Wert verwendet wurde.
+  </p>
 
-<p>In jeder vernünftigen Programmiersprache, bei der Farben zum Zeichnen mit Computerprogrammen verwendet werden, gibt es zum Mischen diese drei Farben: Rot (R), Grün (G) und Blau (B). Damit lässt sich die gewünschte Farbe genauer bestimmen als nur mit Farbnamen. Denn nicht jeder Name lässt sich so leicht merken wie <span style="background-color: lightgoldenrodyellow; color: black;">lightgoldenrodyellow</span>. Üblicherweise wirst du deshalb in p5 Programmen RGB Farbangaben sehen. Einige coole Sachen, die man mit Farben machen kann, und von denen wir 
-noch reden werden, funktionieren auch nur mit RGB Argumenten und nicht mit den Farbnamen. Es ist deshalb hilfreich, sich mit RGB ein bisschen anzufreunden, auch wenn du hauptsächlich Farbnamen verwenden möchtest.</p>
+  <p>In jeder vernünftigen Programmiersprache, bei der Farben zum Zeichnen mit
+    Computerprogrammen verwendet werden, gibt es zum Mischen diese drei Farben:
+    Rot (R), Grün (G) und Blau (B). Damit lässt sich die gewünschte Farbe
+    genauer bestimmen als nur mit Farbnamen. Denn nicht jeder Name lässt sich so
+    leicht merken wie <span
+      style="background-color: lightgoldenrodyellow; color: black;">lightgoldenrodyellow</span>.
+    Üblicherweise wirst du deshalb in p5 Programmen RGB Farbangaben sehen.
+    Einige coole Sachen, die man mit Farben machen kann, und von denen wir
+    noch reden werden, funktionieren auch nur mit RGB Argumenten und nicht mit
+    den Farbnamen. Es ist deshalb hilfreich, sich mit RGB ein bisschen
+    anzufreunden, auch wenn du hauptsächlich Farbnamen verwenden möchtest.</p>
 
-<p>Auch dein Browser verwendet das RGB-Schema, um das Aussehen von Browserseiten zu gestalten. Dafür werden Anweisungen aus einer sogenannten CSS Datei gelesen. &bdquo;CSS&rdquo; bedeutet  
-&ldquo;Cascading Style Sheet&rdquo;: der &ldquo;Style&rdquo; legt den Stil der Webseite fest. 
-In CSS werden RGB Farben so geschrieben: <code>rgb(0, 0, 255)</code>. Weil CSS viel mehr verwendet wird als p5, nämlich für jede Browser-Seite, kannst du diesen Ausdruck auch in p5 verwenden: <code>fill('rgb(0, 0, 255)')</code> ist das Gleiche wie <code>fill(0, 0, 255)</code>. Du willst die umständlichere CSS Anweisung wahrscheinlich nicht verwenden; häufig sind aber andere p5 Programme, die du verstehen möchtest, so geschrieben. Man kann viel dabei lernen, wenn man p5 Programme von Anderen liest und zu verstehen versucht.</p>
+  <p>Auch dein Browser verwendet das RGB-Schema, um das Aussehen von
+    Browserseiten zu gestalten. Dafür werden Anweisungen aus einer sogenannten
+    CSS Datei gelesen. &bdquo;CSS&rdquo; bedeutet
+    &ldquo;Cascading Style Sheet&rdquo;: der &ldquo;Style&rdquo; legt den Stil
+    der Webseite fest.
+    In CSS werden RGB Farben so geschrieben: <code>rgb(0, 0, 255)</code>. Weil
+    CSS viel mehr verwendet wird als p5, nämlich für jede Browser-Seite, kannst
+    du diesen Ausdruck auch in p5 verwenden: <code>fill('rgb(0, 0, 255)')</code>
+    ist das Gleiche wie <code>fill(0, 0, 255)</code>. Du willst die
+    umständlichere CSS Anweisung wahrscheinlich nicht verwenden; häufig sind
+    aber andere p5 Programme, die du verstehen möchtest, so geschrieben. Man
+    kann viel dabei lernen, wenn man p5 Programme von Anderen liest und zu
+    verstehen versucht.</p>
 
-<h2>Rand</h2>
+  <h2 id="Rand">Rand</h2>
 
-<p>Der zweite Bereich, der in einem p5 sketch mit Farbe gefüllt werden kann, ist der Rand einer Figur, also die Umrandung aussenrum: die sogenannte Konturlinie. Auch Linien und Punkte, die ja nicht so recht eine Innen-Fläche haben, bekommen so eine Farbe.</p> 
+  <p>Der zweite Bereich, der in einem p5 sketch mit Farbe gefüllt werden kann,
+    ist der Rand einer Figur, also die Umrandung aussenrum: die sogenannte
+    Konturlinie. Auch Linien und Punkte, die ja nicht so recht eine Innen-Fläche
+    haben, bekommen so eine Farbe.</p>
 
-<p>Die Anweisung, um Linien oder Umrisse <em>breiter</em> zu machen, kennst du schon: <code>strokeWeight(5)</code> macht alle (Rand-)Linien 5 Pixel breit. Normalerweise ist eine Linie nur einen Pixel breit, das ist der Default. "strokeWeight" legt sozusagen das Gewicht (&ldquo;weight&rdquo;) der Linie (&ldquo;stroke&rdquo;) fest. Der Wert des Arguments gibt die Breite in Pixel an, die der Rand bekommen soll.</p>
+  <p>Die Anweisung, um Linien oder Umrisse <em>breiter</em> zu machen, kennst du
+    schon: <code>strokeWeight(5)</code> macht alle (Rand-)Linien 5 Pixel breit.
+    Normalerweise ist eine Linie nur einen Pixel breit, das ist der Default.
+    "strokeWeight" legt sozusagen das Gewicht (&ldquo;weight&rdquo;) der Linie
+    (&ldquo;stroke&rdquo;) fest. Der Wert des Arguments gibt die Breite in Pixel
+    an, die der Rand bekommen soll.</p>
 
-<p>Die Anweisung für die <em>Farbe</em> einer (Rand-)Linie ist <b>"stroke"</b>. Mit dem Aufruf <code>stroke('blue')</code> legst du fest, dass alle Linien, Ränder oder Umrisse ab jetzt Blau (&ldquo;blue&rdquo;) gezeichnet werden. "stroke" verhält sich wieder wie ein Schalter: welche Farbe gesetzt wird, gilt solange bis ein neuer Wert mit einer anderen "stroke" Anweisung bestimmt wird.</p>
+  <p>Die Anweisung für die <em>Farbe</em> einer (Rand-)Linie ist
+    <b>"stroke"</b>. Mit dem Aufruf <code>stroke('blue')</code> legst du fest,
+    dass alle Linien, Ränder oder Umrisse ab jetzt Blau (&ldquo;blue&rdquo;)
+    gezeichnet werden. "stroke" verhält sich wieder wie ein Schalter: welche
+    Farbe gesetzt wird, gilt solange bis ein neuer Wert mit einer anderen
+    "stroke" Anweisung bestimmt wird.</p>
 
-<p>Die Farbe, das Argument der Funktion "stroke", kann wie gehabt ein Farbname, oder ein RGB Wert aus drei Zahlen zwischen '0' und '255', oder ein Hex-Wert sein. </p>
+  <p>Die Farbe, das Argument der Funktion "stroke", kann wie gehabt ein
+    Farbname, oder ein RGB Wert aus drei Zahlen zwischen '0' und '255', oder ein
+    Hex-Wert sein. </p>
 
-<span id="tbd">Code/090.js</span>	
-<script type="text/p5" src="../Code/0090.js" 
-	data-autoplay data-height="470" data-preview-width="270" 
-	data-p5-version="1.9.0">
+  <span id="tbd">Code/090.js</span>
+  <script type="text/p5" src="../Code/0090.js" data-autoplay data-height="470"
+    data-preview-width="270" data-p5-version="1.9.0">
 </script>
 
-<p> In dem sketch hier sind drei Kreise gezeichnet. Jeder Kreis hat einen superbreiten Rand von 25 Pixeln: das macht das "strokeWeight" Kommando: <code>strokeWeight(25)</code>. </p>
+  <p> In dem sketch hier sind drei Kreise gezeichnet. Jeder Kreis hat einen
+    superbreiten Rand von 25 Pixeln: das macht das "strokeWeight" Kommando:
+    <code>strokeWeight(25)</code>. </p>
 
-<p>Kannst du herausfinden, warum die Farben so zu sehen sind? Es hängt von der Reihenfolge ab, in der die Kreise gezeichnet werden. Die Anweisung, die im Programm später kommt, übermalt, was bisher an der Stelle schon gezeichnet ist. Sehen wir uns das genauer an.</p>
+  <p>Kannst du herausfinden, warum die Farben so zu sehen sind? Es hängt von der
+    Reihenfolge ab, in der die Kreise gezeichnet werden. Die Anweisung, die im
+    Programm später kommt, übermalt, was bisher an der Stelle schon gezeichnet
+    ist. Sehen wir uns das genauer an.</p>
 
-<ul>
-<li>Zunächst bekommt der Hintergrund eine braune Farbe. Denn die Anweisung "background" wird mit der Farbe &bdquo;Braun&rdquo; aufgerufen: <code>background("brown")</code>. </li>
+  <ul>
+    <li>Zunächst bekommt der Hintergrund eine braune Farbe. Denn die Anweisung
+      "background" wird mit der Farbe &bdquo;Braun&rdquo; aufgerufen:
+      <code>background("brown")</code>. </li>
 
-<li>Dann wird der äußere grösste Kreis gezeichnet. Er übermalt den Hintergrund, wo er eben hinkommt, und hat wegen der <code>stroke("blue")</code> Anweisung einen blauen Rand. </li>
+    <li>Dann wird der äußere grösste Kreis gezeichnet. Er übermalt den
+      Hintergrund, wo er eben hinkommt, und hat wegen der
+      <code>stroke("blue")</code> Anweisung einen blauen Rand. </li>
 
-<li>Die Innenfläche dieses äußeren Kreises ist jedoch nicht zu sehen. Jede sichtbare Fläche, wie das Innere eines Kreises, ist <em>eigentlich</em> mit roter Farbe gefüllt: <code>fill(255, 0, 0)</code>. Die drei RGB Zahlen, (255, 0, 0) haben einen maximal roten ('255') Anteil, aber einen grünen und blauen Anteil von Null. <em>Aber:</em> die rote Farbe ist nur ganz innen zu sehen. Die Kreise weiter innen, die später gezeichnet werden, übermalen jeweils die Fläche des aussenliegenden Kreises. </li>
+    <li>Die Innenfläche dieses äußeren Kreises ist jedoch nicht zu sehen. Jede
+      sichtbare Fläche, wie das Innere eines Kreises, ist <em>eigentlich</em>
+      mit roter Farbe gefüllt: <code>fill(255, 0, 0)</code>. Die drei RGB
+      Zahlen, (255, 0, 0) haben einen maximal roten ('255') Anteil, aber einen
+      grünen und blauen Anteil von Null. <em>Aber:</em> die rote Farbe ist nur
+      ganz innen zu sehen. Die Kreise weiter innen, die später gezeichnet
+      werden, übermalen jeweils die Fläche des aussenliegenden Kreises. </li>
 
-<li>Der mittlere Kreis übermalt das Innere des äusseren Kreises. Der Rand des mittleren Kreises ist grün: <code>stroke(0, 255, 0)</code>: in der RGB Angabe ist grün auf '255', rot und blau sind auf Null. Dieser mittlere Kreis ist kleiner als der äußere Kreis, deshalb wird nur die Innenfläche, aber nicht der blaue Rand des äußeren Kreises übermalt. Die Kreisscheibe, das Innere des mittleren Kreises, ist nicht zu sehen. Denn: </li>
+    <li>Der mittlere Kreis übermalt das Innere des äusseren Kreises. Der Rand
+      des mittleren Kreises ist grün: <code>stroke(0, 255, 0)</code>: in der RGB
+      Angabe ist grün auf '255', rot und blau sind auf Null. Dieser mittlere
+      Kreis ist kleiner als der äußere Kreis, deshalb wird nur die Innenfläche,
+      aber nicht der blaue Rand des äußeren Kreises übermalt. Die Kreisscheibe,
+      das Innere des mittleren Kreises, ist nicht zu sehen. Denn: </li>
 
-<li>Der innere Kreis übermalt die Kreisfläche des mittleren Kreises. Der innere Kreis hat einen gelben Rand: <code>stroke("yellow")</code>. Und: Die rote Kreisfläche dieses Kreises ist jetzt zu sehen, denn sie wird nicht wie die anderen von einem nachfolgenden Kreis übermalt. Die Kreisfläche des inneren Kreises ist rot, weil weit vorher der Schalter für die Flächenfarbe auf Rot gestellt wurde: <code>fill(255, 0, 0)</code>. </li>
-</ul>
+    <li>Der innere Kreis übermalt die Kreisfläche des mittleren Kreises. Der
+      innere Kreis hat einen gelben Rand: <code>stroke("yellow")</code>. Und:
+      Die rote Kreisfläche dieses Kreises ist jetzt zu sehen, denn sie wird
+      nicht wie die anderen von einem nachfolgenden Kreis übermalt. Die
+      Kreisfläche des inneren Kreises ist rot, weil weit vorher der Schalter für
+      die Flächenfarbe auf Rot gestellt wurde: <code>fill(255, 0, 0)</code>.
+    </li>
+  </ul>
 
-<p>Wir lernen daraus: Die <b>Reihenfolge</b> der Anweisungen im Programm ist superwichtig! Was später kommt, wird übermalt! Wird eine kleinere Figur vor einer größeren gezeichnet, wird sie möglicherweise überdeckt und ist dann gar nicht mehr zu sehen. Oder, es werden - wie im sketch oben - Teile größerer Figuren von kleineren Figuren übermalt. Wenn du genau das willst, kannst  du damit schöne Effekte erreichen - wie im sketch oben. </p>
+  <p>Wir lernen daraus: Die <b>Reihenfolge</b> der Anweisungen im Programm ist
+    superwichtig! Was später kommt, wird übermalt! Wird eine kleinere Figur vor
+    einer größeren gezeichnet, wird sie möglicherweise überdeckt und ist dann
+    gar nicht mehr zu sehen. Oder, es werden - wie im sketch oben - Teile
+    größerer Figuren von kleineren Figuren übermalt. Wenn du genau das willst,
+    kannst du damit schöne Effekte erreichen - wie im sketch oben. </p>
 
-<p>Man muss einfach nur daran denken, wenn man programmiert: Ein Programm läuft Anweisung für Anweisung ab, Schritt für Schritt. Eine Anweisung weiter hinten wird später ausgeführt als eine Anweisung weiter vorne im Programm. Mit den späteren Anweisungen werden Figuren, die vorher gezeichnet worden sind, übermalt, und Schalter-Einstellungen wie zum Beispiel "fill" geändert.
-</p>
+  <p>Man muss einfach nur daran denken, wenn man programmiert: Ein Programm
+    läuft Anweisung für Anweisung ab, Schritt für Schritt. Eine Anweisung weiter
+    hinten wird später ausgeführt als eine Anweisung weiter vorne im Programm.
+    Mit den späteren Anweisungen werden Figuren, die vorher gezeichnet worden
+    sind, übermalt, und Schalter-Einstellungen wie zum Beispiel "fill" geändert.
+  </p>
 
-<p> <span id="ausprobieren">Ändere die Reihenfolge der Kreise!</span> </p> 
+  <p> <span id="ausprobieren">Ändere die Reihenfolge der Kreise!</span> </p>
 
-<ul> <li>Ändere die Breite der Kreisränder. Wo ist der "strokeWeight" Aufruf?
-<br> Machst du die Breite kleiner, werden Teile der roten Kreisflächen des großen und des mittleren Kreises sichtbar. Der innere Kreis verdeckt die Kreisfläche des äußeren nicht mehr vollständig.</li>
+  <ul>
+    <li>Ändere die Breite der Kreisränder. Wo ist der "strokeWeight" Aufruf?
+      <br> Machst du die Breite kleiner, werden Teile der roten Kreisflächen des
+      großen und des mittleren Kreises sichtbar. Der innere Kreis verdeckt die
+      Kreisfläche des äußeren nicht mehr vollständig.
+    </li>
 
-<li>Ändere die Farbe der Flächen. Wo ist der "fill" Aufruf?
-<br>Jetzt kannst du deutlich sehen, was Kreisrand und Kreisfläche ist.</li>
+    <li>Ändere die Farbe der Flächen. Wo ist der "fill" Aufruf?
+      <br>Jetzt kannst du deutlich sehen, was Kreisrand und Kreisfläche ist.
+    </li>
 
-<li>Ändere nur die Farbe der innersten Kreis-Fläche. Wo muss ein weiterer "fill" Aufruf eingefügt werden? 
-<br>Der neue "fill" Aufruf kommt später im Programm, der "fill" Schalter wird umgelegt und ab jetzt gilt die neue Farbe.</li>
+    <li>Ändere nur die Farbe der innersten Kreis-Fläche. Wo muss ein weiterer
+      "fill" Aufruf eingefügt werden?
+      <br>Der neue "fill" Aufruf kommt später im Programm, der "fill" Schalter
+      wird umgelegt und ab jetzt gilt die neue Farbe.
+    </li>
 
-<li>Gib jeder Kreis-Fläche eine eigene Farbe mit "fill", wie sie jeder Rand mit "stroke" schon hat. Falls manchmal übermalt wird, kannst du die Auswirkung der neuen "fill" Anweisung nicht  sehen. Vielleicht hilft es dann, mit einer zusätzlichen "strokeWeight" Anweisung auch den betreffenden Kreisradius zu ändern.</li>
+    <li>Gib jeder Kreis-Fläche eine eigene Farbe mit "fill", wie sie jeder Rand
+      mit "stroke" schon hat. Falls manchmal übermalt wird, kannst du die
+      Auswirkung der neuen "fill" Anweisung nicht sehen. Vielleicht hilft es
+      dann, mit einer zusätzlichen "strokeWeight" Anweisung auch den
+      betreffenden Kreisradius zu ändern.</li>
 
-<li>Verschiebe die beiden Aufrufe für den mittleren Kreis, "stroke" und "circle", <em>vor</em> die Aufrufe für den großen Kreis.
-<br>Der mittlere Kreis verschwindet! Er wird jetzt vom großen Kreis, der später im Programm gezeichnet wird, übermalt.</li>
+    <li>Verschiebe die beiden Aufrufe für den mittleren Kreis, "stroke" und
+      "circle", <em>vor</em> die Aufrufe für den großen Kreis.
+      <br>Der mittlere Kreis verschwindet! Er wird jetzt vom großen Kreis, der
+      später im Programm gezeichnet wird, übermalt.
+    </li>
 
-<li>Verschiebe die beiden Aufrufe für den mittleren Kreis, "stroke" und "circle",<em>hinter</em> die Aufrufe für den kleinen Kreis.
-<br>Der kleine Kreis verschwindet! Er wird vom mittleren Kreis, der jetzt später im Programm gezeichnet wird, übermalt. Was wir sehen ist der grüne Rand und die gesamte Innen-Fläche des mittleren Kreises; der gelbe Rand und die Fläche des inneren Kreises sind übermalt.</li>
-</ul>
+    <li>Verschiebe die beiden Aufrufe für den mittleren Kreis, "stroke" und
+      "circle",<em>hinter</em> die Aufrufe für den kleinen Kreis.
+      <br>Der kleine Kreis verschwindet! Er wird vom mittleren Kreis, der jetzt
+      später im Programm gezeichnet wird, übermalt. Was wir sehen ist der grüne
+      Rand und die gesamte Innen-Fläche des mittleren Kreises; der gelbe Rand
+      und die Fläche des inneren Kreises sind übermalt.
+    </li>
+  </ul>
 
-<p>Jede Anweisung von dir wird in p5 berechnet und ausgeführt, selbst wenn die gleiche Stelle auf der Leinwand später wieder übermalt wird. Wenn du sicher weisst, dass so etwas geschieht,  ist es besser, die vorige Anweisung gleich wegzulassen, um p5 Arbeit und Zeitaufand zu ersparen. Dein Programm wird dann schneller laufen.</p>
+  <p>Jede Anweisung von dir wird in p5 berechnet und ausgeführt, selbst wenn die
+    gleiche Stelle auf der Leinwand später wieder übermalt wird. Wenn du sicher
+    weisst, dass so etwas geschieht, ist es besser, die vorige Anweisung gleich
+    wegzulassen, um p5 Arbeit und Zeitaufand zu ersparen. Dein Programm wird
+    dann schneller laufen.</p>
 
 
-<h3>Durchsichtigkeit</h3>
+  <h3 id="Opac">Durchsichtigkeit</h3>
 
-<p>Wir können viele weitere Farben und Farbschattierungen erzeugen, wenn wir Farben ein wenig durchsichtig machen und auf diese Art miteinander mischen können. Für die Durchsichtigkeit gibt es das <em>vierte</em> Argument der Farb-Funktion "fill". Die Durchsichtigkeit heisst auch &bdquo;Transparenz&rdquo;, und das Durchsichtigkeits-Argument in fill wird als &bdquo;alpha&rdquo; bezeichnet: das ist einfach ein üblicher Begriff beim Zeichnen mit Computern. 
-<br>Der Funktionsaufruf von "fill" ist dann zum Beispiel <code>fill(110, 220, 80, <mark>100</mark>)</code>, mit &bdquo;alpha&rdquo; gleich '100'.</p>
+  <p>Wir können viele weitere Farben und Farbschattierungen erzeugen, wenn wir
+    Farben ein wenig durchsichtig machen und auf diese Art miteinander mischen
+    können. Für die Durchsichtigkeit gibt es das <em>vierte</em> Argument der
+    Farb-Funktion "fill". Die Durchsichtigkeit heisst auch
+    &bdquo;Transparenz&rdquo;, und das Durchsichtigkeits-Argument in fill wird
+    als &bdquo;alpha&rdquo; bezeichnet: das ist einfach ein üblicher Begriff
+    beim Zeichnen mit Computern.
+    <br>Der Funktionsaufruf von "fill" ist dann zum Beispiel
+    <code>fill(110, 220, 80, <mark>100</mark>)</code>, mit &bdquo;alpha&rdquo;
+    gleich '100'.
+  </p>
 
-<p>Das Argument alpha bestimmt, wie sehr durchsichtig eine Farbe sein soll. Die möglichen Zahlenwerte von alpha liegen, wie immer bei Farben, zwischen '0' und '255'. 
-Eine Farbe wird immer <em>weniger</em> transparent, je <em>größer</em> der Wert von alpha ist.
-Ein Wert von '0' bedeutet, dass die Farbe ganz durchsichtig und deswegen gar nicht sichtbar ist. Mit einem Wert von '255' ist die Farbe überhaupt nicht mehr durchsichtig und deckt alles darunter Gezeichnete komplett ab, so als ob kein alpha angegeben wäre. Der Defaultwert von alpha ist demnach '255'. Mit einem mittleren Wert von alpha entstehen durch die aufeinander gelegten halb-transparenten Farben ganz neue, interessante Farbmischungen. </p>
+  <p>Das Argument alpha bestimmt, wie sehr durchsichtig eine Farbe sein soll.
+    Die möglichen Zahlenwerte von alpha liegen, wie immer bei Farben, zwischen
+    '0' und '255'.
+    Eine Farbe wird immer <em>weniger</em> transparent, je <em>größer</em> der
+    Wert von alpha ist.
+    Ein Wert von '0' bedeutet, dass die Farbe ganz durchsichtig und deswegen gar
+    nicht sichtbar ist. Mit einem Wert von '255' ist die Farbe überhaupt nicht
+    mehr durchsichtig und deckt alles darunter Gezeichnete komplett ab, so als
+    ob kein alpha angegeben wäre. Der Defaultwert von alpha ist demnach '255'.
+    Mit einem mittleren Wert von alpha entstehen durch die aufeinander gelegten
+    halb-transparenten Farben ganz neue, interessante Farbmischungen. </p>
 
-<p> Den Alpha-Wert kannst du in der "fill" Funktion für Füllfarben, in der "stroke" Funktion für Randfarben und in der Funktion "background" für die Hintergrundfarbe verwenden. Dort gibst du den Alpha-Wert zusammen mit den drei Werten für RGB an: <code>fill(110, 220, 80, 100)</code>. Einen Alpha Wert für "background" anzugeben zu ist eigentlich nicht besonders sinnvoll, weil hinter dem Hintergrund nichts mehr ist, was durchscheinen kann.
-<br>Was nicht funktioniert, ist Alpha zusammen mit Farbnamen oder der hexadezimalen Farbkennzeichnung zu verwenden. Du musst hier also RGB Farbskalen verwenden, deswegen ist es gut, damit vertraut zu sein.</p>
+  <p> Den Alpha-Wert kannst du in der "fill" Funktion für Füllfarben, in der
+    "stroke" Funktion für Randfarben und in der Funktion "background" für die
+    Hintergrundfarbe verwenden. Dort gibst du den Alpha-Wert zusammen mit den
+    drei Werten für RGB an: <code>fill(110, 220, 80, 100)</code>. Einen Alpha
+    Wert für "background" anzugeben zu ist eigentlich nicht besonders sinnvoll,
+    weil hinter dem Hintergrund nichts mehr ist, was durchscheinen kann.
+    <br>Was nicht funktioniert, ist Alpha zusammen mit Farbnamen oder der
+    hexadezimalen Farbkennzeichnung zu verwenden. Du musst hier also RGB
+    Farbskalen verwenden, deswegen ist es gut, damit vertraut zu sein.
+  </p>
 
-<p>Wenn du dich an die CSS-Darstellung von RGB erinnerst: damit funktioniert Alpha auch, aber ein klein wenig anders.  In CSS werden RGB Farben so geschrieben: <code>rgb(0, 0, 255)</code>.
-Soll zusätzlich die Transparenz angegeben werden, schreibt man "rgba" statt "rgb". Ausserdem 
-bekommt Alpha hier nicht ganze Zahlenwerte zwischen '0' und '255', sondern Kommazahlen zwischen '0' und '1'. Auch hier gilt: Je <em>kleiner</em> die Zahl, desto transparenter die Farbe. &bdquo;Kommazahlen&rdquo; gibt es vorwiegend in Europa. In der übrigen Welt, in wissenschaftlichen Darstellungen und beim Programmieren wird der Dezimalpunkt verwendet. Alpha in der CSS-Darstellung kann also den Wert '0', '0<mark>.</mark>2', '0<mark>.</mark>5', usw., haben - aber <em>nicht</em> '0<mark>,</mark>5' oder so - das kennt p5 nicht und macht daraus eine glatte '0'. </p>
+  <p>Wenn du dich an die CSS-Darstellung von RGB erinnerst: damit funktioniert
+    Alpha auch, aber ein klein wenig anders. In CSS werden RGB Farben so
+    geschrieben: <code>rgb(0, 0, 255)</code>.
+    Soll zusätzlich die Transparenz angegeben werden, schreibt man "rgba" statt
+    "rgb". Ausserdem
+    bekommt Alpha hier nicht ganze Zahlenwerte zwischen '0' und '255', sondern
+    Kommazahlen zwischen '0' und '1'. Auch hier gilt: Je <em>kleiner</em> die
+    Zahl, desto transparenter die Farbe. &bdquo;Kommazahlen&rdquo; gibt es
+    vorwiegend in Europa. In der übrigen Welt, in wissenschaftlichen
+    Darstellungen und beim Programmieren wird der Dezimalpunkt verwendet. Alpha
+    in der CSS-Darstellung kann also den Wert '0', '0<mark>.</mark>2',
+    '0<mark>.</mark>5', usw., haben - aber <em>nicht</em> '0<mark>,</mark>5'
+    oder so - das kennt p5 nicht und macht daraus eine glatte '0'. </p>
 
-<span id="tbd">Code/095.js</span>	
-<script type="text/p5" src="../Code/0095.js" 
-	data-autoplay data-height="450" data-preview-width="270" 
-	data-p5-version="1.9.0">
+  <span id="tbd">Code/095.js</span>
+  <script type="text/p5" src="../Code/0095.js" data-autoplay data-height="450"
+    data-preview-width="270" data-p5-version="1.9.0">
 </script>
 
-<p> <span id="ausprobieren">Ändere den Alpha Wert in den "fill" Aufrufen!</span> </p>
+  <p> <span id="ausprobieren">Ändere den Alpha Wert in den "fill"
+      Aufrufen!</span> </p>
 
-<ul>
-<li>Ändere das vierte Argument im <code>fill(255, 255, 0, 160);</code>Funktionsaufruf für das gelbe Quadrat von '160' auf '10' und beobachte, wie jetzt das blaue Quadrat durchscheint. Setzt du das Argument auf '255' - oder lässt es ganz weg - ist kein blaues Quadrat mehr zu sehen, wo das gelbe Quadrat darüber liegt. Was passiert beim Wert '0' für Alpha - das blaue Quadrat ist zu sehen und was noch?</li>
-<li>Ändere die Alpha Werte in den verschiedenen "fill" Anweisungen. Welche neuen Farbmischungen kannst du erzeugen? </li> </ul>
+  <ul>
+    <li>Ändere das vierte Argument im
+      <code>fill(255, 255, 0, 160);</code>Funktionsaufruf für das gelbe Quadrat
+      von '160' auf '10' und beobachte, wie jetzt das blaue Quadrat
+      durchscheint. Setzt du das Argument auf '255' - oder lässt es ganz weg -
+      ist kein blaues Quadrat mehr zu sehen, wo das gelbe Quadrat darüber liegt.
+      Was passiert beim Wert '0' für Alpha - das blaue Quadrat ist zu sehen und
+      was noch?</li>
+    <li>Ändere die Alpha Werte in den verschiedenen "fill" Anweisungen. Welche
+      neuen Farbmischungen kannst du erzeugen? </li>
+  </ul>
 
-<p>Da ist noch eine vierte Möglichkeit, um eine Füll-Farbe festzulegen: Man kann Flächen auch überhaupt nicht mit Farbe füllen.  
-<br> Du hast diese Möglichkeit gerade eben ausprobiert, indem du Alpha für das gelbe Quadrat  auf '0' gesetzt hast. Der Effekt: Das Quadrat ist vollkommen durchsichtig geworden, kein Gelb ist mehr vorhanden und nur die Randlinie bleibt stehen.</p>
+  <p>Da ist noch eine vierte Möglichkeit, um eine Füll-Farbe festzulegen: Man
+    kann Flächen auch überhaupt nicht mit Farbe füllen.
+    <br> Du hast diese Möglichkeit gerade eben ausprobiert, indem du Alpha für
+    das gelbe Quadrat auf '0' gesetzt hast. Der Effekt: Das Quadrat ist
+    vollkommen durchsichtig geworden, kein Gelb ist mehr vorhanden und nur die
+    Randlinie bleibt stehen.
+  </p>
 
-<p>Wenn du willst, dass nur der Rand, die Konturlinie einer Form sichtbar ist, kannst du den Alpha Wert auf '0' setzen in einer beliebigen Farb-Anweisung, die RGB verwendet. Nur den Rand einer Form zeichnen zu wollen kommt bei einer künstlerischen Darstellung ziemlich oft vor, deshalb gibt es dafür eine eigene Funktion. Sie heisst passenderweise <code>noFill()</code>, also &Bdquo;nicht füllen&rdquo;. "noFill" wird ohne ein Argument, mit leeren runden Klammern, aufgerufen. Sobald "noFill" aufgerufen wurde, haben sämtliche Flächen, die danach gezeichnet werden, keine Füllung. Es wird nur der Rand einer Form gezeichnet und der Inhalt ist durchsichtig (wie bei Alpha gleich '0').
-<br>Die Funktion "noFill" ist wieder mal ein Schalter. Die Anweisung "noFill" gilt solange, bis du eine neue "fill" Anweisung verwendest, um wieder eine Füllung mit Füllfarbe festzulegen. 
-</p>
+  <p>Wenn du willst, dass nur der Rand, die Konturlinie einer Form sichtbar ist,
+    kannst du den Alpha Wert auf '0' setzen in einer beliebigen Farb-Anweisung,
+    die RGB verwendet. Nur den Rand einer Form zeichnen zu wollen kommt bei
+    einer künstlerischen Darstellung ziemlich oft vor, deshalb gibt es dafür
+    eine eigene Funktion. Sie heisst passenderweise <code>noFill()</code>, also
+    &Bdquo;nicht füllen&rdquo;. "noFill" wird ohne ein Argument, mit leeren
+    runden Klammern, aufgerufen. Sobald "noFill" aufgerufen wurde, haben
+    sämtliche Flächen, die danach gezeichnet werden, keine Füllung. Es wird nur
+    der Rand einer Form gezeichnet und der Inhalt ist durchsichtig (wie bei
+    Alpha gleich '0').
+    <br>Die Funktion "noFill" ist wieder mal ein Schalter. Die Anweisung
+    "noFill" gilt solange, bis du eine neue "fill" Anweisung verwendest, um
+    wieder eine Füllung mit Füllfarbe festzulegen.
+  </p>
 
-<p>So wie es "noFill" für die Füllung einer Form gibt (um sie nicht zu zeichnen), gibt es die Funktion "noStroke" für die Randlinie einer Form (um sie nicht zu zeichnen). Auch  <code>noStroke()</code>, sprich &bdquo;nou-strouk&rdquo;, hat keine Argumente, nur die leeren Klammern. Der Aufruf von <code>noStroke()</code> sorgt dafür, dass ab sofort keine Randlinien für alle nachfolgenden Formen gezeichnet werden. Auch "noStroke" ist also ein Schalter. Wenn du nach "noStroke" wieder Randlinien haben möchtest, kannst du die Funktion "stroke" mit einem bestimmten Farbwert aufrufen. Mit <code>noStroke()</code> verschwinden alle Ränder, mit <code>stroke(0)</code> gibt es wieder einen schwarzen Rand; mit <code>stroke(0, 0, 255)</code> und <code>strokeWeight(10)</code> einen dicken blauen Rand.</p>
+  <p>So wie es "noFill" für die Füllung einer Form gibt (um sie nicht zu
+    zeichnen), gibt es die Funktion "noStroke" für die Randlinie einer Form (um
+    sie nicht zu zeichnen). Auch <code>noStroke()</code>, sprich
+    &bdquo;nou-strouk&rdquo;, hat keine Argumente, nur die leeren Klammern. Der
+    Aufruf von <code>noStroke()</code> sorgt dafür, dass ab sofort keine
+    Randlinien für alle nachfolgenden Formen gezeichnet werden. Auch "noStroke"
+    ist also ein Schalter. Wenn du nach "noStroke" wieder Randlinien haben
+    möchtest, kannst du die Funktion "stroke" mit einem bestimmten Farbwert
+    aufrufen. Mit <code>noStroke()</code> verschwinden alle Ränder, mit
+    <code>stroke(0)</code> gibt es wieder einen schwarzen Rand; mit
+    <code>stroke(0, 0, 255)</code> und <code>strokeWeight(10)</code> einen
+    dicken blauen Rand.</p>
 
-<p>Machen wir ein ausführliches Beispiel, um alle Farb-Funktionen in Aktion zu sehen!</p> 
+  <p>Machen wir ein ausführliches Beispiel, um alle Farb-Funktionen in Aktion zu
+    sehen!</p>
 
-<span id="tbd">Code/100.js</span>	
-<script type="text/p5" src="../Code/0100.js" 
-	data-autoplay data-height="550" data-preview-width="270" 
-	data-p5-version="1.9.0">
+  <span id="tbd">Code/100.js</span>
+  <script type="text/p5" src="../Code/0100.js" data-autoplay data-height="550"
+    data-preview-width="270" data-p5-version="1.9.0">
 </script>
 
-<p> <span id="ausprobieren">Bastle am sketch herum und ändere, was immer dir einfällt.</span> </p>
+  <p> <span id="ausprobieren">Bastle am sketch herum und ändere, was immer dir
+      einfällt.</span> </p>
 
   <div>
     <center>
       <button onclick="document.location='016.html'">Zurück</button>
-			<button onclick="document.location='index.html'">Inhalt</button>
+      <button onclick="document.location='index.html'">Inhalt</button>
       <button onclick="document.location='020.html'">Weiter</button>
     </center>
   </div>
@@ -303,5 +564,3 @@ bekommt Alpha hier nicht ganze Zahlenwerte zwischen '0' und '255', sondern Komma
 <script src="//toolness.github.io/p5.js-widget/p5-widget.js"></script>
 
 </html>
-
-	

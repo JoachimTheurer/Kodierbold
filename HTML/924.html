@@ -4,218 +4,279 @@
 <head>
 	<meta charset="utf-8" />
 	<link rel="stylesheet" type="text/css" href="style.css" />
-	<title>Programmieren mit p5 - Kapitel 3</title>
+	<title>Programmieren mit p5 - Der Web-Editor</title>
 </head>
 
 <body>
 
-	<h1>Der Web-Editor</h1>
+	<h1 id="h1">Der Web-Editor</h1>
 
-  <h2 id="K013">Die Werkstatt des Programmier-Künstlers</h2>
-  <p>
-    Um p5 Programme zu schreiben, ist für dich schon eine Künstler-Werkstatt
-    im Internet eingerichtet. Hier wirst du Programme &bdquo;entwickeln&rdquo;,
-    weshalb man man diese Werkstatt <span id="Begriff";>Entwicklungsumgebung</span>
-    nennt. In dieser Umgebung kannst du Programme schreiben, testen, ändern und dann  
-    gleich ansehen, ob der Computer daraus gemacht hast, was du wolltest.
-  </p>
-  <p>
-    Deine Künstler-Werkstatt, die p5 Entwicklungsumgebung, liegt auf dieser
-    Internet-Seite
-    <center><b>
-      <a style="text-align:center; font-size:125%;"
-        href="https://editor.p5js.org/" target="_blank";>p5 Web Editor</a>.
-    </b></center>
-</p>
+	<h2 id="Werkstatt">Die Werkstatt des Programmier-Künstlers</h2>
+	<p>
+		Um p5 Programme zu schreiben, ist für dich schon eine Künstler-Werkstatt
+		im Internet eingerichtet. Hier wirst du Programme &bdquo;entwickeln&rdquo;,
+		weshalb man man diese Werkstatt <span id="Begriff"
+			;>Entwicklungsumgebung</span>
+		nennt. In dieser Umgebung kannst du Programme schreiben, testen, ändern und
+		sofort ansehen, ob der Computer daraus das gemacht hast, was du wolltest.
+	</p>
+	<p>
+		Deine Künstler-Werkstatt, die p5 Entwicklungsumgebung, liegt auf dieser
+		Internet-Seite
+		<center><b>
+				<a style="text-align:center; font-size:125%;"
+					href="https://editor.p5js.org/" target="_blank" ;>p5 Web Editor</a>.
+			</b></center>
+	</p>
 
-  <p>Du kannst die Seite aufrufen, indem du auf diesen Link &bdquo;p5 Web Editor&rdquo; klickst. Am besten ist es, wenn du die Seite in einem <em>neuen Fenster</em> aufrufst. Diese 
-		Möglichkeit wird dir angeboten, wenn du mit der <b>rechten Maustaste</b> auf den Link klickst.
-	  Dann kannst du diesen Text und nebendran den p5-Webeditor gleichzeitig auf dem Bildschirm ansehen.</p>  
+	<p>Du kannst die Seite aufrufen, indem du auf diesen Link &bdquo;p5 Web
+		Editor&rdquo; klickst. Am besten ist es, wenn du die Seite in einem
+		<em>neuen Fenster</em> aufrufst. Diese
+		Möglichkeit wird dir angeboten, wenn du mit der <b>rechten Maustaste</b> auf
+		den Link klickst.
+		Dann kannst du diesen Text und nebendran den p5-Webeditor gleichzeitig auf
+		dem Bildschirm ansehen.</p>
 
-		<p> Für die Webseite mit dem p5 Editor legst du am besten gleich
-    ein Lesezeichen im Browser an. Das geht in den meisten Browsern durch einen 
+	<p> Für die Webseite mit dem p5 Editor legst du am besten gleich
+		ein Lesezeichen im Browser an. Das geht in den meisten Browsern durch einen
 		Klick auf den Stern rechts neben der Zeile ganz oben auf der Seite, in der
-    nach dem Klick auf den Link oben <code>https://editor.p5js.org/</code> steht. </p>
+		nach dem Klick auf den Link oben <code>https://editor.p5js.org/</code>
+		steht. </p>
 
-  Das neue Browser-Fenster, die p5 Entwicklungsumgebung, sieht ungefähr so aus:
-  <p><img src="../Bild/p5Editor (000) - Uebersicht.png"
-      alt="p5 Entwicklungsumgebung">
-  </p>
+	Das neue Browser-Fenster, die p5 Entwicklungsumgebung, sieht ungefähr so aus:
+	<p><img src="../Bild/p5Editor (000) - Uebersicht.png"
+			alt="p5 Entwicklungsumgebung">
+	</p>
 
-<p>Von Zeit zu Zeit wird eine Kleinigkeit daran verbessert oder geändert, dann kann sich das Aussehen ein bisschen ändern. Lass' dich davon nicht davon stören: die wesentlichen Sachen bleiben sicher so, wie sie jetzt schon sind. </p>
-	 
-	<p> Die oberste Zeile, die links mit <span style="background-color:red"> p5* </span> anfängt, ist die <span id="Begriff";>Menüleiste</span>. Dort stellen wir gleich mal die Sprache von Englisch auf Deutsch um. Klappe die Liste unter dem Wort &bdquo;English&rdquo; 
-	in der Menüleiste auf und klicke dann auf &bdquo;Deutsch&rdquo;.
-  </p>
-	
-  <p><img src="../Bild/p5Editor (001) - auf Deutsch umschalten.png"
-      alt="Menüleiste">
-  </p>
-	
-  Jetzt sollten alle Überschriften in der Menüleiste auf Deutsch geschrieben
-  sein.
+	<p>Von Zeit zu Zeit wird eine Kleinigkeit daran verbessert oder geändert, dann
+		kann sich das Aussehen ein bisschen ändern. Lass' dich davon nicht davon
+		stören: die wesentlichen Sachen bleiben bestimmt so, wie sie jetzt schon
+		sind. </p>
 
-  <p> Unter der Menüleiste ist die Taste, um ein Programm zu starten.
-    Diese Start-Taste wird manchmal auch Play-Taste oder &bdquo;Abspielknopf&rdquo; 
+	<p> Die oberste Zeile, die links mit <span style="background-color:red"> p5*
+		</span> anfängt, ist die <span id="Begriff" ;>Menüleiste</span>. Dort
+		stellen wir gleich mal die Sprache von Englisch auf Deutsch um. Klappe die
+		Liste unter dem Wort &bdquo;English&rdquo;
+		in der Menüleiste auf und klicke dann auf &bdquo;Deutsch&rdquo;.
+	</p>
+
+	<p><img src="../Bild/p5Editor (001) - auf Deutsch umschalten.png"
+			alt="Menüleiste">
+	</p>
+
+	Jetzt sollten alle Überschriften in der Menüleiste auf Deutsch geschrieben
+	sein.
+
+	<p> Unter der Menüleiste ist die Taste, um ein Programm zu starten.
+		Diese Start-Taste wird manchmal auch Play-Taste oder
+		&bdquo;Abspielknopf&rdquo;
 		genannt.
-    Rechts daneben liegt der Stopp-Knopf, mit dem jedes gestartete Programm wieder
-    angehalten werden kann.</p>
-		
-  <p><img src="../Bild/p5Editor (002) - Start und Stopp.png"
-      alt="Start und Stopp-Taste">
-  </p>
+		Rechts daneben liegt der Stopp-Knopf, mit dem jedes gestartete Programm
+		wieder
+		angehalten werden kann.</p>
 
-  <p>
-    Unter diesen beiden Tasten, auf der linken Seite, steht die Überschrift
-    <span class="rahmen" style="background-color:yellow"> sketch.js </span>.
-    In dem Bereich darunter gibt es sogar schon ein paar Zeilen mit
-    Programm-Anweisungen, die am linken Rand nummeriert sind. 
-		<br> Diesen Bereich zum Schreiben des Programms 
-    nennt man <span id="Begriff">Editor</span>.</p>
+	<p><img src="../Bild/p5Editor (002) - Start und Stopp.png"
+			alt="Start und Stopp-Taste">
+	</p>
 
-  <p>
-    <img src="../Bild/p5Editor (003) - Sketch und Vorschau.png"
-      alt="Rahmen für den Editor und die Zeichnung">
-  </p>
+	<p>
+		Unter diesen beiden Tasten, auf der linken Seite, steht die Überschrift
+		<span class="rahmen" style="background-color:yellow"> sketch.js </span>.
+		In dem Bereich darunter gibt es sogar schon ein paar Zeilen mit
+		Programm-Anweisungen, die am linken Rand nummeriert sind.
+		<br> Diesen Bereich zum Schreiben des Programms
+		nennt man <span id="Begriff">Editor</span>.
+	</p>
 
-	<p>Rechts davon, unter der Überschrift 
-	  <span class="rahmen" style="background-color:yellow">Vorschau</span>, 
+	<p>
+		<img src="../Bild/p5Editor (003) - Sketch und Vorschau.png"
+			alt="Rahmen für den Editor und die Zeichnung">
+	</p>
+
+	<p>Rechts davon, unter der Überschrift
+		<span class="rahmen" style="background-color:yellow">Vorschau</span>,
 		ist eine leere Fläche. Dort erscheint die Zeichnung, die du mit deinem
-    Programm erschaffen hast. 
+		Programm erschaffen hast.
 		<br>Diese Zeichnung nennt man <span id="Begriff">Sketch</span> ("Skizze" auf
-    Englisch, sprich "skätsch").
-  </p>
+		Englisch, sprich "skätsch").
+	</p>
 
-  <p>Einfacher Text, den dir der Computer schreiben will, landet in dem
-    Bereich ganz unten links, der mit <span class="rahmen">Konsole</span>
-    überschrieben ist.</p>
+	<p>Einfacher Text, den dir der Computer schreiben will, landet in dem
+		Bereich ganz unten links, der mit <span class="rahmen">Konsole</span>
+		überschrieben ist.</p>
 
-  <p><img src="../Bild/p5Editor (004) - Editor, Vorschau und Konsole.png"
-      alt="Editor, Vorschau und Konsole">
-  </p>
+	<p><img src="../Bild/p5Editor (004) - Editor, Vorschau und Konsole.png"
+			alt="Editor, Vorschau und Konsole">
+	</p>
 
-  <p>Was es in der Entwicklungsumgebung sonst noch so gibt, sehen wir uns
-    später an, wenn wir es brauchen. Jetzt wollen wir rasch mit dem
-    Programmieren loslegen!</p>
+	<p>Was es in der Entwicklungsumgebung sonst noch so gibt, sehen wir uns
+		später an, wenn wir es brauchen. Jetzt wollen wir rasch mit dem
+		Programmieren loslegen!</p>
 
-<h2>Den Web-Editor verwenden</h2>		
-<h3>Bei jedem neuen Sketch</h3>
-<p>Deine Programme schreibst du in dem Editor-Teil, der die Überschrift &bdquo;sketch.js&rdquo;hat. Du kannst alle Programme aus dem Widget in 
-den Editor kopieren und dann mit der Play-Taste laufen lassen.</p>
+	<h2 id="WEv">Den Web-Editor verwenden</h2>
+	<h3 id="Init">Ein neuer sketch</h3>
+	<p>Deine Programme schreibst du in dem Editor-Fenster. Der Editor hat die
+		Überschrift &bdquo;sketch.js&rdquo;.</p>
 
-<p>Im Editor sind schon automatisch zwei Anweisungen drin, die 
-du vielleicht noch nicht kennst: <code>function setup</code> und 
-<code>function draw</code>. Diese beiden Anweisungen werden erst auf der
-Seite <a href="020.html#setup und draw">setup und draw</a> erklärt: du musst sie am Anfang noch nicht kennen, um den Editor verwenden zu können. 
-</p>
-
-<ul>Wenn du die <code>draw</code> Anweisung noch nicht kennengelernt hast und nicht brauchst, 
-kannst du immer folgendes tun, sobald du einen neuen sketch zeichnen willst:
-
-<li>Lösche die <code>draw</code> Anweisung komplett weg, einschliesslich der
-runden Klammern ( und ) nach draw, und der öffnenden und schließenden geschweiften 
-Klammern { und } danach.</li>
-
-<li>Schreibe deinen p5 Programmcode zwischen die geschweiften Klammern { und }
-hinter der Anweisung <code> setup() </code>. Die schliessende geschweifte Klammer } darf erst 
-nach all deinen eigenen Programm-Anweisungen stehen. 
-</li>
-</ul>
-
-<h3>Die Sketche anderer Programmier-Künstler ansehen</h3>
-<p>Im Menü des Web Editors findest du unter <b>Datei</b> den Punkt <b>Beispiele</b>.
-Hier sind viele, viele Beispiele von schönen, interessanten und lustigen Sketchen 
-zu finden, die andere Programmier-Künstler geschrieben haben.
-</p>
-
-<p>Es lohnt sich nicht nur aus Neugier, die Werke anderer anzusehen. Du bekommst 
-auch eine Ahnung, was mit p5 alles möglich ist - und vielleicht willst du dann 
-etwas Ähnliches selbst mal machen. Auch Programmier-Künstler müssen sich inspirieren
-lassen!</p>
-
-<p>Du kannst an den Beispielen auch herausfinden, wie Andere eine 
-Programmier-Lösung gemacht haben. Neben eigenem Ausprobieren lernt man Programmieren
-am besten, wenn man sich andere Programme ansieht, deren Methoden und Tricks 
-zu verstehen versucht, übernimmt, anpasst und womöglich sogar verbessert. Niemand 
-muss alle Programmier-Kniffe neu erfinden, wenn es schon Andere gemacht haben! Von Anderen zu lernen ist die beste Möglichkeit, selbst bald tolle Sachen programmieren zu können.</p>
-
-<h3>Code formatieren</h3>
-
-<h3>Im Menü findest du unter dem Punkt &bdquo;Bearbeiten&rdquo; den Eintrag &bdquo;Code formatieren&rdquo;. Wenn du das anklickst, wird dein Programm-Code verschönert: es werden Zeilen gleichmäßig eingerückt und Leerzeilen eingefügt. Vor allem aber: solltest du die lästigen Strichpunkte am Zeilenende vergessen haben, fügt sie &bdquo;Code formatieren&rdquo;ein. So kannst du Schwierigkeiten, dein Programm auszuführen, und unnötige Fehlermeldungen vermeiden. Und es sieht einfach besser aus!</h3>
+	<p>Im Editor sind schon automatisch zwei Anweisungen drin, die
+		du vielleicht noch nicht kennst: <code>function setup</code> und
+		<code>function draw</code>. Diese beiden Anweisungen werden erst auf der
+		Seite <a href="020.html#setup und draw">setup und draw</a> erklärt: du musst
+		sie am Anfang noch nicht kennen, um den Editor verwenden zu können.
+	</p>
 
 
-	<h2>Anmelden im p5 Web Editor</h2>
+	<ul>Wenn du die <code>draw</code> Anweisung noch nicht kennengelernt hast und
+		nicht brauchst,
+		kannst du immer folgendes tun:
 
-	<p>Deine tollen Programme möchtest du bestimmt behalten und deinen Freunden
-	zeigen. 
-	
-	
-	
-	
-	
-	
-	Am einfachsten geht das, wenn du dich auf der Seite mit dem p5 Web Editor registrierst, also ein Konto erstellst, und dich dann dort anmeldest. Dazu musst du dir einen
-	Nutzernamen und ein passendes Passwort ausdenken, die du am besten nicht
-	mehr vergessen solltest. Ausserdem benötigst du eine Mail-Adresse um die Registrierung mit der Antwort auf eine Mail zu bestätigen. </p>
+		<p>Du kannst ein Programm aus dem Widget hier im Text in
+			den Web-Editor kopieren und dabei alles, was in diesem Web-Editor schon
+			steht, überschreiben.
+			Dann kannst du das Programm, wie sonst hier im Widget, jetzt in der
+			Entwicklungsumgebung mit der Play-Taste laufen lassen.</p>
 
-	<p>Die Registrierung findest du im p5 Webeditor in der Menüleiste ganz oben
-	ganz rechts unter "Registrieren". Bist du registriert, kannst du dich unter
-	"Anmelden" in deinem p5 Konto mit deinem Nutzernamen und deinem Passwort
-	anmelden. Nach der Anmeldung ist es möglich, jede deiner Zeichnungen mit dem
-	Menüpunkt "Datei > speichern" für immer zu sichern. </p>
+		<ul>Wenn du einen ganz neuen eigenen sketch zeichnen willst:
+			<li>Lösche die <code>draw</code> Anweisung komplett weg, einschliesslich
+				der
+				runden Klammern ( und ) nach draw, und der öffnenden und schließenden
+				geschweiften
+				Klammern { und } danach.</li>
 
-	<p>Falls du dich nicht anmelden möchtest, kannst du einfach das ganze 
-	Programm markieren, in einen Editor auf deinen
-	Computer kopieren und dann dort speichern.</p>
-	
-	<p>Falls es möglich ist, empfiehlt sich eine Registrierung im p5 Web-Editor
-	aber schon, denn es gibt dann im Menü noch ein paar zusätzliche Werkzeuge.</p>
+			<li>Schreibe deinen p5 Programmcode zwischen die geschweiften Klammern {
+				und }
+				hinter der Anweisung <code> setup() </code>. Die schliessende
+				geschweifte Klammer } darf erst
+				nach all deinen eigenen Programm-Anweisungen stehen.
+		</ul>
 
-	<h2>Dein Programm sichern</h2>
+		<h3 id="Lib">Die Sketche anderer Programmier-Künstler ansehen</h3>
+		<p>Im Menü des Web Editors findest du unter <b>Datei</b> den Punkt
+			<b>Beispiele</b>.
+			Hier sind viele, viele Beispiele von schönen, interessanten und lustigen
+			Sketchen
+			zu finden, die andere Programmier-Künstler geschrieben haben.
+		</p>
 
-	<p>Vielleicht hast du es schon bemerkt: Jeder neue sketch bekommt im p5
-	Webeditor automatisch einen Namen.</p>
+		<p>Es lohnt sich nicht nur aus Neugier, die Werke anderer anzusehen. Du
+			bekommst
+			auch eine Ahnung, was mit p5 alles möglich ist - und vielleicht willst du
+			dann
+			etwas Ähnliches selbst mal machen. Auch Programmier-Künstler müssen sich
+			inspirieren
+			lassen!</p>
 
-	$screenshot
+		<p>Du kannst an den Beispielen auch herausfinden, wie Andere eine
+			Programmier-Lösung gemacht haben. Neben eigenem Ausprobieren lernt man
+			Programmieren
+			am besten, wenn man sich andere Programme ansieht, deren Methoden und
+			Tricks
+			zu verstehen versucht, sie übernimmt, anpasst und womöglich sogar
+			verbessert. Niemand
+			muss alle Programmier-Kniffe neu erfinden, wenn es schon Andere gemacht
+			haben! Von Anderen zu lernen ist eine gute Möglichkeit, selbst bald tolle
+			Sachen programmieren zu können.</p>
 
-	<p>Dieser Datei-Name ist absichtlich wild zusammengewürfelt, maximal unsinnig
-	und deshalb ziemlich lustig. Dein sketch bekommt beim Sichern diesen Namen
-	verpasst. Willst du - vor dem Sichern - jedoch einen eigenen Datei-Namen
-	vergeben, klickst du das Stift-Symbol neben dem Namen an, füllst den von dir
-	gewünschten Namen in das Kästchen und drückst die <ENTER> (Eingabe-) Taste.</p>
+		<h3 id="Format">Code formatieren</h3>
+
+		<h3>Im Menü findest du unter dem Punkt &bdquo;Bearbeiten&rdquo; den Eintrag
+			&bdquo;Code formatieren&rdquo;. Wenn du das anklickst, wird dein
+			Programm-Code verschönert: es werden Zeilen gleichmäßig eingerückt und
+			Leerzeilen eingefügt. Vor allem aber: solltest du die lästigen
+			Strichpunkte am Zeilenende vergessen haben, fügt sie &bdquo;Code
+			formatieren&rdquo;ein. So kannst du Schwierigkeiten, dein Programm
+			auszuführen, und unnötige Fehlermeldungen vermeiden. Und es sieht einfach
+			besser aus und lässt sich besser lesen!</h3>
+
+
+		<h2 id="Register">Anmelden im p5 Web Editor</h2>
+
+		<p>Deine tollen Programme möchtest du bestimmt behalten und sichern. Du
+			kannst sie dann sogar mit einem Link an deine Freunde schicken. </p>
+
+		<p>Am einfachsten geht das, wenn du dich auf der Seite mit dem p5 Web Editor
+			registrierst, das heisst ein kostenloses Konto erstellst. Dazu musst du
+			dir einen
+			Nutzernamen und ein passendes Passwort ausdenken, die du nicht vergessen
+			solltest.
+			Zu Registrierung benötigst du ebenfalls noch eine Mail-Adresse, die du
+			angeben musst. Du bekommst dann eine Mail, auf die du antworten musst, um
+			die Registrierung zu bestätigen.
+			Anschliessend wirst du mit großer Wahrscheinlichkeit nie wieder eine Mail
+			von p5 bekommen - es gibt bestimmt keine &bdquo;spam &rdquo; Mails.</p>
+
+		<p> Die Registrierung findest du im p5 Webeditor in der Menüleiste, ganz
+			oben
+			und ganz rechts, unter "Registrieren". </p>
+
+		<p> Bist du registriert, kannst du dich unter
+			"Anmelden" in deinem p5 Konto mit deinem Nutzernamen und deinem Passwort
+			anmelden. Nach der Anmeldung ist es dann möglich, jede deiner Zeichnungen
+			mit dem
+			Menüpunkt "Datei > speichern" für immer zu sichern. </p>
+
+		<p>Falls du dich nicht anmelden möchtest, kannst du auch einfach das ganze
+			Programm aus dem Web Editor markieren, in einen Editor auf deinen
+			Computer kopieren und dann dort speichern. Um das Programm wieder zu
+			laden,
+			gehst du den umgekehrten Weg: den Programmcode deiner gespeicherten Datei
+			kopieren
+			und in den Editor einfügen.</p>
+
+		<p>Eine Registrierung im p5 Web-Editor empfiehlt sich aber sehr, denn es
+			gibt im Menü noch weitere nützliche zusätzliche Werkzeuge.</p>
+
+		<h2 id="Save">Dein Programm sichern</h2>
+
+		<p>Vielleicht hast du es schon bemerkt: Jeder neue sketch bekommt im p5
+			Webeditor automatisch einen Namen.</p>
+
+		$screenshot
+
+		<p>Dieser Datei-Name ist absichtlich wild zusammengewürfelt, maximal
+			unsinnig
+			und deshalb ziemlich lustig. Dein sketch bekommt diesen Namen
+			verpasst, wenn du sicherst. Willst du einen eigenen Datei-Namen
+			vergeben, damit du den richtigen sketch auch wiederfindest,
+			klickst du das Stift-Symbol neben dem wilden Namen an, füllst den von dir
+			gewünschten Namen in das Kästchen und drückst die <ENTER> (Eingabe-)
+				Taste.
+				Denke daran: deinen eigenen Datei-Namen musst du eintragen, bevor du
+				sicherst.</p>
 
 		<p>Oberhalb vom Editor, auf der rechten Seite, kannst du ablesen, wann dein
-		sketch zuletzt gesichert wurde. Hast du in der Zwischenzeit viele
-		Änderungen gemacht, ist es an der Zeit, wieder einmal zu sichern. Mitunter
-		funktioniert auch das automatische Sichern in der Entwicklungsumgebung, so
-		in etwa jede Minute einmal. Darauf musst du dich nicht unbedingt
-		verlassen: drücke einfach nach jeder wichtigen Änderung rasch die
-		Tastenkombinaten zum Sichern (in Windows zum Beispiel: Taste 'STRG' und
-		Taste 's' gleichzeitig).</p>
+			sketch zuletzt gesichert wurde. Hast du in der Zwischenzeit ein paar
+			Änderungen gemacht, ist es an der Zeit, mal wieder zu sichern. Mitunter
+			funktioniert auch das automatische Sichern in der Entwicklungsumgebung, so
+			in etwa jede Minute einmal. Darauf solltest du dich nicht unbedingt
+			verlassen: drücke einfach nach jeder wichtigen Änderung rasch die
+			Tastenkombinaten zum Sichern (in Windows zum Beispiel: Taste 'STRG' und
+			Taste 's' gleichzeitig).</p>
 
 		<p>Häufiges Sichern ist immer eine gute Idee, damit deine Änderungen nicht
-		verloren gehen. Du kannst auch bei jedem Sichern deine Datei etwas anders
-		nennen, zum Beispiel an den Namen eine Zahl anhängen. Dann ist es später
-		möglich, die aktuelle Zeichnung nach einer Änderung, die dir vielleicht
-		nicht so gefällt, zu ersetzen durch das, was früher gespeichert wurde. Die
-		Dateien mit den unterschiedlichen Namen sind die 
-		<span id="Begriff";>Versionen</span> deines
-		sketches. Beim Zurückholen kannst du zu einer früheren
-		Programmversion zurück gehen. Hochgestochen kann man das eine
-		<span id="Begriff";>Versionsverwaltung</span> nennen.</p>
+			verloren gehen. Du kannst auch bei jedem Sichern deine Datei etwas anders
+			nennen, zum Beispiel an den Namen eine Zahl anhängen. Dann ist es später
+			möglich, die aktuelle Zeichnung nach einer Änderung, die dir vielleicht
+			nicht so gefällt, zu ersetzen durch das, was früher gespeichert wurde. Die
+			Dateien mit den unterschiedlichen Namen sind die
+			<span id="Begriff" ;>Versionen</span> deines
+			sketches. Beim Zurückholen kannst du zu einer früheren
+			Programmversion zurück gehen. Hochgestochen kann man das eine
+			<span id="Begriff" ;>Versionsverwaltung</span> nennen.
+		</p>
 
-		<p>Möchtest du deinen früheren sketch zurückholen, wählst du den Meüpunkt
-		"Datei > Öffnen". Was dann im Editor aktuell steht, wird komplett
-		überschrieben. Sichere vor dem Zurückholen also unbedingt den aktuellen
-		sketch.</p>
+		<p>Möchtest du einen früheren sketch zurückholen, wählst du den Menüpunkt
+			"Datei > Öffnen". Was dann im Editor aktuell steht, wird komplett
+			überschrieben. Sichere vor dem Zurückholen also unbedingt den aktuellen
+			sketch.</p>
 
-  <div>
-    <center>
-      <button onclick="document.location='016.html'">Zurück</button>
-			<button onclick="document.location='index.html'">Inhalt</button>
-      <button onclick="document.location='020.html'">Weiter</button>
-    </center>
-  </div>
+		<div>
+			<center>
+				<button onclick="document.location='016.html'">Zurück</button>
+				<button onclick="document.location='index.html'">Inhalt</button>
+				<button onclick="document.location='020.html'">Weiter</button>
+			</center>
+		</div>
 
 </body>
 
@@ -223,4 +284,3 @@ muss alle Programmier-Kniffe neu erfinden, wenn es schon Andere gemacht haben! V
 <script src="//toolness.github.io/p5.js-widget/p5-widget.js"></script>
 
 </html>
-
