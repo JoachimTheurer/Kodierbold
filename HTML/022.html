@@ -178,18 +178,8 @@ denn die Ursache einer Meldung in der Konsole sein könnte. </p>
 
 <p>Schreib mal zwischendrin im Programm (oder auch bei der Initialisierung) die Variable "durchmesser" mit einem Großbuchstaben und schau dir an, was passiert.</p>
 
-<p>d für durchmessser, x für rechts, ...</p>
-
-========================================
-
-		
-		Zuerst wird vom Programm all das, was rechts vom 
-		Gleichheitszeichen steht, ausgerechnet und dann in die Variable auf der 
-		linken Seite geschaufelt. </p>
 
 	  <h2 id="VAendern">Die Variable ändern</h2>
-
-= on the fly =
 
 
   <p>Das Gleichheitszeichen <code>=</code> wird beim Programmieren ein bisschen
@@ -211,7 +201,7 @@ denn die Ursache einer Meldung in der Konsole sein könnte. </p>
 
   <p><code>durchmesser = durchmesser + 1;</code></p>
 
-  nimmt palso 5 zuerst den alten Wert von <code>durchmesser</code> auf der
+  nimmt also zuerst den alten Wert von <code>durchmesser</code> auf der
   rechten Seite, zählt die Zahl "1" dazu und weist das Ergebnis dann wieder der
   gleichen Variable <code>durchmesser</code> auf der linken Seite zu. Mit einem
   initialen Wert von "1" erhält die Variable <code>durchmesser</code>, wenn der
@@ -220,6 +210,22 @@ denn die Ursache einer Meldung in der Konsole sein könnte. </p>
   <code>durchmesser</code> um "1". Beim nächsten Aufruf dieser Zeile wird also
   aus der "2" in der Variablen <code>durchmesser</code> eine "3", und so weiter.
   </p>
+
+<b>XXX sketch mit mehreren Anweisungen : Keis Durchmesser wird größer XXX == in SETUP</b>
+		
+<p>		Zuerst wird vom Programm all das, was rechts vom 
+		Gleichheitszeichen steht, ausgerechnet und dann in die Variable auf der 
+		linken Seite geschaufelt. </p>
+
+========================================
+
+<p>d für durchmessser, x für rechts, ...</p>
+in SETUP
+
+========================================
+
+<br>verschiedene Variablen: x1 = x2  + abstand
+in SETUP
 
   <p>Natürlich muss auf der linken Seite der Zuweisung nicht die gleiche
     Variable stehen wie rechts. Falls wir aber den Wert einer bestimmten
@@ -232,12 +238,47 @@ denn die Ursache einer Meldung in der Konsole sein könnte. </p>
     schon.</p>
 
 
-  Verwendung
-  - als Variable
-  - oder als Platzhalter für viele gleiche Zahlen
+==========================================
 
+Rechenarten + - * /
+
+==========================================
+
+  <h2 id="log">Variable ausgeben</h2>
+<b>Werte ausgeben</b>
+<br>In p5.js kannst du die Funktion print() verwenden, um den Wert einer Variablen in der Konsole auszugeben. Diese Funktion ist speziell für Debugging-Zwecke in p5.js vorgesehen. Alternativ kannst du auch die JavaScript-Funktion console.log() nutzen, die denselben Zweck erfüllt. Beide Methoden zeigen Informationen in der Konsole des Browsers an, was beim Überprüfen und Debuggen deines Codes hilfreich ist.
+
+<br>==========================================
+
+<br>==========================================
 
   <h2 id="Vid">Variablen in draw</h2>
+
+      <p>Wir haben festgestellt, dass der "draw" Block in p5 immer und immer
+        wieder durchlaufen wird, damit sich eine Zeichnung ändern kann. Wie
+        genau können wir diese Eigenschaft von "draw" ausnutzen? </p>
+
+      <p>Sagen wir mal, wir wollen, dass ein Kreis auf dem Canvas von rechts
+        nach links wandert. Dann muss sich die Stelle, an der der Kreis
+        gezeichnet wird, ändern. Der waagrechte, horizontale Abstand vom rechten
+        Rand - was wir x-Richtung genannt haben - muss immer größer werden. Der
+        Durchmesser des Kreises und sein senkrechter, vertikaler Abstand - was
+        wir y-Richtung nennen - bleiben gleich. </p>
+
+      <p>Wollen wir die x-Richtung ändern, dürfen wir logischerweise dafür in
+        der <code>circle (10, 50, 30)</code> Funktion nicht immer die Zahl "10"
+        verwenden, sondern diese Zahl muss größer werden. Deshalb können wir an
+        der Stelle der "10" einen "Platzhalter" verwenden, in dem wie in einer
+        Schublade der aktuelle Wert der x-Richtung steckt. Wollen wir den
+        aktuellen Wert verwenden, nehmen wir den Wert aus der Schublade heraus,
+        indem wir an der Stelle der "10" den Namen des Platzhalters verwenden.
+
+        Den Platzhalter nennt man Variable, weil sich sein Wert ständig ändern
+        kann, also "variabel" ist.</p>
+
+
+<br>XXXXXXX  sketch: Kreis mit d=d+1 in DRAW
+	
   <p>Warum wird der "durchmesser" immer größer? Klar, wir zählen "1" dazu, aber
     dann?
     <br>Du erinnerst dich: die Funktion "draw" wird immer und immer wieder von
@@ -265,63 +306,6 @@ denn die Ursache einer Meldung in der Konsole sein könnte. </p>
       <script type="text/p5" src="../Code/0120.js" data-autoplay
         data-height="300" data-preview-width="250" data-p5-version="1.9.0">
 </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <p>Wir haben festgestellt, dass der "draw" Block in p5 immer und immer
-        wieder durchlaufen wird, damit sich eine Zeichnung ändern kann. Wie
-        genau können wir diese Eigenschaft von "draw" ausnutzen? </p>
-
-      <p>Sagen wir mal, wir wollen, dass ein Kreis auf dem Canvas von rechts
-        nach links wandert. Dann muss sich die Stelle, an der der Kreis
-        gezeichnet wird, ändern. Der waagrechte, horizontale Abstand vom rechten
-        Rand - was wir x-Richtung genannt haben - muss immer größer werden. Der
-        Durchmesser des Kreises und sein senkrechter, vertikaler Abstand - was
-        wir y-Richtung nennen - bleiben gleich. </p>
-
-      <p>Wollen wir die x-Richtung ändern, dürfen wir logischerweise dafür in
-        der <code>circle (10, 50, 30)</code> Funktion nicht immer die Zahl "10"
-        verwenden, sondern diese Zahl muss größer werden. Deshalb können wir an
-        der Stelle der "10" einen "Platzhalter" verwenden, in dem wie in einer
-        Schublade der aktuelle Wert der x-Richtung steckt. Wollen wir den
-        aktuellen Wert verwenden, nehmen wir den Wert aus der Schublade heraus,
-        indem wir an der Stelle der "10" den Namen des Platzhalters verwenden.
-
-        Den Platzhalter nennt man Variable, weil sich sein Wert ständig ändern
-        kann, also "varrrriabl" ist.
-
-
-        Das ändern wir gleich; dazu müssen wir uns aber zuerst mit einer Sache
-        vertraut machen, die für Programmiersprachen mindestens so wichtig ist
-        wie die &bdquoFunktion&rdquo: das ist die <span id="Begriff"
-          ;>Variable</span>. </p>
 
       =============================================================================
 

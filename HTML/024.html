@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <title>Programmieren lernen mit p5 - Kapitel 3</title>
+</head>
+
+<body>
+
+  <h1 id="h1"> Kontrollstrukturen </h1>
+
+<p>An if-else statement adds a block of code that runs if the Boolean expression is false. For example, here's an if-else statement that expresses the idea "Draw a circle if the mouse is pressed. Otherwise, display a message.":
+A way to repeat a block of code when the number of iterations is known.</p>
+
+<p>for loops are helpful for repeating statements a certain number of times. For example, a for loop makes it easy to express the idea "draw five lines" like so:
+for (let x = 10; x < 100; x += 20) {
+  line(x, 25, x, 75);
+}
+The loop's header begins with the keyword for. Loops generally count up or count down as they repeat, or iterate. The statements in parentheses let x </p>
+
+In p5.js, das auf JavaScript basiert, stehen dir verschiedene Kontrollstrukturen zur Verfügung, um den Ablauf deines Programms zu steuern. Hier sind die wichtigsten:
+
+Bedingte Anweisungen: Ermöglichen es, Code nur unter bestimmten Bedingungen auszuführen.
+
+<br>if-Anweisung: Führt Code aus, wenn eine Bedingung wahr ist.
+javascript
+Kopieren
+Bearbeiten
+if (x > 10) {
+  // Code wird ausgeführt, wenn x größer als 10 ist
+}
+
+<br>if...else-Anweisung: Führt Code aus, wenn die Bedingung wahr ist, andernfalls wird ein anderer Codeblock ausgeführt.
+javascript
+Kopieren
+Bearbeiten
+if (x > 10) {
+  // Code für den Fall, dass x größer als 10 ist
+} else {
+  // Code für den Fall, dass x nicht größer als 10 ist
+}
+
+<br>else if-Anweisung: Ermöglicht die Prüfung zusätzlicher Bedingungen, wenn die vorherige Bedingung falsch war.
+javascript
+Kopieren
+Bearbeiten
+if (x > 10) {
+  // Code für x > 10
+} else if (x > 5) {
+  // Code für x > 5 und x <= 10
+} else {
+  // Code für x <= 5
+}
+<p>Schleifen: Wiederholen Codeblöcke, solange eine bestimmte Bedingung erfüllt ist.</p>
+
+<br>for-Schleife: Wiederholt Code eine festgelegte Anzahl von Malen.
+javascript
+Kopieren
+Bearbeiten
+for (let i = 0; i < 5; i++) {
+  // Code wird 5-mal ausgeführt
+}
+
+<br>while-Schleife: Führt Code aus, solange eine Bedingung wahr ist.
+javascript
+Kopieren
+Bearbeiten
+while (x < 10) {
+  // Code wird ausgeführt, solange x kleiner als 10 ist
+}
+
+<br>do...while-Schleife: Führt Code mindestens einmal aus und wiederholt ihn, solange die Bedingung wahr ist.
+javascript
+Kopieren
+Bearbeiten
+do {
+  // Code wird mindestens einmal ausgeführt
+} while (x < 10);
+
+<p>Switch-Anweisung: Ermöglicht die Auswahl zwischen verschiedenen Codeblöcken basierend auf dem Wert einer Variablen oder eines Ausdrucks.</p>
+
+javascript
+Kopieren
+Bearbeiten
+switch (expression) {
+  case value1:
+    // Code für den Fall, dass expression gleich value1 ist
+    break;
+  case value2:
+    // Code für den Fall, dass expression gleich value2 ist
+    break;
+  default:
+    // Code für alle anderen Fälle
+}
+
+Diese Kontrollstrukturen helfen dir, den Ablauf deines Programms flexibel und dynamisch zu gestalten. Weitere Informationen findest du in der p5.js-Referenz.
+
+<br>=============================================================================
+
+      <!-- Kommentar -->
+      <!-- Kommentar -->
+      <!-- Kommentar -->
+
+      <div>
+        <center>
+          <button onclick="document.location='018.html'">Zurück</button>
+          <button onclick="document.location='index.html'">Inhalt</button>
+          <button onclick="document.location='022.html'">Weiter</button>
+        </center>
+      </div>
+
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.1/p5.js"></script>
+<script src="//toolness.github.io/p5.js-widget/p5-widget.js"></script>
+
+</html>
