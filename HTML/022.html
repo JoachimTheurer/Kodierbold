@@ -98,7 +98,7 @@
     liegt.
   </p>
 
-  <p>Der Anfangswert für die Zahl, der zu Beginn in die Schublade namens
+  <p>Der Anfangswert für die Zahl, der zu Beginn in die Variablen-Schublade namens
     <code>durchmesser</code> gelegt wird, ist - beispielsweise - 50 Pixel. Der
     Fachausdruck dafür ist: die Variable "durchmesser" wird mit dem Wert "50"
     <span id="Begriff" ;>initialisiert</span>, wenn wir
@@ -112,19 +112,18 @@
     <br>Erst später, in einer nachfolgenden Anweisung,
     bekommt die Variable mit der Anweisung <code>durchmesser = 50;</code>
     dann ihren ersten Wert, wird also initialisiert.
-    <br>Das ist aber für uns Kleinkram. Eigentlich ist es immer eine gute Idee, der
-    Variablen bei ihrer Geburt auch gleich einen Wert zuzuweisen, sie
+    <br>Das ist aber für uns Kleinkram.
+    Eigentlich ist es immer eine gute Idee, der Variablen bei ihrer Geburt auch gleich einen Wert zuzuweisen, sie
     mit <code>let vari = 175;</code> zu deklarieren und gleichzeitig,
-    hier mit dem Zahlenwert "175", zu initialisieren. Falls der Wert später
-    doch nicht passen sollte, wird er einfach nochmal überschrieben.
+    hier mit dem Zahlenwert "175", zu initialisieren. Falls der Wert später doch nicht passen sollte, wird er einfach
+    nochmal überschrieben.
   </p>
 
   <p>Vor einiger Zeit gab es mal das <span id="Begriff" ;>Schlüsselwort</span> "var"
     für die Deklaration einer Variablen. "var" funktioniert ähnlich - aber nicht
     ganz genau gleich - wie das Schlüsselwort "let". Manchmal aber ist "var" nicht
-    so gut wie "let", um fehlerfreie und gut lesbare
-    Programme zu schreiben. Deshalb wurde es, mehr oder weniger, durch "let" ersetzt.
-    <br> Das nur für den Fall, dass du ältere
+    so gut wie "let", um fehlerfreie und gut lesbare Programme zu schreiben. Deshalb wurde es, mehr oder weniger, durch
+    "let" ersetzt. <br> Das nur für den Fall, dass du ältere
     Programme findest, in denen Variablen mit "var" deklariert werden - denke dir
     einfach ein "let" an diese Stelle.
   </p>
@@ -196,6 +195,16 @@
 
   <h2 id="VAendern">Die Variable ändern</h2>
 
+  XXX=========================================
+  Der eigentliche Zweck von Variablen ist jedoch, dass du sie ändern kannst.
+  Dazu rechnen wir auf der rechten
+  Seite irgend etwas Neues aus und weisen es der linken Seite zu.
+
+  <br> Die rechte Seite
+  nach dem <code>=</code> Zeichen wird zuerst vollständig ausgerechnet, dann
+  erst wird das Ergebnis der linken Seite zugewiesen.
+
+
 
   <p>Das Gleichheitszeichen <code>=</code> wird beim Programmieren ein bisschen
     anders verwendet als in Mathe. Alles, was auf der rechten Seite des
@@ -204,36 +213,32 @@
     rechten Seite steht, wird der Variablen &bdquo;zugewiesen&rdquo;; man sagt,
     es ist eine <span id="Begriff" ;>Zuweisung</span>. Auf der rechten Seite
     kann eine Zahl stehen, beispielsweise ein Anfangswert.
-    
-    <p><code>durchmesser = 88;</code></p>
 
-    Der eigentliche Zweck von Variablen ist jedoch, dass du sie ändern kannst.
-    Dazu rechnen wir auf der rechten
-    Seite irgend etwas Neues aus und weisen es der linken Seite zu. 
-    
-    <br> Die rechte Seite
-    nach dem <code>=</code> Zeichen wird zuerst vollständig ausgerechnet, dann
-    erst wird das Ergebnis der linken Seite zugewiesen.
+  <p><code>durchmesser = 88;</code></p>
 
-    <br>In der Programm-Zeile
+  <br>In der Programm-Zeile
 
   <p><code>durchmesser = durchmesser + 1;</code></p>
 
   nimmt das Programm also zuerst den alten Wert von <code>durchmesser</code> auf der
   rechten Seite, zählt die Zahl "1" dazu und weist dann das Ergebnis wieder der
-  gleichen Variable <code>durchmesser</code> auf der linken Seite zu. Mit diesem 
+  gleichen Variable <code>durchmesser</code> auf der linken Seite zu. Mit diesem
   Schritt im Programm ist so der Wert der Variablen <code>durchmesser</code> um 1
-  erhöht worden - was vorher in der Variablen stand, geht verloren.
-  
+  erhöht worden - was vorher in der Variablen <code>durchmesser</code> stand, geht verloren.
+
   <br> Mit einem initialen Wert von "88" erhält so die Variable <code>durchmesser</code>
   den Wert "89", wenn die Anweisung ausgeführt wird. Die "88" ist vergessen.
-   <br> Jedesmal, wenn diese Anweisung im Programm aufgerufen wird, erhöht sich der Wert der Variablen <code>durchmesser</code> um "1". Beim nächsten Aufruf dieser Zeile wird also aus der "89" in der Variablen <code>durchmesser</code> eine "90", beim nächsten Aufruf eine "91", dann "92", "93", und so weiter.
+  <br> Jedesmal, wenn diese Anweisung im Programm aufgerufen wird, erhöht sich
+  der Wert der Variablen <code>durchmesser</code> um "1". Beim nächsten Aufruf
+  dieser Zeile wird also aus der "89" in der Variablen <code>durchmesser</code> eine "90",
+  beim nächsten Aufruf eine "91", dann "92", "93", und so weiter.
   </p>
 
-X X X draw läuft automatisch mehrfach - also die Addition in draw einbauen X X X
+  X X X draw läuft automatisch mehrfach - also die Addition in draw einbauen X X X
 
   <span id="tbd">Code/0180.js</span>
-  <script type="text/p5" src="../Code/0180.js" data-autoplay data-height="450" data-preview-width="270" data-p5-version="1.9.0">
+  <script type="text/p5" src="../Code/0180.js" data-autoplay data-height="450" data-preview-width="270"
+    data-p5-version="1.9.0">
   </script>
 
   <b>XXX sketch mit mehreren Anweisungen : Kreis Durchmesser wird größer XXX == in SETUP</b>
