@@ -1,54 +1,50 @@
 <!DOCTYPE html>
 <html lang="de">
-  <head>
-    <script src="../../LIB/p5.js"></script>
-    <script src="../../LIB/p5.sound.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <meta charset="utf-8" />
-    <title>Programmieren lernen mit p5 - Kapitel 1</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="design.css" rel="stylesheet" />
-  </head>
-  <body>
-    <h1>Unser Werkzeug</h1>
-    <h2  id="Browser">Browser</h2>  
-    <p>
-      Du schaust dir diese Seiten mit einem Browser an, also weisst du schon,
-      wie man ihn bedient. Wir brauchen hier sowieso nur ein paar Tasten, die auf deinem
-      Browser oben links zu finden sind - wahrscheinlich, denn es gibt ziemlich
-      viele Browser, und jeder sieht ein bisschen anders aus.
-    </p>
-    <p>
-      screenshot Browsers
-      <img
-        src="../Bild/redCross.jpg"
-        alt="Auslassung"
-        width="400"
-        height="300"
-      />
-    </p>
-    <p>
-      Mit der "Zurück-Taste" kommst du auf eine vorher besuchte Seite zurück.
-      Mit der "Vorwärts"-Taste kommst du dann wieder auf die Seite, von der aus
-      du "Zurück" gegangen bist. 
-      <br> Für p5 wichtig ist die "Neu laden" (oder
-      "Auffrischen") Taste: wenn du dich verheddert hast und nichts mehr
-      funktioniert und du ganz von vorne anfangen willst, kannst du diese Taste
-      drücken. Das wird am Anfang häufiger vorkommen, ist vollkommen ok und geht
-      oft schneller als die Suche nach einem Tippfehler. Mit "Neu laden" wird
-      allerdings alles gelöscht, was immer du schon geschrieben hast. Deswegen fragen dich
-      die meisten Browser auch: "Webseite neu laden?", was du mit "Neu laden"
-      bestätigen musst - wenn du dir sicher bist, dass du alles wegwerfen
-      willst.
-    </p>
-    Es kann sein, dass du beim Aufruf des p5 Web Editors gefragt wirst, ob du
-    "Kekse akzeptieren" ("Accept Cookies") möchtest. Es stimmt, dass man sich
-    das immer genau überlegen muss. Ich kann dir aber versichern, dass die p5
-    Leute weder deine Daten sammeln und verkaufen, noch irgendwie sonst mit dir
-    Geld verdienen wollen. Also beantworte die Frage nach Cookies mit "Accept",
-    sonst kann es sein, dass nicht alles im Editor so funktioniert, wie es soll.
 
-    <h2  id="Tastatur">Tastatur</h2>
+<head>
+  <script src="../../LIB/p5.js"></script>
+  <script src="../../LIB/p5.sound.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <meta charset="utf-8" />
+  <title>Programmieren lernen mit p5 - Kapitel 1</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="design.css" rel="stylesheet" />
+</head>
+
+<body>
+  <h1>Unser Werkzeug</h1>
+  <h2 id="Browser">Browser</h2>
+  <p>
+    Du schaust dir diese Seiten mit einem Browser an, also weisst du schon,
+    wie man ihn bedient. Wir brauchen hier sowieso nur ein paar Tasten, die auf deinem Browser oben links zu finden sind
+    - wahrscheinlich, denn es gibt ziemlich viele Browser, und jeder sieht ein bisschen anders aus.
+  </p>
+  <p>
+    screenshot Browsers
+    <img src="../Bild/redCross.jpg" alt="Auslassung" width="400" height="300" />
+  </p>
+  <p>
+    Mit der "Zurück-Taste" kommst du auf eine vorher besuchte Seite zurück.
+    Mit der "Vorwärts"-Taste kommst du dann wieder auf die Seite, von der aus
+    du "Zurück" gegangen bist.
+    <br> Für p5 wichtig ist die "Neu laden" (oder
+    "Auffrischen") Taste: wenn du dich verheddert hast und nichts mehr
+    funktioniert und du ganz von vorne anfangen willst, kannst du diese Taste
+    drücken. Das wird am Anfang häufiger vorkommen, ist vollkommen ok und geht
+    oft schneller als die Suche nach einem Tippfehler. Mit "Neu laden" wird
+    allerdings alles gelöscht, was immer du schon geschrieben hast. Deswegen fragen dich
+    die meisten Browser auch: "Webseite neu laden?", was du mit "Neu laden"
+    bestätigen musst - wenn du dir sicher bist, dass du alles wegwerfen
+    willst.
+  </p>
+  Es kann sein, dass du beim Aufruf des p5 Web Editors gefragt wirst, ob du
+  "Kekse akzeptieren" ("Accept Cookies") möchtest. Es stimmt, dass man sich
+  das immer genau überlegen muss. Ich kann dir aber versichern, dass die p5
+  Leute weder deine Daten sammeln und verkaufen, noch irgendwie sonst mit dir
+  Geld verdienen wollen. Also beantworte die Frage nach Cookies mit "Accept",
+  sonst kann es sein, dass nicht alles im Editor so funktioniert, wie es soll.
+
+  <h2 id="Tastatur">Tastatur</h2>
   <h3 id="K012B">Tastatur</h3>
   Sicher hast du auch schon eine Tastatur vor dir liegen. Je nach Modell kann
   die
@@ -76,34 +72,30 @@
   </ul>
 
 
-		<p>
-Unterschiedliche Tastaturen gibt es wahrscheinlich sogar noch mehr als Browser. 
-Die Buchstaben und Zahlen zu finden, sollte trotzdem nicht allzu schwer sein - aber 
-wir brauchen zum Programmieren auch noch alle möglichen Klammern und Sonderzeichen. 
-</p>
-<p>
-Die runden Klammern finden sich auf den meisten Tastaturen über den Zahlen 8 und 9,
-wenn du die Umschalttaste (auch "Shift"-Taste genannt) und diese Zahlen gleichzeitig drückst.
-Häufig werden mit der ALT (alternative Taste) oder ALT GR (alternative Grafiktaste) 
-und den Zahlen 8 und 9 die eckige Klammern ausgegeben, und mit ALT und 7 und 0 die 
-geschweiften Klammern. Bei einem Mac ist es statt der ALT die "Option" Taste, die 
-gedrückt werden muss.  
-</p>
-<p>
-  screenshot Browsers
-  <img
-    src="../Bild/redCross.jpg"
-    alt="Auslassung"
-    width="400"
-    height="300"
-  />
-</p>
-Wenn du alle möglichen Kombinationen erfolglos versucht hast, kannst du zur Not die
-Klammern kopieren und einfügen, die von Anfang an schon im p5 Editor stehen (oder 
-jemanden fragen - zur Not auch das Internet).) 
-</p>
+  <p>
+    Unterschiedliche Tastaturen gibt es wahrscheinlich sogar noch mehr als Browser.
+    Die Buchstaben und Zahlen zu finden, sollte trotzdem nicht allzu schwer sein - aber
+    wir brauchen zum Programmieren auch noch alle möglichen Klammern und Sonderzeichen.
+  </p>
+  <p>
+    Die runden Klammern finden sich auf den meisten Tastaturen über den Zahlen 8 und 9,
+    wenn du die Umschalttaste (auch "Shift"-Taste genannt) und diese Zahlen gleichzeitig drückst.
+    Häufig werden mit der ALT (alternative Taste) oder ALT GR (alternative Grafiktaste)
+    und den Zahlen 8 und 9 die eckige Klammern ausgegeben, und mit ALT und 7 und 0 die
+    geschweiften Klammern. Bei einem Mac ist es statt der ALT die "Option" Taste, die
+    gedrückt werden muss.
+  </p>
+  <p>
+    screenshot Browsers
+    <img src="../Bild/redCross.jpg" alt="Auslassung" width="400" height="300" />
+  </p>
+  Wenn du alle möglichen Kombinationen erfolglos versucht hast, kannst du zur Not die
+  Klammern kopieren und einfügen, die von Anfang an schon im p5 Editor stehen (oder
+  jemanden fragen - zur Not auch das Internet).)
+  </p>
 
-<h2>Farbtabellen</h2>
-<span id="tbd"> Farbtabellen Link </span>
-  </body>
+  <h2>Farbtabellen</h2>
+  <span id="tbd"> Farbtabellen Link </span>
+</body>
+
 </html>
