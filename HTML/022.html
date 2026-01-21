@@ -241,14 +241,21 @@
     steht, können wir ausrechnen. Da muss also keine feste Zahl (wie bei der Initialisierung)
     stehen. Beispiel:
     <br><code>durchmesser = 70 + 40;</code> oder <br><code>durchmesser = 150 - 40;</code>.
-    <br>Zweitens: wir können rechts vom Gleichheitszeichen nicht nur eine feste Zahl oder
-    etwas Ausgerechnetes hinschreiben, sondern auch eine Variable. Unsere Variable links
-    bekommt auf diese Weise den Wert der Variablen rechts vom Gleichheitszeichen.
+    <br>Zweitens: wir können rechts vom Gleichheitszeichen nicht nur eine feste Zahl oder etwas Ausgerechnetes hinschreiben, sondern auch eine Variable. Unsere Variable links bekommt auf diese Weise den Wert der Variablen
+    rechts vom Gleichheitszeichen.
     Beispiel:
     <br><code>durchmesser = radiusMalZwei;</code>.
-    <br>Drittens: Auf der rechten Seite kann auch eine bunte Mischung aus Zahlen und Variablen
-    stehen, zum Beispiel:
+    <br>Drittens: Auf der rechten Seite kann auch eine bunte Mischung aus Zahlen und Variablen stehen, alles, was man ausrechnen kann, zum Beispiel:
     <br><code>durchmesser = radiusMalZwei + 30;</code>.
+    Viertens: Wir können beliebig viele Variablen auf der rechten Seite verwenden, etwa um eine ganze Formel auszurechnen, zum Beispiel:
+    <br><code>durchmesser = 2 * radius + IrgendWas - 5;</code>.
+    Dieses Beispiel klappt natürlich nur, falls <code>radius</code> und <code>IrgendWas</code> Variablen sind, die vorher im Programm angelegt und initialisiert wurden (und ja, IrgendWas ist ein denkbar mieser Variablenname).
+    
+  <p> <span id="ausprobieren">Höchste Zeit, das alles auszuprobieren. Spiel' mit der Variablen-Zuweisung von <code>durchmesser</code>herum.</span>
+  <span id="tbd">Code/0180.js</span>
+  <script type="text/p5" src="../Code/0180.js" data-autoplay data-height="450" data-preview-width="270" data-p5-version="1.9.0">
+  </script>
+
   </p>
 
 
@@ -256,7 +263,7 @@
 
 
 
-  Damit wird der Wert der
+  Damit wird der Wert der Variablen, die  
   Variablen rechts verwendet,
 
 
