@@ -241,24 +241,36 @@
     steht, können wir ausrechnen. Da muss also keine feste Zahl (wie bei der Initialisierung)
     stehen. Beispiel:
     <br><code>durchmesser = 70 + 40;</code> oder <br><code>durchmesser = 150 - 40;</code>.
-    <br>Zweitens: wir können rechts vom Gleichheitszeichen nicht nur eine feste Zahl oder etwas Ausgerechnetes hinschreiben, sondern auch eine Variable. Unsere Variable links bekommt auf diese Weise den Wert der Variablen
-    rechts vom Gleichheitszeichen.
+    <br>Zweitens: wir können rechts vom Gleichheitszeichen nicht nur eine feste Zahl oder etwas Ausgerechnetes hinschreiben, sondern ebenfalls eine Variable. Unsere Variable links bekommt auf diese Weise den Wert der Variablen rechts vom Gleichheitszeichen.
     Beispiel:
     <br><code>durchmesser = radiusMalZwei;</code>.
     <br>Drittens: Auf der rechten Seite kann auch eine bunte Mischung aus Zahlen und Variablen stehen, alles, was man ausrechnen kann, zum Beispiel:
     <br><code>durchmesser = radiusMalZwei + 30;</code>.
     Viertens: Wir können beliebig viele Variablen auf der rechten Seite verwenden, etwa um eine ganze Formel auszurechnen, zum Beispiel:
-    <br><code>durchmesser = 2 * radius + IrgendWas - 5;</code>.
-    Dieses Beispiel klappt natürlich nur, falls <code>radius</code> und <code>IrgendWas</code> Variablen sind, die vorher im Programm angelegt und initialisiert wurden (und ja, IrgendWas ist ein denkbar mieser Variablenname).
+    <br><code>durchmesser = 2 * radius + irgendWas - 5;</code>.
+    Dieses Beispiel klappt natürlich nur, falls <code>radius</code> und <code>irgendWas</code> Variablen sind, die vorher im Programm angelegt und initialisiert wurden (und ja, <code>irgendWas</code> ist ein denkbar mieser Variablenname).
     
   <p> <span id="ausprobieren">Höchste Zeit, das alles auszuprobieren. Spiel' mit der Variablen-Zuweisung von <code>durchmesser</code>herum.</span>
   <span id="tbd">Code/0180.js</span>
   <script type="text/p5" src="../Code/0180.js" data-autoplay data-height="450" data-preview-width="270" data-p5-version="1.9.0">
   </script>
+</p>
 
-  </p>
 
 
+
+---------Einschub
+Wert der Variablen in der Konsole ausgeben
+
+_________
+
+
+
+
+  <p>Fünftens und ziemlich wichtig: Links und rechts vom Gleichheitszeichen darf die gleiche Variable stehen. Auf die Weise wird der Variablen links
+    ein ganz neuer Wert zugewiesen, der aus dem alten Wert der Variablen rechts berechnet werden kann. Zum Beispiel:
+    <br><code>durchmesser = durchmesser + 10;</code>  
+    <br>Also: Wenn <code>Durchmesser</code> den alten Wert "88" hatte, bevor diese Zeile im Programm durchlaufen wird, dann wird danach der neue Wert von <code>durchmesser</code> "98" sein.
 
 
 
